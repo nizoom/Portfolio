@@ -2,34 +2,45 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import Logo from "../Components/logo/logo"
 import Sidebar from "../Components/sidebar/sidebar"
-
+import Languages from "../Components/languages/languages"
+import workingGif from "../Components/project_layout/whale.gif"
+import classes from "./css/homepage.css"
 
 class HomePage extends Component {
-  state = {
-    sidebarVisible : false
+  constructor (props) {
+    super(props)
+
+    this.state = {
+      sidebarVisible : false,
+      clickHandler : ( ) => {
+      this.setState(prevstate => ({
+        sidebarVisible : !prevstate.sidebarVisible }))
+      console.log(this.state.sidebarVisible);
+      }
+    }
   }
 
-  clickHandler = ( ) => {
-  this.setState(prevstate => ({
-    sidebarVisible : !prevstate.sidebarVisible }))
-  console.log(this.state.sidebarVisible);
-}
 
   render() {
     return(
       <div>
           <Logo/>
+          <Sidebar/>
 
-          <Sidebar
-          onClick = {this.clickHandler}
-          sidebarStatus = {this.state.sidebarVisible}
-          />
-          <h2> Welcome to homepage </h2>
-          <h3> Main Content Here </h3>
+          <div className = "projects">
+            <div className = "comingSoonBanner">
+              <h1> Welcome! Projects coming soon ...</h1>
+              <img src = {workingGif}
+                alt = "Gif file" className = "gif" height = "600px"/>
+                  <br/>
+                  <br/>
+                  <br/>
 
-          <Link to = "/About"
-        
-          > About </Link>
+            </div>
+          </div>
+
+          <Link to = "/About"> About </Link>
+          <Languages/>
      </div>
     )
 }}

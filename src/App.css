@@ -1,7 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 body {
-  background-color: #C1B2CA;
+
+  background-image: url("./Components/project_layout/sunset.jpg");
+
+
+  background-size: contain;
 }
 .App {
   text-align: center;

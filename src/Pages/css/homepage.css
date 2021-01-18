@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
+
+.projects{
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+
+
+}
+
+.gif{
+  display: inline;
+  margin: 0 auto;
+  border-radius: 100%;
+  width: auto;
+}
+
+.comingSoonBanner{
+  font-family: 'Roboto Mono', monospace;
+}

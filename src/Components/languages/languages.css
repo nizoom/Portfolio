@@ -1,0 +1,19 @@
+.main{
+  display: flex;
+  justify-content: space-around;
+  flex-items: margin-left;
+  border-radius: 25%;
+}
+
+.main img:hover{
+  transform: scale(1.2);
+  transition: all ease 500ms;
+}
+
+
+
+.title{
+  padding: 30px;
+  text-align: center;
+  text-decoration: underline;
+}
