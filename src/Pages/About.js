@@ -12,7 +12,8 @@ const About = ( props ) => {
   return (
     <div>
       <Logo/>
-      <Sidebar />
+      <Sidebar/>
+
       <h1 className = "title"> Bįo</h1>
       <div className = "main">
 

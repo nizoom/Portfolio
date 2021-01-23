@@ -1,23 +1,35 @@
-import React, {useState} from "react";
-import classes from "./sidebar.css"
+import React, {useState, forwardRef} from "react";
+import "./sidebar.css"
+import {BrowserRouter as Router, Link} from "react-router-dom";
+//()=>setClipBoardStatus("Email : nissimram1812@gmail.com")
+import Tippy from "@tippyjs/react";
+import "tippy.js/dist/tippy.css";
+import "tippy.js/animations/perspective.css"
+
+import Tooltip from "../tooltip/tooltip"
+
+
 
 const Sidebar = ( props ) => {
 
-//make useState part of sidebar rather than receive props from homepage
-    // 1. the two features to replace is sidebarStatus and onClick
-    // 2.
   const [sidebarStatus, setSidebarStatus] = useState(false);
 
-  const clickHandler = () => {
+  const clickHandlerBar = () => {
     setSidebarStatus(!sidebarStatus)
-    console.log(sidebarStatus);
+    //if sidebar closed so should tooltip
   }
+
+
+
+
+  //{navigator.clipboard.writeText(  "nissimram1812@gmail.com")}
+
 
 
   return (
     <div >
         <button className = {`classes ${sidebarStatus ? "change" : null}`}
-        onClick = {clickHandler}>
+        onClick = {clickHandlerBar}>
           <div className = "bar1"></div>
           <div className = "bar2"></div>
           <div className = "bar3"></div>
@@ -25,11 +37,36 @@ const Sidebar = ( props ) => {
       <div className = {`classes ${sidebarStatus ? "sidebar" : "off"}`}>
         <nav>
           <ul>
-            <li> Portfolio </li>
-            <li> About </li>
-            <li> Blog </li>
-            <li> Contact </li>
-            <li> GitHub </li>
+            <li>
+              <Link to = "/" className = "link"> Portfolio </Link>
+            </li>
+
+            <li>
+              <Link to = "/About" className = "link"> About </Link>
+            </li>
+
+            <li>
+              <Link to = "/Blog" className = "link"> Blog. </Link>
+            </li>
+
+            <li>
+              <a target = "blank" href = "https://github.com/nizoom"
+              className = "link">
+              GitHub </a>
+            </li>
+
+            <Tooltip content =
+            {<h3>Email : nissimram1812@gmail.com <br/> <br/>
+            LinkedIn : www.linkedin.com/in/nissimram/</h3>}
+            direction = "bottom">
+              <li>
+                Contact
+              </li>
+            </Tooltip>
+
+
+
+
           </ul>
         </nav>
       </div>

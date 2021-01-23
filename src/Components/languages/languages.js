@@ -36,13 +36,14 @@ const Languages = ( ) => {
         <img src = {jsImg} width = "" height = "150" alt = "JavaScript"/>
       </Tippy>
 
+      <Tippy content = {<span> ReactJS </span>}>
+        <img src = {reactImg} width = "" height = "150" alt = "ReactJS"/>
+      </Tippy>
+
       <Tippy content = {<span> NodeJS </span>}>
         <img src = {nodeImg} width = "" height = "150" alt = "NodeJS"/>
       </Tippy>
 
-      <Tippy content = {<span> ReactJS </span>}>
-        <img src = {reactImg} width = "" height = "150" alt = "ReactJS"/>
-      </Tippy>
 
     </div>
   </div>

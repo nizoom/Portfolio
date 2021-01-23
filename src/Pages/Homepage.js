@@ -30,16 +30,16 @@ class HomePage extends Component {
           <div className = "projects">
             <div className = "comingSoonBanner">
               <h1> Welcome! Projects coming soon ...</h1>
+              <br/>
               <img src = {workingGif}
                 alt = "Gif file" className = "gif" height = "600px"/>
-                  <br/>
-                  <br/>
+
                   <br/>
 
             </div>
           </div>
 
-          <Link to = "/About"> About </Link>
+          <Link to = "/Blog"> Blog </Link>
           <Languages/>
      </div>
     )

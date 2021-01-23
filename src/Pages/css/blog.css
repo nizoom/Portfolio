@@ -1,0 +1,10 @@
+.blog_div{
+  margin: 10%;
+  width: 80%;
+  box-sizing: content-box;
+  background-color: #B6C7C9;
+}
+
+.post{
+  padding: 10%;
+}

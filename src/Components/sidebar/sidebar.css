@@ -72,12 +72,23 @@ ul{
 li{
   font-size: 20px;
   padding: 20px;
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 
 .li:hover {
   padding-right: 25px;
 }
+
+
+.link{
+  z-index: 1;
+  color: #D2C396;
+  font-size: 20px;
+
+}
+
 
 .li:hover:after {
   opacity: 1;
