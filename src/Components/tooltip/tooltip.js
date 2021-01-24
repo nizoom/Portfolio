@@ -5,31 +5,17 @@ const Tooltip = (props) => {
 
   // take this logic and put it in the sidebar component so that the onlick
   // is connected to the li rather than the tool
-  const [active, setActive] = useState(false);
 
-  const showTip = event => {
-
-      setActive(!active);
-      console.log("test");
-
-    }
-
+//onClick={showTip}
 
   return (
-    <div
-      className="Tooltip-Wrapper"
-      // When to show the tooltip
-      onClick={showTip}
+    <div className = {props.status? "contact_wrapper" : "invisible"}>
+      <h4>
+        <u>Email </u>: <br/><br/> nissimram1812@gmail.com </h4>
+      <br/>
+      <br/>
+      <h4> <u> LinkedIn </u>:<br/><br/> https://www.linkedin.com/in/nissimram/ </h4>
 
-    >
-      {/* Wrapping */}
-      {props.children}
-      {active && (
-        <div className={`Tooltip-Tip ${props.direction || "bottom"}`}
-        >
-          {/* Content */}
-        </div>
-      )}
     </div>
   );
 };

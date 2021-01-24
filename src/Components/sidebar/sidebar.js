@@ -19,6 +19,14 @@ const Sidebar = ( props ) => {
     //if sidebar closed so should tooltip
   }
 
+  const [active, setActive] = useState(false);
+
+  const showTip = () => {
+
+      setActive(!active);
+      console.log("test");
+
+    }
 
 
 
@@ -55,14 +63,11 @@ const Sidebar = ( props ) => {
               GitHub </a>
             </li>
 
-            <Tooltip content =
-            {<h3>Email : nissimram1812@gmail.com <br/> <br/>
-            LinkedIn : www.linkedin.com/in/nissimram/</h3>}
-            direction = "bottom">
-              <li>
+              <li onClick = {showTip}>
                 Contact
               </li>
-            </Tooltip>
+              <Tooltip status = {active} />
+
 
 
 
