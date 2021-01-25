@@ -2,6 +2,7 @@ import React from "react";
 import Logo from "../Components/logo/logo";
 import Sidebar from "../Components/sidebar/sidebar"
 import "./css/blog.css"
+import PostOne from "../Components/blog_posts/post_one"
 
 
 const Blog = ( ) => {
@@ -11,7 +12,7 @@ const Blog = ( ) => {
       <Sidebar/>
       <div className = "blog_div">
         <div className = "post">
-          <h1> Post 1 </h1>
+          <PostOne/>
         </div>
       </div>
     </div>

@@ -8,3 +8,19 @@
 .post{
   padding: 10%;
 }
+
+h3{
+  line-height: 2.5;
+  font-weight: 600;
+  font-size: 1.5em;
+}
+
+h2{
+  font-weight: bold;
+  font-size: 1.7em;
+}
+
+h1{
+  color: #701E57;
+  text-align: center;
+}
