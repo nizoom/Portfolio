@@ -1,8 +1,7 @@
-import React, {useState, forwardRef} from "react";
+import React, {useState} from "react";
 import "./sidebar.css"
 import {BrowserRouter as Router, Link} from "react-router-dom";
 //()=>setClipBoardStatus("Email : nissimram1812@gmail.com")
-import Tippy from "@tippyjs/react";
 import "tippy.js/dist/tippy.css";
 import "tippy.js/animations/perspective.css"
 
@@ -18,6 +17,7 @@ const Sidebar = ( props ) => {
     setSidebarStatus(!sidebarStatus)
     //if sidebar closed so should tooltip
   }
+
 
   const [active, setActive] = useState(false);
 
@@ -35,9 +35,9 @@ const Sidebar = ( props ) => {
 
 
   return (
-    <div >
+    <div className = "container">
         <button className = {`classes ${sidebarStatus ? "change" : null}`}
-        onClick = {clickHandlerBar}>
+        onClick = {()=>{clickHandlerBar();props.click()}}>
           <div className = "bar1"></div>
           <div className = "bar2"></div>
           <div className = "bar3"></div>

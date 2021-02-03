@@ -43,7 +43,6 @@ nav {
 }
 
 .sidebar {
-
   color: #D1C496;
   float: right;
   width: 25%;
@@ -93,4 +92,11 @@ li{
 .li:hover:after {
   opacity: 1;
   right: 0;
+}
+
+@media (max-width: 850px){
+  .sidebar{
+    height: 165vh;
+    width:80%;
+  }
 }

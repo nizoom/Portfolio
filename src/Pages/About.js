@@ -1,7 +1,7 @@
 import React from "react";
 import Logo from "../Components/logo/logo"
 import Sidebar from "../Components/sidebar/sidebar"
-import classes from "./css/about.css"
+import "./css/about.css"
 import Languages from "../Components/languages/languages"
 
 

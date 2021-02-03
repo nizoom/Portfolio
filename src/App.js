@@ -12,7 +12,7 @@ import Blog from "./Pages/blog"
 class App extends Component{
   render (){
     return (
-      <Router>
+      <HashRouter>
         <Switch>
           <Route exact path = "/" component = { HomePage }/>
           <Route exact path = "/About" component = { About }/>
@@ -20,7 +20,7 @@ class App extends Component{
           <Route path = "/404" component = { NotFound }/>
           <Redirect to = "/404"/>
         </Switch>
-      </Router>
+      </HashRouter>
     )
   }
 }

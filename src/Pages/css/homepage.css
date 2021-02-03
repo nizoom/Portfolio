@@ -18,3 +18,16 @@
 .comingSoonBanner{
   font-family: 'Roboto Mono', monospace;
 }
+
+@media (max-width: 900px){
+  .gif{
+    width: 75%;
+  }
+  .projects{
+    font-size: 85%;
+  }
+}
+
+.navOpen{
+  display: none;
+}

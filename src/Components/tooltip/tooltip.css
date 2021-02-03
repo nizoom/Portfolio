@@ -14,3 +14,9 @@
 .invisible{
   visibility:hidden;
 }
+
+@media (max-width:1000px){
+  .contact_wrapper{
+    word-wrap: break-word;
+  }
+}

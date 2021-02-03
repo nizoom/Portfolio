@@ -1,10 +1,9 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 import Logo from "../Components/logo/logo"
 import Sidebar from "../Components/sidebar/sidebar"
 import Languages from "../Components/languages/languages"
 import workingGif from "../Components/project_layout/whale.gif"
-import classes from "./css/homepage.css"
+import "./css/homepage.css"
 
 class HomePage extends Component {
   constructor (props) {
@@ -16,30 +15,45 @@ class HomePage extends Component {
       this.setState(prevstate => ({
         sidebarVisible : !prevstate.sidebarVisible }))
       console.log(this.state.sidebarVisible);
-      }
+    },
+    giveWidth : window.innerWidth
     }
   }
+
+
+  determineClass(x){
+    console.log(window.innerWidth);
+    if(x && window.innerWidth < 850){
+      console.log(window.innerWidth);
+      return "navOpen"
+    } else {
+      return "gif"
+    }
+  }
+
+
 
 
   render() {
     return(
       <div>
           <Logo/>
-          <Sidebar/>
+          <Sidebar click = {this.determineClass(this.state.sidebarVisible)}/>
 
           <div className = "projects">
             <div className = "comingSoonBanner">
               <h1> Welcome! Projects coming soon ...</h1>
               <br/>
               <img src = {workingGif}
-                alt = "Gif file" className = "gif" height = "600px"/>
+                alt = "Gif file" className =
+                {this.state.sidebarVisible && window.innerWidth < 850 ? "navOpen"
+              : "gif"}
+                height = "600px"/>
 
                   <br/>
 
             </div>
           </div>
-
-          <Link to = "/Blog"> Blog </Link>
           <Languages/>
      </div>
     )
