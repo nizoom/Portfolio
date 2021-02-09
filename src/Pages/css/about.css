@@ -2,7 +2,7 @@
 body{
   font-family: 'Montserrat', sans-serif;
 }
-.main {
+.body {
   flex-flow: wrap;
   padding: 10px;
   margin: 10px;
@@ -22,4 +22,24 @@ h1{
 
 .par_two {
   text-align: center;
+}
+
+.navOpen{
+  display: none;
+}
+
+@media (max-width:900px){
+  .body{
+    text-align: center;
+    color: #7B7689;
+    font-size: 75%;
+    background: -webkit-linear-gradient(#660058, #3B4381, #EAEAEA);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .title{
+    text-align: center;
+    font-size: 125%;
+  }
 }

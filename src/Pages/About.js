@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState }from "react";
 import Logo from "../Components/logo/logo"
 import Sidebar from "../Components/sidebar/sidebar"
 import "./css/about.css"
@@ -8,14 +8,26 @@ import Languages from "../Components/languages/languages"
 const About = ( props ) => {
 
 
+  const [clazz, setClazz] = useState(true)
+
+  const classStatusForMobile = ( sidebarStatus ) => {
+    if (sidebarStatus && window.innerWidth < 850){
+      setClazz(!clazz)
+    } else {
+      setClazz(!clazz)
+    }
+    }
+
 
   return (
     <div>
-      <Logo/>
-      <Sidebar/>
 
-      <h1 className = "title"> Bįo</h1>
-      <div className = "main">
+      <Logo/>
+      <Sidebar functionCallFromParent = {classStatusForMobile}/>
+      <div className = { clazz ? "title" : "navOpen" }>
+        <h1> Bįo</h1>
+      </div>
+      <div className = { clazz ? "body" : "navOpen"}>
 
 
           <h2>
@@ -38,8 +50,7 @@ const About = ( props ) => {
 
           </h2>
        </div>
-
-       <Languages/>
+       <Languages classStatusForMobile = {clazz ? "gif" : "navOpen"}/>
    </div>
 
   )

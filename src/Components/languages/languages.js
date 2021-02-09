@@ -17,32 +17,48 @@ import reactImg from "./lang_imgs/react_img.png"
 ddd*/
 
 
-const Languages = ( ) => {
+const Languages = ( props ) => {
   return (
 
-  <div>
-    <h1 className = "title"> Languages </h1>
+  <div className = {props.classStatusForMobile != "gif"  && window.innerWidth < 850 ? "navOpen" : null}>
+    <div className = "title_div">
+      <h1 className = "title"> Languages </h1>
+    </div>
     <div className = "main">
-
+      <div>
       <Tippy content = {<span> HTML</span>}>
-        <img src = {htmlImg} width = "" height = "150px" alt = "HTML"/>
+        <img src = {htmlImg} width = "" height = "150px" alt = "HTML"
+        className = "htmlImg"/>
       </Tippy>
+      </div>
 
+      <div>
       <Tippy content = {<span> CSS </span>}>
-        <img src = {cssImg} width = "" height = "150" alt = "CSS"/>
+        <img src = {cssImg} width = "" height = "150" alt = "CSS"
+        className = "cssImg"/>
       </Tippy>
+      </div>
 
+      <div>
       <Tippy content = {<span> JavaScript </span>}>
-        <img src = {jsImg} width = "" height = "150" alt = "JavaScript"/>
+        <img src = {jsImg} width = "" height = "150" alt = "JavaScript"
+        className = "jsImg"/>
       </Tippy>
+      </div>
 
+      <div>
       <Tippy content = {<span> ReactJS </span>}>
-        <img src = {reactImg} width = "" height = "150" alt = "ReactJS"/>
+        <img src = {reactImg} width = "" height = "120" alt = "ReactJS"
+        className = "reactImg" />
       </Tippy>
+      </div>
 
+      <div>
       <Tippy content = {<span> NodeJS </span>}>
-        <img src = {nodeImg} width = "" height = "150" alt = "NodeJS"/>
+        <img src = {nodeImg} width = "" height = "120" alt = "NodeJS"
+        className = "nodeImg"/>
       </Tippy>
+      </div>
 
 
     </div>

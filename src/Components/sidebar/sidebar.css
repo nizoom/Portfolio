@@ -28,6 +28,7 @@
 }
 
 button{
+  z-index: 1;
   margin: 8px;
   position: fixed;
   right : 20px;
@@ -96,7 +97,9 @@ li{
 
 @media (max-width: 850px){
   .sidebar{
-    height: 165vh;
+    margin-top: 5%;
+    padding-top: 10%;
+    height: 95vh;
     width:80%;
   }
 }

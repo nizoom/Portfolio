@@ -10,6 +10,7 @@ import Tooltip from "../tooltip/tooltip"
 
 
 const Sidebar = ( props ) => {
+  let status = false;
 
   const [sidebarStatus, setSidebarStatus] = useState(false);
 
@@ -22,12 +23,12 @@ const Sidebar = ( props ) => {
   const [active, setActive] = useState(false);
 
   const showTip = () => {
-
       setActive(!active);
-      console.log("test");
-
     }
 
+  const childFunction = (e) => {
+    props.functionCallFromParent(e)
+  }
 
 
   //{navigator.clipboard.writeText(  "nissimram1812@gmail.com")}
@@ -36,12 +37,14 @@ const Sidebar = ( props ) => {
 
   return (
     <div className = "container">
+      <div>
         <button className = {`classes ${sidebarStatus ? "change" : null}`}
-        onClick = {()=>{clickHandlerBar();props.click()}}>
+        onClick = {()=>{clickHandlerBar(); childFunction(!sidebarStatus)}}>
           <div className = "bar1"></div>
           <div className = "bar2"></div>
           <div className = "bar3"></div>
         </button>
+      </div>
       <div className = {`classes ${sidebarStatus ? "sidebar" : "off"}`}>
         <nav>
           <ul>
@@ -67,11 +70,6 @@ const Sidebar = ( props ) => {
                 Contact
               </li>
               <Tooltip status = {active} />
-
-
-
-
-
           </ul>
         </nav>
       </div>

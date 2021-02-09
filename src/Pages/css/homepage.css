@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
 
 .projects{
+  z-index: -1;
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -9,6 +10,7 @@
 }
 
 .gif{
+  padding-top: 3%;
   display: inline;
   margin: 0 auto;
   border-radius: 100%;
@@ -16,15 +18,20 @@
 }
 
 .comingSoonBanner{
+  position: relative;
+  left: 12%;
+  text-align: center;
+  width: 75%;
   font-family: 'Roboto Mono', monospace;
 }
 
 @media (max-width: 900px){
   .gif{
     width: 75%;
+    padding-top: 8%;
   }
   .projects{
-    font-size: 85%;
+    font-size: 80%;
   }
 }
 

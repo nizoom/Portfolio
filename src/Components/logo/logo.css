@@ -1,13 +1,13 @@
 .wrapper{
-  width: 25%;
-  height: 77px;
+  text-align: left;
+  margin-bottom: 4%;
 }
 
 .parallelogram {
   background: #8A2387;
   background: linear-gradient(to right, #F27121, #E94057, #8A2387);
   border-radius: 15px;
-  margin : 10px;
+  margin : 12px;
   width: 60px;
   height: 70px;
   transform: skew(-5deg);
@@ -34,10 +34,40 @@
 
 
 .gov_name{
+  padding-right: 5px;
+  left: 8%;
   position: absolute;
   font-family: 'Montserrat', sans-serif;
-  top: 10px;
-  left: 100px;
   font-size: 40px;
   color: #A5873A;
+}
+
+.name_div{
+  width: 50%;
+  margin-left:3%;
+  top: 2%;
+  position: absolute;
+
+}
+
+
+
+@media (max-width:1000px){
+  .gov_name{
+    left: 45%;
+    text-align: center;
+    position: relative;
+    font-size: 30px;
+
+  }
+  .wrapper{
+
+    text-align: center;
+
+
+  }
+}
+
+@media (max-width:1300){
+
 }

@@ -9,6 +9,8 @@ class HomePage extends Component {
   constructor (props) {
     super(props)
 
+
+
     this.state = {
       sidebarVisible : false,
       clickHandler : ( ) => {
@@ -16,21 +18,17 @@ class HomePage extends Component {
         sidebarVisible : !prevstate.sidebarVisible }))
       console.log(this.state.sidebarVisible);
     },
-    giveWidth : window.innerWidth
+    determineClass : (x) =>{
+      if(x && window.innerWidth < 850){
+        this.setState({gifClass : "navOpen"})
+      } else {
+        this.setState({gifClass : "gif"})
+      }
+
+  },
+      gifClass : "gif"
     }
-  }
-
-
-  determineClass(x){
-    console.log(window.innerWidth);
-    if(x && window.innerWidth < 850){
-      console.log(window.innerWidth);
-      return "navOpen"
-    } else {
-      return "gif"
     }
-  }
-
 
 
 
@@ -38,23 +36,23 @@ class HomePage extends Component {
     return(
       <div>
           <Logo/>
-          <Sidebar click = {this.determineClass(this.state.sidebarVisible)}/>
+          <Sidebar
+          functionCallFromParent = {this.state.determineClass}/>
 
           <div className = "projects">
             <div className = "comingSoonBanner">
-              <h1> Welcome! Projects coming soon ...</h1>
+              <h1 className = {this.state.gifClass}> Welcome! Projects coming soon ...</h1>
               <br/>
               <img src = {workingGif}
                 alt = "Gif file" className =
-                {this.state.sidebarVisible && window.innerWidth < 850 ? "navOpen"
-              : "gif"}
+                {this.state.gifClass}
                 height = "600px"/>
 
                   <br/>
 
             </div>
           </div>
-          <Languages/>
+          <Languages classStatusForMobile = {this.state.gifClass}/>
      </div>
     )
 }}
