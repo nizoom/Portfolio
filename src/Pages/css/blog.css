@@ -24,3 +24,27 @@ h1{
   color: #701E57;
   text-align: center;
 }
+
+@media(max-width:900px){
+  h1{
+    font-size: 125%;
+  }
+
+  h2{
+    text-align: center;
+    font-size: 125%;
+  }
+
+  h3{
+    font-size: 100%;
+  }
+
+  button{
+    font-size: 100%;
+    width: 40px;
+  }
+
+  .navOpen{
+    display: none;
+  }
+}

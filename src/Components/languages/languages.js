@@ -20,7 +20,7 @@ ddd*/
 const Languages = ( props ) => {
   return (
 
-  <div className = {props.classStatusForMobile != "gif"  && window.innerWidth < 850 ? "navOpen" : null}>
+  <div className = {props.classStatusForMobile != "gif"  && window.innerWidth < 850 ? "navOpen" : "boom"}>
     <div className = "title_div">
       <h1 className = "title"> Languages </h1>
     </div>
@@ -53,7 +53,7 @@ const Languages = ( props ) => {
       </Tippy>
       </div>
 
-      <div>
+      <div className = "nodeImg_div">
       <Tippy content = {<span> NodeJS </span>}>
         <img src = {nodeImg} width = "" height = "120" alt = "NodeJS"
         className = "nodeImg"/>

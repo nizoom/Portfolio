@@ -28,10 +28,16 @@
 @media (max-width: 900px){
   .gif{
     width: 75%;
+    height: 400px;
     padding-top: 8%;
   }
+
+
   .projects{
     font-size: 80%;
+  }
+  .homepage_wrapper{
+
   }
 }
 

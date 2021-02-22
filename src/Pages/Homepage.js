@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import Logo from "../Components/logo/logo"
 import Sidebar from "../Components/sidebar/sidebar"
-import Languages from "../Components/languages/languages"
 import workingGif from "../Components/project_layout/whale.gif"
 import "./css/homepage.css"
 
@@ -30,11 +29,9 @@ class HomePage extends Component {
     }
     }
 
-
-
   render() {
     return(
-      <div>
+      <div className = "homepage_wrapper">
           <Logo/>
           <Sidebar
           functionCallFromParent = {this.state.determineClass}/>
@@ -43,16 +40,20 @@ class HomePage extends Component {
             <div className = "comingSoonBanner">
               <h1 className = {this.state.gifClass}> Welcome! Projects coming soon ...</h1>
               <br/>
-              <img src = {workingGif}
-                alt = "Gif file" className =
-                {this.state.gifClass}
-                height = "600px"/>
+              <div className = "whale_div">
+                <img src = {workingGif}
+                  alt = "Gif file" className =
+                  {this.state.gifClass}
+                  height = "600px"/>
+              </div>
 
                   <br/>
 
             </div>
           </div>
-          <Languages classStatusForMobile = {this.state.gifClass}/>
+          <br/>
+          <br/>
+          <br/>
      </div>
     )
 }}

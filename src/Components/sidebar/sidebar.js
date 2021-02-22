@@ -2,11 +2,6 @@ import React, {useState} from "react";
 import "./sidebar.css"
 import {BrowserRouter as Router, Link} from "react-router-dom";
 //()=>setClipBoardStatus("Email : nissimram1812@gmail.com")
-import "tippy.js/dist/tippy.css";
-import "tippy.js/animations/perspective.css"
-
-import Tooltip from "../tooltip/tooltip"
-
 
 
 const Sidebar = ( props ) => {
@@ -37,7 +32,7 @@ const Sidebar = ( props ) => {
 
   return (
     <div className = "container">
-      <div>
+      <div className = "sidebar_btn">
         <button className = {`classes ${sidebarStatus ? "change" : null}`}
         onClick = {()=>{clickHandlerBar(); childFunction(!sidebarStatus)}}>
           <div className = "bar1"></div>
@@ -66,10 +61,11 @@ const Sidebar = ( props ) => {
               GitHub </a>
             </li>
 
-              <li onClick = {showTip}>
-                Contact
-              </li>
-              <Tooltip status = {active} />
+            <li>
+              <Link to = "/Contact" className = "link"> Contact </Link>
+            </li>
+
+
           </ul>
         </nav>
       </div>

@@ -2,7 +2,6 @@ import React, { useState }from "react";
 import Logo from "../Components/logo/logo"
 import Sidebar from "../Components/sidebar/sidebar"
 import "./css/about.css"
-import Languages from "../Components/languages/languages"
 
 
 const About = ( props ) => {
@@ -13,7 +12,8 @@ const About = ( props ) => {
   const classStatusForMobile = ( sidebarStatus ) => {
     if (sidebarStatus && window.innerWidth < 850){
       setClazz(!clazz)
-    } else {
+    } if(window.innerWidth < 850) {
+      console.log("small");
       setClazz(!clazz)
     }
     }
@@ -29,7 +29,7 @@ const About = ( props ) => {
       </div>
       <div className = { clazz ? "body" : "navOpen"}>
 
-
+        <div className = "background">
           <h2>
            Nissim Ram is a New York based self-taught web developer. He
            looks to build tools that tackle social issues and break down barriers
@@ -49,8 +49,8 @@ const About = ( props ) => {
             </div>
 
           </h2>
+        </div>
        </div>
-       <Languages classStatusForMobile = {clazz ? "gif" : "navOpen"}/>
    </div>
 
   )

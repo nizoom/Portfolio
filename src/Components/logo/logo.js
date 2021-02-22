@@ -6,9 +6,13 @@ const Logo = ( ) => {
 
   return (
     <div className = "wrapper">
-      <Link to="/">
-        <div className = "parallelogram"> </div>
-       </Link>
+
+      <div className = "link_div">
+          <Link to="/">
+          <button className = "parallelogram">  </button>
+          </Link>
+      </div>
+
        <div className = "name_div">
        <h1 className = "gov_name"> Nissim Ram </h1>
       </div>
