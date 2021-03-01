@@ -3,7 +3,7 @@ import {useState, useEffect} from "react";
 const useForm = (validate, submitForm) => {
   const [ values, setValues ] = useState({
     name: "",
-    email : "",
+    reply_to : "",
     message : ""
   })
 
@@ -27,17 +27,13 @@ const useForm = (validate, submitForm) => {
     }
 
   useEffect(() => {
+
     if(Object.keys(errors).length === 0 && isSubmitting){
+      console.log("useEffectFired");
       submitForm()
     }
-  })
+  }, [isSubmitting])
 
-  /*
-  useEffect(() => {
-    if(Object.keys(errors).length === 0 && isSubmitting){
-
-    }
-  }, [errors])  */
 
 
 

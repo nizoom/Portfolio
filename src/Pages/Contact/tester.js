@@ -4,6 +4,7 @@ import validate from "./validateinfo"
 import "./contactFinal.css";
 import Sidebar from "../../Components/sidebar/sidebar";
 import Logo from "../../Components/logo/logo"
+import submitValidatedData from "./submit"
 
 
 
@@ -18,6 +19,8 @@ const Tester = ( ) => {
   function submitForm(){
     console.log("submitForm");
     setIsSubmitted(true)
+    submitValidatedData(values)
+  
   }
 
 
@@ -42,7 +45,8 @@ const Tester = ( ) => {
           <h1>  Please contact me and I'll get
           back to you as soon as possible </h1>
         </div>
-          <form className = "form" onSubmit = {handleSubmit}>
+          <form className = "form" onSubmit = {handleSubmit}
+           action = "#" method = "POST">
 
           <div className = "form-inputs">
             <label htmlFor = "Name" className = "form-label" >
@@ -60,8 +64,8 @@ const Tester = ( ) => {
             <label htmlFor = "email" className = "form-label" >
             Email:
               <input type = "email" className = "form-input"
-              placeholder = "Email Address" id = "email" name = "email"
-              value = {values.email}
+              placeholder = "Email Address" id = "email" name = "reply_to"
+              value = {values.reply_to}
               onChange = {handleChange}/>
             </label>
 
@@ -88,7 +92,7 @@ const Tester = ( ) => {
 
 
           { isSubmitted ? <div className = "form-success"> <h1> Sent! Thanks for your message
-             </h1> </div> : null }
+             </h1> </div>: null }
 
 
 
