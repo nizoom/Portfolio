@@ -20,7 +20,7 @@ const Tester = ( ) => {
     console.log("submitForm");
     setIsSubmitted(true)
     submitValidatedData(values)
-  
+
   }
 
 
@@ -46,7 +46,7 @@ const Tester = ( ) => {
           back to you as soon as possible </h1>
         </div>
           <form className = "form" onSubmit = {handleSubmit}
-           action = "#" method = "POST">
+           action = "https://98si29b3q9.execute-api.us-east-1.amazonaws.com/dev" method = "POST">
 
           <div className = "form-inputs">
             <label htmlFor = "Name" className = "form-label" >
