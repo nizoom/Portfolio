@@ -170,7 +170,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/static-site-mailer/dev/1614571603215-2021-03-01T04:06:43.215Z/static-site-mailer.zip"
+          "S3Key": "serverless/static-site-mailer/dev/1614710115476-2021-03-02T18:35:15.476Z/static-site-mailer.zip"
         },
         "Handler": "handler.staticSiteMailer",
         "Runtime": "nodejs12.x",
@@ -188,14 +188,14 @@
         "StaticSiteMailerLogGroup"
       ]
     },
-    "StaticSiteMailerLambdaVersionvS6tLuiHBv9YUoPFJdO0ZUiJD2GmnTepk8mXOPT3Y6g": {
+    "StaticSiteMailerLambdaVersion2wQ2ZzxdbRogi2mBQ3Xs1AcakkQ3CiwWKTPOXrJoo": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "StaticSiteMailerLambdaFunction"
         },
-        "CodeSha256": "trWQdELD/VqENvTqUBzWZpIaCUYr1hUZIz+zFmuEOPI="
+        "CodeSha256": "+VzqvCgUJd2ORyG42lFyTqrPm1wJ+E1QhAJSkKJq7vo="
       }
     },
     "ApiGatewayRestApi": {
@@ -313,7 +313,7 @@
         "MethodResponses": []
       }
     },
-    "ApiGatewayDeployment1614571602365": {
+    "ApiGatewayDeployment1614710114108": {
       "Type": "AWS::ApiGateway::Deployment",
       "Properties": {
         "RestApiId": {
@@ -373,7 +373,7 @@
     "StaticSiteMailerLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "StaticSiteMailerLambdaVersionvS6tLuiHBv9YUoPFJdO0ZUiJD2GmnTepk8mXOPT3Y6g"
+        "Ref": "StaticSiteMailerLambdaVersion2wQ2ZzxdbRogi2mBQ3Xs1AcakkQ3CiwWKTPOXrJoo"
       }
     },
     "ServiceEndpoint": {
