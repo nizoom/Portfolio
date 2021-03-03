@@ -1,4 +1,4 @@
-import React, {Component, useState} from "react"
+import React, {useState} from "react"
 import useForm from "./useForm"
 import validate from "./validateinfo"
 import "./contactFinal.css";
@@ -17,10 +17,9 @@ const Tester = ( ) => {
 
 
   function submitForm(){
-    console.log("submitForm");
     setIsSubmitted(true)
     submitValidatedData(values)
-  
+
   }
 
 
@@ -31,7 +30,6 @@ const Tester = ( ) => {
       if(sidebarStatus && window.innerWidth < 850){
         setClazz(!clazz)
       } if(window.innerWidth < 850){
-        console.log("small");
         setClazz(!clazz)
       }
   }

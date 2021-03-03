@@ -15,7 +15,7 @@ class App extends Component{
     return (
       <HashRouter>
         <Switch>
-          <Route exact path = "/" component = { HomePage }/>
+          <Route exact path = "/" component = { HomePage } />
           <Route exact path = "/About" component = { About }/>
           <Route exact path = "/Blog" component = { Blog } />
           <Route exact path = "/Contact" component = { Tester } />

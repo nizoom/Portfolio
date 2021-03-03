@@ -13,7 +13,6 @@ const About = ( props ) => {
     if (sidebarStatus && window.innerWidth < 850){
       setClazz(!clazz)
     } if(window.innerWidth < 850) {
-      console.log("small");
       setClazz(!clazz)
     }
     }
