@@ -1,13 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
-body {
 
-  background-image: url("project_layout/sunset.jpg");
-  background-repeat:no-repeat;
-  background-size: cover;
-}
 .App {
   text-align: center;
+  background: url(project_layout/sunset.jpg);
+  background-repeat:no-repeat;
+  background-size: cover;
 
 }
 
@@ -21,4 +19,10 @@ body {
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+body {
+  background: url(project_layout/sunset.jpg);
+  background-repeat:no-repeat;
+  background-size: cover;
 }
