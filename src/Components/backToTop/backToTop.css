@@ -14,8 +14,12 @@
 
 @media (max-width:900px) {
   .top{
+    text-align: center;
     top: 10%;
     font-size: 150%;
     right: 0;
+  }
+  .btn_div{
+    text-align: center;
   }
 }

@@ -1,8 +1,10 @@
 import React, { Component } from "react";
 import Logo from "../Components/logo/logo"
 import Sidebar from "../Components/sidebar/sidebar"
-import workingGif from "../Components/project_layout/whale.gif"
+import workingGif from "../project_layout/whale.gif"
 import "./css/homepage.css"
+import background from "../project_layout/sunset.jpg"
+
 
 class HomePage extends Component {
   constructor (props) {

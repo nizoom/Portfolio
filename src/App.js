@@ -9,13 +9,14 @@ import NotFound from "./Pages/NotFound"
 import About from "./Pages/About"
 import Blog from "./Pages/blog"
 import Tester from "./Pages/Contact/tester"
+import background from "./project_layout/sunset.jpg"
 
 class App extends Component{
   render (){
     return (
       <HashRouter>
         <Switch>
-          <Route exact path = "/" component = { HomePage }/>
+          <Route exact path = "/" component = { HomePage } />
           <Route exact path = "/About" component = { About }/>
           <Route exact path = "/Blog" component = { Blog } />
           <Route exact path = "/Contact" component = { Tester } />

@@ -5,7 +5,7 @@ import {BrowserRouter as Router, Link} from "react-router-dom";
 
 
 const Sidebar = ( props ) => {
-  let status = false;
+
 
   const [sidebarStatus, setSidebarStatus] = useState(false);
 
@@ -15,11 +15,7 @@ const Sidebar = ( props ) => {
   }
 
 
-  const [active, setActive] = useState(false);
 
-  const showTip = () => {
-      setActive(!active);
-    }
 
   const childFunction = (e) => {
     props.functionCallFromParent(e)
@@ -44,7 +40,7 @@ const Sidebar = ( props ) => {
         <nav>
           <ul>
             <li>
-              <Link to = "/" className = "link"> Portfolio </Link>
+              <Link to = "/" className = "link" > Portfolio </Link>
             </li>
 
             <li>

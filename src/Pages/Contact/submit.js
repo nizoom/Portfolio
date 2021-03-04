@@ -4,8 +4,11 @@
 // the stringify json treatment
 
 export default function submitValidatedData(values){
+
+  
   const formData = JSON.stringify(values)
   console.log(formData);
+
 
   const url = "https://98si29b3q9.execute-api.us-east-1.amazonaws.com/dev/static-site-mailer"
   const options = {
