@@ -11,7 +11,6 @@ import Blog from "./Pages/blog"
 import Tester from "./Pages/Contact/tester"
 import background from "./project_layout/sunset.jpg"
 
-
 class App extends Component{
 
   //Integrating Global News
