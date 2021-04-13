@@ -13,7 +13,8 @@ import background from "./project_layout/sunset.jpg"
 
 
 class App extends Component{
-  //Integrating Global News TAKE TWO 
+
+  //Integrating Global News
   render (){
     return (
       <HashRouter>
