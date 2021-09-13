@@ -1,0 +1,52 @@
+.icon-bubble{
+    opacity: .95;
+    display: flex;
+    background-color: #080B1A;
+    margin-bottom: 1em;
+    justify-content: space-around;
+}
+
+.circle{
+    text-align: center;
+    width: 130px;
+    height: 130px;
+    background: #CEB98F;
+    border-radius: 50%;
+    margin: 5%;
+    border: 3px solid black;
+    cursor: pointer;
+
+    webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+}
+    
+    /* border: 3px solid #C6EBF1; */
+
+
+.pic{
+    margin-top: 3%;
+    width: 120px;
+    height: 120px;
+}
+
+.circle:hover {
+-webkit-transform: scale(1.2);
+transform: scale(1.2);
+-webkit-transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+}
+
+/* .twitter-pic{
+    margin-top: 3%;
+    width: 120px;
+    height: 120px;
+} */
+
+.linkedin-pic{
+    margin-top: 18%;
+    width: 70px;
+    height: 70px;
+}

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Logo from "../Components/logo/logo"
 import Sidebar from "../Components/sidebar/sidebar"
 import "./css/about.css"
+import ContactLinks from "../Components/contactlinks/contactlinks";
 
 
 const About = (props) => {
@@ -28,11 +29,11 @@ const About = (props) => {
         <h1 style={{ color: "#D5B060", paddingBottom: "1em", fontSize: "2.2em" }}> Bįo</h1>
       </div> */}
       <div className={clazz ? "" : "navOpen"}>
-        <div className="bubble1">
+        <div className="bubble">
           <h2 className="header">Hey there, I'm a New York based web developer and am actively looking for work...</h2>
 
         </div>
-        <div className="bubble1">
+        <div className="bubble">
 
           <p className="about-content">
 
@@ -53,11 +54,11 @@ const About = (props) => {
 
             <br /> <br />
 
-
-
-
           </p>
+
         </div>
+        <ContactLinks />
+
       </div>
     </div >
 
