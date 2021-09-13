@@ -1,10 +1,10 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import "./sidebar.css"
-import {BrowserRouter as Router, Link} from "react-router-dom";
+import { BrowserRouter as Router, Link } from "react-router-dom";
 //()=>setClipBoardStatus("Email : nissimram1812@gmail.com")
 
 
-const Sidebar = ( props ) => {
+const Sidebar = (props) => {
 
 
   const [sidebarStatus, setSidebarStatus] = useState(false);
@@ -27,38 +27,41 @@ const Sidebar = ( props ) => {
 
 
   return (
-    <div className = "container">
-      <div className = "sidebar_btn">
-        <button className = {`classes ${sidebarStatus ? "change" : null}`}
-        onClick = {()=>{clickHandlerBar(); childFunction(!sidebarStatus)}}>
-          <div className = "bar1"></div>
-          <div className = "bar2"></div>
-          <div className = "bar3"></div>
-        </button>
+    <div className="container">
+      <div className="sidebar_btn">
+        <div className={`classes ${sidebarStatus ? "change" : null}`}>
+          <button className="square-btn"
+            onClick={() => { clickHandlerBar(); childFunction(!sidebarStatus) }}>
+            <div className="bar1"></div>
+            <div className="bar2"></div>
+            <div className="bar3"></div>
+          </button>
+        </div>
+
       </div>
-      <div className = {`classes ${sidebarStatus ? "sidebar" : "off"}`}>
+      <div className={`classes ${sidebarStatus ? "sidebar" : "off"}`}>
         <nav>
           <ul>
             <li>
-              <Link to = "/" className = "link" > Portfolio </Link>
+              <Link to="/" className="link" > Portfolio </Link>
             </li>
 
             <li>
-              <Link to = "/About" className = "link"> About </Link>
+              <Link to="/About" className="link"> About </Link>
             </li>
 
             <li>
-              <Link to = "/Blog" className = "link"> Blog. </Link>
+              <Link to="/Blog" className="link"> Blog. </Link>
             </li>
 
             <li>
-              <a target = "blank" href = "https://github.com/nizoom"
-              className = "link">
-              GitHub </a>
+              <a target="blank" href="https://github.com/nizoom"
+                className="link">
+                GitHub </a>
             </li>
 
             <li>
-              <Link to = "/Contact" className = "link"> Contact </Link>
+              <Link to="/Contact" className="link"> Contact </Link>
             </li>
 
 

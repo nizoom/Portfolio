@@ -27,7 +27,7 @@
   transform: rotate(45deg) translate(-7px, -9.0px);
 }
 
-button{
+.square-btn{
   z-index: 1;
   margin: 8px;
   position: fixed;
@@ -109,7 +109,7 @@ li{
     width: 25px;
     height: 3px;
   }
-  button{
+  .square-btn{
     right: 0;
   }
   .sidebar_btn{
