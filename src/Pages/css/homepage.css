@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
+
+.projects{
+
+
+ 
+  overflow: hidden;
+
+
+}
+
+.gif{
+  font-weight: 400;
+  font-size: 2em;
+  padding: 10% 0 10% 0;
+  display: inline;
+  /* color: #C6EBF1; */
+  color: #D1C496;
+
+}
+
+.comingSoonBanner{
+  
+  position: relative;
+ 
+  width: 60%;
+  margin-left: 1%;
+  margin-top: 20px;
+  opacity: .9;
+
+  
+}
+
+.welcome-border{
+  /* width: -100px;
+  height: -100px;
+  
+  transform: skewX(-6deg); */
+
+  padding: 2rem;
+  position: relative;
+  background: linear-gradient(to right, #F06A2C, #623F74, #050110);;
+  padding: 6px;
+
+}
+
+.checkmeout{
+  background: #050110;
+  padding: 40px;
+  font-family: 'Montserrat', sans-serif;
+  /* font-family: 'Slabo 27px', serif; */
+  /* font-family: monospace; */
+  
+}
+
+.app_links{
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-content: space-around;
+  align-content: space-around;
+  place-content: space-around;
+
+
+}
+
+
+@media (max-width: 900px){
+  .gif{
+    margin-top: 10px;
+    width: 75%;
+    height: 400px;
+    padding-top: 8%;
+    font-size: 20px;
+  }
+
+ .checkmeout{
+   padding-top: 20px;
+ }
+  .projects{
+    font-size: 80%;
+  }
+
+  .app_links{
+    display: block;
+  }
+
+} 
+
+.navOpen{
+  display: none;
+}
+
+ 

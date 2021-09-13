@@ -1,0 +1,22 @@
+.contact_wrapper{
+  border: solid gray;
+  background-color: #5D3C53;
+  border-radius: 5%;
+  font-size: 17px;
+  padding: 1em;
+  margin-top: 5%;
+  margin-right: 4%;
+  transition: .5s;
+  overflow-x: hidden;
+  transform: translateY(10%);
+}
+
+.invisible{
+  visibility:hidden;
+}
+
+@media (max-width:1000px){
+  .contact_wrapper{
+    word-wrap: break-word;
+  }
+}

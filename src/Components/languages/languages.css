@@ -1,0 +1,90 @@
+.navOpen{
+  display: none;
+}
+.main{
+  display: flex;
+  bottom: 0;
+  align-items: center;
+  justify-content: space-around;
+}
+
+
+.main img:hover{
+  transform: scale(1.2);
+  transition: all ease 500ms;
+}
+
+.title{
+  border-radius: 40%;
+  text-align: center;
+  text-decoration: underline;
+  padding: 2.5%;
+  margin: 5%;
+
+}
+
+
+.reactImg{
+  padding-top: 5%;
+}
+
+.nodeImg{
+  padding-top: 5%;
+}
+
+@media (max-width:900px){
+
+  .main{
+    margin-left: auto;
+    position: relative;
+    bottom:0;
+    justify-content: space-between;
+    background:linear-gradient(#9198e5, #e66465); 
+
+    width: 100%;
+
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border: 5px solid gray;
+    border-bottom: 0;
+    margin-bottom:0;
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  .main div{
+    padding-left: 6%;
+    flex: 0%;
+
+  }
+
+  .main img{
+
+
+    padding: 2%;
+    width: 60%;
+    height: 60%;
+  }
+
+  .title{
+
+    font-size: 150%;
+  }
+
+
+
+}
+
+@media(max-width:350px){
+  .boom {
+   position: relative;
+   bottom:0;
+   width:100%
+
+
+  }
+}

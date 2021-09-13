@@ -1,0 +1,33 @@
+.top{
+  scroll-behavior: smooth;
+  font-size: 250%;
+  position: -webkit-sticky;
+  position: fixed;
+  margin-top: 5%;
+  border-radius: 50%;
+
+}
+
+
+
+@media (max-width:1200px) {
+  .top{
+    text-align: center;
+    top: 15%;
+    font-size: 150%;
+    border-radius: 9999px
+
+  }
+
+}
+
+@media (max-width:400px){
+  .btn_div{
+    left: 95%;
+  }
+  .top{
+    font-size: 100%;
+    border-radius: 9999px;
+
+  }
+}
