@@ -1,15 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
 
 .projects{
-
-
  
   overflow: hidden;
-
-
 }
 
 .gif{
+  display: flex;
   font-weight: 400;
   font-size: 2em;
   padding: 10% 0 10% 0;
@@ -40,6 +37,8 @@
 
 }
 
+/* 050110 */
+
 .checkmeout{
   background: #050110;
   padding: 40px;
@@ -61,19 +60,37 @@
 
 @media (max-width: 900px){
   .gif{
-    margin-top: 10px;
-    width: 75%;
-    height: 400px;
-    padding-top: 8%;
-    font-size: 20px;
+    font-size: 30px;
+    overflow: auto;
+    line-height: 2;
+    
   }
 
  .checkmeout{
-   padding-top: 20px;
+ 
+ }
+
+ .comingSoonBanner{
+
+ 
+  
+ }
+
+ .welcome-border{
+
+  
+ 
+  
  }
   .projects{
+    
     font-size: 80%;
   }
+
+  .app_links{
+    margin-top:150px;
+  }
+
 
   .app_links{
     display: block;
@@ -85,4 +102,33 @@
   display: none;
 }
 
- 
+ @media (max-width: 451px){
+  .gif{
+    overflow-wrap:break-word;
+    font-size: 25px;
+    overflow: auto;
+    line-height: 2;
+    margin-right: 10%;
+    
+
+  }
+  .checkmeout{
+    width: 100%;
+    padding: 2%;
+    margin: auto;
+
+  }
+  .welcome-border{
+    width: 100%;
+    margin: auto;
+  
+  }
+  .comingSoonBanner{
+    margin: auto;
+   margin-left:0;
+    width: 100%;
+    margin-top: 45px;
+    
+   
+  }
+ }

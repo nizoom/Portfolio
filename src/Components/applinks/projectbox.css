@@ -16,6 +16,7 @@
     font-size: 2em;
     font-weight: 400;
     padding: 5%;
+    
 
    
 }
@@ -51,4 +52,45 @@
 .app-link a:hover, a:visited, a:link, a:active{
    text-decoration: none;
 
+}
+
+@media(max-width: 500px){
+    .title-wrapper{
+      width: 98%;
+      margin: auto;
+    }
+
+    .project-title{
+      
+    }
+
+    .app-description{
+        opacity: .8;
+    }
+
+    .whole-project-box{
+        background-color: #050010;
+    }
+  }
+
+@media(max-width: 450px){
+    .project-wrapper{
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .app-description{
+        width: 90%;
+        margin:auto;
+        padding:0;
+
+    }
+    .project-title{
+        width: 90%;
+        margin: auto;
+    }
+}
+
+@media(max-width: 400px){
+   
 }

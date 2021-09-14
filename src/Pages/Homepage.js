@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Logo from "../Components/logo/logo"
 import Sidebar from "../Components/sidebar/sidebar"
-import workingGif from "../project_layout/whale.gif"
+// import workingGif from "../project_layout/whale.gif"
 import "./css/homepage.css"
 import PresentGlobalNews from "../Components/applinks/presentglobalnews/presentgn"
 import EchoIcon from "../Components/applinks/echochamber/echoicon";
@@ -55,14 +55,6 @@ class HomePage extends Component {
                 {/* </em> */}
               </div>
             </div>
-            {/* <div className="whale_div">
-              <img src={workingGif}
-                alt="Gif file" className=
-                {this.state.gifClass}
-                height="600px"
-
-              />
-            </div> */}
           </div>
 
 
@@ -82,3 +74,13 @@ class HomePage extends Component {
 }
 
 export default HomePage;
+
+
+{/* <div className="whale_div">
+              <img src={workingGif}
+                alt="Gif file" className=
+                {this.state.gifClass}
+                height="600px"
+
+              />
+            </div> */}

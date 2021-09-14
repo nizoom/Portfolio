@@ -23,3 +23,18 @@
      }
   }
   
+  @media(max-width: 800px){
+    .echoIcon{
+       width: 150px;
+       height: 150px;
+    }
+  }
+  
+  @media(max-width: 700px){
+    .echoIcon{
+       width: 100px;
+       height: 100px;
+    }
+  }
+
+  

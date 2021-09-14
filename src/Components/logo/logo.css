@@ -64,6 +64,8 @@
 
 @media (max-width:1000px){
   .gov_name{
+    margin-top:8px;
+    padding-top:0;
     text-align: center;
     position: relative;
     font-size: 30px;
