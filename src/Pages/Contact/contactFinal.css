@@ -13,7 +13,7 @@
   background-color: #D2C396;
   font-size: 1.2em;
   color: black;
-  padding: 1.5%;
+  padding: 1.47%;
   border-radius: 16px;
 }
 
@@ -37,7 +37,7 @@
 
 .err-div{
   display: flex;
-margin-left: 50px;
+   margin-left: 50px;
   
 }
 
@@ -119,12 +119,15 @@ textarea{
   display: flex;
   justify-content: flex-start;
   padding-left: 5%;
+  
 }
 
 .name-input{
   height: 25px;
   margin-left: 5%;
   padding: 1.2%;
+  background-color: #BAB1CE;
+
 }
 
 .email-input-div{
@@ -138,6 +141,7 @@ textarea{
   height: 25px;
   margin-left: 5%;
   padding: 1.2%;
+  background-color: #BAB1CE;
 }
 
 
@@ -152,6 +156,7 @@ textarea{
 .message_field{
   margin-left: 2.5%;
   height: 90px;
+  background-color: #BAB1CE;
 }
 
 

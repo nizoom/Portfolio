@@ -32,10 +32,6 @@
 }
 
 .welcome-border{
-  /* width: -100px;
-  height: -100px;
-  
-  transform: skewX(-6deg); */
 
   padding: 2rem;
   position: relative;
@@ -48,9 +44,6 @@
   background: #050110;
   padding: 40px;
   font-family: 'Montserrat', sans-serif;
-  /* font-family: 'Slabo 27px', serif; */
-  /* font-family: monospace; */
-  
 }
 
 .app_links{
