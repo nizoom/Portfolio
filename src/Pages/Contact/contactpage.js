@@ -62,7 +62,10 @@ const ContactPage = () => {
                     onChange={handleChange} />
 
 
-                  {errors.name && <p className="err">{errors.name}</p>}
+                  {errors.name &&
+                    <div className="err-div">
+                      <p className="err">{errors.name}</p>
+                    </div>}
                 </div>
 
                 <div className="email-input-div">
@@ -75,7 +78,10 @@ const ContactPage = () => {
                     onChange={handleChange} />
 
 
-                  {errors.email && <p className="err">{errors.email}</p>}
+                  {errors.reply_to &&
+                    <div className="err-div">
+                      <p className="err">{errors.reply_to}</p>
+                    </div>}
 
                 </div>
 
@@ -84,12 +90,15 @@ const ContactPage = () => {
                   <label htmlFor="Message" className="form-label" >
                     Message:
                   </label>
-                  <textarea rows="7" cols="50" className="message_field"
+                  <textarea rows="10" cols="50" className="message_field"
                     placeholder="Message" id="message" name="message"
                     value={values.message}
                     onChange={handleChange} />
 
-                  {errors.message && <p className="err"> {errors.message} </p>}
+                  {errors.message &&
+                    <div className="err-div">
+                      <p className="err"> {errors.message} </p>
+                    </div>}
                 </div>
 
 
@@ -112,7 +121,7 @@ const ContactPage = () => {
           </div>
         </div>
       </div>
-    </div>
+    </div >
 
   )
 }

@@ -1,10 +1,10 @@
-import {useState, useEffect} from "react";
+import { useState, useEffect } from "react";
 
 const useForm = (validate, submitForm) => {
-  const [ values, setValues ] = useState({
+  const [values, setValues] = useState({
     name: "",
-    reply_to : "",
-    message : ""
+    reply_to: "",
+    message: ""
   })
 
   const [errors, setErrors] = useState({})
@@ -15,20 +15,19 @@ const useForm = (validate, submitForm) => {
     const { name, value } = e.target;
     setValues({
       ...values,
-      [name] : value
+      [name]: value
     })
   }
 
   const handleSubmit = (e) => {
-    console.log("handleSubmit");
     e.preventDefault();
     setErrors(validate(values))
     setIsSubmitting(true)
-    }
+  }
 
   useEffect(() => {
 
-    if(Object.keys(errors).length === 0 && isSubmitting){
+    if (Object.keys(errors).length === 0 && isSubmitting) {
       console.log("useEffectFired");
       submitForm()
     }
@@ -37,7 +36,7 @@ const useForm = (validate, submitForm) => {
 
 
 
-  return { handleChange , values, handleSubmit, errors }
+  return { handleChange, values, handleSubmit, errors }
 }
 
 
