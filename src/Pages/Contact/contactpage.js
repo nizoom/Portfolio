@@ -5,6 +5,7 @@ import "./contactFinal.css";
 import Sidebar from "../../Components/sidebar/sidebar";
 import Logo from "../../Components/logo/logo"
 import submitValidatedData from "./submit"
+import Headshot from "./headshot.png"
 
 
 
@@ -110,6 +111,9 @@ const ContactPage = () => {
                   }}>
                     Submit
                   </button>
+                  <span className=" ">
+                    <img src={Headshot} alt="headshot photo" className="headshot" />
+                  </span>
                 </div>
               </form>
             </div>
