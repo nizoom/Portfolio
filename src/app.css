@@ -4,6 +4,7 @@
 .App {
   text-align: center;
   background-image: url(project_layout/background.jpg);
+  background-size: cover;
   
 }
 
@@ -17,4 +18,22 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+@media(max-width:330px){
+  /* .App{
+   
+    height:100%;
+    width:100%;
+    overflow : hidden;
+  }
+  body {
+
+    height : 100%;
+    width:100%;
+    overflow : scroll;
+    background-repeat: none;
+    -webkit-overflow-scrolling : touch;
+
+} */
 }

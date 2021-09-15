@@ -55,7 +55,7 @@
 .name_div{
   width: 50%;
   margin-left:4.5%;
-  top: 1%;
+  top: .8%;
   position: absolute;
 
 }
@@ -64,7 +64,7 @@
 
 @media (max-width:1000px){
   .gov_name{
-    margin-top:8px;
+    margin-top:7px;
     padding-top:0;
     text-align: center;
     position: relative;
@@ -78,7 +78,7 @@
   .name_div{
     left: 19%;
     text-align: center;
-    margin-bottom: 10%;
+    margin-bottom: 1%;
 
   }
 

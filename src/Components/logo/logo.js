@@ -1,20 +1,20 @@
-import React from "react";
 import "./logo.css"
+import React from "react";
 import { Link } from "react-router-dom"
 
-const Logo = ( ) => {
+const Logo = () => {
 
   return (
-    <div className = "wrapper">
+    <div className="wrapper">
 
-      <div className = "link_div">
-          <Link to="/">
-          <button className = "parallelogram">  </button>
-          </Link>
+      <div className="link_div">
+        <Link to="/">
+          <button className="parallelogram">  </button>
+        </Link>
       </div>
 
-       <div className = "name_div">
-       <h1 className = "gov_name"> Nissim Ram </h1>
+      <div className="name_div">
+        <h1 className="gov_name"> Nissim Ram </h1>
       </div>
     </div>
   )

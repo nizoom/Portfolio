@@ -8,17 +8,21 @@ import ContactLinks from "../Components/contactlinks/contactlinks";
 const About = (props) => {
 
 
-  const [clazz, setClazz] = useState(true)
+  const [clazz, setClazz] = useState(false)
 
   const classStatusForMobile = (sidebarStatus) => {
+    console.log(clazz)
     if (sidebarStatus && window.innerWidth < 850) {
       setClazz(!clazz)
     }
-    // if(window.innerWidth < 850) {
-    //   setClazz(!clazz)
-    // }
+    if (window.innerWidth < 850) {
+      setClazz(!clazz)
+    }
   }
 
+  function setClass() {
+    return (clazz ? "displayOn" : "navOpen")
+  }
 
   return (
     <div>
@@ -28,10 +32,12 @@ const About = (props) => {
       {/* <div className={clazz ? "title" : "navOpen"}>
         <h1 style={{ color: "#D5B060", paddingBottom: "1em", fontSize: "2.2em" }}> Bįo</h1>
       </div> */}
-      <div className={clazz ? "" : "navOpen"}>
-        <div className="bubble">
-          <h2 className="header">Hey there, I'm a New York based web developer and am actively looking for work...</h2>
+      <div className={clazz ? "navOpen" : null}>
+        <div className="bubble-wrapper">
+          <div className="bubble">
+            <h2 className="header">Hey there, I'm a New York based web developer and am actively looking for work...</h2>
 
+          </div>
         </div>
         <div className="bubble">
 
