@@ -27,7 +27,12 @@ const ContactPage = () => {
   //SIDEBAR CODE
   const [clazz, setClazz] = useState(true)
 
+  const [showHeadShot, setShowHeadshot] = useState(true)
+
   const classStatusForMobile = (sidebarStatus) => {
+    console.log(sidebarStatus)
+    setShowHeadshot(!showHeadShot)
+
     if (sidebarStatus && window.innerWidth < 850) {
       setClazz(!clazz)
     } if (window.innerWidth < 850) {
@@ -64,9 +69,9 @@ const ContactPage = () => {
 
 
                   {errors.name &&
-                    <div className="err-div">
+                    <span className="err-span">
                       <p className="err">{errors.name}</p>
-                    </div>}
+                    </span>}
                 </div>
 
                 <div className="email-input-div">
@@ -80,9 +85,9 @@ const ContactPage = () => {
 
 
                   {errors.reply_to &&
-                    <div className="err-div">
+                    <span className="err-span">
                       <p className="err">{errors.reply_to}</p>
-                    </div>}
+                    </span>}
 
                 </div>
 
@@ -97,9 +102,9 @@ const ContactPage = () => {
                     onChange={handleChange} />
 
                   {errors.message &&
-                    <div className="err-div">
+                    <span className="err-message-span">
                       <p className="err"> {errors.message} </p>
-                    </div>}
+                    </span>}
                 </div>
 
 
@@ -111,9 +116,13 @@ const ContactPage = () => {
                   }}>
                     Submit
                   </button>
-                  <span className=" ">
-                    <img src={Headshot} alt="headshot photo" className="headshot" />
-                  </span>
+
+                  {showHeadShot ?
+                    <span className="headshot-span">
+                      <img src={Headshot} alt="headshot photo" className="headshot" />
+                    </span>
+
+                    : null}
                 </div>
               </form>
             </div>
