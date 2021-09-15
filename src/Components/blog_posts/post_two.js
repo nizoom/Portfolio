@@ -1,12 +1,13 @@
 import React from "react";
+import "./blogposts.css"
 
 const PostTwo = (props) => {
   return (
-    <div style={{ marginBottom: "10em" }}>
-      <h1 style={{ color: "#D2C396", margin: "60px", fontWeight: "400" }}> Post Two, March 2021 </h1>
-      <h2 style={{ textAlign: "center", color: "#D2C396", fontWeight: "300" }}> Global News Project </h2>
+    <div>
+      <h1 className="date"> Post Two, March 2021 </h1>
+      <h2 className="blog-title"> Global News Project </h2>
 
-      <p style={{ fontSize: "1.3em", lineHeight: "2", color: "#D2C396" }} >
+      <p className="blog-body" >
 
         This post is about building my first web application, Global News.
         I first had the idea for the project around a year ago, and at the time,

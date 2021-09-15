@@ -1,0 +1,33 @@
+.date{
+    color: #D2C396;
+    margin: 40px;
+    font-weight: 400
+}
+
+.blog-title{
+    text-align: center;
+    color: #D2C396;
+    font-weight: 300;
+}
+
+.blog-body{
+    font-size: 1.3em;
+    line-height: 2;
+    color: #D2C396
+}
+
+@media(max-width: 700px){
+    .date{
+        font-size: 1.8em;
+    }
+
+    .blog-title{
+        font-size: 1.9em;
+        padding-bottom: 5%;
+    }
+
+    .blog-body{
+        font-size: 1.2em;
+        text-align: justify;
+    }
+}

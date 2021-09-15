@@ -1,12 +1,13 @@
 import React from "react";
+import "./blogposts.css"
 
 const PostFour = () => {
     return (
         <div>
-            <h1 style={{ color: "#D2C396", margin: "40px", fontWeight: "400" }}> Post Four, August 2021 </h1>
-            <h2 style={{ textAlign: "center", color: "#D2C396", fontWeight: "300" }}> City Building, Certifications, and CRUDs </h2>
+            <h1 className="date"> Post Four, August 2021 </h1>
+            <h2 className="blog-title"> City Building, Certifications, and CRUDs </h2>
 
-            <p style={{ fontSize: "1.3em", lineHeight: "2", color: "#D2C396" }} >
+            <p className="blog-body" >
                 After deploying the Echo Chamber app, I wanted to delve into databases and data visualization.
                 That hope was delivered in Built NYC, a visualizer for tracking building development in New York
                 from the past 30 years. Making this app required exploring some new areas: producing organized

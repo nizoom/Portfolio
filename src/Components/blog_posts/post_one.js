@@ -1,12 +1,12 @@
 import React from "react";
-
+import "./blogposts.css"
 const PostOne = () => {
   return (
 
     <div>
-      <h1 style={{ fontWeight: "400" }}> Post One, January 2021 </h1>
-      <h2 style={{ textAlign: "center", color: "#D2C396", fontWeight: "300" }}> Hello world. </h2>
-      <p style={{ fontSize: "1.3em", lineHeight: "2", color: "#D2C396" }}
+      <h1 className="date"> Post One, January 2021 </h1>
+      <h2 className="blog-title"> Hello world. </h2>
+      <p className="blog-body"
 
       > This blog is to document my experience teaching myself to code. It has been a long journey so far and I think there is still a ways to go. That sense of trying to locate yourself along a track will be a perennial question during this process: where am I at on this road, what page have I gotten to within the infinite encyclopedia of code.
 

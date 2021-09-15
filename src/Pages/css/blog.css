@@ -40,6 +40,9 @@ h1{
 
 @media(max-width:900px){
 
+  .blog_div{
+    margin-top: 15%;
+  }
 
   button{
     font-size: 100%;
@@ -55,6 +58,10 @@ h1{
 
 }
 
+@media(max-width:600px){
+
+}
+
 @media(max-width:400px){
 
   .post{
@@ -64,5 +71,6 @@ h1{
 
   .blog_div{
     margin-top: 60px;
+    letter-spacing: -.5px;
   }
 }

@@ -1,12 +1,13 @@
 import React from "react";
+import "./blogposts.css"
 
 
 const PostThree = () => {
     return (
         <div>
-            <h1 style={{ color: "#D2C396", margin: "60px", fontWeight: "400" }}> Post Three, June 2021 </h1>
-            <h2 style={{ textAlign: "center", color: "#D2C396", fontWeight: "300" }}> Enter the Echo Chamber </h2>
-            <p style={{ fontSize: "1.3em", lineHeight: "2", color: "#D2C396" }}>
+            <h1 className="date"> Post Three, June 2021 </h1>
+            <h2 className="blog-title"> Enter the Echo Chamber </h2>
+            <p className="blog-body">
                 This post is about building my second web app, <em> Enter the Echo Chamber </em>. Compared to Global News, my first project, it has been more of a technical exercise, than an overtly socially oriented effort. That being said, I did try to include some visual cues to get people thinking about the dynamic of a content feed and the consumer.
                 <br /><br />
                 <em>Enter the Echo Chamber</em> is an attempt to get insight into a particular Twitter user’s experience on the platform. Instead of seeing what people tweet from your own feed, I thought it would be interesting to look at what a given user might see. By recreating someone’s feed, you get a peek into what kind of media and language they’re exposed to, and what communities they are a part of. Amalgamating all this information across a social network is sometimes referred to as an echo chamber. A group of people who are united in some way see that commonality reflected in their peers, and feel their opinions reinforced. Yet at some level, each echo chamber is made up of individuals who typically have a variety of hobbies, concerns, and appreciations. Identifying diversity of interesting could be a powerful thing. Does taking a closer look at a single account disrupt the hive mind imagery that social media allegedly provokes?

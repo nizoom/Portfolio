@@ -2,8 +2,9 @@
   scroll-behavior: smooth;
   font-size: 240%;
   position: -webkit-sticky;
-  position: fixed;
-  margin-top: 5%;
+  position: sticky;
+  /* margin-top: 5%;
+  margin-right: 2%; */
   border-radius: 50%;
   left: 94%;
   height: 60px;
@@ -14,7 +15,8 @@
 }
 
 .btn_div{
-
+  position: fixed;
+  left: 94%;
 }
 
 @media (max-width:1200px) {
@@ -28,13 +30,58 @@
 
 }
 
+@media(max-width:1100px){
+  .btn_div{
+    left: 92%;
+  }
+}
+
+@media(max-width:800px){
+  .top{
+    height: 50px;
+   width: 50px;
+  }
+  .btn_div{
+    left: 93%;
+  }
+}
+
+@media(max-width:700px){
+  .btn_div{
+    left: 92%;
+  }
+}
+
+@media(max-width:600px){
+  .btn_div{
+    left: 91%;
+  }
+}
+
+@media(max-width:500px){
+
+  .top{
+    height: 40px;
+    width: 40px;
+  }
+  .btn_div{
+    left: 90%;
+  }
+}
+
 @media (max-width:400px){
   .btn_div{
-    left: 95%;
+    left: 89%;
+  }
+}
+
+
+@media (max-width:300px){
+  .btn_div{
+    left: 86%;
   }
   .top{
-    font-size: 100%;
-    border-radius: 9999px;
-
+    /* height: 35px;
+    width: 35px; */
   }
 }
