@@ -118,9 +118,9 @@ const ContactPage = () => {
                   </button>
 
                   {showHeadShot ?
-                    <span className="headshot-span">
-                      <img src={Headshot} alt="headshot photo" className="headshot" />
-                    </span>
+                    // <span className="headshot-span">
+                    <img src={Headshot} alt="headshot photo" className="headshot" />
+                    /* </span> */
 
                     : null}
                 </div>
