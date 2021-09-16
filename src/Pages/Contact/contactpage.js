@@ -43,11 +43,19 @@ const ContactPage = () => {
     <div>
       <Logo />
       <Sidebar functionCallFromParent={classStatusForMobile} />
+
       <div className={clazz ? "contact-divy" : "navOpen"} style={{ marginTop: "5em" }}>
 
 
         <div className="contact-border">
           <div className="contact-wrapper">
+
+            {showHeadShot ?
+              <div className="headshot-span">
+                <img src={Headshot} alt="headshot photo" className="headshot" />
+              </div>
+
+              : null}
 
             <h1 className="contact-intro">  Please contact me and I'll get
               back to you as soon as possible. </h1>
@@ -116,12 +124,7 @@ const ContactPage = () => {
                     Submit
                   </button>
 
-                  {showHeadShot ?
-                    // <span className="headshot-span">
-                    <img src={Headshot} alt="headshot photo" className="headshot" />
-                    /* </span> */
 
-                    : null}
                 </div>
               </form>
             </div>
