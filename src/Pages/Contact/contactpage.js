@@ -30,7 +30,6 @@ const ContactPage = () => {
   const [showHeadShot, setShowHeadshot] = useState(true)
 
   const classStatusForMobile = (sidebarStatus) => {
-    console.log(sidebarStatus)
     setShowHeadshot(!showHeadShot)
 
     if (sidebarStatus && window.innerWidth < 850) {

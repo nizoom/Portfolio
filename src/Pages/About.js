@@ -11,7 +11,6 @@ const About = (props) => {
   const [clazz, setClazz] = useState(false)
 
   const classStatusForMobile = (sidebarStatus) => {
-    console.log(clazz)
     if (sidebarStatus && window.innerWidth < 850) {
       setClazz(!clazz)
     }

@@ -42,7 +42,7 @@ class HomePage extends Component {
         <Sidebar
           functionCallFromParent={this.state.determineClass} />
 
-        <div className="projects">
+        <div className={this.state.gifClass === "navOpen" ? "navOpen" : "projects"}>
 
           <div className="comingSoonBanner">
             <div className="welcome-border">
