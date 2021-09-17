@@ -1,6 +1,7 @@
 .top{
   -webkit-appearance: none;
-
+  -moz-appearance: none;
+  appearance: none;
   scroll-behavior: smooth;
   font-size: 240%;
   position: -webkit-sticky;
@@ -19,8 +20,12 @@
 input[type=submit], input[type=Reset]{ -webkit-appearance:none; }
 
 .btn_div{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+appearance: none;
   position: fixed;
   left: 94%;
+  
 }
 
 @media (max-width:1200px) {
@@ -65,17 +70,20 @@ input[type=submit], input[type=Reset]{ -webkit-appearance:none; }
 @media(max-width:500px){
 
   .top{
+    -webkit-appearance: none;
     height: 40px;
     width: 40px;
   }
   .btn_div{
     left: 90%;
+    -webkit-appearance: none;
   }
 }
 
 @media (max-width:400px){
   .btn_div{
     left: 89%;
+    -webkit-appearance: none;
   }
 }
 
@@ -83,5 +91,6 @@ input[type=submit], input[type=Reset]{ -webkit-appearance:none; }
 @media (max-width:300px){
   .btn_div{
     left: 86%;
+    -webkit-appearance: none;
   }
 }
