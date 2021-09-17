@@ -1,7 +1,5 @@
 .top{
   -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
   scroll-behavior: smooth;
   font-size: 240%;
   position: -webkit-sticky;
@@ -13,16 +11,22 @@
   height: 60px;
   width: 60px;
   background: linear-gradient(to right, #F27121, #E94057, #8A2387);
+  padding: 0;
   /* background-color: #E94057; */
 
 }
 
-input[type=submit], input[type=Reset]{ -webkit-appearance:none; }
+/* input[type=submit], input[type=Reset]{ -webkit-appearance:none; } */
 
 .btn_div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  text-align: center;
   -webkit-appearance: none;
   -moz-appearance: none;
-appearance: none;
+  appearance: none;
   position: fixed;
   left: 94%;
   
@@ -33,7 +37,10 @@ appearance: none;
     text-align: center;
     top: 15%;
     font-size: 150%;
-    border-radius: 9999px
+    border-radius: 9999px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
 
   }
 
@@ -42,6 +49,7 @@ appearance: none;
 @media(max-width:1100px){
   .btn_div{
     left: 92%;
+
   }
 }
 
@@ -49,9 +57,12 @@ appearance: none;
   .top{
     height: 50px;
    width: 50px;
+
+   
   }
   .btn_div{
     left: 93%;
+
   }
 }
 
@@ -64,26 +75,36 @@ appearance: none;
 @media(max-width:600px){
   .btn_div{
     left: 91%;
+    -webkit-appearance: none;
+    -moz-appearance: none;
   }
 }
 
 @media(max-width:500px){
 
   .top{
-    -webkit-appearance: none;
     height: 40px;
     width: 40px;
+    right: 5%;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-align: center;
   }
   .btn_div{
     left: 90%;
-    -webkit-appearance: none;
+  
+    -webkit-appearance: none; 
+    -moz-appearance: none;
   }
 }
 
-@media (max-width:400px){
+@media (max-width:420px){
   .btn_div{
-    left: 89%;
-    -webkit-appearance: none;
+    left: 86%;
+  }
+
+  .top{
+    -webkit-appearance: none; 
   }
 }
 
@@ -92,5 +113,9 @@ appearance: none;
   .btn_div{
     left: 86%;
     -webkit-appearance: none;
+    -moz-appearance: none;
+  }
+  .top{
+    -webkit-appearance: none; 
   }
 }
