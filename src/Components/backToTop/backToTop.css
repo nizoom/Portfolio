@@ -1,4 +1,6 @@
 .top{
+  -webkit-appearance: none;
+
   scroll-behavior: smooth;
   font-size: 240%;
   position: -webkit-sticky;
@@ -13,6 +15,8 @@
   /* background-color: #E94057; */
 
 }
+
+input[type=submit], input[type=Reset]{ -webkit-appearance:none; }
 
 .btn_div{
   position: fixed;

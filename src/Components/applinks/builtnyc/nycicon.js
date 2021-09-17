@@ -14,10 +14,10 @@ const NYCIcon = (props) => {
                     <p>
                         Built NYC is a data visualization tool that explores building development in New York City.
                         Using a data base provided by
-                        <a style={{ color: "#C6EBF1" }}
+                        <a style={{ color: "#DC6DD9", opacity: "1" }}
                             target="_blank" rel="noopener noreferrer"
-                            href="https://data.cityofnewyork.us/Housing-Development/DOB-Permit-Issuance/ipu4-2q9a"> NYC Open Data. </a>
-                        See building demolition and constructions by year and borough on a location specific map. Each location is
+                            href="https://data.cityofnewyork.us/Housing-Development/DOB-Permit-Issuance/ipu4-2q9a"> NYC Open Data </a>
+                        the user can view building demolition and constructions by year and borough on a location specific map. Each location is
                         a clickable pin that displays the address, owner, and contracting company of the site. Data visualizations
                         are supplemented by charts that provide a breakdown of construction permits by type and a graph that show
                         construction trends for the last 30 years.

@@ -129,8 +129,8 @@ const ContactPage = () => {
               </form>
             </div>
 
-            {isSubmitted ? <div className="form-success"> <h1> Sent! Thanks for your message
-            </h1> </div> : null}
+            {isSubmitted ? <div className="form-success"> <h4 className="success-msg"> Sent! Thanks for your message.
+            </h4> </div> : null}
 
 
           </div>

@@ -16,7 +16,7 @@ const ContactLinks = () => {
             </span>
 
             <span className="circle">
-                <a href="https://twitter.com/Nissim37907843" target="blank" rel="noopener noreferrer" >
+                <a href="https://twitter.com/NizoomRam" target="blank" rel="noopener noreferrer" >
                     <img src={TwitterIcon} alt="twitter icon" className="pic" />
                 </a>
             </span>

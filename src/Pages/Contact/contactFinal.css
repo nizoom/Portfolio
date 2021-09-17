@@ -60,12 +60,18 @@ textarea{
 }
 
 .form-success{
-  color : #DAC6DE;
-  justify-content: center;
-  padding: 2px;
-  font-size: 20px;
+  color: #D2C396;
   text-align: center;
+  margin-top: 0;
+  padding-top:0;
   margin: 10px;
+  font-size: 2em;
+}
+
+.success-msg{
+  margin-top: 0;
+  padding-top:0;
+  font-weight: 400;
 }
 
 .contact-wrapper{
