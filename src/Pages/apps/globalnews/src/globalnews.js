@@ -54,7 +54,7 @@ function Globalnews() {
 
 //activates setNews hook to store the data from map.js
   const dataBackToTop = ( data ) => {
-    console.log(data); // this is not correct array (articles) and is instead a location
+    // this is not correct array (articles) and is instead a location
   
     data === null ? setNewsData("NOTHINGFOUND") : setNewsData(data);
 

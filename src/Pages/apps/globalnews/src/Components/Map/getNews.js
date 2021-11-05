@@ -1,9 +1,7 @@
 
 export default async function getNews (localityName, country, topic, localityFeatureStatus) {
 
-  console.log(localityName)
-  console.log(country);
-  // console.log(topic);
+
 
 
 
@@ -20,10 +18,9 @@ headers: {
 }).then(async response => {
   try {
    const data = await response.json()
-  //  console.log('response data?', data)
-  //  console.log( data.value );
+
    return data.value
- } catch(error) {
+ } catch(error) { 
    console.log('Error happened here!')
    console.error(error)
  }
