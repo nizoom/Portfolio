@@ -4,11 +4,12 @@ import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
 
 const About = ( props ) => {
+ 
 
   return(
     <div name = "Stuart">
       <Typography variant = "h2" style = {{color: "white"}}> About </Typography>
-
+      
       <CssBaseline />
       <Container maxWidth = "md" style = {{backgroundColor : "#DD8F8F", padding : "1vh",
         marginTop: "1em", marginBottom: "1em"}} >

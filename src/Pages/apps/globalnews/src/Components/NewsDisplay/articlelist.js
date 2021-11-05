@@ -4,7 +4,7 @@ import {makeStyles} from "@material-ui/core/styles"
 
 const ArticleList = ( props ) => {
 
-  //console.log(props.articlesToDisplay);
+  console.log(props.articlesToDisplay);
   //console.log(props.articlesToDisplay[0]);
 
   let readyToDisplay = false
@@ -32,7 +32,6 @@ const ArticleList = ( props ) => {
   })
   const classes = useStyles();
 
-
   return(
     <div>
     {/*for each article list the source name and title which is also a hyperlink to
@@ -41,8 +40,7 @@ const ArticleList = ( props ) => {
       { readyToDisplay ?
          <ul> {
               props.articlesToDisplay[0].map(function(article, index) {
-                //console.log(article);
-                return <li  key = {props.articlesToDisplay[0].indexOf(article).toString()}
+                return <li  key = {article.url}
                         className = {classes.typographyStyle} >
                         {article.provider[0].name} -
                         <a href = {article.url} target="_blank" rel="noreferrer"

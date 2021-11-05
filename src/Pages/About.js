@@ -34,7 +34,7 @@ const About = (props) => {
       <div className={clazz ? "navOpen" : null}>
         <div className="bubble-wrapper">
           <div className="bubble">
-            <h2 className="header">Hey there, I'm a New York based web developer and am actively looking for work...</h2>
+            <h2 className="header">Hey there, I'm a Boston based web developer and am actively looking for work...</h2>
 
           </div>
         </div>

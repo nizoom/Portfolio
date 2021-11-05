@@ -54,9 +54,9 @@ function Globalnews() {
 
 //activates setNews hook to store the data from map.js
   const dataBackToTop = ( data ) => {
-    //console.log(data);
-
-    data == null ? setNewsData("NOTHINGFOUND") : setNewsData(data);
+    console.log(data); // this is not correct array (articles) and is instead a location
+  
+    data === null ? setNewsData("NOTHINGFOUND") : setNewsData(data);
 
   }
 
@@ -78,7 +78,10 @@ function Globalnews() {
   const classes = useStyles()
 
 
-
+  function dataToMap(data){
+    console.log('this is the new function')
+    console.log(data)
+  }
 
   return (
     <div className= {classes.root} >
@@ -115,7 +118,7 @@ function Globalnews() {
 
         <Grid item xs = {12} className = {classes.allItems} >
           <Map topicFilter = {input} localityStatus = {checked}
-            dataBackToTop = {dataBackToTop}
+            dataBackToTop = {dataBackToTop} dataToMap = {dataToMap}
           />
         </Grid>
          {/* Conditional rendering of newsDisplay if there is something to be displayed based
