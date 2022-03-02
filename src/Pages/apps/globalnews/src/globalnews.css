@@ -2,14 +2,14 @@
   text-align: center;
 }
 
-body{
+/* body{ THIS NEEDS TO BE REPLACED BY A CLASS NOT A BODY HTML SELECTOR
   background-image:url("Images/background.jpg");
   background-repeat: round;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover;;
-}
+  background-size: cover;
+} */
 
 
 .leaflet-container{

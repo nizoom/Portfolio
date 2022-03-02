@@ -59,13 +59,13 @@ class HomePage extends Component {
 
 
 
-          <div className="app_links">
+          <section className="app_links">
             <PresentGlobalNews visibilityStatus={this.state.gifClass} />
             <EchoIcon visibilityStatus={this.state.gifClass} />
             <NYCIcon visibilityStatus={this.state.gifClass} />
 
 
-          </div>
+          </section>
 
         </div>
       </div>
@@ -74,13 +74,3 @@ class HomePage extends Component {
 }
 
 export default HomePage;
-
-
-{/* <div className="whale_div">
-              <img src={workingGif}
-                alt="Gif file" className=
-                {this.state.gifClass}
-                height="600px"
-
-              />
-            </div> */}

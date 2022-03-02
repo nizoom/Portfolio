@@ -13,13 +13,15 @@ import NotFound from "./Pages/NotFound"
 import About from "./Pages/About"
 import Blog from "./Pages/blog"
 import ContactPage from "./Pages/Contact/contactpage"
+import IntroScreen from "./Pages/intro";
 
 class App extends Component {
   render() {
     return (
       <HashRouter>
         <Switch>
-          <Route exact path="/" component={HomePage} />
+          <Route exact path = "/Loader" component = {IntroScreen}/>
+          <Route exact path="/Home" component={HomePage} />
           <Route exact path="/About" component={About} />
           <Route exact path="/Blog" component={Blog} />
           <Route exact path="/Contact" component={ContactPage} />

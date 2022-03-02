@@ -1,0 +1,19 @@
+/* .loading-page-wrapper{
+    background-color: #000000;
+    position: absolute;
+    top: 
+} */
+
+.middle-content-wrapper{
+
+}
+
+.intro-screen-parent{
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
