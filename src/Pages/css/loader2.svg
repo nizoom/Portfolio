@@ -1,0 +1,17 @@
+<svg width="273" height="399" viewBox="0 0 273 399" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+    <path d="M7.5 397V108.184" stroke="#D5B060" stroke-width="10" className='draw-bold-straight'/>
+
+    <path d="M266 394.002L8 111.182" stroke="#D5B060" stroke-opacity="0.59" stroke-width="10" stroke-linecap="round" className ='diagonal-line'/>
+
+    <path d="M266 397V108.184" stroke="#D5B060" stroke-width="10" className='draw-bold-straight'/>
+
+    <ellipse cx="265.5" cy="107.685" rx="7.5" ry="7.49521" fill="#D5B060"/>
+
+    <ellipse cx="7.5" cy="107.685" rx="7.5" ry="7.49521" fill="#D5B060"/>
+
+    <path d="M7 109.184C7 -30.2273 266 -29.2278 266 109.184" stroke="#D5B060" stroke-width="10" stroke-linecap="round" className='draw-curve-lrg'/>
+
+    <path d="M266 108.184C266 108.184 266 224.11 113 224.11" stroke="#D5B060" stroke-width="10" stroke-linecap="square" className='draw-curve-small'/>
+</svg>
+<!-- className='draw-bold-straight' -->

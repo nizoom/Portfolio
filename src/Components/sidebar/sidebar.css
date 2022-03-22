@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
+.container{
+ 
+}
+
 .off{
   float: right;
   width: 0;
@@ -10,20 +14,23 @@
 .bar1, .bar2, .bar3 {
   width: 35px;
   height: 5px;
-  background-color: #333;
+  background-color: #D5B060;
   margin: 6px 0;
   transition: 0.4s;
 }
-
+  
 .change .bar1 {
-  -webkit-transform: rotate(-45deg) translate(-9px, 0px);
-  transform: rotate(-45deg) translate(-8.7px, 7px);
+  top: 10px;
+  -webkit-transform:rotate(-45deg) translate(-7.7px, 7px);
+  /* transform: rotate(-45deg) translate(-8.7px, 7px); */
+  transform: rotate(-45deg) translate(-7.7px, 7px);
 }
 
 .change .bar2 {opacity: 0;}
 
 .change .bar3 {
-  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  margin-top: .5px;
+  -webkit-transform: rotate(45deg) translate(-7px, -9.0px);
   transform: rotate(45deg) translate(-7px, -9.0px);
 }
 
@@ -31,10 +38,15 @@
   z-index: 1;
   margin: 8px;
   position: fixed;
-  right : 20px;
-  top : 10px;
-  background: #8A2387;
-  background: linear-gradient(to right, #F27121, #E94057, #8A2387);
+  right : 30px;
+  top : 40px;
+  /* background: #003566; */
+  border: none;
+ 
+  padding-top: 1px;
+  box-shadow: 2px 2px 40px #976508;
+  background: radial-gradient(#976508, black);
+  /* background: linear-gradient(to left, #01060F, #D5B060); */
 
 }
 

@@ -9,7 +9,7 @@ const Sidebar = (props) => {
 
   const [sidebarStatus, setSidebarStatus] = useState(false);
 
-  const clickHandlerBar = () => {
+  const sideBarBtnHandler = () => {
     setSidebarStatus(!sidebarStatus)
     //if sidebar closed so should tooltip
   }
@@ -31,10 +31,14 @@ const Sidebar = (props) => {
       <div className="sidebar_btn">
         <div className={`classes ${sidebarStatus ? "change" : null}`}>
           <button className="square-btn"
-            onClick={() => { clickHandlerBar(); childFunction(!sidebarStatus) }}>
-            <div className="bar1"></div>
-            <div className="bar2"></div>
-            <div className="bar3"></div>
+            onClick={() => { sideBarBtnHandler(); childFunction(!sidebarStatus) }}>
+            <div className="bars-wrapper"> 
+              <div className="bar1"></div>
+              <div className="bar2"></div>
+              <div className="bar3"></div>
+
+            </div>
+           
           </button>
         </div>
 

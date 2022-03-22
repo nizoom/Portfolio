@@ -1,49 +1,99 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100&family=Roboto:wght@100;300&display=swap');
+
+.fade-in{
+
+  animation:fade-in 1s 1;
+  -webkit-animation:fade-in 1s 1;
+  animation-fill-mode: forwards;
+
+
+  -webkit-animation-fill-mode: forwards;
+}
+
+
+@keyframes fade-in {
+  0%   {opacity: 0;}
+  70%  {opacity: 0;}
+  90% {opacity: 1;-webkit-transform: translateY(0px);}
+  100% {opacity: 1;-webkit-transform: translateY(0px);}
+}
 
 .projects{
  
   overflow: hidden;
 }
 
-.gif{
-  display: flex;
+.welcome-border h2{
   font-weight: 400;
-  font-size: 2em;
-  padding: 10% 0 10% 0;
-  display: inline;
-  /* color: #C6EBF1; */
-  color: #D1C496;
+}
+header{
+  display: flex;
+  width: 100%;
 
 }
-
-.comingSoonBanner{
-  
-  position: relative;
- 
-  width: 60%;
-  margin-left: 1%;
-  margin-top: 20px;
-  opacity: .9;
-
-  
-}
-
 .welcome-border{
-
-  padding: 2rem;
-  position: relative;
-  background: linear-gradient(to right, #F06A2C, #623F74, #050110);;
-  padding: 6px;
-
-}
-
-/* 050110 */
-
-.checkmeout{
-  background: #050110;
-  padding: 40px;
+ 
+  /* background: ellipse at top(#000814, #D5B060); */
+  display: inline-block;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 40%;
+  align-items: flex-start;
   font-family: 'Montserrat', sans-serif;
+ 
 }
+
+.bar-short{
+  color: #D5B060;
+  background-color: #D5B060;
+  height: 4px;
+  border: none;
+  width: 62%;
+  margin:0;
+}
+.bar-long{
+  color: #D5B060;
+  background-color: #D5B060;
+  height: 4px;
+  border: none;
+  margin:0;
+  width: 100%;
+  
+}
+.subheader-div{
+  color: #D5B060;
+  background: #01060f;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-evenly;
+  margin-left: auto;
+  border: solid 4px #D5B060;
+  border-right: none;
+  border-left:none;
+  border-top:none;
+}
+
+.welcome-statement{
+  background: #01060f;
+  padding: 10px;
+  font-family: 'Montserrat', sans-serif;
+  color: #D5B060;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 0;
+  padding: 0;
+  font-weight: 100;
+  border: solid 4px #D5B060;
+  border-right: none;
+  border-left:none;
+  border-bottom: none;
+
+  
+}
+
 
 .app_links{
   margin-top: 100px;
@@ -91,16 +141,7 @@
 }
 
  @media (max-width: 451px){
-  .gif{
-    overflow-wrap:break-word;
-    font-size: 25px;
-    overflow: auto;
-    line-height: 2;
-    margin-right: 10%;
-    
-
-  }
-  .checkmeout{
+  .welcome-statement{
     width: 100%;
     padding: 2%;
     margin: auto;

@@ -6,6 +6,7 @@ import "./css/homepage.css"
 import PresentGlobalNews from "../Components/applinks/presentglobalnews/presentgn"
 import EchoIcon from "../Components/applinks/echochamber/echoicon";
 import NYCIcon from "../Components/applinks/builtnyc/nycicon";
+import IntroScreen from "./intro";
 
 class HomePage extends Component {
   constructor(props) {
@@ -14,6 +15,7 @@ class HomePage extends Component {
 
     this.state = {
       sidebarVisible: false,
+      loadScreen : true,
       clickHandler: () => {
         this.setState(prevstate => ({
           sidebarVisible: !prevstate.sidebarVisible
@@ -37,38 +39,51 @@ class HomePage extends Component {
 
   render() {
     return (
-      <div className="homepage_wrapper">
+      
+
+      <div className="homepage_wrapper background-covering"> 
+        <div className="fade-in "> 
         <Logo />
-        <Sidebar
-          functionCallFromParent={this.state.determineClass} />
+          <Sidebar
+            functionCallFromParent={this.state.determineClass} />
 
-        <div className={this.state.gifClass === "navOpen" ? "navOpen" : "projects"}>
+          <div className={this.state.gifClass === "navOpen" ? "navOpen" : "projects"}>
 
-          <div className="comingSoonBanner">
-            <div className="welcome-border">
-              <div className="checkmeout">
-
-                {/* <em>  */}
-                <h1 className={this.state.gifClass}
-                  style={{ fontWeight: "10000" }}
-                > Welcome to my web development site! <br />Check out my projects below.</h1>
-                {/* </em> */}
-              </div>
-            </div>
-          </div>
-
-
-
-          <section className="app_links">
-            <PresentGlobalNews visibilityStatus={this.state.gifClass} />
-            <EchoIcon visibilityStatus={this.state.gifClass} />
-            <NYCIcon visibilityStatus={this.state.gifClass} />
+            
+            <header>
+              
+                <div className="welcome-border">
+                  <div className="welcome-statement">
+                    {/* <hr className="bar-short"/> */}
+                    <h2 className={this.state.gifClass}> Welcome to my portfolio </h2>
+                  </div>
+                  <hr className="bar-long"/>
+                    <div className="subheader-div">
+                      <h2 className={this.state.gifClass}> Check out my projects below </h2>
+                      {/* <hr className="bar-short"/> */}
+                    </div>
+              
+                  
+                </div>
+            </header>
 
 
-          </section>
 
-        </div>
+            <section className="app_links">
+              <PresentGlobalNews visibilityStatus={this.state.gifClass} />
+              <EchoIcon visibilityStatus={this.state.gifClass} />
+              <NYCIcon visibilityStatus={this.state.gifClass} />
+
+
+            </section>
+
+          </div>  
+        </div> 
       </div>
+      
+
+
+
     )
   }
 }
