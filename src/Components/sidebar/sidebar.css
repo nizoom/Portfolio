@@ -56,21 +56,21 @@ nav {
 }
 
 .sidebar {
-  color: #D1C496;
+  color: #D5B060;
   float: right;
   width: 25%;
   height: 100vh;
   /* background: #312450; */
-  background:#080B1A;
+  background:black;
   font-size: auto;
-  box-shadow: 1px 1px, -.3em 0 .002em #D2C396;
+  box-shadow: 1px 1px, -.3em 0 .002em #eccd88;
   transition: 0.5s;
   overflow-x: hidden;
   margin-left: 2%;
 }
 
 .nav {
-  color: #E8CF6C;
+  color: #D5B060;
   position: relative;
   margin:  15 0%;
   text-align: right;
@@ -98,7 +98,7 @@ li{
 
 .link{
   z-index: 1;
-  color: #D2C396;
+  color: #D5B060;
   font-size: 20px;
 
 }

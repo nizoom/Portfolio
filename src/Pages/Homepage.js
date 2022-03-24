@@ -7,6 +7,7 @@ import PresentGlobalNews from "../Components/applinks/presentglobalnews/presentg
 import EchoIcon from "../Components/applinks/echochamber/echoicon";
 import NYCIcon from "../Components/applinks/builtnyc/nycicon";
 import IntroScreen from "./intro";
+import gradientBubble from './../project_layout/Ellipse.png'
 
 class HomePage extends Component {
   constructor(props) {
@@ -66,6 +67,13 @@ class HomePage extends Component {
                   
                 </div>
             </header>
+            <div className="bubbles-wrapper">
+                <img src = {gradientBubble} alt = 'graphic of bubbles falling down'className="left"/>
+                <img src = {gradientBubble} alt = 'graphic of bubbles falling down' className="small-bbl middle-left"/>
+                <img src = {gradientBubble} alt = 'graphic of bubbles falling down' className="small-bbl middle-right"/>
+                <img src = {gradientBubble} alt = 'graphic of bubbles falling down' className="right"/>
+
+            </div>
 
 
 
