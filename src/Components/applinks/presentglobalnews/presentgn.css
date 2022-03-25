@@ -1,9 +1,29 @@
+.global-new-icon-card{
+  margin-left: 150px;
+}
+
+.global-news-title{
+    margin-left:260px;
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+    position:absolute;
+    top: 1060px;
+    font-size: 25px;
+    font-weight: 500;
+    text-decoration: underline;
+   
+}
+
 .newsIcon{
   webkit-transform: perspective(1px) translateZ(0);
   transform: perspective(1px) translateZ(0);
   box-shadow: 0 0 1px rgba(0, 0, 0, 0);
   -webkit-transition-duration: 0.5s;
   transition-duration: 0.5s;
+  position: absolute;
+  z-index: 1000;
+  top: 1200px;
+  margin-left: 250px;
 }
 
   .app_title{

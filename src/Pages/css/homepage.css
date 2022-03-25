@@ -23,6 +23,10 @@
   overflow: hidden;
 }
 
+.homepage_wrapper{
+  background-color: black;
+}
+
 .welcome-border h2{
   font-weight: 400;
 }
@@ -43,6 +47,7 @@ header{
   font-family: 'Montserrat', sans-serif;
  
 }
+
 
 .bar-short{
   color: #D5B060;
@@ -103,7 +108,7 @@ header{
   align-content: space-around;
   align-content: space-around;
   place-content: space-around;
-
+  background-color: black;
 
 }
 
@@ -111,6 +116,7 @@ header{
 /* BUBBLES */
 .bubbles-wrapper{
   position: relative;
+  margin-bottom: 500px;
 }
 
 .left{

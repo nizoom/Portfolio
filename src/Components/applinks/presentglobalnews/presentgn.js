@@ -3,14 +3,25 @@ import { BrowserRouter as Router, Link } from "react-router-dom";
 import React from "react";
 import "./presentgn.css"
 import "../projectbox.css"
-
+import appIconCard from "../../../project_layout/appiconcard.png"
 
 const PresentGlobalNews = (props) => {
 
 
   return (
     <div className="whole-project-box">
-      <div className="title-wrapper">
+
+
+    <div>
+     <h3 className="global-news-title"> Global News</h3>
+     <img src={globalnewsIcon} alt="world news icon" className="newsIcon" />
+      <img src = {appIconCard} alt = 'icon card'className="global-new-icon-card"/>
+      
+    </div>
+    
+
+
+      {/* <div className="title-wrapper">
         <h3 className="project-title"> Global News </h3>
       </div>
       <section className="project-wrapper">
@@ -45,7 +56,7 @@ const PresentGlobalNews = (props) => {
 
 
         </div>
-      </section>
+      </section> */}
     </div>
   )
 }

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100&family=Roboto:wght@100;300&display=swap');
+
 .project-wrapper{
     display: flex;
     text-align: justify;
@@ -9,31 +11,18 @@
     justify-content: space-between;
 }
 
-.project-title{
-    
-    /* color: #A5873A; */
-    /* display: flex;
-    justify-content: start;
-    align-content: center; */
-    color: #C6EBF1;
-    font-size: 2em;
-    font-weight: 400;
-    padding: 5%;
-    /* padding-bottom: 2%; */
-    
 
-   
-}
 
 .whole-project-box{
-    margin-bottom: 5%;
+    background-color: black;
+    margin-bottom: 50%;
 }
 
 .title-wrapper{
     background-color: #050110;
     width: 20%;
     margin-left: 1%;
-  
+    
 
 }
 
