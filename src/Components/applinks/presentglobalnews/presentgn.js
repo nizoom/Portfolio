@@ -4,19 +4,36 @@ import React from "react";
 import "./presentgn.css"
 import "../projectbox.css"
 import appIconCard from "../../../project_layout/appiconcard.png"
+import appDescriptionCard from "../../../project_layout/appdescriptioncard.png"
 
 const PresentGlobalNews = (props) => {
 
 
   return (
-    <div className="whole-project-box">
+    <section className="whole-project-box">
 
 
     <div>
-     <h3 className="global-news-title"> Global News</h3>
-     <img src={globalnewsIcon} alt="world news icon" className="newsIcon" />
+     <h3 className="global-news-title"> Try Global News</h3>
+     <Link to="/globalnews" target="_blank" rel="noopener noreferrer">
+              {/* <h3 className="app_title"> Try it out! </h3> */}
+              <img src={globalnewsIcon} alt="world news icon" className="newsIcon" />
       <img src = {appIconCard} alt = 'icon card'className="global-new-icon-card"/>
+
+            </Link>
+
       
+    </div>
+
+    <div>
+      <div className="description-text-div">
+          <p className="tech-used">  <span className="stack"> Tech stack: </span> <span className="tech-list">ReactJS, React Router, Material UI, Azure, Google Cloud, LeafletJS.  </span> </p>
+          <button className="more-info-btn"> Click here for more info</button>
+      </div>
+      <img src = {appDescriptionCard} alt = 'app description card' className="app-description-card news-desc-card-location"/>
+      
+
+
     </div>
     
 
@@ -57,10 +74,9 @@ const PresentGlobalNews = (props) => {
 
         </div>
       </section> */}
-    </div>
+    </section>
   )
 }
 
 export default PresentGlobalNews
-
-//, #E94057, #8A2387
+// <span className="try"> 

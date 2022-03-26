@@ -11,7 +11,9 @@
     justify-content: space-between;
 }
 
-
+.app-description-card {
+    width: 500px;
+}
 
 .whole-project-box{
     background-color: black;
@@ -22,8 +24,6 @@
     background-color: #050110;
     width: 20%;
     margin-left: 1%;
-    
-
 }
 
 .app-description{
@@ -34,18 +34,70 @@
     padding: 0 1% 2% 1%;
 }
 
+.tech-used{
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+    word-wrap: normal;
+    font-size: x-large;
+
+}
+
 .app-link-wrapper{
     display: flex;
     text-align: center;
     margin: 0 5% 0 0;
     align-items: flex-start;
-    bottom:
+
 }
 
 .app-link a:hover, a:visited, a:link, a:active{
    text-decoration: none;
 
 }
+
+.stack{
+    font-weight: bold;
+   
+}
+.tech-list{
+    display : block;
+    margin-top: 10px;
+ 
+}
+
+.more-info-btn{
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 3px;
+    font-family: 'Montserrat', sans-serif;
+    box-shadow: ;
+    color: black;
+    font-size: large;
+    font-weight: 500;
+    cursor: pointer;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    transition: all 250ms;
+    margin-left: 80px;
+}
+
+
+.more-info-btn:focus {
+    color: #C29E59;
+    background-color: black;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+  }
+  
+  .more-info-btn:hover {
+    transform: translateY(-1.5px);
+  }
+  
+  .more-info-btn:active {
+    background-color: black;
+    box-shadow: rgba(0, 0, 0, .06) 0 2px 4px;
+    transform: translateY(0);
+    color: #C29E59;
+  }
 
 @media(max-width: 600px){
     .project-title{
