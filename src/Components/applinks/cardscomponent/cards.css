@@ -1,0 +1,129 @@
+.all-cards-wrapper{
+    background-color: black;
+    padding-bottom: 200px;
+}
+
+.app-description-card {
+    width: 500px;
+}
+
+.whole-project-box{
+    background-color: black;
+    margin-bottom: 50%;
+}
+
+.app-description{
+    opacity: .7;
+    width: 70%;
+    color: #D3F3FF;
+    font-size: 1.35em;
+    padding: 0 1% 2% 1%;
+}
+
+.tech-used{
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+    word-wrap: normal;
+    font-size: x-large;
+
+}
+
+
+.stack{
+    font-weight: bold;
+   
+}
+.tech-list{
+    display : block;
+    margin-top: 10px;
+ 
+}
+
+.more-info-btn{
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 3px;
+    font-family: 'Montserrat', sans-serif;
+    box-shadow: ;
+    color: black;
+    font-size: large;
+    font-weight: 500;
+    cursor: pointer;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    transition: all 250ms;
+    margin-left: 80px;
+    margin-top: 10px;
+}
+
+
+.more-info-btn:focus {
+    color: #C29E59;
+    background-color: black;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+  }
+  
+  .more-info-btn:hover {
+    transform: translateY(-2.5px);
+  }
+  
+  .more-info-btn:active {
+    background-color: black;
+    box-shadow: rgba(0, 0, 0, .06) 0 2px 4px;
+    transform: translateY(0);
+    color: #C29E59;
+  }
+
+  /* TITLE  */
+
+  .app-title{
+    left:490px;
+    /* color: #AD8D51; */
+    /* background-color: rgb(3, 3, 7);; */
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+    position:absolute;
+    margin-top: 200px;    
+    letter-spacing: 0px;
+    padding: 5px 5px 5px 0;
+    border-radius: 6px;
+
+    font-size: x-large;
+    font-weight: bold;
+  
+}
+
+
+
+  /* ICON */
+
+  .app-icon{
+    cursor: pointer;
+    webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    position: absolute;
+    z-index: 1000;
+    top: 1250px;
+    margin-left: 530px;
+    width: 125px;
+    filter: drop-shadow(0 0 0.75rem rgb(76, 13, 158));
+    opacity: .8;
+  }
+  
+  
+  .app-icon:hover, .app-icon:focus, .app-icon:active {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    -webkit-transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+    transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+  }
+
+  /* ICON CARD */
+
+  .app-icon-card{
+    margin-left: 400px;
+    margin-top: 15px;
+  }

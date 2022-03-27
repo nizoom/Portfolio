@@ -1,6 +1,6 @@
 import React from "react";
 import "./nycicon.css"
-import "../projectbox.css"
+import "../presentappstyles.css"
 import NYCIconImg from "../../../project_layout/builtnyclogo.png"
 
 const NYCIcon = (props) => {

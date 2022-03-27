@@ -5,7 +5,7 @@
   animation:fade-in 1s 1;
   -webkit-animation:fade-in 1s 1;
   animation-fill-mode: forwards;
-
+  background-color: black;
 
   -webkit-animation-fill-mode: forwards;
 }
@@ -34,6 +34,10 @@ header{
   display: flex;
   width: 100%;
 
+}
+
+.apps-section{
+  background-color: black;
 }
 .welcome-border{
  
@@ -99,7 +103,7 @@ header{
   
 }
 
-
+/* 
 .app_links{
   margin-top: 210px;
   display: flex;
@@ -110,18 +114,19 @@ header{
   place-content: space-around;
   background-color: black;
 
-}
+} */
 
 
 /* BUBBLES */
 .bubbles-wrapper{
   position: relative;
   margin-bottom: 500px;
+  margin-left: 70px;
 }
 
 .left{
   position: absolute;
-  margin-left: 120px;
+  margin-left: 200px;
   margin-top: 150px;
 }
 
@@ -131,28 +136,28 @@ header{
 
 .middle-left{
   position: absolute;
-  margin-left: 500px;
+  margin-left: 600px;
   margin-top: 100px;
 }
 
 .middle-right{
   position: absolute;
-  margin-left: 900px;
+  margin-left: 1000px;
   margin-top: 170px;
 }
 
 .right{
   position: absolute;
-  margin-left: 1300px;
+  margin-left: 1400px;
   margin-top: 100px;
 }
 
 .right-most{
   position: absolute;
-  margin-left: 1700px;
+  margin-left: 1800px;
   margin-top: 50px;
 }
-
+/* 
 @media (max-width: 900px){
   .gif{
     font-size: 30px;
@@ -205,4 +210,4 @@ header{
     
    
   }
- }
+ } */

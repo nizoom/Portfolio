@@ -2,7 +2,7 @@ import globalnewsIcon from "../../../project_layout/worldnews.png"
 import { BrowserRouter as Router, Link } from "react-router-dom";
 import React from "react";
 import "./presentgn.css"
-import "../projectbox.css"
+import "../presentappstyles.css"
 import appIconCard from "../../../project_layout/appiconcard.png"
 import appDescriptionCard from "../../../project_layout/appdescriptioncard.png"
 
@@ -32,7 +32,7 @@ const PresentGlobalNews = (props) => {
       </div>
       <img src = {appDescriptionCard} alt = 'app description card' className="app-description-card news-desc-card-location"/>
       
-
+    
 
     </div>
     

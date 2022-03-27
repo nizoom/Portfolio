@@ -6,8 +6,10 @@ import "./css/homepage.css"
 import PresentGlobalNews from "../Components/applinks/presentglobalnews/presentgn"
 import EchoIcon from "../Components/applinks/echochamber/echoicon";
 import NYCIcon from "../Components/applinks/builtnyc/nycicon";
+import globalnewsIcon from "../project_layout/worldnews.png";
 import IntroScreen from "./intro";
 import gradientBubble from './../project_layout/Ellipse.png'
+import Cards from "../Components/applinks/cardscomponent/cards"
 
 class HomePage extends Component {
   constructor(props) {
@@ -78,10 +80,18 @@ class HomePage extends Component {
 
 
 
-            <section className="app_links">
-              <PresentGlobalNews visibilityStatus={this.state.gifClass} />
+            <section className="apps-section">
+              <Cards alt = 'global news'icon = {globalnewsIcon} appTitle = 'Try Global News'stackList = 'ReactJS, React Router, Material UI, Azure, Google Cloud, LeafletJS.'
+                linkType = 'Link' priority-level = '1'
+              />
+
+              {/* <Cards alt = 'Build NYC 'icon = {NYCIcon} appTitle = 'Try Build NYC' stackList = 'React JS, LeafletJS, ChartJS, SoQueryLanguage, NodeJS, ExpressJS.'
+                linkType = 'href'
+              /> */}
+
+              {/* <PresentGlobalNews visibilityStatus={this.state.gifClass} />
               <EchoIcon visibilityStatus={this.state.gifClass} />
-              <NYCIcon visibilityStatus={this.state.gifClass} />
+              <NYCIcon visibilityStatus={this.state.gifClass} /> */}
 
 
             </section>

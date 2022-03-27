@@ -1,7 +1,7 @@
 import React from "react";
 import EchoIconImg from "../../../project_layout/icon_transparent.png"
 import "./echoicon.css"
-import "../projectbox.css"
+import "../presentappstyles.css"
 
 const EchoIcon = (props) => {
     return (
