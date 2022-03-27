@@ -1,3 +1,13 @@
+
+.one{
+
+    position:relative;
+}
+
+.two{
+   
+    position:relative;
+}
 .all-cards-wrapper{
     background-color: black;
     padding-bottom: 200px;
@@ -5,6 +15,9 @@
 
 .app-description-card {
     width: 500px;
+    position: absolute;
+    right: 450px;
+    top:200px;
 }
 
 .whole-project-box{
@@ -20,12 +33,22 @@
     padding: 0 1% 2% 1%;
 }
 
+.description-text-div{
+    position: absolute;
+    right: 450px;
+    top:325px;
+    z-index: 1000;
+    width: 450px;
+}
+
+
 .tech-used{
     color: black;
     font-family: 'Montserrat', sans-serif;
     word-wrap: normal;
     font-size: x-large;
-
+    top: 0;
+ 
 }
 
 
@@ -35,7 +58,6 @@
 }
 .tech-list{
     display : block;
-    margin-top: 10px;
  
 }
 
@@ -52,8 +74,7 @@
     background-color: transparent;
     background-repeat: no-repeat;
     transition: all 250ms;
-    margin-left: 80px;
-    margin-top: 10px;
+
 }
 
 
@@ -74,27 +95,44 @@
     color: #C29E59;
   }
 
+
+  .icon-and-title-wrapper{
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      margin-top: 200px; 
+     left: 412px; 
+     width: 350px;
+     z-index: 2000;
+
+      
+  }
+
   /* TITLE  */
 
   .app-title{
-    left:490px;
+    /* left:490px; */
     /* color: #AD8D51; */
     /* background-color: rgb(3, 3, 7);; */
     color: black;
     font-family: 'Montserrat', sans-serif;
-    position:absolute;
-    margin-top: 200px;    
+    /* position:absolute; */
+    /* margin-top: 200px;     */
     letter-spacing: 0px;
-    padding: 5px 5px 5px 0;
+    /* padding: 5px 5px 5px 0; */
     border-radius: 6px;
-
     font-size: x-large;
     font-weight: bold;
   
 }
 
+.arrow{
+  margin: 15px 0 15px 0;
+  width: 10%;
 
-
+}
   /* ICON */
 
   .app-icon{
@@ -104,10 +142,10 @@
     box-shadow: 0 0 1px rgba(0, 0, 0, 0);
     -webkit-transition-duration: 0.5s;
     transition-duration: 0.5s;
-    position: absolute;
+    /* position: absolute; */
     z-index: 1000;
-    top: 1250px;
-    margin-left: 530px;
+    top: 325px;
+    margin-top: 40px;
     width: 125px;
     filter: drop-shadow(0 0 0.75rem rgb(76, 13, 158));
     opacity: .8;

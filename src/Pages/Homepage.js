@@ -3,9 +3,9 @@ import Logo from "../Components/logo/logo"
 import Sidebar from "../Components/sidebar/sidebar"
 // import workingGif from "../project_layout/whale.gif"
 import "./css/homepage.css"
-import PresentGlobalNews from "../Components/applinks/presentglobalnews/presentgn"
-import EchoIcon from "../Components/applinks/echochamber/echoicon";
-import NYCIcon from "../Components/applinks/builtnyc/nycicon";
+// import PresentGlobalNews from "../Components/applinks/presentglobalnews/presentgn"
+import EchoIcon from "../project_layout/echochambericon.png";
+import NYCIcon from "../project_layout/builtnyclogo.png";
 import globalnewsIcon from "../project_layout/worldnews.png";
 import IntroScreen from "./intro";
 import gradientBubble from './../project_layout/Ellipse.png'
@@ -81,13 +81,17 @@ class HomePage extends Component {
 
 
             <section className="apps-section">
-              <Cards alt = 'global news'icon = {globalnewsIcon} appTitle = 'Try Global News'stackList = 'ReactJS, React Router, Material UI, Azure, Google Cloud, LeafletJS.'
-                linkType = 'Link' priority-level = '1'
+              <Cards alt = 'Global News'icon = {globalnewsIcon} appTitle = 'Try Global News'stackList = 'ReactJS, React Router, Material UI, Azure, Google Cloud, LeafletJS.'
+                linkType = 'Link' priorityLevel = 'one'
               />
 
-              {/* <Cards alt = 'Build NYC 'icon = {NYCIcon} appTitle = 'Try Build NYC' stackList = 'React JS, LeafletJS, ChartJS, SoQueryLanguage, NodeJS, ExpressJS.'
-                linkType = 'href'
-              /> */}
+              <Cards alt = 'Build NYC 'icon = {NYCIcon} appTitle = 'Try Build NYC' stackList = 'React JS, LeafletJS, ChartJS, SoQueryLanguage, NodeJS, ExpressJS.'
+                linkType = 'href' priorityLevel = 'two' url = 'https://build-nyc.herokuapp.com/'
+              /> 
+
+              <Cards alt = 'Build NYC 'icon = {EchoIcon} appTitle = 'Try Echochamber' stackList = 'ReactJS, Material UI, NodeJS, ExpressJS.'
+                linkType = 'href' priorityLevel = 'two' url = 'https://entertheechochamber.herokuapp.com/'
+              /> 
 
               {/* <PresentGlobalNews visibilityStatus={this.state.gifClass} />
               <EchoIcon visibilityStatus={this.state.gifClass} />

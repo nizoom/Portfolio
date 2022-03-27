@@ -2,6 +2,7 @@ import React from 'react';
 import './cards.css';
 import appIconCard from "../../../project_layout/appiconcard.png"
 import appDescriptionCard from "../../../project_layout/appdescriptioncard.png"
+import DownArrow from "../../../project_layout/downarrow.png"
 
 
 
@@ -11,24 +12,27 @@ const Cards = (props) => {
     return (
 
         // ICON CARD
-        <div className='all-cards-wrapper'>
-            <h3 className="app-title"> {props.appTitle} </h3>
+        <div className={`all-cards-wrapper ${props.priorityLevel}`}>
+            <div className='icon-and-title-wrapper'>
+                <h3 className="app-title"> {props.appTitle} </h3>
 
-          { props.linkType === "Link" ?  <Link to="/globalnews" target="_blank" rel="noopener noreferrer">
+                <img src={DownArrow} className= 'arrow'/>
+
+            { props.linkType === "Link" ?  <Link to="/globalnews" target="_blank" rel="noopener noreferrer">
+
+                        <img src={props.icon} alt={`${props.alt} icon`} className="app-icon" />
+
+                </Link>  : 
+                
+                <a href={props.url} target="_blank" rel="noopener noreferrer"> 
 
                     <img src={props.icon} alt={`${props.alt} icon`} className="app-icon" />
 
-            </Link>  : 
-            
-            <a href={props.url} target="_blank" rel="noopener noreferrer"> 
-
-                <img src={props.icon} alt={`${props.alt} icon`} className="app-icon" />
-
-            </a>
-            
-            
-            }
-
+                </a>
+                
+                
+                }
+            </div>
             <img src = {appIconCard} alt = 'icon card'className="app-icon-card"/>
 
 
@@ -40,7 +44,7 @@ const Cards = (props) => {
             </div>
 
 
-            <img src = {appDescriptionCard} alt = 'app description card' className="app-description-card news-desc-card-location"/>
+            <img src = {appDescriptionCard} alt = 'app description card' className="app-description-card"/>
 
         </div>
     )
