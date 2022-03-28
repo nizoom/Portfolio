@@ -103,6 +103,15 @@ header{
   
 }
 
+.planetoid{
+
+  opacity: .8;
+  z-index: 0;
+  top:800px;
+  left: 200px;
+  position: absolute;
+}
+
 /* 
 .app_links{
   margin-top: 210px;

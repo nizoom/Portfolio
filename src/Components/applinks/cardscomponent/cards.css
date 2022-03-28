@@ -11,43 +11,61 @@
 .all-cards-wrapper{
     background-color: black;
     padding-bottom: 200px;
+
 }
 
 .app-description-card {
     width: 500px;
+    height: 500px;
     position: absolute;
     right: 450px;
-    top:200px;
+    top:195px;
+    z-index: 1000;
 }
 
 .whole-project-box{
     background-color: black;
     margin-bottom: 50%;
+    font-family: 'Montserrat', sans-serif;
+
 }
 
 .app-description{
-    opacity: .7;
-    width: 70%;
-    color: #D3F3FF;
-    font-size: 1.35em;
-    padding: 0 1% 2% 1%;
+    margin: 0;
+
+    font-size: x-large;
+    width: 90%;
+    font-family: 'Montserrat', sans-serif;
+  
 }
 
 .description-text-div{
     position: absolute;
-    right: 450px;
-    top:325px;
-    z-index: 1000;
-    width: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  justify-content: space-evenly;
+    right: 480px;
+    top:280px;
+
+    width: 440px;
+    height: 400px;
+    z-index: 1001
+
 }
 
 
 .tech-used{
+   display: flex;
+   flex-direction: column;
     color: black;
     font-family: 'Montserrat', sans-serif;
     word-wrap: normal;
     font-size: x-large;
-    top: 0;
+    margin: 0 0 0 20px;
+    
+    
+    /* 23px; */
  
 }
 
@@ -67,20 +85,22 @@
     border-radius: 3px;
     font-family: 'Montserrat', sans-serif;
     box-shadow: ;
-    color: black;
+    color: rgb(184, 134, 27);
     font-size: large;
     font-weight: 500;
     cursor: pointer;
-    background-color: transparent;
-    background-repeat: no-repeat;
+    background-color: rgb(10, 10, 9);
+    /* background-color: transparent;
+    background-repeat: no-repeat; */
     transition: all 250ms;
+  
 
 }
 
 
 .more-info-btn:focus {
-    color: #C29E59;
-    background-color: black;
+    color: #ebdec7;
+    background-color: #513E3B;
     box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
   }
   
@@ -89,10 +109,10 @@
   }
   
   .more-info-btn:active {
-    background-color: black;
+    background-color: rgb(0, 0, 0);
     box-shadow: rgba(0, 0, 0, .06) 0 2px 4px;
     transform: translateY(0);
-    color: #C29E59;
+    color: #faecd1;
   }
 
 
@@ -105,7 +125,7 @@
       margin-top: 200px; 
      left: 412px; 
      width: 350px;
-     z-index: 2000;
+
 
       
   }
@@ -125,12 +145,14 @@
     border-radius: 6px;
     font-size: x-large;
     font-weight: bold;
+    margin-top:0;
   
 }
 
 .arrow{
   margin: 15px 0 15px 0;
   width: 10%;
+
 
 }
   /* ICON */
@@ -143,12 +165,13 @@
     -webkit-transition-duration: 0.5s;
     transition-duration: 0.5s;
     /* position: absolute; */
-    z-index: 1000;
+
     top: 325px;
     margin-top: 40px;
     width: 125px;
     filter: drop-shadow(0 0 0.75rem rgb(76, 13, 158));
     opacity: .8;
+
   }
   
   
@@ -164,4 +187,5 @@
   .app-icon-card{
     margin-left: 400px;
     margin-top: 15px;
+    z-index: 2000;
   }

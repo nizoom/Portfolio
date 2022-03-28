@@ -39,6 +39,8 @@ const Cards = (props) => {
         {/* DESCRIPTION CARD */}
 
             <div className="description-text-div">
+                {props.Description}
+                {/* <div className='app-description'> {props.Description}</div> */}
                 <p className="tech-used">  <span className="stack"> Tech stack: </span> <span className="tech-list"> {props.stackList} </span> </p>
                 <button className="more-info-btn"> Click here for more info</button>
             </div>

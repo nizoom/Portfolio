@@ -10,6 +10,7 @@ import globalnewsIcon from "../project_layout/worldnews.png";
 import IntroScreen from "./intro";
 import gradientBubble from './../project_layout/Ellipse.png'
 import Cards from "../Components/applinks/cardscomponent/cards"
+import planetEyes from "../project_layout/lightbubble.png"
 
 class HomePage extends Component {
   constructor(props) {
@@ -81,16 +82,20 @@ class HomePage extends Component {
 
 
             <section className="apps-section">
+             
               <Cards alt = 'Global News'icon = {globalnewsIcon} appTitle = 'Try Global News'stackList = 'ReactJS, React Router, Material UI, Azure, Google Cloud, LeafletJS.'
                 linkType = 'Link' priorityLevel = 'one'
+                Description = {<p className='app-description'> <b>Web app </b> that finds localized news based on geolocation from map click.</p>}
               />
-
+              <img src = {planetEyes} alt = 'planet-graphic' className="planetoid"/> 
               <Cards alt = 'Build NYC 'icon = {NYCIcon} appTitle = 'Try Build NYC' stackList = 'React JS, LeafletJS, ChartJS, SoQueryLanguage, NodeJS, ExpressJS.'
-                linkType = 'href' priorityLevel = 'two' url = 'https://build-nyc.herokuapp.com/'
+                linkType = 'href' priorityLevel = 'two' url = 'https://build-nyc.herokuapp.com/' 
+                Description ={ <p className='app-description'> <b> Data visualization interface </b>  that illustrates building development in NYC. </p> }
               /> 
 
               <Cards alt = 'Build NYC 'icon = {EchoIcon} appTitle = 'Try Echochamber' stackList = 'ReactJS, Material UI, NodeJS, ExpressJS.'
                 linkType = 'href' priorityLevel = 'two' url = 'https://entertheechochamber.herokuapp.com/'
+                Description = {<p className='app-description'>  <b>Web scraping app </b> that uses Twitter's  API to recreate a personal feed.</p>}
               /> 
 
               {/* <PresentGlobalNews visibilityStatus={this.state.gifClass} />
