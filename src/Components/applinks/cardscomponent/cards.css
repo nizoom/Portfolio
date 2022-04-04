@@ -1,38 +1,51 @@
-
-.one{
-
-    position:relative;
-}
-
-.two{
-   
-    position:relative;
-}
 .all-cards-wrapper{
     background-color: black;
     padding-bottom: 200px;
+    display: inline-block;
+  
 
+    width:100%;
+    /* display: flex; */
+ 
+  
+
+    /* justify-content: space-evenly;
+    flex: 1; */
+    
+}
+
+.whole-project-box{
+  background-color: black;
+  margin-bottom: 50%;
+  font-family: 'Montserrat', sans-serif;
+
+}
+
+.description-div-wrapper{
+  position: relative;
+  
+  display: inline-block;
+  width: 530px;
+  height: 593px;
+  float: right;
+  margin-top: 10%;
+  margin-right: 10%;
+  /* width: 10
+  height: 10 */
 }
 
 .app-description-card {
     width: 500px;
     height: 500px;
+    z-index: 199;
     position: absolute;
-    right: 450px;
-    top:195px;
-    z-index: 1000;
+    top:0;
+  
 }
 
-.whole-project-box{
-    background-color: black;
-    margin-bottom: 50%;
-    font-family: 'Montserrat', sans-serif;
-
-}
 
 .app-description{
     margin: 0;
-
     font-size: x-large;
     width: 90%;
     font-family: 'Montserrat', sans-serif;
@@ -40,29 +53,32 @@
 }
 
 .description-text-div{
-    position: absolute;
+  
     display: flex;
     flex-direction: column;
     align-items: center;
-  justify-content: space-evenly;
-    right: 480px;
-    top:280px;
-
-    width: 440px;
+    margin-top: 90px;
+    margin-left: 3rem;
+    width: 400px;
     height: 400px;
-    z-index: 1001
+    z-index: 200; 
+    position: absolute;
+    justify-content:center;
+    overflow-wrap: break-word;
+
 
 }
 
 
 .tech-used{
-   display: flex;
-   flex-direction: column;
-    color: black;
+ 
+
+   color: black;
     font-family: 'Montserrat', sans-serif;
-    word-wrap: normal;
+    overflow-wrap: break-word;    
     font-size: x-large;
-    margin: 0 0 0 20px;
+    margin-left: 1.2rem;
+
     
     
     /* 23px; */
@@ -100,7 +116,7 @@
 
 .more-info-btn:focus {
     color: #ebdec7;
-    background-color: #513E3B;
+    background-color: #11110f;
     box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
   }
   
@@ -117,14 +133,15 @@
 
 
   .icon-and-title-wrapper{
-      position: absolute;
+     
       display: flex;
       flex-direction: column;
       align-items: center;
-
-      margin-top: 200px; 
-     left: 412px; 
-     width: 350px;
+      height: 100%;
+      justify-content: center;
+      margin-top: 10px;
+      margin-left: auto;
+      margin-right: auto;
 
 
       
@@ -146,28 +163,32 @@
     font-size: x-large;
     font-weight: bold;
     margin-top:0;
+    margin-bottom: 0;
+    z-index: 200;
   
 }
 
 .arrow{
-  margin: 15px 0 15px 0;
+  margin: 50px 0 50px 0;
   width: 10%;
-
+  z-index: 200;
 
 }
   /* ICON */
 
   .app-icon{
+    position: relative;
     cursor: pointer;
     webkit-transform: perspective(1px) translateZ(0);
     transform: perspective(1px) translateZ(0);
     box-shadow: 0 0 1px rgba(0, 0, 0, 0);
     -webkit-transition-duration: 0.5s;
     transition-duration: 0.5s;
+    z-index: 200;
     /* position: absolute; */
 
-    top: 325px;
-    margin-top: 40px;
+  
+    
     width: 125px;
     filter: drop-shadow(0 0 0.75rem rgb(76, 13, 158));
     opacity: .8;
@@ -185,7 +206,25 @@
   /* ICON CARD */
 
   .app-icon-card{
+    /* position: relative;
     margin-left: 400px;
-    margin-top: 15px;
-    z-index: 2000;
+    margin-top: 15px; */
+    z-index: 199;
+    position: absolute;
+    top:0;
+
+  }
+
+  .icon-card-wrapper{
+    float: left;
+   position: relative;
+   display: inline-block;
+   width: 370px;
+   height: 593px;
+   margin-left: 10%;
+  }
+
+
+  @media (max-width: 1600px){
+ 
   }
