@@ -3,6 +3,9 @@ import LinkedInIcon from "../../project_layout/socialicons/linkedin.png"
 import GithubIcon from "../../project_layout/socialicons/github.png"
 import TwitterIcon from "../../project_layout/socialicons/twitter.png"
 import EmailIcon from "../../project_layout/socialicons/email.png"
+
+import { BrowserRouter as Router, Link } from "react-router-dom";
+
 const Socials = (props) => {
     return (
         <div>
@@ -28,8 +31,12 @@ const Socials = (props) => {
                         </a>
                     
                     </li>
-{/* LINK TO CONTAact PAGE */}
-                    <li> <img src = {EmailIcon} alt = "Nissim Ram's Contact"/> </li>
+                    <li> 
+                         <Link to="/about" target="_blank" rel="noopener noreferrer">
+                            <img src = {EmailIcon} alt = "Nissim Ram's Contact"/> 
+                         </Link>
+                    </li>
+                   
                 </ul>
             </nav>
         </div>

@@ -1,13 +1,13 @@
 import React, { Component } from "react";
 import Logo from "../Components/logo/logo"
 import Sidebar from "../Components/sidebar/sidebar"
-// import workingGif from "../project_layout/whale.gif"
 import "./css/homepage.css"
-// import PresentGlobalNews from "../Components/applinks/presentglobalnews/presentgn"
 import EchoIcon from "../project_layout/echochambericon.png";
 import NYCIcon from "../project_layout/builtnyclogo.png";
 import globalnewsIcon from "../project_layout/worldnews.png";
 import IntroScreen from "./intro";
+import tyIcon from "../project_layout/tyicon.png"
+import emailBuilderIcon from "../project_layout/form.png"
 import gradientBubble from './../project_layout/Ellipse.png'
 import Cards from "../Components/applinks/cardscomponent/cards"
 import planetoid from "../project_layout/lightbubble.png"
@@ -99,6 +99,15 @@ class HomePage extends Component {
               <Cards alt = 'Build NYC 'icon = {EchoIcon} appTitle = 'Try Echochamber' stackList = 'ReactJS, Material UI, NodeJS, ExpressJS.'
                 linkType = 'href' url = 'https://entertheechochamber.herokuapp.com/'
                 Description = {<p className='app-description'>  <b>Web scraping app </b> that uses Twitter's  API to recreate a personal feed.</p>}
+              /> 
+           
+              <Cards alt = 'TY Email Automation'icon = {tyIcon} appTitle = 'TY Email Automation' stackList = ' ExpressJS, NodeJS, NodeMailer, and Handlebars.'
+                linkType = 'href' url = ''
+                Description = {<p className='app-description'>  <b>Backend app </b> that uses that generates custom daily thank you emails based on donations from an API.</p>}
+              /> 
+              <Cards alt = 'TY Email Builder' icon = {emailBuilderIcon} appTitle = 'TY Email Builder' stackList = ' ReactJS, ExpressJS, NodeJS, NodeMailer, and Handlebars.'
+                linkType = 'href' url = ''
+                Description = {<p className='app-description'>  <b>Form web app </b> that builds and sends templated thank you emails.</p>}
               /> 
            
 

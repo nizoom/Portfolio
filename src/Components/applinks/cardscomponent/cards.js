@@ -32,7 +32,7 @@ const Cards = (props) => {
                         <img src={props.icon} alt={`${props.alt} icon`} className="app-icon" />
 
                     </a>
-                    
+                    // if no link like gif situation then pass a prop to create component where onclick shows gif
                     
                     }
                  
