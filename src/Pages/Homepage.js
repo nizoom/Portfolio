@@ -12,6 +12,7 @@ import gradientBubble from './../project_layout/Ellipse.png'
 import Cards from "../Components/applinks/cardscomponent/cards"
 import planetoid from "../project_layout/lightbubble.png"
 import Socials from "../Components/socials/socials";
+import Starburst from "../project_layout/starburst.png"
 
 class HomePage extends Component {
   constructor(props) {
@@ -48,7 +49,7 @@ class HomePage extends Component {
 
       <div className="homepage_wrapper background-covering"> 
         <div className="fade-in "> 
-        <Logo />
+          <Logo />
           <Sidebar
             functionCallFromParent={this.state.determineClass} />
 
@@ -100,11 +101,15 @@ class HomePage extends Component {
                 linkType = 'href' url = 'https://entertheechochamber.herokuapp.com/'
                 Description = {<p className='app-description'>  <b>Web scraping app </b> that uses Twitter's  API to recreate a personal feed.</p>}
               /> 
+               <img src = {Starburst} alt = 'planet-graphic' className="starburst1" />
            
               <Cards alt = 'TY Email Automation'icon = {tyIcon} appTitle = 'TY Email Automation' stackList = ' ExpressJS, NodeJS, NodeMailer, and Handlebars.'
-                linkType = 'href' url = ''
+                linkType = 'href' url = 'https://github.com/nizoom/TYAutomation'
                 Description = {<p className='app-description'>  <b>Backend app </b> that uses that generates custom daily thank you emails based on donations from an API.</p>}
               /> 
+
+              <img src = {Starburst} alt = 'planet-graphic' className="starburst2" />
+
               <Cards alt = 'TY Email Builder' icon = {emailBuilderIcon} appTitle = 'TY Email Builder' stackList = ' ReactJS, ExpressJS, NodeJS, NodeMailer, and Handlebars.'
                 linkType = 'href' url = ''
                 Description = {<p className='app-description'>  <b>Form web app </b> that builds and sends templated thank you emails.</p>}
@@ -118,7 +123,7 @@ class HomePage extends Component {
 
 
             </section>
-
+            <footer> </footer>
           </div>  
         </div> 
       </div>

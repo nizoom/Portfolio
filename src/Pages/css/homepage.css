@@ -143,7 +143,7 @@ header{
   opacity: .8;
   z-index: 2;
   position: absolute;
-  bottom:1800px;
+  bottom:1000px;
   transform: scaleX(-1);
   /* float: right; */
   left: 0;
@@ -152,9 +152,27 @@ header{
   opacity: .8;
   z-index: 2;
   position: absolute;
-  botoom:200px;
+  bottom:200px;
   transform: scaleX(-1);
   /* float: right; */
+}
+
+.starburst1{
+
+  position: absolute;
+  top:1700px;
+  z-index: 2;
+  right: 20px;
+  transform: rotate(-15deg)
+}
+
+.starburst2{
+
+  position: absolute;
+  bottom:200px;
+  z-index: 2;
+  left: 500px;
+  transform: rotate(40deg)
 }
 /* 
 .app_links{

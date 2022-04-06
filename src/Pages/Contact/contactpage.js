@@ -5,7 +5,7 @@ import "./contactFinal.css";
 import Sidebar from "../../Components/sidebar/sidebar";
 import Logo from "../../Components/logo/logo"
 import submitValidatedData from "./submit"
-import Headshot from "./headshot.png"
+
 
 
 
@@ -27,10 +27,10 @@ const ContactPage = () => {
   //SIDEBAR CODE
   const [clazz, setClazz] = useState(true)
 
-  const [showHeadShot, setShowHeadshot] = useState(true)
+  // const [show, setShowHeadshot] = useState(true)
 
   const classStatusForMobile = (sidebarStatus) => {
-    setShowHeadshot(!showHeadShot)
+    // setShowHeadshot(!showHeadShot)
 
     if (sidebarStatus && window.innerWidth < 850) {
       setClazz(!clazz)
@@ -50,13 +50,10 @@ const ContactPage = () => {
         <div className="contact-border">
           <div className="contact-wrapper">
 
-            {showHeadShot ?
-              <div className="headshot-span">
-                <img src={Headshot} alt="headshot photo" className="headshot" />
-              </div>
+       
+         
 
-              : null}
-
+            
             <h1 className="contact-intro">  Please contact me and I'll get
               back to you as soon as possible. </h1>
 

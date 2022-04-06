@@ -197,7 +197,7 @@ textarea{
   background-color: linear-gradient(to left, #F27121, #E94057, #8A2387);
 }
 
-.headshot{
+/* .headshot{
   float: right;
  
   margin-right: 50px;
@@ -205,7 +205,7 @@ textarea{
   width: 300px;
   height: 300px;
 
-}
+} */
 
 
 @media(max-width: 1200px){
@@ -266,32 +266,32 @@ textarea{
 }
 
 @media(max-width:800px){
-  .headshot{
+  /* .headshot{
     width: 200px;
     height: 200px;
     margin-right: 20px;
     margin-top: 50px;
-  }
+  } */
 }
 
 @media(max-width:750px){
   .form-input-btn{
     width: 15%;
   }
-  .headshot{
+  /* .headshot{
     width: 150px;
     height: 150px;
    
-  }
+  } */
 
 }
 
 @media(max-width: 700px){
-  .headshot{
+  /* .headshot{
     width: 150px;
     height: 150px;
   
-  }
+  } */
 
   .contact-wrapper{
     margin-top: 25%;
@@ -299,9 +299,9 @@ textarea{
 }
 
 @media(max-width: 600px){
-  .headshot{
+  /* .headshot{
     bottom:69%;
-  }
+  } */
   .err{
     width:70px;
     padding: 10px;
@@ -309,12 +309,12 @@ textarea{
 }
 
 @media(max-width: 500px){
-  .headshot{
+  /* .headshot{
     width: 100px;
     height: 100px;
     margin-top: 35px;
    
-  }
+  } */
 
   
   .contact-intro{
@@ -341,11 +341,11 @@ textarea{
 }
 
 @media(max-width: 400px){
-  .headshot{
+  /* .headshot{
     width: 100px;
     height: 100px;
    
-  }
+  } */
   .form-input-btn{
     font-size: .8em !important;
   }
@@ -384,19 +384,19 @@ textarea{
 }
 
 @media(min-height:1000px){
-  .headshot{
+  /* .headshot{
     width: 120px;
     height: 120px;
 
-  }
+  } */
 }
 
 @media(min-height:1200px){
-  .headshot{
+  /* .headshot{
     width: 120px;
     height: 120px;
 
-  }
+  } */
 } 
 
 
