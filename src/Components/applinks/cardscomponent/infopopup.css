@@ -1,0 +1,32 @@
+.popup-wrapper{
+    text-align: center;
+    z-index: 4000;
+    height:200px;
+    width: 70%;
+    background-color: black;
+    display: inline-block;       /* Display inline block */
+    text-align: center;          /* For button text center */
+    position: absolute;          /* Position absolute */
+    left: 50%;                   /* Move 50% from left */
+               
+    transform: translate(-50%, 0); /* Move button Center position  */
+    margin-top: 300px;
+    border: 2px solid #ebdec7;
+
+    opacity: 1;
+    transition: height 0ms 0ms, opacity 300ms 0ms;
+    transition-timing-function: ease-in;
+    font-family: 'Montserrat', sans-serif;
+}   
+
+.hide{
+    /* overflow: hidden;  Hide the element content, while height = 0 */
+    height: 0;
+    opacity: 0;
+    transition: height 0ms 400ms, opacity 400ms 0ms;
+   
+}
+
+.popup-text{
+    color:  #ebdec7;
+}

@@ -1,17 +1,27 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './cards.css';
 import appIconCard from "../../../project_layout/appiconcard.png"
 import appDescriptionCard from "../../../project_layout/appdescriptioncard.png"
 import DownArrow from "../../../project_layout/downarrow.png"
-
+import InfoPopUp from './infopopup';
 
 
 import { BrowserRouter as Router, Link } from "react-router-dom";
 
 const Cards = (props) => {
 
+    const [popupState, setPopupState] = useState({
+        status : false,
+        whichApp : ''
+    })
+
     const handleShowInfoClick = () => {
-        
+       const updatedvalues = {
+            status : true,
+            app : props.appTitle
+       }  
+
+        setPopupState(updatedvalues)
     }
 
     return (
@@ -61,6 +71,10 @@ const Cards = (props) => {
             </div>
 
             <div style={{width: '0px'}}></div>
+
+
+
+            <InfoPopUp popupState = {popupState}/>
         </div>
     )
 }
