@@ -187,7 +187,8 @@
     -webkit-transition-duration: 0.5s;
     transition-duration: 0.5s;
     z-index: 200;
-    /* position: absolute; */
+    margin-right: 5px;
+
 
   
     

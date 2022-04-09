@@ -13,6 +13,7 @@ import Cards from "../Components/applinks/cardscomponent/cards"
 import planetoid from "../project_layout/lightbubble.png"
 import Socials from "../Components/socials/socials";
 import Starburst from "../project_layout/starburst.png"
+import BackgroundGradient from "../project_layout/background.png"
 
 class HomePage extends Component {
   constructor(props) {
@@ -84,37 +85,44 @@ class HomePage extends Component {
 
 
             <section className="apps-section">
-             
-              <Cards alt = 'Global News'icon = {globalnewsIcon} appTitle = 'Try Global News'
-                stackList = 'ReactJS, React Router, Material UI, Azure, Google Cloud, LeafletJS.'
-                linkType = 'Link' 
-                Description = {<p className='app-description'> <b>Web app </b> that finds localized news based on geolocation from map click.</p>}
-              />
-              <img src = {planetoid} alt = 'planet-graphic' className="planetoid"/> 
+             <img src = {BackgroundGradient} alt = 'background-gradient' className="background-gradient-1"/>
+             <img src = {BackgroundGradient} alt = 'background-gradient' className="background-gradient-2"/>
+
+             <Cards alt = 'TY Email Builder' icon = {emailBuilderIcon} appTitle = 'TY Email Builder' stackList = ' ReactJS, ExpressJS, NodeJS, NodeMailer, and Handlebars.'
+                linkType = 'href' url = ''
+                Description = {<p className='app-description'>  <b>Form web app </b> that builds and sends templated thank you emails.</p>}
+              /> 
 
               <Cards alt = 'Build NYC 'icon = {NYCIcon} appTitle = 'Try Build NYC' stackList = 'React JS, LeafletJS, ChartJS, SoQueryLanguage, NodeJS, ExpressJS.'
                 linkType = 'href' url = 'https://build-nyc.herokuapp.com/' 
                 Description ={ <p className='app-description'> <b> Data visualization interface </b>  that illustrates building development in NYC. </p> }
               /> 
-               <img src = {planetoid} alt = 'planet-graphic' className="planetoid-2"/> 
-              <Cards alt = 'Build NYC 'icon = {EchoIcon} appTitle = 'Try Echochamber' stackList = 'ReactJS, Material UI, NodeJS, ExpressJS.'
-                linkType = 'href' url = 'https://entertheechochamber.herokuapp.com/'
-                Description = {<p className='app-description'>  <b>Web scraping app </b> that uses Twitter's  API to recreate a personal feed.</p>}
-              /> 
-               <img src = {Starburst} alt = 'planet-graphic' className="starburst1" />
-           
+
               <Cards alt = 'TY Email Automation'icon = {tyIcon} appTitle = 'TY Email Automation' stackList = ' ExpressJS, NodeJS, NodeMailer, and Handlebars.'
                 linkType = 'href' url = 'https://github.com/nizoom/TYAutomation'
                 Description = {<p className='app-description'>  <b>Backend app </b> that uses that generates custom daily thank you emails based on donations from an API.</p>}
               /> 
 
-              <img src = {Starburst} alt = 'planet-graphic' className="starburst2" />
+              <Cards alt = 'Global News'icon = {globalnewsIcon} appTitle = 'Try Global News'
+                stackList = 'ReactJS, React Router, Material UI, Azure, Google Cloud, LeafletJS.'
+                linkType = 'Link' 
+                Description = {<p className='app-description'> <b>Web app </b> that finds localized news based on geolocation from map click.</p>}
+              />
+              {/* <img src = {planetoid} alt = 'planet-graphic' className="planetoid curvy-figma-graphic"/>  */}
 
-              <Cards alt = 'TY Email Builder' icon = {emailBuilderIcon} appTitle = 'TY Email Builder' stackList = ' ReactJS, ExpressJS, NodeJS, NodeMailer, and Handlebars.'
-                linkType = 'href' url = ''
-                Description = {<p className='app-description'>  <b>Form web app </b> that builds and sends templated thank you emails.</p>}
+
+               {/* <img src = {planetoid} alt = 'planet-graphic' className="planetoid-2 curvy-figma-graphic"/>  */}
+              <Cards alt = 'Build NYC 'icon = {EchoIcon} appTitle = 'Try Echochamber' stackList = 'ReactJS, Material UI, NodeJS, ExpressJS.'
+                linkType = 'href' url = 'https://entertheechochamber.herokuapp.com/'
+                Description = {<p className='app-description'>  <b>Web scraping app </b> that uses Twitter's  API to recreate a personal feed.</p>}
               /> 
+               {/* <img src = {Starburst} alt = 'planet-graphic' className="starburst1 figma-graphic" /> */}
            
+            
+{/* 
+              <img src = {Starburst} alt = 'planet-graphic' className="starburst2 figma-graphic" /> */}
+
+             
 
 
               {/* <PresentGlobalNews visibilityStatus={this.state.gifClass} />

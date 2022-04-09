@@ -9,6 +9,11 @@ import DownArrow from "../../../project_layout/downarrow.png"
 import { BrowserRouter as Router, Link } from "react-router-dom";
 
 const Cards = (props) => {
+
+    const handleShowInfoClick = () => {
+        
+    }
+
     return (
 
         // ICON CARD
@@ -48,7 +53,7 @@ const Cards = (props) => {
                     {/* <div className='app-description'> {props.Description}</div> */}
              
                     <p className="tech-used">  <span className="stack"> Tech stack: </span> <span className="tech-list"> {props.stackList} </span> </p>
-                    <button className="more-info-btn"> Click here for more info</button>
+                    <button className="more-info-btn" onClick = {handleShowInfoClick} > Click here for more info</button>
                 </div>
 
 

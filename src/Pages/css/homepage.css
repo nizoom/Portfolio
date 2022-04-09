@@ -49,7 +49,9 @@
 }
 
 .homepage_wrapper{
-  background-color: black;
+ 
+  z-index: 3000;
+
 }
 
 .welcome-border h2{
@@ -133,9 +135,11 @@ header{
 
   opacity: .8;
   z-index: 0;
-  top:800px;
-  left: 200px;
+  top:950px;
+  left: 400px;
   position: absolute;
+  width: 60%;
+  transform: rotate(-65deg)
 
 }
 
@@ -143,27 +147,29 @@ header{
   opacity: .8;
   z-index: 2;
   position: absolute;
-  bottom:1000px;
-  transform: scaleX(-1);
+  bottom:1020px;
+  width: 60%;
+  transform: rotate(96deg);
   /* float: right; */
   left: 0;
 }
-.planetoid-3{
+/* .planetoid-3{
   opacity: .8;
   z-index: 2;
   position: absolute;
   bottom:200px;
   transform: scaleX(-1);
-  /* float: right; */
-}
+
+} */
 
 .starburst1{
 
   position: absolute;
   top:1700px;
   z-index: 2;
-  right: 20px;
-  transform: rotate(-15deg)
+  right: 100px;
+  transform: rotate(-15deg);
+  width: 20%;
 }
 
 .starburst2{
@@ -172,7 +178,8 @@ header{
   bottom:200px;
   z-index: 2;
   left: 500px;
-  transform: rotate(40deg)
+  transform: rotate(40deg);
+  width: 20%;
 }
 /* 
 .app_links{
@@ -188,6 +195,7 @@ header{
 } */
 
 
+
 /* BUBBLES */
 .bubbles-wrapper{
 
@@ -200,7 +208,9 @@ header{
   align-items: flex-start;
   transition: 4s ease-in;
 
+
 }
+
 
 .left{
   margin-top: 20px;
@@ -239,7 +249,26 @@ header{
 }
 
 /* MEDIA QUERIUES */
+.background-gradient-1{
+  z-index: 000;
+  position: absolute;
+  top: 1000px;
+  width: 100%;
+  opacity: .7;
+}
 
+.background-gradient-2{
+  z-index: 000;
+  position: absolute;
+  top: 2800px;
+  width: 100%;
+  opacity: .7;
+}
+
+footer{
+  height: 100px;
+  background-color: black;
+}
 
 
 @media (max-width: 1600px){

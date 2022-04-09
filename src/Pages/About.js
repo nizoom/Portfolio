@@ -36,12 +36,11 @@ const About = (props) => {
 
         <div className="about-wrapper">
 
-       
-          <div className="about-text">
 
               <h2 className="header"> Hey there, I'm a web developer based in Boston and New York City.</h2>
+              
               <img src = {Headshot} alt='Nissim Ram photo' className="headshot"/>
-              <section className="about-content-wrapper">
+           
 
                   <p className="about-content">
 
@@ -66,7 +65,7 @@ const About = (props) => {
 
 
 
-              </section>
+        
 
              
           </div>
@@ -80,7 +79,7 @@ const About = (props) => {
 
        
       </div>
-    </div >
+
 
   )
 }
