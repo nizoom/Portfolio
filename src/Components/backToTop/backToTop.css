@@ -10,13 +10,14 @@
   left: 94%;
   height: 60px;
   width: 60px;
-  background: linear-gradient(to right, #F27121, #E94057, #8A2387);
+  background: black;
   padding: 0;
+  border: 3px solid #D5AF60;
+  box-shadow: 2px 2px 40px #8f702e;
   /* background-color: #E94057; */
 
 }
 
-/* input[type=submit], input[type=Reset]{ -webkit-appearance:none; } */
 
 .btn_div{
   display: flex;
@@ -32,6 +33,10 @@
   
 }
 
+.up-arrow-img{
+  margin-top: 8px;
+
+}
 @media (max-width:1200px) {
   .top{
     text-align: center;

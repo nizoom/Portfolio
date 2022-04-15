@@ -3,9 +3,12 @@ import "./blogposts.css"
 
 const PostFour = () => {
     return (
-        <div>
+        <article>
             <h1 className="date"> Post Four, August 2021 </h1>
-            <h2 className="blog-title"> City Building, Certifications, and CRUDs </h2>
+            <div className="bar"> 
+            <h2 className="blog-title title-4"> City Building, Certifications, and CRUDs </h2>
+            </div>
+           
 
             <p className="blog-body" >
                 After deploying the Echo Chamber app, I wanted to delve into databases and data visualization.
@@ -57,7 +60,7 @@ const PostFour = () => {
             <br /><br />
             <br />
 
-        </div >
+        </article >
     )
 }
 

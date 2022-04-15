@@ -1,5 +1,6 @@
 import React from "react";
 import "./backToTop.css"
+import Arrow from "../../project_layout/arrow.png"
 
 const BackToTopBtn = (props) => {
 
@@ -13,7 +14,7 @@ const BackToTopBtn = (props) => {
     <div className="btn_div">
       <button type="button" className="top"
         onClick={scrollUp}
-      > 👆 </button>
+      > <img src = {Arrow} className = 'up-arrow-img'/> </button>
     </div>
   )
 }

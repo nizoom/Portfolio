@@ -2,62 +2,71 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Oxygen&display=swap');
 
+.cluster{
+  float: right;
+  margin-right:0;
+  margin-left:0;
+} 
+.contact-input-field{
+  position: absolute;
+  left: 200px;
+  border: 2px solid #D5AF60;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  border-radius: 16px;
+  background-color: #1A1404;
 
-.form-wrapper label{
-  display: flex;
-  text-align: center;
-  align-self: center;
+
+}
+
+.form-line-wrapper{
+  position: relative;
 }
 
 
+.contact-page-wrapper{
+  background-color: black;
+  height: 150vh;
+  font-family: 'Montserrat', sans-serif;
+
+}
 
 .form-label{
-  background-color: #D2C396;
+  background-color: #826617;
   font-size: 15px;
-  color: black;
+  color: white;
   padding: 1.8%;
-  /* height: 50px;
-  width: 60px; */
   border-radius: 16px;
 }
 
 .err{
-
+  font-family: 'Montserrat', sans-serif;
   color: white;
-
   background-color: #E94057;
-
- 
-  padding: 5px;
+  padding: 10px;
   margin: 0;
   padding-left: 5%;
+  border-radius: 16px;
+  font-size: small;
 
 
 }
 
 .err-span{
- margin-left:5%;
+  position: absolute;
+  left:30%;
+  top: 5px;
 
 }
-
 
 
 textarea{
-
-  border: 2px solid #783EB6;
-  border-radius: 4px;
-
-  box-sizing: border-box;
-  font-family: arial;
-  
-
-
   width: 50%;
   vertical-align: middle;
-  margin-top: 5px;
- 
-  margin-right: 15px;
+  box-sizing: border-box;
+  padding: 10px;
 }
+
 
 .form-success{
   color: #D2C396;
@@ -74,9 +83,9 @@ textarea{
   font-weight: 400;
 }
 
-.contact-wrapper{
+.contact-form-wrapper{
 
-  background-color: #050110;
+ 
   width: 95%;
   margin: auto;
   margin-bottom: 2%;
@@ -86,9 +95,10 @@ textarea{
   border-image: 
     linear-gradient(
       to bottom, 
-      #067A82, 
-      #623F74,
-      #050110,
+      black, 
+      /* #623F74, */
+      #D5AF60,
+      black,
       rgba(0, 0, 0, 0)
     ) 1 50%;
   
@@ -97,62 +107,60 @@ textarea{
 
 
 .name-input-div{
-  /* height: 50px; */
   display: flex;
   justify-content: flex-start;
 
-  padding: 2%;
-  padding-left: 5%;
   
 }
 
 .name-input{
   height: 25px;
-  margin-left: 5%;
   padding: 1.2%;
-  background-color: #BAB1CE;
+  border-radius: 16px;
+
 
 }
 
 .email-input-div{
   display: flex;
-  padding-left: 5%;
+
 }
 
 .email-input{
   display: flex;
   height: 25px;
-  margin-left: 5%;
   padding: 1.2%;
-  background-color: #BAB1CE;
 }
 
 
 .message-input-div{
-  padding-left: 5%;
   display: flex;
-  
-  text-align: center;
+}
+
+.textarea-label{
+
+  margin-top: 5px;
+  height: 50%;
  
 }
 
 .message_field{
-  margin-left: 2.5%;
   height: 90px;
-  background-color: #BAB1CE;
+  background-color: #1a1404;
 }
 
 
 .contact-intro{
-  display: flex;;
+
   padding: 5%;
   font-weight: 400;
+  color: #D5AF60;
 }
 
+
 .form-wrapper{
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  width: 90%;
+  margin: auto;
 
 }
 
@@ -175,20 +183,26 @@ textarea{
 
 .form-input-btn:hover{
   cursor:pointer;
-  border: 2px solid #1D7480;
+  border: 2px solid #826617;
   background-color: #050010;
   color: white;
   /* color: white;
   border-bottom: 4px solid darken($color, 10%); */
 }
+.btnDiv{
+  margin-left: 2px;
+
+
+}
 
 .form-input-btn{
-  
-  color:black;
-  background-color: #D2C396;
+  font-size: 1em;
+  border-radius: 16px;
+  color:white;
+  background-color: #826617;
   padding: 1%;
-  margin-left: 5%;
-  border: 2px solid white;
+  border: none;
+  margin-top: 2%;
 
 }
 
@@ -197,41 +211,18 @@ textarea{
   background-color: linear-gradient(to left, #F27121, #E94057, #8A2387);
 }
 
-/* .headshot{
-  float: right;
- 
-  margin-right: 50px;
-  margin-top: 200px;
-  width: 300px;
-  height: 300px;
-
-} */
 
 
 @media(max-width: 1200px){
-  .headshot{
-    width: 250px;
-    height: 250px;
-  
-  }
+ 
 }
 
 @media(max-width:1100px){
-  .headshot{
-    width: 240px;
-    height: 240px;
-   
-
-  }
+ 
 }
 
 @media(max-width:1000px){
-  .headshot{
-    width: 215px;
-    height: 215px;
-    margin-right: 25px;
 
-  }
 }
 
 
@@ -239,12 +230,6 @@ textarea{
 @media(max-width:900px) {
   textarea{
     width: 70%;
-  }
-
-  .headshot{
-    width: 200px;
-    height: 200px;
-  
   }
 
   .err-message-span{
@@ -266,32 +251,18 @@ textarea{
 }
 
 @media(max-width:800px){
-  /* .headshot{
-    width: 200px;
-    height: 200px;
-    margin-right: 20px;
-    margin-top: 50px;
-  } */
+
 }
 
 @media(max-width:750px){
   .form-input-btn{
     width: 15%;
   }
-  /* .headshot{
-    width: 150px;
-    height: 150px;
-   
-  } */
+
 
 }
 
 @media(max-width: 700px){
-  /* .headshot{
-    width: 150px;
-    height: 150px;
-  
-  } */
 
   .contact-wrapper{
     margin-top: 25%;
@@ -299,9 +270,6 @@ textarea{
 }
 
 @media(max-width: 600px){
-  /* .headshot{
-    bottom:69%;
-  } */
   .err{
     width:70px;
     padding: 10px;
@@ -309,12 +277,6 @@ textarea{
 }
 
 @media(max-width: 500px){
-  /* .headshot{
-    width: 100px;
-    height: 100px;
-    margin-top: 35px;
-   
-  } */
 
   
   .contact-intro{
@@ -341,11 +303,7 @@ textarea{
 }
 
 @media(max-width: 400px){
-  /* .headshot{
-    width: 100px;
-    height: 100px;
-   
-  } */
+
   .form-input-btn{
     font-size: .8em !important;
   }
@@ -384,19 +342,11 @@ textarea{
 }
 
 @media(min-height:1000px){
-  /* .headshot{
-    width: 120px;
-    height: 120px;
 
-  } */
 }
 
 @media(min-height:1200px){
-  /* .headshot{
-    width: 120px;
-    height: 120px;
 
-  } */
 } 
 
 

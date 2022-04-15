@@ -1,17 +1,21 @@
 
 .wallpaper{
-   background-repeat: repeat-y;
+   background-color: black;
 }
 
+
 .blog_div{
-  border: 3px solid black;
+  color: #d4b36d;
+  border-top: none;
+  border-bottom: none;
   margin-top: 10%;
   margin-right: 10%;
   margin-left: 10%;
   width: 80%;
   box-sizing: content-box;
-  background-color: #090B1A;
-  box-shadow: 5px 5px 5px 5px #4E3A64;;
+  font-family: 'Montserrat', sans-serif;
+  /* background-color: #090B1A; */
+
 }
 .blog-hr{
   width: 70%;
@@ -30,8 +34,9 @@ h2{
 }
 
 h1{
-  color: #D2C396;
-  text-align: center;
+  /* color: #D5AF60; */
+  /* text-align: left; */
+
 }
 
 .divider{
@@ -71,6 +76,6 @@ h1{
 
   .blog_div{
     margin-top: 60px;
-    letter-spacing: -.5px;
+   
   }
 }

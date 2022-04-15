@@ -4,7 +4,7 @@ import "./blogposts.css"
 
 const PostThree = () => {
     return (
-        <div>
+        <article>
             <h1 className="date"> Post Three, June 2021 </h1>
             <h2 className="blog-title"> Enter the Echo Chamber </h2>
             <p className="blog-body">
@@ -57,7 +57,7 @@ const PostThree = () => {
           <h4> ________________________________________________ </h4>} */}
             </div>
             <br /> <br /> <br /> <br />
-        </div>
+        </article>
 
 
     )

@@ -1,10 +1,12 @@
 import React, { useState } from "react"
 import useForm from "./useForm"
 import validate from "./validateinfo"
-import "./contactFinal.css";
+import "./contact.css";
 import Sidebar from "../../Components/sidebar/sidebar";
 import Logo from "../../Components/logo/logo"
 import submitValidatedData from "./submit"
+import cluster from "../../project_layout/contactpagecluster.png"
+
 
 
 
@@ -40,7 +42,7 @@ const ContactPage = () => {
   }
 
   return (
-    <div>
+    <div className="contact-page-wrapper">
       <Logo />
       <Sidebar functionCallFromParent={classStatusForMobile} />
 
@@ -48,25 +50,26 @@ const ContactPage = () => {
 
 
         <div className="contact-border">
-          <div className="contact-wrapper">
+          <div className="contact-form-wrapper">
 
        
          
 
             
-            <h1 className="contact-intro">  Please contact me and I'll get
+            <h1 className="contact-intro">  Please submit your message here and I'll get
               back to you as soon as possible. </h1>
 
 
             <div className="form-wrapper">
+              <img src = {cluster} alt= 'bubble graphic' className="cluster"/>
               <form onSubmit={handleSubmit}
                 action="#" method="POST" className="contact-form">
 
-                <div className="name-input-div">
+                <div className="name-input-div form-line-wrapper">
                   <label htmlFor="Name" className="form-label" >
                     Name:
                   </label>
-                  <input type="text" className="name-input"
+                  <input type="text" className="name-input contact-input-field"
                     placeholder="Name" id="username" name="name"
                     value={values.name}
                     onChange={handleChange} />
@@ -78,11 +81,11 @@ const ContactPage = () => {
                     </span>}
                 </div>
 
-                <div className="email-input-div">
+                <div className="email-input-div form-line-wrapper">
                   <label htmlFor="email" className="form-label" >
                     Email:
                   </label>
-                  <input type="email" className="email-input"
+                  <input type="email" className="email-input contact-input-field"
                     placeholder="Email Address" id="email" name="reply_to"
                     value={values.reply_to}
                     onChange={handleChange} />
@@ -96,11 +99,11 @@ const ContactPage = () => {
                 </div>
 
 
-                <div className="message-input-div">
-                  <label htmlFor="Message" className="form-label" >
+                <div className="message-input-div form-line-wrapper">
+                  <label htmlFor="Message" className="form-label textarea-label" >
                     Message:
                   </label>
-                  <textarea rows="10" cols="50" className="message_field"
+                  <textarea rows="10" cols="50" className="message_field contact-input-field"
                     placeholder="Message" id="message" name="message"
                     value={values.message}
                     onChange={handleChange} />
@@ -114,10 +117,7 @@ const ContactPage = () => {
 
 
                 <div className="btnDiv" style={{ fontColor: "white" }}>
-                  <button className="form-input-btn" type="submit" style={{
-                    borderRadius: "17px"
-                    , fontSize: "1em", fontColor: "white"
-                  }}>
+                  <button className="form-input-btn" type="submit" >
                     Submit
                   </button>
 

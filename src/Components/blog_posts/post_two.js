@@ -3,7 +3,7 @@ import "./blogposts.css"
 
 const PostTwo = (props) => {
   return (
-    <div>
+    <article>
       <h1 className="date"> Post Two, March 2021 </h1>
       <h2 className="blog-title"> Global News Project </h2>
 
@@ -89,7 +89,7 @@ const PostTwo = (props) => {
         {/* {window.innerWidth > 100 ? <h4 stlye={{ color: "#D2C396" }}> ____________________</h4> :
           <h4> ________________________________________________ </h4>} */}
       </div>
-    </div>
+    </article>
   )
 }
 

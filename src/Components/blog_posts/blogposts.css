@@ -1,19 +1,50 @@
 .date{
-    color: #D2C396;
-    margin: 40px;
-    font-weight: 400
+ 
+    margin: 40px 0 40px 0;
+
+    font-weight: semi-bold;
+    font-size: 36px;
+    
 }
 
+
 .blog-title{
-    text-align: center;
-    color: #D2C396;
-    font-weight: 300;
+    text-align: left;
+    font-size: 28px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    
+}
+
+.title-1{
+    border-bottom: 5px solid #D5B060;
+    padding-bottom: 20px;
+    width: 175px; 
+}
+.title-4{
+    border-bottom: 5px solid #D5B060;
+    padding-bottom: 20px;
+    width: 565px; 
+}
+.title-4{
+    border-bottom: 5px solid #D5B060;
+    padding-bottom: 20px;
+    width: 565px; 
+}
+
+.bar{
+
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    overflow: visible;
 }
 
 .blog-body{
     font-size: 1.3em;
     line-height: 2;
-    color: #D2C396
+
+    letter-spacing: -.05px;
 }
 
 @media(max-width: 700px){

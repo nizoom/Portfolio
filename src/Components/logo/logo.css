@@ -52,6 +52,7 @@
 
 .gov_name{
   margin: 0;
+  text-align: center;
   font-family: 'Montserrat', sans-serif;
   font-size: 40px;
   color: #D5B060;
@@ -67,7 +68,7 @@
   margin:0;
 }
 
-.name_div{
+.name-div{
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;

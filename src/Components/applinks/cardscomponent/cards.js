@@ -15,15 +15,16 @@ const Cards = (props) => {
         whichApp : ''
     })
 
-    const handleShowInfoClick = () => {
+    const handlePopupClick = (boolean) => {
        const updatedvalues = {
-            status : true,
+            status : boolean,
             app : props.appTitle
        }  
 
         setPopupState(updatedvalues)
     }
 
+  
     return (
 
         // ICON CARD
@@ -63,7 +64,7 @@ const Cards = (props) => {
                     {/* <div className='app-description'> {props.Description}</div> */}
              
                     <p className="tech-used">  <span className="stack"> Tech stack: </span> <span className="tech-list"> {props.stackList} </span> </p>
-                    <button className="more-info-btn" onClick = {handleShowInfoClick} > Click here for more info</button>
+                    <button className="more-info-btn" onClick = {handlePopupClick} > Click here for more info</button>
                 </div>
 
 
@@ -74,7 +75,7 @@ const Cards = (props) => {
 
 
 
-            <InfoPopUp popupState = {popupState}/>
+            <InfoPopUp popupState = {popupState} appTitle = {props.appTitle} handlePopupClick = {handlePopupClick}/>
         </div>
     )
 }

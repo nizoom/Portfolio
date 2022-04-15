@@ -10,9 +10,7 @@ import tyIcon from "../project_layout/tyicon.png"
 import emailBuilderIcon from "../project_layout/form.png"
 import gradientBubble from './../project_layout/Ellipse.png'
 import Cards from "../Components/applinks/cardscomponent/cards"
-import planetoid from "../project_layout/lightbubble.png"
 import Socials from "../Components/socials/socials";
-import Starburst from "../project_layout/starburst.png"
 import BackgroundGradient from "../project_layout/background.png"
 
 class HomePage extends Component {
@@ -93,7 +91,7 @@ class HomePage extends Component {
                 Description = {<p className='app-description'>  <b>Form web app </b> that builds and sends templated thank you emails.</p>}
               /> 
 
-              <Cards alt = 'Build NYC 'icon = {NYCIcon} appTitle = 'Try Build NYC' stackList = 'React JS, LeafletJS, ChartJS, SoQueryLanguage, NodeJS, ExpressJS.'
+              <Cards alt = 'Build NYC'icon = {NYCIcon} appTitle = 'Try Build NYC' stackList = 'React JS, LeafletJS, ChartJS, SoQueryLanguage, NodeJS, ExpressJS.'
                 linkType = 'href' url = 'https://build-nyc.herokuapp.com/' 
                 Description ={ <p className='app-description'> <b> Data visualization interface </b>  that illustrates building development in NYC. </p> }
               /> 
@@ -112,7 +110,7 @@ class HomePage extends Component {
 
 
                {/* <img src = {planetoid} alt = 'planet-graphic' className="planetoid-2 curvy-figma-graphic"/>  */}
-              <Cards alt = 'Build NYC 'icon = {EchoIcon} appTitle = 'Try Echochamber' stackList = 'ReactJS, Material UI, NodeJS, ExpressJS.'
+              <Cards alt = 'Echo Chamber'icon = {EchoIcon} appTitle = 'Try Echochamber' stackList = 'ReactJS, Material UI, NodeJS, ExpressJS.'
                 linkType = 'href' url = 'https://entertheechochamber.herokuapp.com/'
                 Description = {<p className='app-description'>  <b>Web scraping app </b> that uses Twitter's  API to recreate a personal feed.</p>}
               /> 
@@ -124,10 +122,6 @@ class HomePage extends Component {
 
              
 
-
-              {/* <PresentGlobalNews visibilityStatus={this.state.gifClass} />
-              <EchoIcon visibilityStatus={this.state.gifClass} />
-              <NYCIcon visibilityStatus={this.state.gifClass} /> */}
 
 
             </section>

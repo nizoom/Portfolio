@@ -1,7 +1,7 @@
 .popup-wrapper{
     text-align: center;
     z-index: 4000;
-    height:200px;
+    
     width: 70%;
     background-color: black;
     display: inline-block;       /* Display inline block */
@@ -11,22 +11,48 @@
                
     transform: translate(-50%, 0); /* Move button Center position  */
     margin-top: 300px;
-    border: 2px solid #ebdec7;
+
 
     opacity: 1;
     transition: height 0ms 0ms, opacity 300ms 0ms;
     transition-timing-function: ease-in;
     font-family: 'Montserrat', sans-serif;
+    border-radius: 32px;
+    padding:0;
 }   
 
 .hide{
     /* overflow: hidden;  Hide the element content, while height = 0 */
     height: 0;
     opacity: 0;
-    transition: height 0ms 400ms, opacity 400ms 0ms;
+    /* transition: height 0ms 400ms, opacity 400ms 0ms; */
    
 }
 
 .popup-text{
     color:  #ebdec7;
+    text-align: justify;
+    padding: 2% 5% 2% 5%;
+    line-height: 25px;
+}
+
+.button-div{
+    width: 100%;
+    margin: auto;
+    justify-content: space-evenly;
+    display: flex;
+    margin-bottom: 40px;
+    
+}
+
+.hide-btn{
+    display: none;
+}
+.btn-border{
+ 
+    border: 2px solid rgb(184, 134, 27);
+    padding: 16px;
+    border-radius: 16px;
+  
+    
 }

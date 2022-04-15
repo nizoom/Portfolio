@@ -3,9 +3,11 @@ import "./blogposts.css"
 const PostOne = () => {
   return (
 
-    <div>
+    <article>
       <h1 className="date"> Post One, January 2021 </h1>
-      <h2 className="blog-title"> Hello world. </h2>
+      <div className="bar"> 
+        <h2 className="blog-title title-1"> Hello world. </h2>
+      </div> 
       <p className="blog-body"
 
       > This blog is to document my experience teaching myself to code. It has been a long journey so far and I think there is still a ways to go. That sense of trying to locate yourself along a track will be a perennial question during this process: where am I at on this road, what page have I gotten to within the infinite encyclopedia of code.
@@ -30,7 +32,7 @@ const PostOne = () => {
         Stay tuned for upcoming projects and to hear more about my journey into web development!
 
       </p>
-    </div>
+    </article>
   )
 }
 
