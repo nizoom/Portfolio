@@ -8,19 +8,23 @@
   margin-left:0;
 } 
 .contact-input-field{
-  position: absolute;
-  left: 200px;
+
+
   border: 2px solid #D5AF60;
   color: white;
   font-family: 'Montserrat', sans-serif;
   border-radius: 16px;
   background-color: #1A1404;
-
-
 }
 
+
+
 .form-line-wrapper{
-  position: relative;
+  width: 700px;
+  display: flex;
+  align-items: flex-start;
+  gap: 50px;
+
 }
 
 
@@ -28,6 +32,7 @@
   background-color: black;
   height: 150vh;
   font-family: 'Montserrat', sans-serif;
+
 
 }
 
@@ -45,7 +50,7 @@
   background-color: #E94057;
   padding: 10px;
   margin: 0;
-  padding-left: 5%;
+  
   border-radius: 16px;
   font-size: small;
 
@@ -53,9 +58,7 @@
 }
 
 .err-span{
-  position: absolute;
-  left:30%;
-  top: 5px;
+  margin-top: 5px;
 
 }
 
@@ -107,9 +110,6 @@ textarea{
 
 
 .name-input-div{
-  display: flex;
-  justify-content: flex-start;
-
   
 }
 
@@ -122,19 +122,19 @@ textarea{
 }
 
 .email-input-div{
-  display: flex;
+
 
 }
 
 .email-input{
-  display: flex;
+
   height: 25px;
   padding: 1.2%;
 }
 
 
 .message-input-div{
-  display: flex;
+
 }
 
 .textarea-label{
@@ -145,14 +145,16 @@ textarea{
 }
 
 .message_field{
-  height: 90px;
+  height: 120px;
+  width: 500px;
   background-color: #1a1404;
+  margin-left: -20px;
 }
 
 
 .contact-intro{
 
-  padding: 5%;
+  padding: 0 5% 5% 5%;
   font-weight: 400;
   color: #D5AF60;
 }
@@ -164,8 +166,21 @@ textarea{
 
 }
 
+.contact-form-wrapper input:focus { 
+  outline: none !important;
+  border-color: rgb(203, 186, 205);
+  box-shadow: 0 0 10px #77525a;
+}
+.contact-form-wrapper textarea:focus { 
+  outline: none !important;
+  border-color: rgb(203, 186, 205);
+  box-shadow: 0 0 10px #77525a;
+}
+
+
+
 .message-input-div .err-span{
-  margin-top: 5px;
+
 }
 
 .form-wrapper div{
@@ -174,37 +189,37 @@ textarea{
 
 
 .err-message-span{
-  margin-left: 5%;
-  margin-top: 5px;
-  text-align: left;
-}
-
-
-
-.form-input-btn:hover{
-  cursor:pointer;
-  border: 2px solid #826617;
-  background-color: #050010;
-  color: white;
-  /* color: white;
-  border-bottom: 4px solid darken($color, 10%); */
-}
-.btnDiv{
-  margin-left: 2px;
-
 
 }
 
 .form-input-btn{
   font-size: 1em;
-  border-radius: 16px;
+  border-radius: 15px;
   color:white;
   background-color: #826617;
-  padding: 1%;
+  padding: 40%;
   border: none;
-  margin-top: 2%;
+
+
 
 }
+
+
+.form-input-btn:hover{
+  cursor:pointer;
+ 
+  background-color: #52373D;
+  color: white;
+
+  /* color: white;
+  border-bottom: 4px solid darken($color, 10%); */
+}
+.btn-div{
+
+
+  margin-top: 10px;
+}
+
 
 
 .form-input-btn:active{
@@ -244,7 +259,7 @@ textarea{
     width: 10%;
   }
 
-  .btnDiv{
+  .btn-div{
     text-align: center;
   }
 

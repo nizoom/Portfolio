@@ -103,7 +103,7 @@ const ContactPage = () => {
                   <label htmlFor="Message" className="form-label textarea-label" >
                     Message:
                   </label>
-                  <textarea rows="10" cols="50" className="message_field contact-input-field"
+                  <textarea rows="15" cols="50" className="message_field contact-input-field"
                     placeholder="Message" id="message" name="message"
                     value={values.message}
                     onChange={handleChange} />
@@ -112,14 +112,16 @@ const ContactPage = () => {
                     <span className="err-message-span">
                       <p className="err"> {errors.message} </p>
                     </span>}
+
+                    <div className="btn-div" style={{ fontColor: "white" }}>
+                        <button className="form-input-btn" type="submit" >
+                          Submit
+                        </button>
                 </div>
 
 
 
-                <div className="btnDiv" style={{ fontColor: "white" }}>
-                  <button className="form-input-btn" type="submit" >
-                    Submit
-                  </button>
+              
 
 
                 </div>
