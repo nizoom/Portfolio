@@ -20,7 +20,7 @@ const Cards = (props) => {
             status : boolean,
             app : props.appTitle
        }  
-
+        props.toggleOpacityForPopup()
         setPopupState(updatedvalues)
     }
 
@@ -75,7 +75,7 @@ const Cards = (props) => {
 
 
 
-            <InfoPopUp popupState = {popupState} appTitle = {props.appTitle} handlePopupClick = {handlePopupClick}/>
+            <InfoPopUp popupState = {popupState} appTitle = {props.appTitle} handlePopupClick = {handlePopupClick} position = {props.position}/>
         </div>
     )
 }

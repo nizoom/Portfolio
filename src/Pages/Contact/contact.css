@@ -30,7 +30,7 @@
 
 .contact-page-wrapper{
   background-color: black;
-  height: 150vh;
+  height: 140vh;
   font-family: 'Montserrat', sans-serif;
 
 
@@ -86,7 +86,7 @@ textarea{
   font-weight: 400;
 }
 
-.contact-form-wrapper{
+.contact-form-wrapper {
 
  
   width: 95%;
@@ -106,8 +106,28 @@ textarea{
     ) 1 50%;
   
 }
+.nav-open-contact{
 
+  width: 95%;
+  margin: auto;
+  margin-bottom: 2%;
+  border-width: 10px;
+  border-style: dashed solid;
+  border-image-slice: 30;
+  border-image: 
+    linear-gradient(
+      to bottom, 
+      black, 
+      /* #623F74, */
+      #D5AF60,
+      black,
+      rgba(0, 0, 0, 0)
+    ) 1 50%;
+}
 
+.nav-open-contact img{
+  display: none;
+}
 
 .name-input-div{
   
@@ -168,12 +188,12 @@ textarea{
 
 .contact-form-wrapper input:focus { 
   outline: none !important;
-  border-color: rgb(203, 186, 205);
+  border-color: #997079;
   box-shadow: 0 0 10px #77525a;
 }
 .contact-form-wrapper textarea:focus { 
   outline: none !important;
-  border-color: rgb(203, 186, 205);
+  border-color: #997079;
   box-shadow: 0 0 10px #77525a;
 }
 

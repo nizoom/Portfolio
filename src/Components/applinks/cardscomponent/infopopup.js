@@ -1,14 +1,13 @@
-import React, {useState} from "react";
+import React from "react";
 import "./infopopup.css"
 
 const InfoPopUp = (props) => {
 
-    const [appDetails, setAppDetails] = useState("")
        
-    console.log(props.popupState.status)
+    console.log(props.appTitle)
 
     const selectAppText = () => {
-        console.log('deviding')
+       
             // Switch statement to determine app details text
             switch(props.appTitle){
                 case 'TY Email Builder':
@@ -29,17 +28,23 @@ const InfoPopUp = (props) => {
     }
     return(
 
-        <div className={props.popupState.status ? "popup-wrapper" : "hide"}>
+        <div className={props.popupState.status ? "popup-background" : "hide"}>
+            <div className={`popup-wrapper ${props.position}`}>
+            
 
-             <article className="popup-text">
-                {selectAppText()}
-            </article> 
+                    <article className={props.popupState.status ? "popup-text" : "hide-popup-text" }>
+                        {selectAppText()}
+                    </article> 
 
-            <div className= {props.popupState.status ? "button-div" : "hide-btn"} >
-                <button className="more-info-btn btn-border"> Visit </button>
-                <button className="more-info-btn btn-border" onClick = {closePopup}> Close </button>
+                    {/* <div className= {props.popupState.status ? "button-div" : "hide-btn"} > */}
+                    <div className={props.popupState.status ? "button-div" : "hide-button-div" }>
+                        <button className="more-info-btn btn-border"> Visit </button>
+                        <button className="more-info-btn btn-border" onClick = {closePopup}> Close </button>
+                    </div>
             </div>
+       
         </div>
+          
 
     )
 }

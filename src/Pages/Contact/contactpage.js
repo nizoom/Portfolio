@@ -27,33 +27,30 @@ const ContactPage = () => {
 
 
   //SIDEBAR CODE
-  const [clazz, setClazz] = useState(true)
+  const [navStatus, setNavStatus] = useState(false)
 
-  // const [show, setShowHeadshot] = useState(true)
-
-  const classStatusForMobile = (sidebarStatus) => {
-    // setShowHeadshot(!showHeadShot)
-
-    if (sidebarStatus && window.innerWidth < 850) {
-      setClazz(!clazz)
-    } if (window.innerWidth < 850) {
-      setClazz(!clazz)
-    }
+  // const classStatusForMobile = (sidebarStatus) => {
+  //   if (sidebarStatus && window.innerWidth < 850) {
+  //     setNavStatus(!navStatus)
+  //   }
+  //   if (window.innerWidth < 850) {
+  //     setNavStatus(!navStatus)
+  //   }
+  // }
+  const getSidebarStatus = (sidebarStatus) => {
+    console.log(sidebarStatus)
+    return (sidebarStatus ? setNavStatus(true) : setNavStatus(false))
   }
 
   return (
     <div className="contact-page-wrapper">
       <Logo />
-      <Sidebar functionCallFromParent={classStatusForMobile} />
+      <Sidebar functionCallFromParent={getSidebarStatus} />
 
-      <div className={clazz ? "contact-divy" : "navOpen"} style={{ marginTop: "5em" }}>
 
 
         <div className="contact-border">
-          <div className="contact-form-wrapper">
-
-       
-         
+          <div className={navStatus ? "nav-open-contact" : "contact-form-wrapper"}>
 
             
             <h1 className="contact-intro">  Please submit your message here and I'll get
@@ -133,7 +130,6 @@ const ContactPage = () => {
 
 
           </div>
-        </div>
       </div>
     </div >
 

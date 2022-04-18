@@ -15,7 +15,7 @@ const Sidebar = (props) => {
   }
 
 
-
+  
 
   const childFunction = (e) => {
     props.functionCallFromParent(e)

@@ -25,7 +25,7 @@ class HomePage extends Component {
         this.setState(prevstate => ({
           sidebarVisible: !prevstate.sidebarVisible
         }))
-        console.log(this.state.sidebarVisible);
+       
       },
       determineClass: (x) => {
         if (x && window.innerWidth < 850) {
@@ -34,6 +34,12 @@ class HomePage extends Component {
           this.setState({ gifClass: "gif" })
         }
 
+      },
+      popupStatus: false,
+      toggleOpacityForPopup: () => {
+        this.setState(prevstate => ({
+          popupStatus: !prevstate.popupStatus
+        }))
       },
       gifClass: "gif"
     }
@@ -46,8 +52,9 @@ class HomePage extends Component {
     return (
       
 
-      <div className="homepage_wrapper background-covering"> 
-        <div className="fade-in "> 
+      <div className= "homepage_wrapper background-covering"> 
+        <div className= {this.state.popupStatus ? "gray-out" : null }> </div>
+        <div className="fade-in"> 
           <Logo />
           <Sidebar
             functionCallFromParent={this.state.determineClass} />
@@ -89,43 +96,39 @@ class HomePage extends Component {
              <Cards alt = 'TY Email Builder' icon = {emailBuilderIcon} appTitle = 'TY Email Builder' stackList = ' ReactJS, ExpressJS, NodeJS, NodeMailer, and Handlebars.'
                 linkType = 'href' url = ''
                 Description = {<p className='app-description'>  <b>Form web app </b> that builds and sends templated thank you emails.</p>}
+                toggleOpacityForPopup ={this.state.toggleOpacityForPopup} position = 'one'
               /> 
 
               <Cards alt = 'Build NYC'icon = {NYCIcon} appTitle = 'Try Build NYC' stackList = 'React JS, LeafletJS, ChartJS, SoQueryLanguage, NodeJS, ExpressJS.'
                 linkType = 'href' url = 'https://build-nyc.herokuapp.com/' 
                 Description ={ <p className='app-description'> <b> Data visualization interface </b>  that illustrates building development in NYC. </p> }
+                toggleOpacityForPopup ={this.state.toggleOpacityForPopup} position = 'two'
               /> 
 
               <Cards alt = 'TY Email Automation'icon = {tyIcon} appTitle = 'TY Email Automation' stackList = ' ExpressJS, NodeJS, NodeMailer, and Handlebars.'
                 linkType = 'href' url = 'https://github.com/nizoom/TYAutomation'
                 Description = {<p className='app-description'>  <b>Backend app </b> that uses that generates custom daily thank you emails based on donations from an API.</p>}
+                toggleOpacityForPopup ={this.state.toggleOpacityForPopup} position = 'three'
               /> 
 
               <Cards alt = 'Global News'icon = {globalnewsIcon} appTitle = 'Try Global News'
                 stackList = 'ReactJS, React Router, Material UI, Azure, Google Cloud, LeafletJS.'
                 linkType = 'Link' 
                 Description = {<p className='app-description'> <b>Web app </b> that finds localized news based on geolocation from map click.</p>}
+                toggleOpacityForPopup ={this.state.toggleOpacityForPopup} position = 'four'
               />
-              {/* <img src = {planetoid} alt = 'planet-graphic' className="planetoid curvy-figma-graphic"/>  */}
-
-
-               {/* <img src = {planetoid} alt = 'planet-graphic' className="planetoid-2 curvy-figma-graphic"/>  */}
+         
+             
               <Cards alt = 'Echo Chamber'icon = {EchoIcon} appTitle = 'Try Echochamber' stackList = 'ReactJS, Material UI, NodeJS, ExpressJS.'
                 linkType = 'href' url = 'https://entertheechochamber.herokuapp.com/'
                 Description = {<p className='app-description'>  <b>Web scraping app </b> that uses Twitter's  API to recreate a personal feed.</p>}
+                toggleOpacityForPopup ={this.state.toggleOpacityForPopup} position = 'five'
               /> 
-               {/* <img src = {Starburst} alt = 'planet-graphic' className="starburst1 figma-graphic" /> */}
-           
-            
-{/* 
-              <img src = {Starburst} alt = 'planet-graphic' className="starburst2 figma-graphic" /> */}
-
-             
-
+        
 
 
             </section>
-            <footer> </footer>
+            <footer> </footer>  
           </div>  
         </div> 
       </div>

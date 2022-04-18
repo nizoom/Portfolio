@@ -7,6 +7,19 @@
   column-gap: 50px;
 
 }
+.nav-open-about img{
+ display: none;
+}
+
+.nav-open-about{
+  display: grid;
+  margin: auto;
+  width: 60%;
+  grid-template-columns: 1; 
+
+ 
+}
+
 .headshot{
   width: 300px;
   height: 300px;
@@ -44,8 +57,9 @@
   height: 100vh;
   padding-bottom: 10%;
 
-
 }
+
+
 /* 
 .about-wrapper{
 
@@ -96,11 +110,6 @@
 .about-content{
 
 } */
-
-.navOpen{
-  display: none;
-}
-
 
 
 @media (max-width:900px){

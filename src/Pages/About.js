@@ -9,32 +9,31 @@ import "./css/about.css"
 const About = (props) => {
 
 
-  const [clazz, setClazz] = useState(false)
+  const [navStatus, setNavStatus] = useState(false)
 
-  const classStatusForMobile = (sidebarStatus) => {
-    if (sidebarStatus && window.innerWidth < 850) {
-      setClazz(!clazz)
-    }
-    if (window.innerWidth < 850) {
-      setClazz(!clazz)
-    }
+  // const classStatusForMobile = (sidebarStatus) => {
+  //   if (sidebarStatus && window.innerWidth < 850) {
+  //     setNavStatus(!navStatus)
+  //   }
+  //   if (window.innerWidth < 850) {
+  //     setNavStatus(!navStatus)
+  //   }
+  // }
+  const getSidebarStatus = (sidebarStatus) => {
+    console.log(sidebarStatus)
+    return (sidebarStatus ? setNavStatus(true) : setNavStatus(false))
   }
 
-  function setClass() {
-    return (clazz ? "displayOn" : "navOpen")
-  }
 
   return (
     <div className="page-wrapper">
 
       <Logo />
-      <Sidebar functionCallFromParent={classStatusForMobile} />
-      {/* <div className={clazz ? "title" : "navOpen"}>
-        <h1 style={{ color: "#D5B060", paddingBottom: "1em", fontSize: "2.2em" }}> Bįo</h1>
-      </div> */}
-      <div className={clazz ? "navOpen" : null}>
+      <Sidebar functionCallFromParent={getSidebarStatus} />
+    
+      <div>
 
-        <div className="about-wrapper">
+        <section className={navStatus ? "nav-open-about" : "about-wrapper"}> 
 
 
               <h2 className="header"> Hey there, I'm a web developer based in Boston and New York City.</h2>
@@ -62,22 +61,8 @@ const About = (props) => {
 
 
                   </p>
-
-
-
-        
-
-             
+            </section>
           </div>
-           
-         
-            
-          </div>
-
-
-      
-
-       
       </div>
 
 

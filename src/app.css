@@ -8,19 +8,12 @@ html{
   background-color: black;
   height: 100vh;
  
-  /* position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 100%;
-  width: 100%; */
-
 }
 
 
 .App {
   text-align: center;
+
   /* background-image: url(project_layout/background.jpg);
   background-size: cover; */
   background-color: #000;
