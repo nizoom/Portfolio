@@ -1,5 +1,6 @@
 import React from "react";
 import "./infopopup.css"
+import TemplateGif from "../../../project_layout/tytemplate.gif"
 
 const InfoPopUp = (props) => {
 
@@ -11,7 +12,12 @@ const InfoPopUp = (props) => {
             // Switch statement to determine app details text
             switch(props.appTitle){
                 case 'TY Email Builder':
-                    return <p> An employee-facing web app that provides a user interface to fill out templated thank you emails for physical checks that come in the mail. INSERT GIF</p>
+                    return <div> 
+                            <p> An employee-facing web app that provides a user interface to fill out templated thank you emails for physical checks that come in the mail.</p>
+                            <img src = {TemplateGif} className = 'template-gif'/>
+
+                            </div>
+                    
                 case 'Try Global News':
                     return <p> Global news is a novel way to access information about the world. The user is presented with a world map and with a map click can learn about that place from a list of news articles generated from that location. The longitude and latitude from a map click is converted, using Google Cloud services, to a human readable address. The address is iterated through Azure's news API until relevant news appears. The user can also narrow their search by entering a keyword before clicking on the map. That key word will then be added to the parameters of the API query.</p>          
                 case 'Try Echochamber':

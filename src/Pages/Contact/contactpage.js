@@ -115,18 +115,15 @@ const ContactPage = () => {
                           Submit
                         </button>
                 </div>
+        
 
-
-
-              
-
-
-                </div>
-              </form>
-            </div>
-
-            {isSubmitted ? <div className="form-success"> <h4 className="success-msg"> Sent! Thanks for your message.
+              </div>
+              {isSubmitted ? <div className="form-success"> <h4 className="success-msg"> Sent! ✅
             </h4> </div> : null}
+            </form>
+          </div>
+
+          
 
 
           </div>

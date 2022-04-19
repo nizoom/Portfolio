@@ -4,8 +4,6 @@ import Sidebar from "../Components/sidebar/sidebar"
 import Headshot from "../project_layout/headshot.png"
 import "./css/about.css"
 
-
-
 const About = (props) => {
 
 

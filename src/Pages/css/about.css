@@ -45,7 +45,7 @@
   color: #D5B060;
   font-weight: 300;
   font-size: 2.2em;
-  padding-top: 30px;
+  grid-row: 1;
   padding-bottom: 30px;
   grid-row-end: -1;
 }
@@ -54,91 +54,82 @@
 
 .page-wrapper{
   background-color: black;
-  height: 100vh;
+  height: 100%;
   padding-bottom: 10%;
 
 }
 
 
-/* 
-.about-wrapper{
+@media (max-width:1000px){
+  .about-wrapper{
+    grid-template-columns: 60% auto;
 
-  margin: 0 50px 0px 50px;
-  
-}
-
-
-
-.header{
-
-  text-align: justify;
-  color: #D5B060;
-  font-weight: 300;
-  font-size: 2.2em;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  margin: 0 auto 0 auto;
-
-}
-
-.page-wrapper h2{
-  margin-bottom: 0;
-  padding-bottom: 0;
-}
-
-.headshot{
-  display: inline;
-  width: 400px;
-  height: 400px;
-  float: right;
-  margin-top: 30px;
-  
-  
- 
-}
-
-.about-content-wrapper{
-  margin-top: 5%;
-
-}
-
-.about-text{
-
-  
-}
-
-.about-content{
-
-} */
-
-
-@media (max-width:900px){
-  .body{
-    color: #C6EBF1;
-    text-align: center;
-    font-size: 75%;
+    
   }
 
   .header{
-    font-size: 2.2em;
-  
+    font-size: 2em;
+    align-self: flex-end;
+    padding-bottom: 0;
+   
   }
 
   .about-content{
-    font-size: 1.8em;
+    margin-top: 15px;
+    font-size: 22px;
     line-height: 1.5;
     letter-spacing: 0;
-  }
-/* 
-  .title{
-    text-align: center;
-    font-size: 75%;
-    padding-top: 10%;
-  } */
+    grid-column: span 2;
 
+  }
+
+  .headshot{
+   display: inline;
+   grid-row: 1;
+   width: 200px;
+   height: 200px;
+   justify-self: center;
+   padding-bottom: 20px;
+  }
 
 }
 
+@media(max-width:800px){
+  
+  .headshot{
+   justify-self: flex-end;
+   padding-bottom: 0px;
+   }
+
+   .page-wrapper{
+     padding-bottom: 15%;
+   }
+
+}
+@media(max-width:700px){
+
+
+  .header{
+    font-size: 24px;
+    margin-bottom: 5px;
+  }
+
+  .headshot{
+    height: 150px;
+    width: 150px;
+  }
+
+  .about-content{
+    font-size: 18px;
+  }
+
+  .about-wrapper{
+    margin: auto;
+    width: 86%;
+   
+  }
+
+}
 
 @media(max-width:500px){
   .header{  

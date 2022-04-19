@@ -72,12 +72,13 @@ textarea{
 
 
 .form-success{
-  color: #D2C396;
+  color: #D5AF60;
   text-align: center;
   margin-top: 0;
   padding-top:0;
-  margin: 10px;
+  display: flex;
   font-size: 2em;
+  width: 50%;
 }
 
 .success-msg{
@@ -177,6 +178,7 @@ textarea{
   padding: 0 5% 5% 5%;
   font-weight: 400;
   color: #D5AF60;
+  margin-bottom: 0;
 }
 
 

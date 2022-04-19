@@ -11,7 +11,7 @@ import SearchBar from "./Components/SearchBar/searchbar"
 import Map from "./Components/Map/map"
 import LocalityCheckBox from "./Components/LocalityCheckBox/checkbox"
 import NewsDisplay from "./Components/NewsDisplay/newsdisplay"
-import About from "./Components/About/about"
+import About from "./Components/About/aboutglobalnews"
 
 
 
