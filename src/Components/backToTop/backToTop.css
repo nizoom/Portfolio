@@ -29,13 +29,19 @@
   -moz-appearance: none;
   appearance: none;
   position: fixed;
-  left: 94%;
+  right: 35px;
   
 }
 
 .up-arrow-img{
   margin-top: 8px;
 
+}
+
+@media(max-width: 1350px) {
+  .btn_div{
+
+  }
 }
 @media (max-width:1200px) {
   .top{
@@ -49,37 +55,52 @@
 
   }
 
+ 
+
 }
 
-@media(max-width:1100px){
-  .btn_div{
-    left: 92%;
-
-  }
-}
-
-@media(max-width:800px){
+@media(max-width:840px){
   .top{
     height: 50px;
-   width: 50px;
+    width: 50px;
+
 
    
   }
+
+  .up-arrow-img{
+    height: 25px;
+  }
   .btn_div{
-    left: 93%;
+    right: 0;
+    margin-right: 8px;
 
   }
 }
 
+@media(max-width:740px){
+  .btn_div{
+
+  }
+
+  .top{
+    height: 40px;
+    width: 40px;
+  }
+
+  .up-arrow-img{
+    height: 20px;  
+  }
+}
 @media(max-width:700px){
   .btn_div{
-    left: 92%;
+  
   }
 }
 
 @media(max-width:600px){
   .btn_div{
-    left: 91%;
+
     -webkit-appearance: none;
     -moz-appearance: none;
   }

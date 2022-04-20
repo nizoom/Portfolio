@@ -13,10 +13,6 @@
   margin: 0;
 }
 
-.link_div{
-  padding: 0;
-  margin: .5% 0 0 0;
-}
 
 .gov_name{
   margin: 0;
@@ -52,33 +48,22 @@
 
 
 
-@media (max-width:1000px){
+@media(max-width:700px){
+  .gold-bar{
+    width: 200px;
+    height: 5px;
+  }
+
   .gov_name{
-    margin-top:7px;
-    padding-top:0;
-    text-align: center;
-    position: relative;
-    font-size: 30px;
-
-  }
-  .wrapper{
-    margin-bottom: 40px;
-
-  }
-  .name_div{
-    left: 19%;
-    text-align: center;
-    margin-bottom: 1%;
-
+    font-size: 32px;
   }
 
-  .parallelogram{
-    top: 10px;
-    left: 1%;
-    width: 50px;
-    height: 60px;
+  .main-sub-header{
+    font-size: 24px;
   }
 
-
-
+  .name-div{
+    margin-left: 0px;
+  }
+ 
 }

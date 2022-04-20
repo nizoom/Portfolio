@@ -4,9 +4,9 @@ const PostOne = () => {
   return (
 
     <article>
-      <h1 className="date"> Post One, January 2021 </h1>
+      <h2 className="date"> Post One, January 2021 </h2>
  
-        <h2 className="blog-title title-1"> Hello world. </h2>
+        <h3 className="blog-title title-1"> Hello world. </h3>
  
       <p className="blog-body"
 

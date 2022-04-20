@@ -1,3 +1,4 @@
+
 .about-wrapper{
 
   display: grid;
@@ -55,7 +56,7 @@
 .page-wrapper{
   background-color: black;
   height: 100%;
-  padding-bottom: 10%;
+  padding-bottom: 15%;
 
 }
 
@@ -92,9 +93,29 @@
    padding-bottom: 20px;
   }
 
+  .nav-open-about{
+    
+    background-color: black;
+    padding: 75px;
+  }
+
+  .nav-open-about img  {
+    display:none;
+  }
+  .nav-open-about p  {
+    display: none;
+  }
+  .nav-open-about h2  {
+    display: none;
+  }
+
 }
 
 @media(max-width:800px){
+
+  .about-wrapper{
+    margin-top: 70px;
+  }
   
   .headshot{
    justify-self: flex-end;
@@ -102,13 +123,13 @@
    }
 
    .page-wrapper{
-     padding-bottom: 15%;
+     padding-bottom: 35%;
    }
 
 }
 @media(max-width:700px){
 
-
+  
   .header{
     font-size: 24px;
     margin-bottom: 5px;
@@ -124,10 +145,12 @@
   }
 
   .about-wrapper{
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
     width: 86%;
    
   }
+
 
 }
 
