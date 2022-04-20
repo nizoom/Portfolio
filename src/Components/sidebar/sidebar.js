@@ -11,6 +11,15 @@ const Sidebar = (props) => {
 
   const sideBarBtnHandler = () => {
     setSidebarStatus(!sidebarStatus)
+
+    if(!sidebarStatus){
+     
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth"
+        })
+      
+    }
     //if sidebar closed so should tooltip
   }
 

@@ -12,23 +12,28 @@ import BackToTopBtn from "../Components/backToTop/backToTop"
 
 const Blog = (props) => {
 
-  const [clazz, setClazz] = useState(false);
+  const [navStatus, setNavStatus] = useState(false);
 
-  const childFunction = (sidebarStatus) => {
-    if (sidebarStatus && window.innerWidth < 850) {
-      setClazz(!clazz)
-    } if (window.innerWidth < 850) {
-      setClazz(!clazz)
-    }
+  // const childFunction = (sidebarStatus) => {
+  //   if (sidebarStatus && window.innerWidth < 850) {
+  //     setClazz(!clazz)
+  //   } if (window.innerWidth < 850) {
+  //     setClazz(!clazz)
+  //   }
 
+  // }
+  const getSidebarStatus = (sidebarStatus) => {
+    console.log(sidebarStatus)
+    return (sidebarStatus ? setNavStatus(true) : setNavStatus(false))
   }
 
+
   return (
-    <div className="wallpaper">
+    <div className={navStatus ? "wallpaper-extended": "wallpaper" }>
       <Logo />
-      <Sidebar functionCallFromParent={childFunction} />
-      <div className={clazz ? "navOpen" : null}>
-        <BackToTopBtn />
+      <Sidebar functionCallFromParent={getSidebarStatus} />
+      <div className={navStatus ? "navOpen" : null}>
+        <BackToTopBtn navStatus = {navStatus}/>
         <div className="blog_div">
           <div className="post">
 

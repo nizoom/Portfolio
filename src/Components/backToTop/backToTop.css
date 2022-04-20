@@ -38,6 +38,10 @@
 
 }
 
+.hide-backtotop-btn{
+  display: none;
+}
+
 @media(max-width: 1350px) {
   .btn_div{
 

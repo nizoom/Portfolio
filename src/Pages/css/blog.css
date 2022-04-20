@@ -1,8 +1,11 @@
 
-.wallpaper{
+.wallpaper {
    background-color: black;
 }
 
+.wallpaper-extended{
+  background-color: black;
+}
 
 .blog_div{
   color: #d4b36d;
@@ -40,6 +43,15 @@ h1{
 }
 
 .divider{
+
+}
+
+@media(max-width:1000px){
+  .wallpaper-extended{
+    padding-bottom: 110vh;
+    background-color: black;
+  }
+
 
 }
 
