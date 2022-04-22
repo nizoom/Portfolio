@@ -9,8 +9,6 @@ import cluster from "../../project_layout/contactpagecluster.png"
 
 
 
-
-
 const ContactPage = () => {
   // FORM CODE
   const { handleChange, values, handleSubmit, errors, isSubmitting } = useForm(

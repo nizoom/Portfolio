@@ -48,6 +48,25 @@
 
 
 
+@media(max-width:1100px){
+  .gold-bar{
+    width: 250px;
+    height: 6px;
+  }
+
+  .gov_name{
+    font-size: 32px;
+  }
+
+  .main-sub-header{
+    font-size: 24px;
+  }
+
+  .name-div{
+    margin-left: 0px;
+  }
+ 
+}
 @media(max-width:700px){
   .gold-bar{
     width: 200px;
