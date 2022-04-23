@@ -11,7 +11,8 @@ import emailBuilderIcon from "../project_layout/form.png"
 import gradientBubble from './../project_layout/Ellipse.png'
 import Cards from "../Components/applinks/cardscomponent/cards"
 import Socials from "../Components/socials/socials";
-import BackgroundGradient from "../project_layout/background.png"
+
+
 
 class HomePage extends Component {
   constructor(props) {
@@ -90,9 +91,7 @@ class HomePage extends Component {
 
 
             <section className="apps-section">
-             {/* <img src = {BackgroundGradient} alt = 'background-gradient' className="background-gradient-0"/> */}
-             {/* <img src = {BackgroundGradient} alt = 'background-gradient' className="background-gradient-1"/>
-             <img src = {BackgroundGradient} alt = 'background-gradient' className="background-gradient-2"/> */}
+
 
              <Cards alt = 'TY Email Builder' icon = {emailBuilderIcon} appTitle = 'TY Email Builder' stackList = ' ReactJS, ExpressJS, NodeJS, NodeMailer, and Handlebars.'
                 linkType = 'href' url = ''

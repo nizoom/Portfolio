@@ -4,6 +4,7 @@ import appIconCard from "../../../project_layout/appiconcard.png"
 import appDescriptionCard from "../../../project_layout/appdescriptioncard.png"
 import DownArrow from "../../../project_layout/downarrow.png"
 import InfoPopUp from './infopopup';
+import MobileCard from "../../../project_layout/mobilecard.png"
 
 
 import { BrowserRouter as Router, Link } from "react-router-dom";
@@ -30,7 +31,8 @@ const Cards = (props) => {
         // ICON CARD
         <div className='all-cards-wrapper'>
           
-            
+          <img src={MobileCard} className= 'mobile-card'/>
+
            <div className='icon-card-wrapper'>
                 <div className='icon-and-title-wrapper'>
                     <h3 className="app-title"> {props.appTitle} </h3>

@@ -24,6 +24,10 @@
 
 }
 
+.mobile-card{
+  display: none;
+}
+
 .description-div-wrapper{
   position: relative;
   
@@ -113,6 +117,7 @@
     /* background-color: transparent;
     background-repeat: no-repeat; */
     transition: all 250ms;
+    margin-top: 5px;
   
 
 }
@@ -230,6 +235,7 @@
   }
 
 
+
   @media (max-width: 1300px){
     .app-description-card{
       width: 410px;
@@ -279,6 +285,17 @@
     }
   }
   @media (max-width: 1050px){
+
+
+    .mobile-card{
+      
+      position: absolute;
+      z-index: 20;
+      display: block;
+      opacity: 1;
+      
+    }
+  
     .app-icon-card{
       display: none;
     }
@@ -288,16 +305,16 @@
     .all-cards-wrapper{
       
       width: auto;
-      background-color: 	rgba(194, 97, 41, 0.45);
+      margin-bottom: 40px;
       display: flex;
       height: 500px;
-      backdrop-filter: blur(20px);
-      z-index: -10;
+      
     
   
       justify-content: space-around;
-      
 
+      /* backdrop-filter: blur(20px);
+      background-color: 	rgba(194, 97, 41, 0.45); */
 
     }
 
@@ -305,11 +322,14 @@
       float: none;
       margin: none;
       height: auto;
+      margin-top: 80px;
     }
 
     .description-div-wrapper{
+      margin-top: 150px;
+      margin-right: 225px;
       float: none;
-      margin: none;
+
       height: auto;
    
     }
@@ -318,5 +338,9 @@
       position: relative;
       height: auto;
       margin:auto;
+      gap: 0;
+    }
+    .tech-used{
+   
     }
   }

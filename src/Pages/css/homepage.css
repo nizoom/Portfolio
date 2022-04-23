@@ -22,8 +22,9 @@
   background-repeat: repeat-y;
 
   background-size: contain;
- 
 }
+
+
 .socials-wrapper{
   color: #D5B060;
 
@@ -51,7 +52,7 @@
 }
 .projects{
  
-  overflow: hidden;
+
 }
 
 .homepage_wrapper{
@@ -257,7 +258,7 @@ header{
   position: absolute;
   top: 550px;
   width: 100%;
-  opacity: .7;
+  /* opacity: .7; */
 }
 
 .background-gradient-2{
@@ -265,7 +266,7 @@ header{
   position: absolute;
   top: 2800px;
   width: 100%;
-  opacity: .7;
+  /* opacity: .7; */
 }
 
 footer{
@@ -334,7 +335,8 @@ footer{
 }
 
 @media(max-width: 1050px){
-  .apps-section:nth-child(0){
-    display: none;
+  .apps-section{
+ 
+  
    }
 }
