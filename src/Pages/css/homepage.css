@@ -187,18 +187,6 @@ header{
   transform: rotate(40deg);
   width: 20%;
 }
-/* 
-.app_links{
-  margin-top: 210px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-content: space-around;
-  align-content: space-around;
-  place-content: space-around;
-  background-color: black;
-
-} */
 
 
 
@@ -334,9 +322,18 @@ footer{
   }
 }
 
-@media(max-width: 1050px){
-  .apps-section{
- 
+@media(max-width: 900px){
+
   
-   }
+  .small-bbl{
+    width: 50px;
+  }
+  
+
+  .large{
+    width: 100px;
+  }
+
+  
 }
+

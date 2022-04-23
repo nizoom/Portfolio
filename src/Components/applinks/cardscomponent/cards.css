@@ -286,7 +286,12 @@
   }
   @media (max-width: 1050px){
 
-
+    .icon-and-title-wrapper{
+     justify-content: center;
+    
+     margin-right: 20px;
+     margin-top: 20px;
+    }
     .mobile-card{
       
       position: absolute;
@@ -304,43 +309,27 @@
     }
     .all-cards-wrapper{
       
-      width: auto;
+      width: 778px;
+      margin: auto;
       margin-bottom: 40px;
-      display: flex;
+      display: grid;
+      grid-template-columns: 40% 60%;
+   
       height: 500px;
-      
-    
-  
-      justify-content: space-around;
 
-      /* backdrop-filter: blur(20px);
-      background-color: 	rgba(194, 97, 41, 0.45); */
 
     }
 
     .icon-card-wrapper{
       float: none;
-      margin: none;
-      height: auto;
-      margin-top: 80px;
     }
 
     .description-div-wrapper{
-      margin-top: 150px;
-      margin-right: 225px;
-      float: none;
-
-      height: auto;
-   
+      margin-top: 0;
+      width: auto;
+      align-self: flex-start;
+    
     }
 
-    .description-text-div{
-      position: relative;
-      height: auto;
-      margin:auto;
-      gap: 0;
-    }
-    .tech-used{
-   
-    }
+  
   }

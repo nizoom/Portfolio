@@ -73,7 +73,7 @@ const Cards = (props) => {
                 <img src = {appDescriptionCard} alt = 'app description card' className="app-description-card"/>
             </div>
 
-            <div style={{width: '0px'}}></div>
+            {/* <div style={{width: '0px'}}></div> */}
 
 
 
