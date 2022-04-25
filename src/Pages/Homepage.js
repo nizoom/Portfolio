@@ -30,9 +30,9 @@ class HomePage extends Component {
       },
       determineClass: (x) => {
         if (x && window.innerWidth < 850) {
-          this.setState({ gifClass: "navOpen" })
+          this.setState({ navStatusClass: "navOpen" })
         } else {
-          this.setState({ gifClass: "gif" })
+          this.setState({ navStatusClass: "standard" })
         }
 
       },
@@ -42,7 +42,7 @@ class HomePage extends Component {
           popupStatus: !prevstate.popupStatus
         }))
       },
-      gifClass: "gif"
+      navStatusClass: "standard"
     }
   }
 
@@ -60,7 +60,7 @@ class HomePage extends Component {
           <Sidebar
             functionCallFromParent={this.state.determineClass} />
 
-          <div className={this.state.gifClass === "navOpen" ? "navOpen" : "projects"}>
+          <div className={this.state.navStatusClass === "navOpen" ? "navOpen" : "projects"}>
 
             
             <header>
@@ -68,11 +68,11 @@ class HomePage extends Component {
                 <div className="welcome-border">
                   <div className="welcome-statement">
                     {/* <hr className="bar-short"/> */}
-                    <h2 className={this.state.gifClass}> Welcome to my portfolio </h2>
+                    <h2 className={this.state.navStatusClass}> Welcome to my portfolio </h2>
                   </div>
                   <hr className="bar-long"/>
                     <div className="subheader-div">
-                      <h2 className={this.state.gifClass}> Check out my projects below </h2>
+                      <h2 className={this.state.navStatusClass}> Check out my projects below </h2>
                       {/* <hr className="bar-short"/> */}
                     </div>
               
