@@ -3,54 +3,64 @@
     margin: 40px 0 0 0;
 
     font-weight: semi-bold !important;
-    font-size: 32px;
+    font-size: 26px;
     
 }
 
 
 .blog-title{
     text-align: left;
-    font-size: 28.83px;
+    font-size: 24px;
     font-weight: 500;
     margin-bottom: 20px;
     
 }
 
 .blog-body{
-    font-size: 20.25px;
+    font-size: 16.5px;
     line-height: 2;
 
     letter-spacing: -.05px;
 }
-
+@media(max-width: 900px) {
+    .blog-title{
+        font-size: 22px;
+    }
+    .blog-body{
+        font-size: 14px;
+    }
+    .date{
+        font-size: 24px;
+    }
+}
 
 @media(max-width: 700px){
     .date{
-        font-size: 28.83px
+        font-size: 22px
     }
 
     .blog-title{
-        font-size: 25.63px
+        font-size: 20px
       
     }
 
     .blog-body{
-        font-size: 18px;
+        font-size: 14px;
         text-align: justify;
     }
 }
 @media(max-width: 600px){
     .date{
-        font-size: 25.63px;
+        font-size: 20px;
     }
 
     .blog-title{
-        font-size: 22.78px;
+        font-size: 18px;
       
     }
 
     .blog-body{
-        font-size: 16px;
+        font-size: 12px;
       
     }
 }
