@@ -78,7 +78,7 @@ textarea{
   margin-top: 0;
   padding-top:0;
   display: flex;
-  font-size: 2em;
+  font-size: 24px;
   width: 50%;
 }
 
@@ -211,10 +211,6 @@ textarea{
 }
 
 
-.err-message-span{
-
-}
-
 .form-input-btn{
   font-size: 12px;
   border-radius: 15px;
@@ -251,14 +247,16 @@ textarea{
 
 
 
-@media(max-width: 1200px){
-  
+@media(max-width: 1405px){
+  .cluster{
+    width: 340px;
+  }
  
 }
 
-@media(max-width:1300px){
+@media(max-width:1330px){
  .cluster{
-   height: 300px;
+  width: 300px;
  }
 }
 
@@ -267,10 +265,14 @@ textarea{
     height: 30px;
     
   }
+
+  .cluster{
+    width: 280px;
+   }
 }
 @media(max-width:1100px){
   .cluster{
-    height: 200px;
+    width: 250px;
   }
 
   .form-line-wrapper{
@@ -278,7 +280,9 @@ textarea{
   }
 }
 @media(max-width:1000px){
-
+  .cluster{
+    width: 200px;
+  }
   .form-wrapper label{
     font-size: 12px;
   }
@@ -289,7 +293,6 @@ textarea{
   .btn-div{
     position: absolute;
     margin-top: 150px;
-
     
   }
 
@@ -298,13 +301,18 @@ textarea{
     height: 40px;
     padding:10px;
   }
+
+  .form-success{
+   width: 80px;
+   margin: auto;
+  }
 }
 
 
 
 @media(max-width:900px) {
   .contact-intro{
-    font-size: 22px;
+    font-size: 20px;
   }
 
   .nav-open-contact{
@@ -314,7 +322,17 @@ textarea{
 }
 
 @media(max-width:800px){
+  .cluster{
+    width: 150px;
+  }
 
+  .form-label{
+    padding: 10px;
+  }
+  .success-msg{
+    font-size: 20px;
+    margin-left: 10px;
+  }
 }
 
 @media(max-width:750px){
@@ -328,59 +346,128 @@ textarea{
 @media(max-width: 700px){
 
   .contact-intro{
-    font-size: 20px;
+    font-size: 18px;
+    margin-bottom: 30px;
   }
 
   .btn-div{
     font-size: 15px;
+  }
 
+  .cluster{
+    width: 130px;
+  }
+
+  .err{
+    font-size: 11px;
   }
 }
 
 @media(max-width: 600px){
-  .err{
- 
+  .success-msg{
+    font-size: 18px;
   }
+  .contact-form-wrapper{
+    border-width: 8px;
+  }
+  .cluster{
+    display: none;
+  }
+ .form-line-wrapper{
+   width: 90%;
+ }
+
+ .err{
+   font-size: 10px;
+ }
 }
 
 @media(max-width: 500px){
 
   
   .contact-intro{
-    font-size: 1.5em;
+    font-size: 15px;
   }
 
   .form-wrapper label{
-    font-size: .8em;
+    font-size: 11px;
     border-radius: 15px;
   }
 
   .err{
-    font-size: .8em;
+
   }
 
   .form-input-btn{
-    font-size: .8em;
+    font-size: 12px;
     left: 0;
-    width: 20%;
+    
   }
   .form-wrapper div{
-    margin-bottom: 13%;
+    margin-bottom: 35px;
+  }
+}
+
+@media (max-width: 450px) {
+  .success-msg{
+    font-size: 16px;
+  }
+  .contact-intro{
+    font-size: 14px;
+
+  }
+
+  .contact-input-field{
+    font-size: 10px;
+    width: 145px;
+  }
+  .form-line-wrapper{
+    flex-wrap: wrap;
+    grid-gap: 20px;
+  }
+
+  .err-span{
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+
+  .message_field{
+    width: 200px;
+    margin-left: 0px;
+    margin-right: 0;
+  }
+
+  .message-input-div span{
+    position: absolute;
+    right: 10px;
+    margin-top: 5px;
   }
 }
 
 @media(max-width: 400px){
 
-  .form-input-btn{
-    font-size: .8em !important;
+  .form-line-wrapper{
+    width: 100%;
+    grid-gap: 20px;
+  }
+  .err{
+    padding: 7px;
+  }
+  .message-input-div span{
+    position: relative;
   }
 
-  .err{
-    padding: 4px;
+  .message_field{
+    width: 140px;
   }
-  .contact-wrapper{
-    padding-bottom: 15vh;
-    margin-bottom: 0;
+
+  .message_field:focus{
+    width: 200px;
+    transition: ease-in .5s;
+  }
+
+  .form-wrapper label{
+    font-size: 9px;
   }
 }
 

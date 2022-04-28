@@ -65,18 +65,18 @@
 
 @media(max-width:840px){
   .top{
-    height: 50px;
-    width: 50px;
+    height: 40px;
+    width: 40px;
 
 
    
   }
 
   .up-arrow-img{
-    height: 25px;
+    height: 20px;
   }
   .btn_div{
-    right: 0;
+    right: 30px;
     margin-right: 8px;
 
   }
@@ -84,7 +84,8 @@
 
 @media(max-width:740px){
   .btn_div{
-
+    width: 30px;
+    right: 35px;
   }
 
   .top{
@@ -121,7 +122,7 @@
     text-align: center;
   }
   .btn_div{
-    left: 90%;
+    right: 35px;
   
     -webkit-appearance: none; 
     -moz-appearance: none;

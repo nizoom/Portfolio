@@ -122,11 +122,9 @@ li{
     height: 3px;
   }
   .square-btn{
-    right: 0;
+    margin-top: 0;
   }
-  .sidebar_btn{
-    right: 10px;
-  }
+
 
   .change .bar1 {
     -webkit-transform: rotate(-45deg) translate(-9px, 6px);
@@ -139,4 +137,8 @@ li{
     -webkit-transform: rotate(45deg) translate(-8px, -8px);
     transform: rotate(45deg) translate(-4px, -6.5px);
   }
+}
+
+@media (max-width: 500px){
+
 }
