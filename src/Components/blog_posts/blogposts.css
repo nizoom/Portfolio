@@ -21,6 +21,7 @@
     line-height: 2;
 
     letter-spacing: -.05px;
+    margin-top: 0;
 }
 @media(max-width: 900px) {
     .blog-title{
@@ -63,4 +64,15 @@
         font-size: 12px;
       
     }
+}
+@media(max-width: 500px){
+
+
+    .blog-title{
+        font-size: 18px;
+        line-height: 30px;
+      
+    }
+
+  
 }
