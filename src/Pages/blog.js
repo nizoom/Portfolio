@@ -29,7 +29,7 @@ const Blog = (props) => {
 
 
   return (
-    <div className={navStatus ? "wallpaper-extended": "wallpaper" }>
+    <div className={navStatus ? "wallpaper-extended blog-wrapper": "wallpaper blog-wrapper" }>
       <Logo />
       <Sidebar functionCallFromParent={getSidebarStatus} />
       <div className={navStatus ? "navOpen" : null}>

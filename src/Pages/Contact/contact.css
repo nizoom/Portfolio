@@ -464,43 +464,12 @@ textarea{
   .message_field:focus{
     width: 200px;
     transition: ease-in .5s;
+
   }
+
+
 
   .form-wrapper label{
     font-size: 9px;
   }
 }
-
-@media(max-width:380px){
-  .headshot{
-  
-  }
-}
-
-@media(max-width:376px){
-  .headshot{
-  
-  }
-}
-
-@media(max-width:365px){
-  .headshot{
-
-  }
-}
-
-@media(max-width:300px){
-  .headshot{
-  
-  }
-}
-
-@media(min-height:1000px){
-
-}
-
-@media(min-height:1200px){
-
-} 
-
-

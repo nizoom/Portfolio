@@ -97,6 +97,27 @@
     height: 20px;  
   }
 }
+
+@media(max-width: 500px){
+  .top{
+    height: 35px;
+    width: 30px;
+  }
+  .btn_div{
+    right: 10px;
+  }
+  .up-arrow-img{
+    height: 20px;  
+    margin-top: 5px;
+  }
+}
+@media(max-width: 400px){
+  .btn_div{
+    right: 5px;
+  }
+}
+
+/* 
 @media(max-width:700px){
   .btn_div{
   
@@ -149,4 +170,4 @@
   .top{
     -webkit-appearance: none; 
   }
-}
+} */

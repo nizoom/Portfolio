@@ -171,7 +171,7 @@
 }
 
 
-@media(max-width:500px){
+@media(max-width:501px){
 
   .headshot{
    
@@ -200,6 +200,22 @@
 
   .about-wrapper{
     width: 84%;
+  }
+
+  .page-wrapper{
+    padding-bottom: 52%;
+  }
+}
+
+@media(max-width:400px){
+
+}
+
+@media(max-width: 290px){
+  .headshot{
+    height: 50px;
+    width: 50px;
+    margin-left: 20px;
   }
 }
 

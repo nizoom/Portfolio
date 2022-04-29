@@ -100,7 +100,7 @@
 
 @media (max-width: 500px) {
   .name-div{
-    margin-left: -50px;
+    margin-left: -60px;
     margin-top: 0px;
     gap: 15px;
   }
@@ -114,5 +114,22 @@
   }
   .main-sub-header{
     font-size: 14px;
+  }
+}
+
+@media (max-width: 400px){
+  .name-div{
+    margin-left: -70px;
+    margin-top: -10px;
+  }
+
+  .gold-bar{
+    width: 100px;
+  }
+  .gov_name{
+    font-size: 16px;
+  }
+  .main-sub-header{
+    font-size: 13px;
   }
 }
