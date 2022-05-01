@@ -157,6 +157,10 @@ li{
   .link{
     font-size: 14px;
   }
+
+  .square-btn{
+    right: 10px;
+  }
 }
 @media (max-width: 400px){
   .blog-wrapper .square-btn{

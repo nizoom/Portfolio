@@ -446,6 +446,11 @@
   }
 
   @media(max-width: 600px){
+
+    .app-icon{
+      z-index: 3000;
+    }
+
     .mobile-card{
       height: 500px;
 
@@ -529,3 +534,42 @@
 
   }
 
+@media(max-width: 500px){
+  .tech-used{
+    font-weight: 500;
+  }
+}
+@media(max-width: 400px){
+  .mobile-card{
+    width: 350px;
+  }
+
+  .all-cards-wrapper{
+    margin-bottom: 30px;
+    width: 350px;
+  }
+
+
+}
+@media(max-width: 300px){
+  .mobile-card{
+    width: 275px;
+  }
+
+  .all-cards-wrapper{
+    margin-bottom: 30px;
+    width: 275px;
+  }
+  .description-div-wrapper{
+    width: 200px;
+    margin-left:-80px;
+    text-align: left;    
+
+    
+  }
+  .description-div-wrapper span{
+    word-wrap: break-word
+
+  }
+
+}

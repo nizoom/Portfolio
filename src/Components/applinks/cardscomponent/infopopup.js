@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useCallback, useEffect, useRef} from "react";
 import "./infopopup.css"
 import TemplateGif from "../../../project_layout/tytemplate.gif"
 
@@ -29,13 +29,32 @@ const InfoPopUp = (props) => {
         }
     }
 
+    // close out logic for escape key 
+    const escapeFunction = useCallback((event) => {
+        if(event.key === "Escape"){
+            closePopup();
+        }
+    },[]);
+
+    useEffect(() => {
+        document.addEventListener("keydown", escapeFunction, false)
+
+        return () => {
+            document.removeEventListener("keydown",escapeFunction, false);
+        }
+    },[])
+
+    // close out logic for clikc outside popup 
+
+    const popupRef = useRef();
+
     const closePopup = () => {
         props.handlePopupClick(false)
     }
     return(
 
         <div className={props.popupState.status ? "popup-background" : "hide"}>
-            <div className={`popup-wrapper ${props.position}`}>
+            <div className={`popup-wrapper ${props.position}`} ref = {popupRef}>
             
 
                     <article className={props.popupState.status ? "popup-text" : "hide-popup-text" }>
@@ -44,8 +63,8 @@ const InfoPopUp = (props) => {
 
                     {/* <div className= {props.popupState.status ? "button-div" : "hide-btn"} > */}
                     <div className={props.popupState.status ? "button-div" : "hide-button-div" }>
-                        <button className="more-info-btn btn-border"> Visit </button>
-                        <button className="more-info-btn btn-border" onClick = {closePopup}> Close </button>
+                        <button className="more-info-btn btn-border pop-up-btn"> Visit </button>
+                        <button className="more-info-btn btn-border pop-up-btn" onClick = {closePopup}> Close </button>
                     </div>
             </div>
        
