@@ -148,6 +148,10 @@
         font-size: 14px;
     }
 
+    .gif-popup-text{
+        font-size: 14px;
+    }
+
     .popup-text{
         font-size: 14px;
     }
@@ -155,6 +159,11 @@
 
 
 
+@media(max-width: 300px){
+    .template-gif{
+        display: none;
+    }
+}
 
 /* .template-gif{
     position: absolute;

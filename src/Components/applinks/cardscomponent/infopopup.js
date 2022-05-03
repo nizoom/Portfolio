@@ -1,9 +1,10 @@
 import React, {useCallback, useEffect, useRef, useState} from "react";
 import "./infopopup.css"
 import TemplateGif from "../../../project_layout/tytemplate.gif"
+import LandscapeGif from "../../../project_layout/landscape-template.gif"
 import TabletGif from "../../../project_layout/tablet-template.gif"
 import MobileGif from "../../../project_layout/mobile-template.gif"
-
+import LargeMobileGif from "../../../project_layout/lrg-mobil-template.gif"
 
 
 
@@ -16,17 +17,20 @@ const InfoPopUp = (props) => {
            case windowWidth > 1400 : 
            console.log('desktop')
             return TemplateGif;
-          case windowWidth < 1400 && windowWidth > 600: 
+          case windowWidth <= 1400 && windowWidth > 830 : 
+            console.log('lanscape')
+            return LandscapeGif
+          case windowWidth <= 830 && windowWidth > 700: 
             console.log('tablet')
             return TabletGif 
-          case windowWidth < 600: 
+          case windowWidth <= 700 && windowWidth > 470:
+              console.log('large mobile')
+              return LargeMobileGif
+          case windowWidth <= 470: 
           console.log('mobile')
             return MobileGif 
        }
 
-       if(windowWidth < 600){
-        console.log('true')
-       }
     }
 
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -93,7 +97,7 @@ const InfoPopUp = (props) => {
 
 
 
-    console.log(gifPopUpStatus)
+
 
     // close out logic for escape key 
     const escapeFunction = useCallback((event) => {
