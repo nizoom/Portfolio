@@ -342,6 +342,7 @@ footer{
   }
   .socials-wrapper img{
     height: 20px;
+    width: 20px;
   }
   
 }
@@ -355,11 +356,12 @@ footer{
     }
 
   .socials-wrapper{
-    top: 87.5px;
-    left: 18px;
+    top: 87.4px;
+    left: 21px;
     border-left: 3px solid #D5B060;
     border-top: 3px solid #D5B060;
     width: 20px;
+    border-top-left-radius: 16px;
 
     margin-top: 0;
 
@@ -431,6 +433,7 @@ footer{
   }
   .socials-wrapper{
     top: 76px;
+    left: 15px;
   }
 
   .welcome-border{

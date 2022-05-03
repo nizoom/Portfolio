@@ -537,7 +537,13 @@
 @media(max-width: 500px){
   .tech-used{
     font-weight: 500;
+    
   }
+  .description-text-div{
+    text-align:center;
+    line-height: normal;
+  }
+
 }
 @media(max-width: 400px){
   .mobile-card{
@@ -549,8 +555,10 @@
     width: 350px;
   }
 
+  
 
 }
+
 @media(max-width: 300px){
   .mobile-card{
     width: 275px;
