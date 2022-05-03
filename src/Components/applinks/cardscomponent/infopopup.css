@@ -81,12 +81,7 @@
     border-radius: 16px;
 }
 
-.template-gif{
-    margin: auto;
-    display: flex;
-    height: 500px;
-    width: 1000px;
-}
+
 
 /* POP UP POSITIONING */
 .one {
@@ -96,11 +91,11 @@
 
 .two{
     position: absolute;
-    top:calc(35%);
+    top:calc(40%);
 }
 .three{
     position: absolute;
-    top:calc(52%);
+    top:calc(55%);
 }
 
 .four{
@@ -109,8 +104,44 @@
 }
 .five{
     position: absolute;
-    top:calc(85%);
+    top:calc(84%);
 }
+
+.gif-popup-text{
+    font-size: 16px;
+    margin: auto;
+    color:  #ebdec7;
+    text-align: justify;
+    padding: 2% 5% 2% 5%;
+    line-height: 25px;
+    background-color: black;
+    
+    border-radius: 32px 32px 0 0;
+}
+
+.gif-button-div{
+    width: 100%;
+    margin: auto;
+    justify-content: space-evenly;
+    display: flex;
+    background-color: black;
+    padding-bottom: 36px;
+
+    border-radius: 0 0 32px 32px;
+
+}
+
+.template-gif{
+
+
+}
+
+.template-gif-wrapper{
+    text-align: center;
+
+}
+
+
 
 @media(max-width: 800px){
     .pop-up-btns{
@@ -121,3 +152,69 @@
         font-size: 14px;
     }
 }
+
+
+
+
+/* .template-gif{
+    position: absolute;
+    width: 1280px;
+    height: 720px;
+} */
+
+/* @media(max-width: 1400px){
+    .template-gif{
+        width: 100%;
+        margin: auto;
+
+    }
+
+    .template-gif-wrapper{
+        width: 95%;
+        margin: auto;
+    }
+}
+
+@media(max-width: 1000px){
+    .template-gif-wrapper{
+         height: 700px;
+    }
+    .template-gif{
+         height: 500px;
+    }
+
+}
+@media(max-width: 900px){
+    .template-gif-wrapper p{
+        font-size: 15px;
+    }
+    .template-gif{
+         height: 400px;
+         width: 100%;
+    }
+    .template-gif-wrapper{
+        height: 600px;
+   }
+
+} */
+/* @media(max-width: 1300px){
+    .template-gif{
+        width: 800px;
+    }
+
+    .template-gif-wrapper{
+        width: 800px;
+
+    }
+}
+@media(max-width: 1300px){
+    .template-gif{
+        width: 800px;
+        margin: auto;
+    }
+
+    .template-gif-wrapper{
+        width: 800px;
+        margin: auto;
+    }
+} */
