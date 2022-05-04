@@ -20,7 +20,7 @@ class App extends Component {
     return (
       <HashRouter>
         <Switch>
-          <Route exact path = "/Loader" component = {IntroScreen}/>
+          <Route exact path = "/Intro" component = {IntroScreen}/>
           <Route exact path="/" component={HomePage} />
           <Route exact path="/About" component={About} />
           <Route exact path="/Blog" component={Blog} />

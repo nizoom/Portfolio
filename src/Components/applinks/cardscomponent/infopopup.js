@@ -15,20 +15,19 @@ const InfoPopUp = (props) => {
         // console.log(windowWidth)
        switch(true){
            case windowWidth > 1400 : 
-           console.log('desktop')
-            return TemplateGif;
+             return TemplateGif;
+             
           case windowWidth <= 1400 && windowWidth > 830 : 
-            console.log('lanscape')
             return LandscapeGif
+            
           case windowWidth <= 830 && windowWidth > 700: 
-            console.log('tablet')
-            return TabletGif 
+              return TabletGif 
+
           case windowWidth <= 700 && windowWidth > 470:
-              console.log('large mobile')
               return LargeMobileGif
+
           case windowWidth <= 470: 
-          console.log('mobile')
-            return MobileGif 
+              return MobileGif 
        }
 
     }

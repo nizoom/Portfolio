@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+
 import Logo from "../Components/logo/logo"
 import Sidebar from "../Components/sidebar/sidebar"
 import "./css/homepage.css"
@@ -11,17 +12,24 @@ import emailBuilderIcon from "../project_layout/form.png"
 import gradientBubble from './../project_layout/Ellipse.png'
 import Cards from "../Components/applinks/cardscomponent/cards"
 import Socials from "../Components/socials/socials";
+import  { firstVisit, getLocalVisitStatus} from "../Components/localstorage/localstorage";
 
 
 
 class HomePage extends Component {
+
+
+
   constructor(props) {
     super(props)
-
-
+    
+  
     this.state = {
+
       sidebarVisible: false,
-      loadScreen : true,
+
+      visitationStatus : false,
+    
       clickHandler: () => {
         this.setState(prevstate => ({
           sidebarVisible: !prevstate.sidebarVisible
@@ -36,16 +44,40 @@ class HomePage extends Component {
         }
 
       },
+
+
       popupStatus: false,
+
       toggleOpacityForPopup: () => {
         this.setState(prevstate => ({
           popupStatus: !prevstate.popupStatus
         }))
       },
-      navStatusClass: "standard"
+      navStatusClass: "standard", 
+
+    
     }
+
+
   }
 
+
+  componentDidMount(){
+    // Runs after the first render() lifecycle
+ 
+    const userVisitationStatus = getLocalVisitStatus();
+
+    if(userVisitationStatus === null || userVisitationStatus === undefined){
+
+           firstVisit()
+
+           this.props.history.push('/Intro')
+
+    } 
+
+  }
+
+    
 
 
 
@@ -141,3 +173,4 @@ class HomePage extends Component {
 }
 
 export default HomePage;
+

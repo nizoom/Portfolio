@@ -1,5 +1,5 @@
 import React from 'react';
-import './css/loader.css'
+import './css/intro.css'
 import { ReactComponent as MySVG} from './css/loader2.svg'
 import { useHistory } from 'react-router-dom';
 
@@ -19,8 +19,6 @@ const IntroScreen = (props) => {
             <div className='middle-content-wrapper fade-out'>
 
                 <MySVG/>
-
-
 
             </div>
         </div>
