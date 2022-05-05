@@ -11,22 +11,23 @@ const LocalityCheckBox = ( props ) => {
 //Material UI Styling
   const CustomBox = withStyles({
   root: {
-    color: '#BC6C25',
+    color: '#DDA15E',
     '&$checked': {
-      color: '#BC6C25',
+      color: '#283618',
     },
   },
   checked: {},
 })((props) => <Checkbox color="default" {...props} />);
 
   return(
-    <div style = {{textAlign: "center", marginTop: "7vh"}}>
+    <div className="filter-form">
 
     {/* below props pass the current checked status of the box and an onChange function
       for when it is clicked.*/}
+      <p className="filter-label"> {props.status ? "2. Checking for local news" : "2. Checking for national news"}</p> 
     <FormControlLabel
-         control={<CustomBox checked={props.status} onChange={props.boxClicked}
-         name="Localized"/>}
+         control={<CustomBox checked={props.status} onChange={props.handleBoxClick}
+         name="Localize"/>}
          label="Localized"
          style = {{backgroundColor: "#FEFAE0",
           paddingRight: "3vh", borderRadius: "16px",

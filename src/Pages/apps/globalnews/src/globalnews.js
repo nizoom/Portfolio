@@ -7,11 +7,13 @@ import Grid from '@material-ui/core/Grid';
 
 
 import Instructions from "./Components/Instructions/instructions"
-import SearchBar from "./Components/SearchBar/searchbar"
+// import SearchBar from "./Components/SearchBar/searchbar"
 import Map from "./Components/Map/map"
-import LocalityCheckBox from "./Components/LocalityCheckBox/checkbox"
+// import LocalityCheckBox from "./Components/LocalityCheckBox/checkbox"
 import NewsDisplay from "./Components/NewsDisplay/newsdisplay"
 import About from "./Components/About/aboutglobalnews"
+import Dropdown from "./Components/dropdown/dropdown";
+import CircledTwo from "./Images/two.png"
 
 
 
@@ -102,9 +104,21 @@ function Globalnews() {
         </Grid> */}
 
 
+        <Grid item md = {12}  xs = {12}>  
+   
+           <Dropdown typed = {handleChange}
 
+             handleBoxClick = {handleBoxClick} status = {checked}
+             
+            />
+               
+            <div className="map-instruction-wrapper">
+                <p className="dropdown-label map-instruction"> <img src= {CircledTwo} className='numbers'/> and/or 👇 a point on the map </p>
 
-          <Grid item md = {6}  xs = {12}>     {/* break points for mobile and desktop formats */}
+            </div>
+        </Grid>
+
+          {/* <Grid item md = {6}  xs = {12}>     break points for mobile and desktop formats
 
               <SearchBar typed = {handleChange} className = {classes.allItems}
 
@@ -112,11 +126,11 @@ function Globalnews() {
 
           </Grid>
 
-          <Grid item md = {6} xs = {12}> {/* Searchbar and locality checkbox should be side-to-side
-            in desktop and then stacked in mobile */}
+          <Grid item md = {6} xs = {12}>  Searchbar and locality checkbox should be side-to-side
+            in desktop and then stacked in mobile 
             <LocalityCheckBox className = {classes.allItems}
             boxClicked = {handleBoxClick} status = {checked}/>
-          </Grid>
+          </Grid> */}
 
 
         <Grid item xs = {12} className = {classes.allItems} >

@@ -19,13 +19,14 @@ const SearchBar = ( props ) => {
 
 
   return(
-    <form style = {{textAlign : "center", marginTop : "5vh"}}>
+    <form className="filter-form">
+      <p className="filter-label"> 1. Topic Filter </p> 
       <MuiThemeProvider theme = {theme}>
       {/* passes in function that tracks user input
        to textField*/}
-      <TextField onChange = {props.typed} className = "searchbar"
-      id = "filled-size-large" label = "Filter🔎" variant ="filled"
-       style = {{width: "50vh", color: "white"}} color = "#FEFAE0" InputProps={{
+      <TextField fullWidth onChange = {props.typed} className = "searchbar"
+      id = "filled-size-large" label = "Filter🔎" variant ="filled" 
+       style = {{color: "white"}} color = "secondary" InputProps={{
     className: theme.multilineColor
   }}
        />
