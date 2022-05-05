@@ -104,7 +104,7 @@ function Globalnews() {
         </Grid> */}
 
 
-        <Grid item md = {12}  xs = {12}>  
+        <Grid item md = {12}  xs = {12} style ={{marginTop: '50px'}}>  
    
            <Dropdown typed = {handleChange}
 
@@ -113,7 +113,7 @@ function Globalnews() {
             />
                
             <div className="map-instruction-wrapper">
-                <p className="dropdown-label map-instruction"> <img src= {CircledTwo} className='numbers'/> and/or 👇 a point on the map </p>
+                <p className="dropdown-label map-instruction"> <img src= {CircledTwo} className='numbers'/> and 👇 a point on the map </p>
 
             </div>
         </Grid>

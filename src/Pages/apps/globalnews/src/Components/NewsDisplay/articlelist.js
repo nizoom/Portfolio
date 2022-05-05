@@ -17,14 +17,20 @@ const ArticleList = ( props ) => {
     typographyStyle: {
       //color : "linear-gradient(#EA7C14, #A43DE2)"
 
-      margin: "2vh",
-      border: "solid",
+   
+      border: "5px solid #FEFAE0",
       padding: ".8vh",
       overflowWrap: "break-word",
-      borderRadius: "16px",
-      backgroundColor: "#65DFB8",
+      color: "#FEFAE0",
+      backgroundColor: "#6F9544",
+      width: '95%',
+      margin: 'auto',
+      marginTop: '2vh',
       '&:hover': {
-      color: '#8759A9'
+        width: '99%',
+        fontSize: '1.5em',
+       
+
       }
     }
   })
@@ -34,14 +40,14 @@ const ArticleList = ( props ) => {
     <div>
     {/*for each article list the source name and title which is also a hyperlink to
       the article */}
-      <div name = "results_bar">
+      <div name = "results-wrapper" style = {{margin: 'auto', width: '95%'}}>
       { readyToDisplay ?
-         <ul> {
+         <ul style = {{padding: 0}}> {
               props.articlesToDisplay[0].map(function(article, index) {
                 return <li  key = {article.url}
                         className = {classes.typographyStyle} >
                         {article.provider[0].name} -
-                        <a href = {article.url} target="_blank" rel="noreferrer"
+                        <a href = {article.url} target="_blank" rel="noreferrer" style = {{color: "#FEFAE0"}}
                         > {article.name} </a> </li>
               })
 

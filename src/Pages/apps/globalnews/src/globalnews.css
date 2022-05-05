@@ -2,14 +2,6 @@
   text-align: center;
 }
 
-/* body{ THIS NEEDS TO BE REPLACED BY A CLASS NOT A BODY HTML SELECTOR
-  background-image:url("Images/background.jpg");
-  background-repeat: round;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-} */
 
 
 .leaflet-container{
@@ -27,7 +19,7 @@
 
     display: flex;
   
-    width: 595px;
+    width: 660px;
     margin: auto;
     margin-top: 0;
   
@@ -37,10 +29,20 @@
 
 }
 
+@media(max-width: 750px){
+  .map-instruction-wrapper{
+    width: 85%;
+  } 
+}
+
+
 @media (max-width: 600px){
   .leaflet-container{
     width: 95%;
   }
 
 }
+
+
+
 

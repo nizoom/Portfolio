@@ -24,7 +24,7 @@ const About = ( props ) => {
          the app allows you to be as local or macro as your interest demands.
          By clicking on places you’ve never heard of before, you get a glimpse of
          the victories and challenges of people living in these places.
-         I hope it is a springboard for your curiosity!  </p>
+         I hope it is a springboard for your curiosity! For more check out <a href = 'nissimram.com'  target="_blank" rel="noopener noreferrer"> nissimram.com </a> </p>
        </Container>
     </div>
   )

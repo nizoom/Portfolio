@@ -16,13 +16,13 @@ const Dropdown = (props) => {
     return (
         <div className='dropdown-wrapper'>
             <div className='toggle-filters-div'>
-                <h3 className='dropdown-label'> <img src = {CircledOne} className='numbers'/>Try Filters </h3> 
+                <h3 className='dropdown-label'> <img src = {CircledOne} className='numbers'/>Try Filters (optional) </h3> 
      
                  <img src = {Settings} alt ='activate filters dropdown menu' className= {dropdownStatus ? 'toggle-dropdwn-btn-on' : 'toggle-dropdwn-btn' }
                  onClick={toggleDropdown}/>
             </div>
-            { dropdownStatus ? 
-                   <section className='dropdown-bubble'>
+            
+                   <section className={dropdownStatus ? 'dropdown-bubble' : 'hide'}>
 
                         <SearchBar typed = {props.typed}/> 
 
@@ -30,7 +30,7 @@ const Dropdown = (props) => {
 
                         <button className='close-filters-btn' onClick = {toggleDropdown}> Close </button>
 
-                    </section> : null}
+                    </section>
 
         </div>
  
