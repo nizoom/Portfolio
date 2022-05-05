@@ -11,9 +11,9 @@ const LocalityCheckBox = ( props ) => {
 //Material UI Styling
   const CustomBox = withStyles({
   root: {
-    color: purple[400],
+    color: '#BC6C25',
     '&$checked': {
-      color: purple[600],
+      color: '#BC6C25',
     },
   },
   checked: {},
@@ -28,7 +28,7 @@ const LocalityCheckBox = ( props ) => {
          control={<CustomBox checked={props.status} onChange={props.boxClicked}
          name="Localized"/>}
          label="Localized"
-         style = {{backgroundColor: "#91CCE5",
+         style = {{backgroundColor: "#FEFAE0",
           paddingRight: "3vh", borderRadius: "16px",
                   fontWeight: "1000", marginRight: "0px"}}
        />

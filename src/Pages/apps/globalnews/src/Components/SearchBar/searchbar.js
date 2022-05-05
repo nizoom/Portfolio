@@ -8,13 +8,13 @@ const SearchBar = ( props ) => {
 //Material UI styling
   const theme = createMuiTheme({
     overrides: {
-      MuiFilledInput : { root : { backgroundColor : "#58434E"}},
-      MuiInputLabel : { root : { color : "#FAF2F6"}}
+      MuiFilledInput : { root : { backgroundColor : "#283618"}},
+      MuiInputLabel : { root : { color : "#FEFAE0"}}
   }
 })
 
 
-
+// set theme for when active 
 
 
 
@@ -25,7 +25,7 @@ const SearchBar = ( props ) => {
        to textField*/}
       <TextField onChange = {props.typed} className = "searchbar"
       id = "filled-size-large" label = "Filter🔎" variant ="filled"
-       style = {{width: "50vh", color: "white"}} color = "secondary" InputProps={{
+       style = {{width: "50vh", color: "white"}} color = "#FEFAE0" InputProps={{
     className: theme.multilineColor
   }}
        />

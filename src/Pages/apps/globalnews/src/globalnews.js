@@ -23,6 +23,7 @@ function Globalnews() {
   const useStyles = makeStyles((theme) => ({
     root: {
       flexGrow: 1,
+      backgroundColor : "#606C38"
 
     },
     allItems : {
@@ -33,7 +34,7 @@ function Globalnews() {
     }, //padding: theme.spacing(2),
 
     typographyStyle: {
-      color : "#DDE3EF",
+      color : "#FEFAE0",
       marginTop : "3vh",
       textAlign: "center"
     }
@@ -86,17 +87,19 @@ function Globalnews() {
   return (
     <div className= {classes.root} >
       <Grid container>
-
+        
         <Grid item xs = {12}>
+     
           <Typography variant = "h2" className = {classes.typographyStyle}>
             The Global News Source
           </Typography>
           <Typography variant = "h4" className = {classes.typographyStyle}> A new way to keep up </Typography>
+    
         </Grid>
 
-        <Grid item xs = {12} className = {classes.allItems} >
+        {/* <Grid item xs = {12} className = {classes.allItems} >
           <Instructions />
-        </Grid>
+        </Grid> */}
 
 
 

@@ -126,7 +126,7 @@ class HomePage extends Component {
 
 
              <Cards alt = 'TY Email Builder' icon = {emailBuilderIcon} appTitle = 'TY Email Builder' stackList = ' ReactJS, ExpressJS, NodeJS, NodeMailer, and Handlebars.'
-                linkType = 'href' url = ''
+                linkType = 'href' url = 'https://github.com/nizoom/TYTemplateBuilder'
                 Description = {<p className='app-description'>  <b>Form web app </b> that builds and sends templated thank you emails.</p>}
                 toggleOpacityForPopup ={this.state.toggleOpacityForPopup} position = 'one'
               /> 

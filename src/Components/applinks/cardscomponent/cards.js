@@ -17,6 +17,7 @@ const Cards = (props) => {
     })
 
     const handlePopupClick = (boolean) => {
+  
        const updatedvalues = {
             status : boolean,
             app : props.appTitle
@@ -25,6 +26,9 @@ const Cards = (props) => {
         setPopupState(updatedvalues)
     }
 
+    function sayUrl(){
+        console.log(props.url)
+    }
   
     return (
 
@@ -45,7 +49,7 @@ const Cards = (props) => {
 
                     </Link>  : 
                     
-                    <a href={props.url} target="_blank" rel="noopener noreferrer"> 
+                    <a href={props.url} target="_blank" rel="noopener noreferrer" onClick = {sayUrl}> 
 
                         <img src={props.icon} alt={`${props.alt} icon`} className="app-icon" />
 
