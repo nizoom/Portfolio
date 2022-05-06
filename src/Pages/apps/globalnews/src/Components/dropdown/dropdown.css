@@ -1,14 +1,16 @@
 .dropdown-bubble{
     transition: height .5s;
     height: 300px;
-    width: 660px;
+    /* width: 660px; */
+  
     background-color: #FEFAE0;
     display: grid;
     margin: auto;
 
     border-radius: 32px;
-    gap: 20px;
+
     grid-template-columns: 5fr 4fr;
+
     /* flex-direction: column; */
 }
 
@@ -18,16 +20,11 @@
     flex-direction: column;
     /* width: 700px; */
     margin: auto;
-
-
 }
 
 .toggle-filters-div{
-
-    width: 660px;
-    margin: auto;
     
-
+    
     display: flex;
     align-items: center;
 
@@ -66,6 +63,8 @@
 
 .filter-label{
     font-size: 18px;
+
+ 
 }
 
 .filter-form{
@@ -73,19 +72,30 @@
     margin-top: 20px;
   }
 
+  .close-btn-wrapper{
+      position: absolute;
+      width: 100%;
+      left: 0;
+      top:500px;
+      display: flex;
+
+  }
+
   .close-filters-btn{
-      width: 200px;
-      height: 50px;
-     font-family: 'Roboto', 'Sans-serif';
-     font-size: 14px;
-     align-self: center;
-    margin-left: 61%;
+
+    width: 200px;
+    height: 50px;
+    font-family: 'Roboto', 'Sans-serif';
+    font-size: 14px;
+
+    margin: auto;
     background-color: #283618;
     border: none;
     cursor: pointer;
     border-radius: 4px;
     color: #FDFAE0;
-    align-self: flex-start;
+    
+  
     
   }
 
@@ -93,6 +103,7 @@
     background-color: #DDA15E;
     color: black;
   }
+
 .numbers{
     height: 45px;
     width: 45px;
@@ -104,34 +115,152 @@
     height: 0;
 }
 
+@media(max-width: 850px){
+    .close-btn-wrapper{
+        top: 450px;
+    }
+
+}
+
 
 @media(max-width: 750px){
-    .dropdown-bubble{
-        width: 85%;
-        gap: 10px;
+
+    /* .dropdown-wrapper{
+        width: 80%;
+    } */
+
+    .filter-label{
+        font-size: 16px;
     }
 
-    .toggle-filters-div{
+    .dropdown-label{
+        font-size: medium;
+    }
+    .dropdown-bubble{
+        /* width: 99%; */
+        gap: 10px;
+        /* grid-template-columns: 1fr 1fr; */
+    }
+
+
+    /* .toggle-filters-div{
         width: 85%;
+    } */
+
+ 
+    
+}
+
+@media(max-width: 675px){
+    /* .dropdown-wrapper{
+        width: 500px;
+    } */
+
+    /* .close-filters-btn{
+        margin-left: 58%;
+    } */
+    /* .numbers{
+        height: 40px;
+        width: 40px;
+    } */
+}
+@media(max-width: 575px){
+    /* .dropdown-wrapper{
+        width: 75%;
+    } */
+}
+@media(max-width: 540px){
+    .dropdown-bubble{
+        gap: 0;
+     
+    }
+    /* .close-filters-btn{
+        margin-left: 52%;
+    } */
+    /* .filter-label{
+        font-size: 15px;
+    }
+
+    .dropdown-bubble{
+        gap: 0;
+        width: 87%;
+    } */
+
+    .close-filters-btn{
+       
+       /* margin-left: auto;
+       margin-right: auto; */
     }
 }
-/* @media(max-width: 650px){
+
+@media(max-width: 450px){
+    /* .dropdown-wrapper{
+        width: 70%;
+    } */
+    /* .dropdown-wrapper{
+        width: 450px;
+    } */
     .dropdown-bubble{
-        width: 500px;
-        gap: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 350px;
+
     }
 
-    .toggle-filters-div{
-        width: 490px;
+    .dropdown-bubble div{
+ 
+    }
+    .close-filters-btn{
+        position: relative;
+        width: 100px;
+        margin: auto;
+
+    }
+
+    .filter-label{
+        margin-left: 0;
+    }
+
+    .close-btn-wrapper{
+        top: 520px;
     }
 }
-@media(max-width: 550px){
-    .dropdown-bubble{
-        width: 500px;
-        gap: 10px;
-    }
+@media(max-width: 400px){
 
-    .toggle-filters-div{
-        width: 490px;
+  
+    /* .dropdown-wrapper{
+   
+    }
+    .dropdown-bubble{
+    
+        display: flex;
+        flex-direction: column;
+    } */
+}
+/* @media(max-width: 480px){
+ 
+    .close-filters-btn{
+        margin-left: 48%;
+    }
+}
+@media(max-width: 460px){
+ 
+    .close-filters-btn{
+        margin-left: 45%;
+    }
+}
+
+@media(max-width: 410px){
+ 
+    .close-filters-btn{
+        margin-left: 30%;
+    }
+}
+
+@media(max-width: 400px){
+ 
+    .close-filters-btn{
+        margin-left: 38%;
     }
 } */

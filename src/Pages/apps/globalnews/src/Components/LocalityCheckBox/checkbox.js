@@ -12,10 +12,19 @@ const LocalityCheckBox = ( props ) => {
   const CustomBox = withStyles({
   root: {
     color: '#DDA15E',
+    backgroundColor: "#FEFAE0",
+    borderRadius: "16px",
+    fontWeight: "1000",
+    marginRight: "0px",
+
+    
+
     '&$checked': {
       color: '#283618',
     },
   },
+
+  
   checked: {},
 })((props) => <Checkbox color="default" {...props} />);
 
@@ -28,10 +37,8 @@ const LocalityCheckBox = ( props ) => {
     <FormControlLabel
          control={<CustomBox checked={props.status} onChange={props.handleBoxClick}
          name="Localize"/>}
-         label="Localized"
-         style = {{backgroundColor: "#FEFAE0",
-          paddingRight: "3vh", borderRadius: "16px",
-                  fontWeight: "1000", marginRight: "0px"}}
+         label="Localized" 
+       
        />
 
 

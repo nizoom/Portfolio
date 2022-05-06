@@ -3,6 +3,9 @@ import './globalnews.css';
 import "fontsource-roboto"
 import Typography from "@material-ui/core/Typography"
 import { makeStyles } from "@material-ui/core/styles"
+// import { createTheme, ThemeProvider } from '@mui/material/styles';
+
+
 import Grid from '@material-ui/core/Grid';
 
 
@@ -20,8 +23,18 @@ import CircledTwo from "./Images/two.png"
 
 function Globalnews() {
 
+  // const theme = createTheme();
 
-// Material UI Styling
+  // theme.typography.p = {
+  //   fontSize: '1.2rem',
+  //   '@media (min-width:600px)': {
+  //     fontSize: '.5rem',
+  //   },
+  //   [theme.breakpoints.up('md')]: {
+  //     fontSize: '.4rem',
+  //   },
+  // };
+
   const useStyles = makeStyles((theme) => ({
     root: {
       flexGrow: 1,
@@ -38,9 +51,27 @@ function Globalnews() {
     typographyStyle: {
       color : "#FEFAE0",
       marginTop : "3vh",
-      textAlign: "center"
+      textAlign: "center",
+     
+  
+  
+    },
+
+    h2MediaQueries : {
+       '@media (max-width:900px)': {
+          fontSize: '32px',
+      },
+    },
+ 
+    h4MediaQueries : {
+       '@media (max-width:900px)': {
+          fontSize: '28px',
+      },
     }
+ 
   }));
+
+
 
 
 //useState hooks to track different changes
@@ -88,14 +119,15 @@ function Globalnews() {
 
   return (
     <div className= {classes.root} >
+      {/* <ThemeProvider theme={theme}> */}
       <Grid container>
         
         <Grid item xs = {12}>
      
-          <Typography variant = "h2" className = {classes.typographyStyle}>
+          <Typography variant = "h2" className = {`${classes.typographyStyle} ${classes.h2MediaQueries}` }>
             The Global News Source
           </Typography>
-          <Typography variant = "h4" className = {classes.typographyStyle}> A new way to keep up </Typography>
+          <Typography variant = "h4" className = {`${classes.typographyStyle} ${classes.h4MediaQueries}`}> A new way to keep up </Typography>
     
         </Grid>
 
@@ -154,6 +186,7 @@ function Globalnews() {
         </Grid>
 
       </Grid>
+      {/* </ThemeProvider> */}
     </div>
   );
 }

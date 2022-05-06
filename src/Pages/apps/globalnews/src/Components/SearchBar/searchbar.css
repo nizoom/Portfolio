@@ -19,3 +19,16 @@
 
 }
 
+@media(max-width: 700px){
+  .searchbar input[type=text] {
+   font-size: 14px;
+  
+  }
+  
+
+  
+}
+
+  
+
+  

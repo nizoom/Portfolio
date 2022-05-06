@@ -28,10 +28,19 @@ const ArticleList = ( props ) => {
       marginTop: '2vh',
       '&:hover': {
         width: '99%',
-        fontSize: '1.5em',
+        fontSize: '1.3rem',
        
 
       }
+    },
+
+    liMediaQueries : {
+      '@media (max-width:900px)': {
+        fontSize: '18px',
+    },
+      '@media (max-width:500px)': {
+        fontSize: '16px',
+    },
     }
   })
   const classes = useStyles();
@@ -45,7 +54,7 @@ const ArticleList = ( props ) => {
          <ul style = {{padding: 0}}> {
               props.articlesToDisplay[0].map(function(article, index) {
                 return <li  key = {article.url}
-                        className = {classes.typographyStyle} >
+                        className = {`${classes.typographyStyle} ${classes.liMediaQueries}`} >
                         {article.provider[0].name} -
                         <a href = {article.url} target="_blank" rel="noreferrer" style = {{color: "#FEFAE0"}}
                         > {article.name} </a> </li>

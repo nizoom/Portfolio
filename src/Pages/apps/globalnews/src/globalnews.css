@@ -19,13 +19,12 @@
 
     display: flex;
   
-    width: 660px;
+    width: 85%;
     margin: auto;
     margin-top: 0;
   
 }
 .map-instruction{
-  margin-top: 20px;
 
 }
 
@@ -33,6 +32,10 @@
   .map-instruction-wrapper{
     width: 85%;
   } 
+
+  .App h2{
+    font-size: 5px;
+  }
 }
 
 

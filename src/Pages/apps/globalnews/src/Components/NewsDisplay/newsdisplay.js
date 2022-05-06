@@ -97,40 +97,56 @@ const NewsDisplay = (props) => {
 
     if (!displayDataObj.newsAvailable) { //if no news
       //console.log("Firing no news display");
-      return <h3 style={{ color: "#FEFAE0" }}> There is no results based on this location
+      return <h3 style={`${classes.h1} ${classes.h1MediaQueries}`}> There is no results based on this location
         or topic. Try clicking a city or town. You can also
         turn off Localized search to broaden your results to the national level</h3>
       //all possibilities assuming that there is news:
     } //if there is news, its local, and topic/userfilter is used
 
     if (displayDataObj.localityWanted && displayDataObj.topicWanted) {
-      return <h1 style={{ color: "#FEFAE0" }}> Here is the news for {localityName}, {country} and {topic}</h1>
+      return <h1 className={`${classes.h1} ${classes.h1MediaQueries}`}> Here is the news for {localityName}, {country} and {topic}</h1>
     }
     // 2. local news only
     if (!displayDataObj.topicWanted && displayDataObj.localityWanted) {
-      return <h1 style={{ color: "#FEFAE0" }}> Here is the news for {localityName}, {country} </h1>
+      return <h1 className={`${classes.h1} ${classes.h1MediaQueries}`}> Here is the news for {localityName}, {country} </h1>
     }
     //3. country news and topic / userfilter is used
     if (!displayDataObj.localityWanted && displayDataObj.topicWanted) {
-      return <h1 style={{ color: "#FEFAE0" }}> Here is the news for {country} and {topic} </h1>
+      return <h1 sclassName={`${classes.h1} ${classes.h1MediaQueries}`}> Here is the news for {country} and {topic} </h1>
     }
 
     // 4. country news only
     if (!displayDataObj.localityWanted && !displayDataObj.topicWanted) {
-      return <h1 style={{ color: "#FEFAE0" }}> Here is the news for {country} </h1>
+      return <h1 className={`${classes.h1} ${classes.h1MediaQueries}`}> Here is the news for {country} </h1>
     }
 
     displayDataObj.dataAssessed = false;
   }
 
 
-  const useStyles = makeStyles({
+  const useStyles = makeStyles((theme) => ({
     typographyStyle: {
       color: "#BC6C25",
       padding: "2vh",
       fontWeight: "700"
+    },
+
+    h1 : {
+      color: '#FEFAE0'
+    },
+
+    h1MediaQueries : {
+      '@media (max-width:900px)': {
+        fontSize: '28px',
+      },
+      '@media (max-width:600px)': {
+        fontSize: '24px',
+      },
+      '@media (max-width:500px)': {
+        fontSize: '20px',
+      },
     }
-  })
+  }));
 
   const classes = useStyles()
 
