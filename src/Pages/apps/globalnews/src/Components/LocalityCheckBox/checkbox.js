@@ -1,7 +1,6 @@
 import React from "react";
 import Checkbox from "@material-ui/core/Checkbox"
 import FormControlLabel from '@material-ui/core/FormControlLabel';
-import { purple } from "@material-ui/core/colors"
 import { withStyles } from '@material-ui/core/styles';
 
 

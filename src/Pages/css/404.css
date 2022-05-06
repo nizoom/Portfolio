@@ -1,4 +1,9 @@
 .bg{
-  background-image: none;
-  background-color: transparent;
+  background-color: black;
+  height: 100vh;
+  color: #ebdec7;
+  font-family: 'Montserrat', sans-serif;
+  padding-top: 10%;
+  text-align: center;
+
 }

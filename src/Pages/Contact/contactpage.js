@@ -36,7 +36,7 @@ const ContactPage = () => {
   //   }
   // }
   const getSidebarStatus = (sidebarStatus) => {
-    console.log(sidebarStatus)
+
     return (sidebarStatus ? setNavStatus(true) : setNavStatus(false))
   }
 

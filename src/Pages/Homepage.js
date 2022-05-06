@@ -6,7 +6,6 @@ import "./css/homepage.css"
 import EchoIcon from "../project_layout/echochambericon.png";
 import NYCIcon from "../project_layout/builtnyclogo.png";
 import globalnewsIcon from "../project_layout/worldnews.png";
-import IntroScreen from "./intro";
 import tyIcon from "../project_layout/tyicon.png"
 import emailBuilderIcon from "../project_layout/form.png"
 import gradientBubble from './../project_layout/Ellipse.png'

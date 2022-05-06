@@ -1,6 +1,5 @@
 import "./logo.css"
 import React from "react";
-import { Link } from "react-router-dom"
 
 const Logo = () => {
 
@@ -11,14 +10,6 @@ const Logo = () => {
           <hr className='gold-bar'/> 
           <h2 className="main-sub-header"> web developer</h2> 
          </div>
-
-      {/* <div className="link_div">
-        <Link to="/">
-          <button className="parallelogram">  </button>
-        </Link>
-      </div> */}
-
-    
     </div>
   )
 }

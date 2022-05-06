@@ -35,7 +35,7 @@ const Cards = (props) => {
         // ICON CARD
         <div className='all-cards-wrapper'>
           
-          <img src={MobileCard} className= 'mobile-card'/>
+          <img src={MobileCard} className= 'mobile-card' alt = 'card to display on'/>
 
            <div className='icon-card-wrapper'>
                 <div className='icon-and-title-wrapper'>
@@ -81,7 +81,7 @@ const Cards = (props) => {
 
 
 
-            <InfoPopUp popupState = {popupState} appTitle = {props.appTitle} handlePopupClick = {handlePopupClick} position = {props.position}/>
+            <InfoPopUp popupState = {popupState} appTitle = {props.appTitle} handlePopupClick = {handlePopupClick} position = {props.position} url = {props.url}/>
         </div>
     )
 }

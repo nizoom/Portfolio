@@ -9,16 +9,9 @@ const About = (props) => {
 
   const [navStatus, setNavStatus] = useState(false)
 
-  // const classStatusForMobile = (sidebarStatus) => {
-  //   if (sidebarStatus && window.innerWidth < 850) {
-  //     setNavStatus(!navStatus)
-  //   }
-  //   if (window.innerWidth < 850) {
-  //     setNavStatus(!navStatus)
-  //   }
-  // }
+
   const getSidebarStatus = (sidebarStatus) => {
-    console.log(sidebarStatus)
+ 
     return (sidebarStatus ? setNavStatus(true) : setNavStatus(false))
   }
 
@@ -36,7 +29,7 @@ const About = (props) => {
 
               <h2 className="header"> Hey there, I'm a web developer based in Boston and New York City.</h2>
               
-              <img src = {Headshot} alt='Nissim Ram photo' className="headshot"/>
+              <img src = {Headshot} alt='Nissim Ram' className="headshot"/>
            
 
                   <p className="about-content">

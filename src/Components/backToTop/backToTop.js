@@ -15,7 +15,7 @@ const BackToTopBtn = (props) => {
     <div className={props.navStatus ? "hide-backtotop-btn" : "btn_div"}>
       <button type="button" className="top"
         onClick={scrollUp}
-      > <img src = {Arrow} className = 'up-arrow-img'/> </button>
+      > <img src = {Arrow} className = 'up-arrow-img' alt = 'button going to top of page'/> </button>
     </div>
   )
 }

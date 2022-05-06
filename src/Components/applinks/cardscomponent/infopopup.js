@@ -67,7 +67,7 @@ const InfoPopUp = (props) => {
                     gifPopUpStatus.current = true
                     return <div className = 'template-gif-wrapper'> 
                             <p> An employee-facing web app that provides a user interface to fill out templated thank you emails for physical checks that come in the mail.</p>
-                            <img src = {selectGifType()} className = 'template-gif'/>
+                            <img src = {selectGifType()} className = 'template-gif' alt = 'gif of template building app in use'/>
 
                             </div>
                     
@@ -89,24 +89,18 @@ const InfoPopUp = (props) => {
         }
     }
 
-    const popupRef = useRef();
 
     
-
-
-
-
-
 
     // close out logic for escape key 
     const escapeFunction = useCallback((event) => {
         if(event.key === "Escape"){
             closePopup();
         }
-    },[]);
+    });
 
 
-
+ 
     useEffect(() => {
 
         document.addEventListener("keydown", escapeFunction, false)
@@ -123,13 +117,13 @@ const InfoPopUp = (props) => {
 
       
 
-    },[])
+    })
+
 
 
 
 
     const closePopup = (event) => {
-        console.log('closing')
     
         props.handlePopupClick(false)
     }
@@ -148,7 +142,11 @@ const InfoPopUp = (props) => {
 
             
                         <div className={props.popupState.status ? "button-div" : "hide-button-div" }>
-                            <button className="more-info-btn btn-border pop-up-btn"> Visit </button>
+                        <a href = {props.url} target="_blank" rel="noopener noreferrer"> 
+                            
+                            <button className="more-info-btn btn-border pop-up-btn">Visit </button>
+
+                            </a> 
                             <button className="more-info-btn btn-border pop-up-btn" onClick = {closePopup}> Close </button>
                         </div>
                 </div>
@@ -160,7 +158,11 @@ const InfoPopUp = (props) => {
                         </article> 
 
                         <div className={props.popupState.status ? "gif-button-div" : "hide-button-div" }>
-                            <button className="more-info-btn btn-border pop-up-btn"> Visit </button>
+                            <a href = {props.url} target="_blank" rel="noopener noreferrer"> 
+
+                            <button className="more-info-btn btn-border pop-up-btn">Visit </button>
+
+                            </a> 
                             <button className="more-info-btn btn-border pop-up-btn" onClick = {closePopup}> Close </button>
                         </div>
                         

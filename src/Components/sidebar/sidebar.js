@@ -55,25 +55,25 @@ const Sidebar = (props) => {
       <div className={`classes ${sidebarStatus ? "sidebar" : "off"}`}>
         <nav>
           <ul>
-            <li>
+            <li onClick={sideBarBtnHandler}>
               <Link to="/" className="link" > Portfolio </Link>
             </li>
 
-            <li>
+            <li onClick={sideBarBtnHandler}> 
               <Link to="/About" className="link"> About </Link>
             </li>
 
-            <li>
+            <li onClick={sideBarBtnHandler}>
               <Link to="/Blog" className="link"> Blog. </Link>
             </li>
 
-            <li>
+            <li onClick={sideBarBtnHandler}>
               <a target="blank" href="https://github.com/nizoom"
                 className="link">
                 GitHub </a>
             </li>
 
-            <li>
+            <li onClick={sideBarBtnHandler}>
               <Link to="/Contact" className="link"> Contact </Link>
             </li>
 
