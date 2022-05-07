@@ -22,20 +22,3 @@ html{
 
 
 
-@media(max-width:330px){
-  /* .App{
-   
-    height:100%;
-    width:100%;
-    overflow : hidden;
-  }
-  body {
-
-    height : 100%;
-    width:100%;
-    overflow : scroll;
-    background-repeat: none;
-    -webkit-overflow-scrolling : touch;
-
-} */
-}

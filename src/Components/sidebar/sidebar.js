@@ -11,7 +11,7 @@ const Sidebar = (props) => {
 
   const sideBarBtnHandler = () => {
     setSidebarStatus(!sidebarStatus)
-
+    childFunction(!sidebarStatus)
     if(!sidebarStatus){
      
         window.scrollTo({

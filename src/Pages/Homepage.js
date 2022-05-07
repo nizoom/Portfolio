@@ -110,6 +110,7 @@ class HomePage extends Component {
                   
                 </div>
             </header>
+            
             <div className="bubbles-wrapper">
                 <img src = {gradientBubble} alt = 'graphic of bubbles falling down'className="left large"/>
                 <img src = {gradientBubble} alt = 'graphic of bubbles falling down' className="small-bbl middle-left"/>

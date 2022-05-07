@@ -35,7 +35,7 @@ const Cards = (props) => {
         // ICON CARD
         <div className='all-cards-wrapper'>
           
-          <img src={MobileCard} className= 'mobile-card' alt = 'card to display on'/>
+          <img src={MobileCard} className= 'mobile-card' alt = 'card to display app on to'/>
 
            <div className='icon-card-wrapper'>
                 <div className='icon-and-title-wrapper'>

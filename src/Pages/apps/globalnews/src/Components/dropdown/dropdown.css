@@ -225,6 +225,10 @@
     .close-btn-wrapper{
         top: 520px;
     }
+
+    .filter-form{
+        margin-left: 0;
+    }
 }
 @media(max-width: 400px){
 

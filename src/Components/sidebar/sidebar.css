@@ -152,8 +152,9 @@ li{
   }
  .blog-wrapper .square-btn{
     margin-top: 0px;
-    right: 5px;
-  }
+    margin-right: 0;
+  
+  }x
   .link{
     font-size: 14px;
   }
