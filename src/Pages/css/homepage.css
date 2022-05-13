@@ -332,7 +332,7 @@ footer{
 
 
   .welcome-border{
-    font-size: 12px;
+
     height: 400px;
     width: 400px;
   }
@@ -432,7 +432,7 @@ footer{
    padding-right: 0; */
   }
   .socials-wrapper{
-    top: 76px;
+    top: 75px;
     left: 15px;
   }
 
@@ -462,7 +462,7 @@ footer{
 @media(max-width: 400px){
 
   .socials-wrapper{
-    top: 65.5px;
+    top: 64.5px;
     height: 400px;
   }
   .socials-wrapper ul{

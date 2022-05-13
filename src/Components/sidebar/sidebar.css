@@ -87,7 +87,7 @@ li{
   font-size: 20px;
   padding: 20px;
   text-decoration: underline;
-  cursor: pointer;
+
 }
 
 
@@ -100,7 +100,7 @@ li{
   z-index: 1;
   color: #D5B060;
   font-size: 20px;
-
+  cursor: pointer;
 }
 
 

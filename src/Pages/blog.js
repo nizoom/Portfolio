@@ -6,7 +6,9 @@ import PostOne from "../Components/blog_posts/post_one"
 import PostTwo from "../Components/blog_posts/post_two"
 import PostThree from "../Components/blog_posts/post_three";
 import PostFour from "../Components/blog_posts/post_four";
+import PostFive from "../Components/blog_posts/post_five";
 import BackToTopBtn from "../Components/backToTop/backToTop"
+
 
 
 
@@ -14,16 +16,8 @@ const Blog = (props) => {
 
   const [navStatus, setNavStatus] = useState(false);
 
-  // const childFunction = (sidebarStatus) => {
-  //   if (sidebarStatus && window.innerWidth < 850) {
-  //     setClazz(!clazz)
-  //   } if (window.innerWidth < 850) {
-  //     setClazz(!clazz)
-  //   }
-
-  // }
   const getSidebarStatus = (sidebarStatus) => {
-    console.log(sidebarStatus)
+  
     return (sidebarStatus ? setNavStatus(true) : setNavStatus(false))
   }
 
@@ -36,6 +30,8 @@ const Blog = (props) => {
         <BackToTopBtn navStatus = {navStatus}/>
         <div className="blog_div">
           <div className="post">
+
+            <PostFive />
 
             <PostFour />
 

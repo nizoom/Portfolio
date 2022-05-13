@@ -33,8 +33,6 @@ const Sidebar = (props) => {
 
   //{navigator.clipboard.writeText(  "nissimram1812@gmail.com")}
 
-
-
   return (
     <div className="container">
       <div className="sidebar_btn">
