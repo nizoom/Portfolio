@@ -17,7 +17,7 @@ const Cards = (props) => {
     })
 
     const handlePopupClick = (boolean) => {
-  
+      console.log(props.appTitle)
        const updatedvalues = {
             status : boolean,
             app : props.appTitle

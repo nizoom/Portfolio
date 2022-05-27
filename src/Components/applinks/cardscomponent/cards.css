@@ -452,7 +452,7 @@
    
      .icon-card-wrapper{
        margin-top: 35px;
-  
+       margin-right: -10px;
        position: relative;
      
      }
@@ -570,7 +570,7 @@
   }
 
   .description-text-div{
-     margin-top: -390px;
+     margin-top: -370px;
    }
 
    .description-div-wrapper{
@@ -584,13 +584,18 @@
   }
 
   .all-cards-wrapper{
-    margin-bottom: 30px;
+    margin-bottom: 150px;
     width: 350px;
   }
 
- 
-  
 
+}
+
+@media(max-width: 376px){
+  .all-cards-wrapper{
+    margin-bottom: 120px;
+
+  }
 }
 
 @media(max-width: 300px){

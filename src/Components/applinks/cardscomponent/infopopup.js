@@ -94,7 +94,9 @@ const InfoPopUp = (props) => {
 
     // close out logic for escape key 
     const escapeFunction = useCallback((event) => {
+     
         if(event.key === "Escape"){
+  
             closePopup();
         }
     });
@@ -103,10 +105,13 @@ const InfoPopUp = (props) => {
  
     useEffect(() => {
 
+
         document.addEventListener("keydown", escapeFunction, false)
 
         // document.addEventListener("click", clickOutPopup, false)
         
+        //document.addEventListener("keydown", (event) => escapeFunction(event, props.appTitle), false)
+
 
         return () => {
             document.removeEventListener("keydown",escapeFunction, false);
@@ -124,9 +129,9 @@ const InfoPopUp = (props) => {
 
 
     const closePopup = (event) => {
-    
         props.handlePopupClick(false)
     }
+
     return(
 
         <div className={props.popupState.status ? "popup-background" : "hide" }>
