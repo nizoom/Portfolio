@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import './cards.css';
 import appIconCard from "../../../project_layout/appiconcard.png"
 import appDescriptionCard from "../../../project_layout/appdescriptioncard.png"
@@ -11,24 +11,55 @@ import { BrowserRouter as Router, Link } from "react-router-dom";
 
 const Cards = (props) => {
 
-    const [popupState, setPopupState] = useState({
-        status : false,
-        whichApp : ''
+
+
+    const handlePopupClick = (popup, boolean) => {
+    
+
+    //    const updatedvalues = {
+    //         status : boolean,
+    //         app : popup
+    //    }  
+        props.toggleOpacityForPopup(props.appTitle)
+        // setPopupState(updatedvalues)
+    }
+
+
+
+    useEffect(() => {
+
+
+        document.addEventListener("keydown", handleEscape, false)
+        
+        //document.addEventListener("keydown", (event) => escapeFunction(event, props.appTitle), false)
+
+
+        return () => {
+            document.removeEventListener("keydown", handleEscape, false);
+
+            // document.removeEventListener("click", clickOutPopup, false)
+
+        }
+
+      
+
     })
 
-    const handlePopupClick = (boolean) => {
-      console.log(props.appTitle)
-       const updatedvalues = {
-            status : boolean,
-            app : props.appTitle
-       }  
-        props.toggleOpacityForPopup()
-        setPopupState(updatedvalues)
-    }
+    const handleEscape = (event) => {
 
-    function sayUrl(){
-        console.log(props.url)
-    }
+        if(props.projectInFocus === props.appTitle){
+
+            if(event.key === "Escape"){
+  
+                handlePopupClick(props.appTitle);
+                
+             }
+
+        }
+
+    
+    };
+
   
     return (
 
@@ -49,7 +80,7 @@ const Cards = (props) => {
 
                     </Link>  : 
                     
-                    <a href={props.url} target="_blank" rel="noopener noreferrer" onClick = {sayUrl}> 
+                    <a href={props.url} target="_blank" rel="noopener noreferrer"> 
 
                         <img src={props.icon} alt={`${props.alt} icon`} className="app-icon" />
 
@@ -70,7 +101,7 @@ const Cards = (props) => {
                     {/* <div className='app-description'> {props.Description}</div> */}
              
                     <p className="tech-used">  <span className="stack"> Tech stack: </span> <span className="tech-list"> {props.stackList} </span> </p>
-                    <button className="more-info-btn" onClick = {handlePopupClick} > Click here for more info</button>
+                    <button className="more-info-btn" onClick = {() => handlePopupClick(props.appTitle)}> Click here for more info</button>
                 </div>
 
 
@@ -81,7 +112,13 @@ const Cards = (props) => {
 
 
 
-            <InfoPopUp popupState = {popupState} appTitle = {props.appTitle} handlePopupClick = {handlePopupClick} position = {props.position} url = {props.url}/>
+            <InfoPopUp 
+            
+             appTitle = {props.appTitle} handlePopupClick = {handlePopupClick} position = {props.position} url = {props.url}
+            projectInFocus = {props.projectInFocus} status = {props.status}
+        
+            />
+      
         </div>
     )
 }
