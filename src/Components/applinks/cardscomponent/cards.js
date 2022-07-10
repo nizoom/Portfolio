@@ -67,50 +67,50 @@ const Cards = (props) => {
         <div className='all-cards-wrapper'>
           
           <img src={MobileCard} className= 'mobile-card' alt = 'card to display app on to'/>
+          <div className='columns'>
+                <div className='icon-card-wrapper'>
+                    <div className='icon-and-title-wrapper'>
+                        <h3 className="app-title"> {props.appTitle} </h3>
 
-           <div className='icon-card-wrapper'>
-                <div className='icon-and-title-wrapper'>
-                    <h3 className="app-title"> {props.appTitle} </h3>
+                        <img src={DownArrow} className= 'arrow'/>
 
-                    <img src={DownArrow} className= 'arrow'/>
+                        { props.linkType === "Link" ?  <Link to="/globalnews" target="_blank" rel="noopener noreferrer">
 
-                    { props.linkType === "Link" ?  <Link to="/globalnews" target="_blank" rel="noopener noreferrer">
+                                <img src={props.icon} alt={`${props.alt} icon`} className="app-icon" />
+
+                        </Link>  : 
+                        
+                        <a href={props.url} target="_blank" rel="noopener noreferrer"> 
 
                             <img src={props.icon} alt={`${props.alt} icon`} className="app-icon" />
 
-                    </Link>  : 
+                        </a>
+                        // if no link like gif situation then pass a prop to create component where onclick shows gif
+                        
+                        }
                     
-                    <a href={props.url} target="_blank" rel="noopener noreferrer"> 
+                        </div>
+                    <img src = {appIconCard} alt = 'app icon card' className="app-icon-card"/>
+                </div>
+                
 
-                        <img src={props.icon} alt={`${props.alt} icon`} className="app-icon" />
-
-                    </a>
-                    // if no link like gif situation then pass a prop to create component where onclick shows gif
-                    
-                    }
-                 
+                {/* DESCRIPTION CARD */}
+                <div className='description-div-wrapper'>
+                    <div className="description-text-div" >
+                        {props.Description}
+                        {/* <div className='app-description'> {props.Description}</div> */}
+                
+                        <p className="tech-used">  <span className="stack"> Tech stack: </span> <span className="tech-list"> {props.stackList} </span> </p>
+                        <button className="more-info-btn" onClick = {() => handlePopupClick(props.appTitle)}> Click here for more info</button>
                     </div>
-                <img src = {appIconCard} alt = 'app icon card' className="app-icon-card"/>
-            </div>
 
 
-            {/* DESCRIPTION CARD */}
-            <div className='description-div-wrapper'>
-                <div className="description-text-div" >
-                    {props.Description}
-                    {/* <div className='app-description'> {props.Description}</div> */}
-             
-                    <p className="tech-used">  <span className="stack"> Tech stack: </span> <span className="tech-list"> {props.stackList} </span> </p>
-                    <button className="more-info-btn" onClick = {() => handlePopupClick(props.appTitle)}> Click here for more info</button>
+                    <img src = {appDescriptionCard} alt = 'app description card' className="app-description-card"/>
                 </div>
 
+                {/* <div style={{width: '0px'}}></div> */}
 
-                <img src = {appDescriptionCard} alt = 'app description card' className="app-description-card"/>
             </div>
-
-            {/* <div style={{width: '0px'}}></div> */}
-
-
 
             <InfoPopUp 
             
@@ -118,8 +118,8 @@ const Cards = (props) => {
             projectInFocus = {props.projectInFocus} status = {props.status}
         
             />
-      
-        </div>
+      </div>
+   
     )
 }
 

@@ -284,6 +284,149 @@
       width: 300px;
     }
   }
+
+  @media (max-width: 1050px){
+    .app-icon-card{
+      display: none;
+    }
+    .app-description-card{
+         display: none;
+    }
+    
+    .mobile-card{
+      position: relative;
+      width: 80%;
+      display: grid;
+      margin: auto;
+      z-index: 0;
+    }
+
+    .all-cards-wrapper{
+
+    }
+
+   .columns {
+      position: absolute;
+      width: 100%;
+      margin: -320px auto auto auto;
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+      justify-content: center;
+      height: 400px;
+ 
+    
+    } 
+
+    .description-text-div{
+      all: revert;
+      margin-left: 25px;
+      margin-top: -15%;
+    }
+
+    .description-div-wrapper{
+      z-index: 100;
+      margin: 0;
+      line-height: 30px;
+      height: auto;
+  
+
+    }
+
+    .icon-and-title-wrapper{
+      height: auto;
+      margin: 0;
+    }
+    .icon-card-wrapper{
+      margin: 0;
+      /* margin-top: -5%; */
+      height: auto;
+    }
+
+    .app-description{
+      margin: 0;
+      
+    }
+    
+  }
+
+@media(max-width: 950px){
+  .mobile-card{
+    height: 550px;
+  }
+}
+@media(max-width: 750px){
+  .mobile-card{
+    height: 550px;
+    width: 400px;
+  }
+
+  .columns{
+    flex-direction: column;
+ 
+    margin-top: -400px; 
+  }
+
+  .icon-card-wrapper{
+    position:relative;
+    margin:0 auto;
+    left: 5px;
+
+  }
+ .arrow{
+  margin: 20px;
+ }
+ .description-div-wrapper{
+  text-align: center;
+  margin: auto;
+  line-height: normal;
+ }
+
+ .description-text-div{
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  align-items: center;
+  margin-bottom: 40px;
+ }
+
+ .more-info-btn{
+  margin: auto;
+ }
+}
+
+@media(max-width: 550px){
+  .mobile-card{
+    height: 600px;
+
+  }
+  .description-div-wrapper{
+    margin-bottom: 60px;  
+  }
+
+  .app-description{
+    font-size: 16px;
+  }
+
+  .tech-used{
+    font-size: 16px;
+  }
+
+  .more-info-btn{
+    font-size: 14px;
+  }
+}
+@media(max-width: 500px){
+  .mobile-card{
+    width: 350px;
+  }
+}
+@media(max-width: 360px){
+  .mobile-card{
+    width: 300px;
+  }
+}
+/*   
   @media (max-width: 1050px){
 
     .app-icon{
@@ -413,6 +556,44 @@
       line-height: 25px;
     }
   }
+
+  @media(max-width: 650px){
+    .mobile-card{
+      width: 350px;
+      height: 500px;
+    }
+
+    .description-text-div{
+      display: block;
+      position: relative;
+    }
+
+    .description-div-wrapper{
+      margin-top: auto;
+    }
+
+    .icon-card-wrapper{
+     margin:0;
+     height: auto;
+    }
+
+    .icon-and-title-wrapper{
+      display: inline;
+      margin: 0;
+    }
+
+    .all-cards-wrapper{
+      width: 350px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+    }
+  }
+   */
+/*   
   @media(max-width: 650px){
   
     .all-cards-wrapper{
@@ -486,8 +667,6 @@
     }
 
     .description-div-wrapper{
-      /* position: absolute;
-      top:50%;  */
       align-self: auto;
       position: relative;
       margin-top:-200px;
@@ -550,8 +729,6 @@
    }
 
    .description-div-wrapper{
-    /* position: absolute;
-    top:50%;  */
     align-self: auto;
     position: relative;
     margin-top:80px;
@@ -619,4 +796,4 @@
 
   }
 
-}
+} */

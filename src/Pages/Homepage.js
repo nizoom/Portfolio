@@ -58,8 +58,6 @@ class HomePage extends Component {
       navStatusClass: "standard", 
 
       }
-
-
   }
 
 
@@ -146,6 +144,7 @@ class HomePage extends Component {
               /> 
 
               <Cards alt = 'Global News'icon = {globalnewsIcon} appTitle = 'Try Global News'
+                url = 'http://localhost:3000/#/globalnews'
                 stackList = 'ReactJS, React Router, Material UI, Azure, Google Cloud, LeafletJS.'
                 linkType = 'Link' 
                 Description = {<p className='app-description'> <b>Web app </b> that finds localized news based on geolocation from map click.</p>}

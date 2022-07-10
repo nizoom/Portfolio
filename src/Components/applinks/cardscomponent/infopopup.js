@@ -45,6 +45,9 @@ const InfoPopUp = (props) => {
     useEffect(() => {
 
 
+        selectGifType()
+
+
             window.addEventListener('resize', handleResize)
 
         
@@ -55,7 +58,6 @@ const InfoPopUp = (props) => {
     })
     
 
-    selectGifType()
 
 
 
@@ -121,12 +123,12 @@ const InfoPopUp = (props) => {
 
             
                         <div className={props.status ? "button-div" : "hide-button-div" }>
-                        <a href = {props.url} target="_blank" rel="noopener noreferrer"> 
+                            <a href = {props.url} target="_blank" rel="noopener noreferrer"> 
                             
-                            <button className="more-info-btn btn-border pop-up-btn">Visit </button>
+                                <button className="base-more-info-btn btn-border pop-up-btn">Visit </button>
 
                             </a> 
-                            <button className="more-info-btn btn-border pop-up-btn" onClick = {closePopup}> Close </button>
+                            <button className="base-more-info-btn btn-border pop-up-btn" onClick = {closePopup}> Close </button>
                         </div>
                 </div>
  
@@ -139,10 +141,10 @@ const InfoPopUp = (props) => {
                         <div className={props.status ? "gif-button-div" : "hide-button-div" }>
                             <a href = {props.url} target="_blank" rel="noopener noreferrer"> 
 
-                            <button className="more-info-btn btn-border pop-up-btn">Visit </button>
+                            <button className="base-more-info-btn btn-border pop-up-btn">Visit </button>
 
                             </a> 
-                            <button className="more-info-btn btn-border pop-up-btn" onClick = {closePopup}> Close </button>
+                            <button className="base-more-info-btn btn-border pop-up-btn" onClick = {closePopup}> Close </button>
                         </div>
                         
                  </div>
@@ -154,32 +156,3 @@ const InfoPopUp = (props) => {
 }
 
 export default InfoPopUp;
-
-// useClickOutside(popupRef, () => closePopup())
-
-
-    // function useClickOutside(ref, handler){
-    //     useEffect(
-    //         () => {
-    //             const listener = (event) => {
-                  
-
-    //                 // Do nothing if clicking ref's element or descendent elements
-    //                 if(!ref.current || ref.current.contains.event.target){
-    //                     console.log('firing')
-    //                     return;
-    //                 }
-
-    //                 handler(event)
-    //             }
-
-    //             document.addEventListener("click", listener, false)
-    //             // document.addEventListener("keydown", listener, false)
-
-    //             return () => {
-    //                 document.removeEventListener("click", listener, false)
-    //                 // document.removeEventListener("keydown", listener, false)
-    //             }
-    //         }, [ref, handler]
-    //     )
-    // }
