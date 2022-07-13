@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./sidebar.css"
 import { BrowserRouter as Router, Link } from "react-router-dom";
-//()=>setClipBoardStatus("Email : nissimram1812@gmail.com")
+
 
 
 const Sidebar = (props) => {
@@ -31,7 +31,7 @@ const Sidebar = (props) => {
   }
 
 
-  //{navigator.clipboard.writeText(  "nissimram1812@gmail.com")}
+
 
   return (
     <div className="container">
