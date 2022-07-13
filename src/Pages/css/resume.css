@@ -1,0 +1,158 @@
+.resume-page-wrapper{
+    background-color: black;
+    height: 320vh;
+    font-family: 'Montserrat', sans-serif;
+}
+.resume-header{
+    margin: 0 0 20px 0px;
+    color: #d4b36d;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 400;
+    margin-top: -80px;
+}
+
+.resume-wrapper{
+    width: 80%;
+    margin: auto;
+    margin-top: 100px;
+}
+
+.section-header{
+    color: #d4b36d;
+    font-weight: 600;
+    
+}
+
+.body-paragraph{
+    color: #d4b36d;
+    font-size: 16px;
+    text-align: justify;
+    line-height: 25px;
+}
+
+.tech-header{
+    color: #d4b36d;
+    font-size: 16px;
+    font-weight: 600;
+ 
+}
+
+.resume-page-wrapper span{
+    color: #d4b36d;
+    display: inline;
+
+}
+
+.experience-name{
+    color: #d4b36d;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.title-dates-split{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: -15px;
+}
+
+.date{
+    color: #d4b36d;
+    font-size: 16px;
+    font-weight: 400;
+    align-self: center;
+    margin-top: 0;
+}
+
+.position{
+    color: #d4b36d;
+    margin-top: 0;
+    font-weight: 400;
+    margin-left: 5px;
+    font-size: 14px
+    
+}
+
+.project{
+    color: #d4b36d;
+    margin-top: 0;
+    font-weight: 400;
+    font-size: 14px;
+    margin-bottom: 5px;
+
+}
+
+.list{
+    color: #d4b36d;
+    margin-top: 0;
+    list-style-type: circle;
+   
+    
+
+}
+
+.list li{
+    font-size: 14px;
+    text-decoration: none;
+    line-height: 20px;
+    padding: 5px;
+ 
+}
+
+.education-paragraph{
+    color: #d4b36d;
+    font-size: 14px;
+    margin-top: -5px;
+}
+
+.download{
+    padding: 0;
+    margin: 0;
+   background-color: black;
+   border: none;
+   height: 20px;
+   width: 20px;
+   cursor: pointer;
+  position: absolute;
+  right: 150px;
+  top: 52px;
+  border-radius: 50%;
+
+
+}
+
+.download img{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+ 
+}
+
+.download:hover {
+    box-shadow: 0 12px 16px 0 #d4b36d, 0 17px 50px 0 #d4b36d;
+
+ 
+  }
+
+.top-right-div{
+  
+}
+
+@media(max-width: 850px){
+    .download{
+        top: 150px;
+        right: 50px;
+    }
+    .download img{
+        height: 30px;
+        width: 30px;
+    }
+}
+@media(max-width: 850px){
+    .download{
+        top: 150px;
+        right: 30px;
+    }
+
+}

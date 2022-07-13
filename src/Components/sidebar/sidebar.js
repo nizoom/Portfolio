@@ -75,6 +75,10 @@ const Sidebar = (props) => {
               <Link to="/Contact" className="link"> Contact </Link>
             </li>
 
+            <li onClick={sideBarBtnHandler}>
+              <Link to="/resume" className="link"> Resume </Link>
+            </li>
+
 
           </ul>
         </nav>

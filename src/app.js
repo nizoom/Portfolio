@@ -4,8 +4,7 @@ import { BrowserRouter as Router, Route, Switch, Redirect, HashRouter } from "re
 
 //Apps 
 import Globalnews from "./Pages/apps/globalnews/src/globalnews"
-//import EchoChamber from "./Pages/apps/echochamber/client/src/echochamber";
-//import EchoChamber from "./Pages/app/"
+
 //Pages
 
 import HomePage from "./Pages/Homepage"
@@ -14,6 +13,7 @@ import About from "./Pages/About"
 import Blog from "./Pages/blog"
 import ContactPage from "./Pages/Contact/contactpage"
 import IntroScreen from "./Pages/intro";
+import Resume from "./Pages/resume"
 
 class App extends Component {
   render() {
@@ -26,7 +26,8 @@ class App extends Component {
           <Route exact path="/Blog" component={Blog} />
           <Route exact path="/Contact" component={ContactPage} />
           <Route exact path="/globalnews" component={Globalnews} />
-          {/* <Route exact path="/enterthechamber" component={EchoChamber} /> */}
+          <Route exact path="/resume" component={Resume} />
+
 
 
           <Route path="/404" component={NotFound} />

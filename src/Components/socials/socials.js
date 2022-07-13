@@ -32,7 +32,7 @@ const Socials = (props) => {
                     
                     </li>
                     <li> 
-                         <Link to="/about" target="_blank" rel="noopener noreferrer">
+                         <Link to="/contact"  rel="noopener noreferrer">
                             <img src = {EmailIcon} alt = "Nissim Ram's Contact"/> 
                          </Link>
                     </li>

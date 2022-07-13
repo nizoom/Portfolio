@@ -11,6 +11,7 @@ import emailBuilderIcon from "../project_layout/form.png"
 import gradientBubble from './../project_layout/Ellipse.png'
 import Cards from "../Components/applinks/cardscomponent/cards"
 import Socials from "../Components/socials/socials";
+import TwitterIcon from '../project_layout/twitter.png'
 import  { firstVisit, getLocalVisitStatus} from "../Components/localstorage/localstorage";
 
 
@@ -123,6 +124,11 @@ class HomePage extends Component {
 
 
             <section className="apps-section">
+
+            <Cards alt = 'Twitter API Clone' icon = {TwitterIcon} appTitle = 'Twitter API Clone' stackList = ' ReactJS, ExpressJS, NodeJS, NodeMailer, and Handlebars.Java, SpringBoot, JPA, PostgresQL, PGAdmin, Postman, Git, Github, Eclipse, Maven'
+                Description = {<p className='app-description'>  <b>Java backend</b> that allows a tester to create users, like tweets, and follow accounts</p>}
+                toggleOpacityForPopup ={this.state.toggleOpacityForPopup} position = 'one' projectInFocus = {this.state.projectInFocus} status = {this.state.popupStatus}
+              /> 
 
 
              <Cards alt = 'TY Email Builder' icon = {emailBuilderIcon} appTitle = 'TY Email Builder' stackList = ' ReactJS, ExpressJS, NodeJS, NodeMailer, and Handlebars.'
