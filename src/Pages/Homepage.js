@@ -125,8 +125,8 @@ class HomePage extends Component {
 
             <section className="apps-section">
 
-            <Cards alt = 'Twitter API Clone' icon = {TwitterIcon} appTitle = 'Twitter API Clone' stackList = ' ReactJS, ExpressJS, NodeJS, NodeMailer, and Handlebars.Java, SpringBoot, JPA, PostgresQL, PGAdmin, Postman, Git, Github, Eclipse, Maven'
-                Description = {<p className='app-description'>  <b>Java backend</b> that allows a tester to create users, like tweets, and follow accounts</p>}
+            <Cards alt = 'Twitter API Clone' icon = {TwitterIcon} appTitle = 'Twitter API Clone' stackList = 'Java, SpringBoot, JPA, PostgresQL, PGAdmin, Postman, Eclipse, Maven'
+                Description = {<p className='app-description'>  <b>Java backend</b> including endpoints to create users, like tweets, and follow accounts</p>}
                 toggleOpacityForPopup ={this.state.toggleOpacityForPopup} position = 'one' projectInFocus = {this.state.projectInFocus} status = {this.state.popupStatus}
               /> 
 
