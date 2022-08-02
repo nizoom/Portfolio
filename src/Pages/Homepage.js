@@ -125,16 +125,17 @@ class HomePage extends Component {
 
             <section className="apps-section">
 
-            <Cards alt = 'Twitter API Clone' icon = {TwitterIcon} appTitle = 'Twitter API Clone' stackList = 'Java, SpringBoot, JPA, PostgresQL, PGAdmin, Postman, Eclipse, Maven'
-                Description = {<p className='app-description'>  <b>Java backend</b> including endpoints to create users, like tweets, and follow accounts</p>}
-                toggleOpacityForPopup ={this.state.toggleOpacityForPopup} position = 'one' projectInFocus = {this.state.projectInFocus} status = {this.state.popupStatus}
-              /> 
-
-
+          
              <Cards alt = 'TY Email Builder' icon = {emailBuilderIcon} appTitle = 'TY Email Builder' stackList = ' ReactJS, ExpressJS, NodeJS, NodeMailer, and Handlebars.'
                 linkType = 'href' url = 'https://github.com/nizoom/TYTemplateBuilder'
                 Description = {<p className='app-description'>  <b>Form web app </b> that builds and sends templated thank you emails.</p>}
                 toggleOpacityForPopup ={this.state.toggleOpacityForPopup} position = 'one' projectInFocus = {this.state.projectInFocus} status = {this.state.popupStatus}
+              /> 
+
+              <Cards alt = 'Twitter API Clone' icon = {TwitterIcon} appTitle = 'Twitter API Clone' stackList = 'Java, SpringBoot, JPA, PostgresQL, PGAdmin, Postman, Eclipse, Maven'
+                Description = {<p className='app-description'>  <b>Java backend</b> including endpoints to create users, like tweets, and follow accounts</p>}
+                toggleOpacityForPopup ={this.state.toggleOpacityForPopup} position = 'one' projectInFocus = {this.state.projectInFocus} status = {this.state.popupStatus}
+                url = 'https://github.com/nizoom/Twitter-API-Clone'
               /> 
 
               <Cards alt = 'Build NYC'icon = {NYCIcon} appTitle = 'Try Build NYC' stackList = 'React JS, LeafletJS, ChartJS, SoQueryLanguage, NodeJS, ExpressJS.'

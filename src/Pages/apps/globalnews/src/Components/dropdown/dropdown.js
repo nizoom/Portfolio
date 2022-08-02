@@ -8,7 +8,7 @@ import { Grid } from '@material-ui/core';
 
 const Dropdown = (props) => {
 
-    const [dropdownStatus, setDropdownStatus] = useState(false)
+    const [dropdownStatus, setDropdownStatus] = useState(true)
 
     function toggleDropdown(){
         console.log('toggling dropdown')
@@ -20,7 +20,7 @@ const Dropdown = (props) => {
             <Grid item xs = {12} md = {12} style = {{width : '85%', margin: 'auto'}} >
                
                     <div className='toggle-filters-div'>
-                        <h3 className='dropdown-label'> <img src = {CircledOne} className='numbers'/>Try Filters (optional) </h3> 
+                        <h3 className='dropdown-label'> <img src = {CircledOne} className='numbers'/>Try Filters </h3> 
             
                         <img src = {Settings} alt ='activate filters dropdown menu' className= {dropdownStatus ? 'toggle-dropdwn-btn-on' : 'toggle-dropdwn-btn' }
                         onClick={toggleDropdown}/>
@@ -32,10 +32,10 @@ const Dropdown = (props) => {
 
                                 <LocalityCheckBox handleBoxClick = {props.handleBoxClick} status = {props.status}/>
 
-                                <div className='close-btn-wrapper'> 
+                                {/* <div className='close-btn-wrapper'> 
                                     <button className='close-filters-btn' onClick = {toggleDropdown}> Close </button>
 
-                                </div>
+                                </div> */}
 
                             
                             </section>

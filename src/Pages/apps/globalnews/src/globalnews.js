@@ -9,7 +9,7 @@ import { makeStyles } from "@material-ui/core/styles"
 import Grid from '@material-ui/core/Grid';
 
 
-import Instructions from "./Components/Instructions/instructions"
+// import Instructions from "./Components/Instructions/instructions"
 // import SearchBar from "./Components/SearchBar/searchbar"
 import Map from "./Components/Map/map"
 // import LocalityCheckBox from "./Components/LocalityCheckBox/checkbox"
@@ -23,28 +23,19 @@ import CircledTwo from "./Images/two.png"
 
 function Globalnews() {
 
-  // const theme = createTheme();
-
-  // theme.typography.p = {
-  //   fontSize: '1.2rem',
-  //   '@media (min-width:600px)': {
-  //     fontSize: '.5rem',
-  //   },
-  //   [theme.breakpoints.up('md')]: {
-  //     fontSize: '.4rem',
-  //   },
-  // };
-
   const useStyles = makeStyles((theme) => ({
     root: {
       flexGrow: 1,
-      backgroundColor : "#606C38"
+      backgroundColor : "#606C38", 
+      height: '125vh',
+      width: '100%'
 
     },
     allItems : {
       textAlign: "center",
       padding : theme.spacing(2),
       justifyContent : "center",
+      padding: '0',
 
     }, //padding: theme.spacing(2),
 
@@ -52,9 +43,6 @@ function Globalnews() {
       color : "#FEFAE0",
       marginTop : "3vh",
       textAlign: "center",
-     
-  
-  
     },
 
     h2MediaQueries : {
@@ -71,10 +59,18 @@ function Globalnews() {
  
   }));
 
-
-
-
 //useState hooks to track different changes
+
+const [page, setPage] = useState(1);
+
+const handleNextClick = () => {
+  setPage(page + 1);
+}
+const handleBackClick = () => {
+  setNewsData('')
+  setPage(page - 1)
+}
+
 
 //Tracks user input
   const [input, setInput] = useState("")
@@ -104,22 +100,14 @@ function Globalnews() {
 
 //handles locality checkbox being clicked/unclicked
   const handleBoxClick = (e) => {
-    console.log("fired");
     setChecked(e.target.checked)
   }
 
-
   const classes = useStyles()
-
-
-  function dataToMap(data){
-    console.log('this is the new function')
-    console.log(data)
-  }
 
   return (
     <div className= {classes.root} >
-      {/* <ThemeProvider theme={theme}> */}
+
       <Grid container>
         
         <Grid item xs = {12}>
@@ -131,25 +119,58 @@ function Globalnews() {
     
         </Grid>
 
-        {/* <Grid item xs = {12} className = {classes.allItems} >
-          <Instructions />
-        </Grid> */}
+       
 
-
-        <Grid item md = {12}  xs = {12} style ={{marginTop: '50px'}}>  
+       { page === 1 ?<Grid item md = {12}  xs = {12} style ={{marginTop: '50px', display: 'flex', flexDirection: 'column'}}>  
    
            <Dropdown typed = {handleChange}
 
              handleBoxClick = {handleBoxClick} status = {checked}
              
             />
-               
-            <div className="map-instruction-wrapper">
+
+            <button className="next-btn" onClick={handleNextClick}> Next </button>
+              
+
+        </Grid> : null}
+
+        {page === 2 ? 
+          <Grid item xs = {12} className = {classes.allItems} >
+                <div className="map-instruction-wrapper">
                 <p className="dropdown-label map-instruction"> <img src= {CircledTwo} className='numbers'/> and 👇 a point on the map </p>
 
+              
             </div>
-        </Grid>
+            <Map topicFilter = {input} localityStatus = {checked}
+              dataBackToTop = {dataBackToTop} 
+            />
 
+              <button className="next-btn" onClick={handleBackClick} style = {{marginBottom: '30px'}}> Back </button>
+          </Grid> : null}
+        
+          {newsData !=="" && page === 2 ? 
+            <Grid item xs = {12} className = {classes.allItems}>
+              <NewsDisplay dataForDisplay = {newsData} localityStatus = {checked}/>
+            </Grid> : null
+          } 
+      
+      {page === 1 ? 
+        <Grid item xs = {12} className = {classes.allItems}>
+          <About  />
+        </Grid>
+      : null }
+      </Grid>
+  
+    </div>
+  );
+}
+
+export default Globalnews;
+
+
+ {/* <Grid item xs = {12} className = {classes.allItems} >
+          <Instructions />
+        </Grid> */}
           {/* <Grid item md = {6}  xs = {12}>     break points for mobile and desktop formats
 
               <SearchBar typed = {handleChange} className = {classes.allItems}
@@ -163,32 +184,3 @@ function Globalnews() {
             <LocalityCheckBox className = {classes.allItems}
             boxClicked = {handleBoxClick} status = {checked}/>
           </Grid> */}
-
-
-        <Grid item xs = {12} className = {classes.allItems} >
-          <Map topicFilter = {input} localityStatus = {checked}
-            dataBackToTop = {dataBackToTop} dataToMap = {dataToMap}
-          />
-        </Grid>
-         {/* Conditional rendering of newsDisplay if there is something to be displayed based
-           on the newsData hook */}
-        {newsData ==="" ? null:
-          <Grid item xs = {12} className = {classes.allItems}>
-            <NewsDisplay
-
-            dataForDisplay = {newsData} localityStatus = {checked}
-             />
-          </Grid>
-        }
-
-        <Grid item xs = {12} className = {classes.allItems}>
-          <About  />
-        </Grid>
-
-      </Grid>
-      {/* </ThemeProvider> */}
-    </div>
-  );
-}
-
-export default Globalnews;

@@ -1,11 +1,9 @@
 import React, { useRef, useEffect } from "react";
 import ArticleList from "./articlelist"
-//import ArticlesHeader from "./articlesheader"
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
 import { makeStyles } from "@material-ui/core/styles"
-//import { ThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 
 
 
@@ -97,8 +95,8 @@ const NewsDisplay = (props) => {
 
     if (!displayDataObj.newsAvailable) { //if no news
       //console.log("Firing no news display");
-      return <h3 style={`${classes.h1} ${classes.h1MediaQueries}`}> There is no results based on this location
-        or topic. Try clicking a city or town. You can also
+      return <h3 className={`${classes.h1} ${classes.h1MediaQueries}`}> There is no results based on this location
+        or topic. Try clicking a city or town. You can also go back and 
         turn off Localized search to broaden your results to the national level</h3>
       //all possibilities assuming that there is news:
     } //if there is news, its local, and topic/userfilter is used
@@ -168,9 +166,11 @@ const NewsDisplay = (props) => {
       <CssBaseline />
 
       <Container
-        style={{ alignItems: "stretch" }}>
+        style={{ alignItems: "stretch", padding: '0' }} maxWidth={false}
+        >
         <Typography component="div" className={classes.typographyStyle}
-          style={{ backgroundColor: '#283618' }} ref={newsDisplayRef}>
+          style={{ backgroundColor: '#283618', overflowY: 'hidden'}}
+          ref={newsDisplayRef}>
 
           {WhatToDisplay()}
 

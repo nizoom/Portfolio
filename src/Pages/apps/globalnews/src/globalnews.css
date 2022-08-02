@@ -3,7 +3,6 @@
 }
 
 
-
 .leaflet-container{
 
   margin-bottom: 5vh;
@@ -24,13 +23,93 @@
     margin-top: 0;
   
 }
-.map-instruction{
+.next-btn{
+padding-bottom: 30px;
+text-align: center;
+width: 100px;
+height: 50px;
+margin: auto;
+background-color: #FEFAE1;
+border: none;
+border-radius: 6px;
+padding: 5px;
+cursor: pointer;
+color: #283618;
+font-weight: 700;
+font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+transition: .2s transform ease-in-out;
+will-change: transform;
+}
+
+
+
+.next-btn:before {
+  content: '';
+  background: linear-gradient(45deg, #456C37, #00ffd5, #283618, #00ffd5, #456C37, #00ffd5);
+  position: absolute;
+  top: -2px;
+  left:-2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+  border-radius: 10px;
+}
+
+.next-btn:active {
+  color: white;
+}
+
+.next-btn:active:after {
+  background: transparent;
+}
+
+.next-btn:hover:before {
+  opacity: 1;
+}
+
+.next-btn:after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+@keyframes glowing {
+  0% { background-position: 0 0; }
+  50% { background-position: 400% 0; }
+  100% { background-position: 0 0; }
+}
+
+  
+.next-btn:after{
+
+
+}
+
+.next-btn:hover:after{
+ 
+}
+  
+.next-btn:hover{
 
 }
 
 @media(max-width: 750px){
   .map-instruction-wrapper{
+    margin: 20px;
     width: 85%;
+    justify-content: center;
+    
   } 
 
   .App h2{
