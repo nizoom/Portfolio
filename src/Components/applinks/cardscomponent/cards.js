@@ -1,42 +1,9 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import './cards.css';
-import Card1 from "../../../project_layout/Card1.png"
-import Card2 from "../../../project_layout/Card2.png"
-
 
 import { BrowserRouter as Router, Link } from "react-router-dom";
 
 const Cards = (props) => {
-
-
-
-    const handlePopupClick = (popup, boolean) => {
-    //    const updatedvalues = {
-    //         status : boolean,
-    //         app : popup
-    //    }  
-        props.toggleOpacityForPopup(props.appTitle)
-        // setPopupState(updatedvalues)
-    }
-
-
-
-    useEffect(() => {
-        document.addEventListener("keydown", handleEscape, false)
-        //document.addEventListener("keydown", (event) => escapeFunction(event, props.appTitle), false)
-        return () => {
-            document.removeEventListener("keydown", handleEscape, false);
-            // document.removeEventListener("click", clickOutPopup, false)
-        }
-    })
-
-    const handleEscape = (event) => {
-        if(props.projectInFocus === props.appTitle){
-            if(event.key === "Escape"){
-                handlePopupClick(props.appTitle);  
-             }
-        }
-    };
 
   
     return (
@@ -48,8 +15,26 @@ const Cards = (props) => {
                 <section className='text-wrapper'>
                     <div className='left-column'>
                         <h3 className='app-title'> {props.appTitle}</h3>
-                        <button className='more-info-btn learn-more'> {props.btnOneTxt} </button>
-                        <button className='more-info-btn view-code'> View Code </button>
+                        { props.btnOneTxt === 'View ReadMe' ?  
+
+                              <button className='more-info-btn view-code'> <a href = {props.githubUrl}
+                              style = {{color: 'white', textDecoration:'none'}} target="_blank" rel="noopener noreferrer"
+                              >  View ReadMe  </a> </button>
+
+                         
+                            
+                        :
+                        <div className='btns-div'> 
+                               <button className='more-info-btn learn-more'> {props.btnOneTxt} </button> 
+
+                                <button className='more-info-btn view-code'> <a href = {props.githubUrl}
+                                style = {{color: 'white', textDecoration:'none'}} target="_blank" rel="noopener noreferrer"
+                                >  View Code  </a> </button>
+
+                        </div>
+                     
+                        }
+                      
                        
                     </div>
                     <div className='right-column'>
@@ -72,6 +57,36 @@ const Cards = (props) => {
 }
 
 export default Cards;
+
+
+
+    // const handlePopupClick = (popup, boolean) => {
+    // //    const updatedvalues = {
+    // //         status : boolean,
+    // //         app : popup
+    // //    }  
+    //     props.toggleOpacityForPopup(props.appTitle)
+    //     // setPopupState(updatedvalues)
+    // }
+
+
+
+    // useEffect(() => {
+    //     document.addEventListener("keydown", handleEscape, false)
+    //     //document.addEventListener("keydown", (event) => escapeFunction(event, props.appTitle), false)
+    //     return () => {
+    //         document.removeEventListener("keydown", handleEscape, false);
+    //         // document.removeEventListener("click", clickOutPopup, false)
+    //     }
+    // })
+
+    // const handleEscape = (event) => {
+    //     if(props.projectInFocus === props.appTitle){
+    //         if(event.key === "Escape"){
+    //             handlePopupClick(props.appTitle);  
+    //          }
+    //     }
+    // };
 
 
 // import appIconCard from "../../../project_layout/appiconcard.png"

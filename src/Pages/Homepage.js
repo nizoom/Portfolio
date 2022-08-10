@@ -127,33 +127,34 @@ class HomePage extends Component {
                 linkType = 'href' githubUrl = 'https://github.com/nizoom/TYTemplateBuilder'
                 Description = {<p className='app-description'> Form web app that builds and sends templated thank you emails.</p>}
                 toggleOpacityForPopup ={this.state.toggleOpacityForPopup} position = 'one' projectInFocus = {this.state.projectInFocus} status = {this.state.popupStatus}
-                cardGraphic={Card1} btnOneTxt='View GIF'
+                cardGraphic={Card1} btnOneTxt='View ReadMe'
               /> 
 
               <Cards alt = 'Twitter API Clone'  appTitle = 'Twitter API Clone' stackList = 'Java, SpringBoot, JPA, PostgresQL, PGAdmin, Postman, Eclipse, Maven'
                 Description = {<p className='app-description'>  Java backend including endpoints to create users, like tweets, and follow accounts</p>}
                 toggleOpacityForPopup ={this.state.toggleOpacityForPopup} position = 'two' projectInFocus = {this.state.projectInFocus} status = {this.state.popupStatus}
                 githubUrl = 'https://github.com/nizoom/Twitter-API-Clone'
-                cardGraphic={Card2} btnOneTxt='Learn more'
+                cardGraphic={Card2} btnOneTxt='View ReadMe'
               /> 
 
               <Cards alt = 'Build NYC' appTitle = 'Build NYC' stackList = 'React JS, LeafletJS, ChartJS, SoQueryLanguage, NodeJS, ExpressJS.'
                 linkType = 'href' url = 'https://build-nyc.herokuapp.com/' 
-             
+                githubUrl = 'https://github.com/nizoom/BuildNYC'
                 Description ={ <p className='app-description'> Data visualization interface that illustrates building development in NYC. </p> }
                 toggleOpacityForPopup ={this.state.toggleOpacityForPopup} position = 'three' projectInFocus = {this.state.projectInFocus} status = {this.state.popupStatus}
                 cardGraphic={Card3} btnOneTxt='Use'
               /> 
 
               <Cards alt = 'Thank you Email Automation' appTitle = 'TY Email Automation' stackList = ' ExpressJS, NodeJS, NodeMailer, and Handlebars.'
-                linkType = 'href' url = 'https://github.com/nizoom/TYAutomation'
+                linkType = 'href' githubUrl = 'https://github.com/nizoom/TYAutomation'
                 Description = {<p className='app-description'> Backend app that uses that generates custom daily thank you emails based on donations from an API.</p>}
                 toggleOpacityForPopup ={this.state.toggleOpacityForPopup} position = 'four' projectInFocus = {this.state.projectInFocus} status = {this.state.popupStatus}
-                cardGraphic={Card4} btnOneTxt='Learn more'
+                cardGraphic={Card4} btnOneTxt='View ReadMe'
               /> 
 
               <Cards alt = 'Global News' appTitle = 'Global News'
                 url = 'http://localhost:3000/#/globalnews'
+                githubUrl='https://github.com/nizoom/global_news'
                 stackList = 'ReactJS, React Router, Material UI, Azure, Google Cloud, LeafletJS.'
                 linkType = 'Link' 
                 Description = {<p className='app-description'> Web app that finds localized news based on geolocation from map click.</p>}
@@ -164,6 +165,7 @@ class HomePage extends Component {
              
               <Cards alt = 'Echo Chamber' appTitle = 'Echochamber' stackList = 'ReactJS, Material UI, NodeJS, ExpressJS.'
                 linkType = 'href' url = 'https://entertheechochamber.herokuapp.com/'
+                githubUrl='https://github.com/nizoom/Echochamber'
                 Description = {<p className='app-description'> Web scraping app that uses Twitter's  API to recreate a personal feed.</p>}
                 toggleOpacityForPopup ={this.state.toggleOpacityForPopup} position = 'six' projectInFocus = {this.state.projectInFocus} status = {this.state.popupStatus}
                 cardGraphic={Card2} btnOneTxt='Use'
