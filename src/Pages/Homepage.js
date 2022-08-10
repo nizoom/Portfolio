@@ -124,7 +124,7 @@ class HomePage extends Component {
 
           
              <Cards alt = 'Thank You Email Generator'  appTitle = 'Thank You Email Generator' stackList = ' ReactJS, ExpressJS, NodeJS, NodeMailer, and Handlebars.'
-                linkType = 'href' githubUrl = 'https://github.com/nizoom/TYTemplateBuilder'
+                githubUrl = 'https://github.com/nizoom/TYTemplateBuilder'
                 Description = {<p className='app-description'> Form web app that builds and sends templated thank you emails.</p>}
                 toggleOpacityForPopup ={this.state.toggleOpacityForPopup} position = 'one' projectInFocus = {this.state.projectInFocus} status = {this.state.popupStatus}
                 cardGraphic={Card1} btnOneTxt='View ReadMe'
@@ -138,15 +138,15 @@ class HomePage extends Component {
               /> 
 
               <Cards alt = 'Build NYC' appTitle = 'Build NYC' stackList = 'React JS, LeafletJS, ChartJS, SoQueryLanguage, NodeJS, ExpressJS.'
-                linkType = 'href' url = 'https://build-nyc.herokuapp.com/' 
+                url = 'https://build-nyc.herokuapp.com/' 
                 githubUrl = 'https://github.com/nizoom/BuildNYC'
                 Description ={ <p className='app-description'> Data visualization interface that illustrates building development in NYC. </p> }
                 toggleOpacityForPopup ={this.state.toggleOpacityForPopup} position = 'three' projectInFocus = {this.state.projectInFocus} status = {this.state.popupStatus}
                 cardGraphic={Card3} btnOneTxt='Use'
               /> 
 
-              <Cards alt = 'Thank you Email Automation' appTitle = 'TY Email Automation' stackList = ' ExpressJS, NodeJS, NodeMailer, and Handlebars.'
-                linkType = 'href' githubUrl = 'https://github.com/nizoom/TYAutomation'
+              <Cards alt = 'Thank you Email Automation' appTitle = 'Thank You Email Automation' stackList = ' ExpressJS, NodeJS, NodeMailer, and Handlebars.'
+                githubUrl = 'https://github.com/nizoom/TYAutomation'
                 Description = {<p className='app-description'> Backend app that uses that generates custom daily thank you emails based on donations from an API.</p>}
                 toggleOpacityForPopup ={this.state.toggleOpacityForPopup} position = 'four' projectInFocus = {this.state.projectInFocus} status = {this.state.popupStatus}
                 cardGraphic={Card4} btnOneTxt='View ReadMe'
@@ -164,7 +164,7 @@ class HomePage extends Component {
          
              
               <Cards alt = 'Echo Chamber' appTitle = 'Echochamber' stackList = 'ReactJS, Material UI, NodeJS, ExpressJS.'
-                linkType = 'href' url = 'https://entertheechochamber.herokuapp.com/'
+                url = 'https://entertheechochamber.herokuapp.com/'
                 githubUrl='https://github.com/nizoom/Echochamber'
                 Description = {<p className='app-description'> Web scraping app that uses Twitter's  API to recreate a personal feed.</p>}
                 toggleOpacityForPopup ={this.state.toggleOpacityForPopup} position = 'six' projectInFocus = {this.state.projectInFocus} status = {this.state.popupStatus}

@@ -96,3 +96,56 @@
   transform: translateY(0);
   color: #faecd1;
 }
+
+@media(max-width:900px){
+
+  .card-img{
+    width: 85%;
+  }
+
+  .text-wrapper{
+    font-size: small;
+    width: 50%;
+    transform: translate( -55%, -50% );
+  }
+  .app-description{
+    font-size: small;
+  }
+  .app-title{
+    font-size: small;
+  }
+
+  .more-info-btn{
+    font-size: 12px;
+  }
+}
+
+@media(max-width: 650px){
+
+  .text-wrapper{
+    width: 55%;
+  }
+  .btns-div{
+    gap: 20px;
+    margin-top: -20px;
+  }
+
+  .app-description{
+    margin-bottom: 0;
+  }
+  .right-column{
+    justify-content: center;
+
+  }
+}
+@media(max-width: 530px){
+
+ 
+  .app-description{
+    font-size: x-small;
+  }
+  .tech-description{
+    font-size: x-small;
+  }
+
+}
