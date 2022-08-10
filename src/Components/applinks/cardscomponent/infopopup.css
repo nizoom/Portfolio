@@ -10,8 +10,6 @@
     font-weight: 500;
     cursor: pointer;
     background-color: rgb(10, 10, 9);
-    /* background-color: transparent;
-    background-repeat: no-repeat; */
     transition: all 250ms;
     margin-top: 5px;
     justify-items: center;
@@ -119,27 +117,34 @@
 
 
 /* POP UP POSITIONING */
+
+
 .one {
     position: absolute;
-    top:calc(21%);
+    top:calc(19%);
 }
 
 .two{
     position: absolute;
-    top:calc(40%);
+    top:calc(35%);
 }
 .three{
     position: absolute;
-    top:calc(55%);
+    top:calc(49%);
 }
 
 .four{
     position: absolute;
-    top:calc(69%);
+    top:calc(58%);
 }
 .five{
     position: absolute;
-    top:calc(84%);
+    top:calc(73%);
+}
+.six{
+    position: absolute;
+    top:calc(86%);
+  
 }
 
 .gif-popup-text{
@@ -160,7 +165,7 @@
     justify-content: space-evenly;
     display: flex;
     background-color: black;
-    padding-bottom: 36px;
+    padding-bottom: 26px;
 
     border-radius: 0 0 32px 32px;
 
@@ -182,10 +187,6 @@
 
 
 @media(max-width: 800px){
-
-    /* .button-div{
-
-    } */
 
   
     .pop-up-btn{
@@ -211,66 +212,3 @@
         display: none;
     }
 }
-
-/* .template-gif{
-    position: absolute;
-    width: 1280px;
-    height: 720px;
-} */
-
-/* @media(max-width: 1400px){
-    .template-gif{
-        width: 100%;
-        margin: auto;
-
-    }
-
-    .template-gif-wrapper{
-        width: 95%;
-        margin: auto;
-    }
-}
-
-@media(max-width: 1000px){
-    .template-gif-wrapper{
-         height: 700px;
-    }
-    .template-gif{
-         height: 500px;
-    }
-
-}
-@media(max-width: 900px){
-    .template-gif-wrapper p{
-        font-size: 15px;
-    }
-    .template-gif{
-         height: 400px;
-         width: 100%;
-    }
-    .template-gif-wrapper{
-        height: 600px;
-   }
-
-} */
-/* @media(max-width: 1300px){
-    .template-gif{
-        width: 800px;
-    }
-
-    .template-gif-wrapper{
-        width: 800px;
-
-    }
-}
-@media(max-width: 1300px){
-    .template-gif{
-        width: 800px;
-        margin: auto;
-    }
-
-    .template-gif-wrapper{
-        width: 800px;
-        margin: auto;
-    }
-} */
