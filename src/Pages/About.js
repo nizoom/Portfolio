@@ -27,7 +27,7 @@ const About = (props) => {
         <section className={navStatus ? "nav-open-about" : "about-wrapper"}> 
 
 
-              <h2 className="header"> Hey there, I'm a web developer based in Boston and New York City.</h2>
+              <h2 className="header"> Hey there, I'm a web developer based in New York City.</h2>
               
               <img src = {Headshot} alt='Nissim Ram' className="headshot"/>
            
