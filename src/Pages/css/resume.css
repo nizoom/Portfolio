@@ -1,7 +1,8 @@
 .resume-page-wrapper{
     background-color: black;
-    height: 170vh;
+    height: 100%;
     font-family: 'Montserrat', sans-serif;
+    padding-bottom: 20px;
 }
 .resume-header{
     margin: 0 0 20px 0px;
@@ -139,6 +140,11 @@
   
 }
 
+@media(max-width: 1100px){
+    .resume-page-wrapper{
+        height: 100%;
+    }
+}
 @media(max-width: 850px){
     .download{
         top: 150px;

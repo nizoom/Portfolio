@@ -5,7 +5,7 @@ import "./css/resume.css"
 import Logo from "../Components/logo/logo"
 import Sidebar from "../Components/sidebar/sidebar";
 import DownloadIcon from "../project_layout/download.jpg"
-import ResumePDF from "../project_layout/RamNissimFTRes1.pdf"
+import ResumePDF from "../project_layout/RamNissimResume.pdf"
 const Resume = () => {
 
     const [navStatus, setNavStatus] = useState(false);
@@ -71,7 +71,7 @@ const Resume = () => {
 
 
                 <div className="title-dates-split">
-                    <h3 className="experience-name"> Nissimram.com <span className="position"> Freelance Developer </span>  </h3> 
+                    <h3 className="experience-name"> Nissimram.com, <span className="position"> Freelance Developer </span>  </h3> 
                     <h3 className="date">    08/21 – 11/21</h3>
                 
                 </div>
@@ -84,7 +84,7 @@ const Resume = () => {
 
 
                 <div className="title-dates-split">
-                    <h3 className="experience-name"> Fragomen LLP – New York,  <span className="position">Assitant Paralegal</span>  </h3> 
+                    <h3 className="experience-name"> Fragomen LLP,  <span className="position">Assitant Paralegal</span>  </h3> 
                     <h3 className="date"> 11/18 – 03/20 </h3>
                 
                 </div>
