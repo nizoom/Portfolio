@@ -18,12 +18,19 @@
 }
 
 .apps-section{
-  /* background-image: url('../../project_layout/background.png');
+  background-image: url('../../project_layout/background.png');
   background-repeat: repeat-y;
   padding-bottom: 200px;
-  background-size: contain; */
+  background-size: contain;
+  display: grid;
+  grid-template-columns:  50% 50%;
 }
 
+@media (max-width:1050px) {
+  .apps-section{
+    grid-template-columns:  100%;
+  }
+}
 
 .socials-wrapper{
   color: #D5B060;
