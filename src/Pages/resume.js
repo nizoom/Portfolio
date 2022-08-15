@@ -28,7 +28,7 @@ const Resume = () => {
 
             </div>
            
-            <h1 className="resume-header"> Resume </h1>
+           
            { !navStatus ? <section className="resume-wrapper">
             <h3 className="section-header"> Skills </h3>
             <p className="body-paragraph">

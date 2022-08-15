@@ -1,12 +1,7 @@
-
-.wallpaper {
-   background-color: black;
-}
-
-.wallpaper-extended{
+.blog-page-wrapper{
   background-color: black;
+  height: 100%;
 }
-
 .blog_div{
   color: #d4b36d;
   border-top: none;
@@ -48,7 +43,7 @@ h1{
 
 @media(max-width:1000px){
   .wallpaper-extended{
-    padding-bottom: 110vh;
+
     background-color: black;
   }
 

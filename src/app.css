@@ -3,10 +3,11 @@
 
 html{
   height: 100%;
+  background-color: black;
 }
 .background-covering{
   background-color: black;
-  height: 100vh;
+  height: 100%;
  
 }
 

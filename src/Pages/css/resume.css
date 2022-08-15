@@ -16,7 +16,7 @@
 .resume-wrapper{
     width: 80%;
     margin: auto;
-    margin-top: 100px;
+    margin-top: 50px;
 }
 
 .section-header{
@@ -147,18 +147,38 @@
 }
 @media(max-width: 850px){
     .download{
-        top: 150px;
-        right: 50px;
+        top: 70px;
+        right: 15%;
     }
     .download img{
         height: 30px;
         width: 30px;
     }
 }
-@media(max-width: 850px){
+@media(max-width: 700px){
     .download{
-        top: 150px;
-        right: 30px;
+        right: 20%;
     }
 
+}
+@media(max-width: 500px){
+    .download{
+        top: 50px;
+        right: 20%;
+    }
+
+}
+@media(max-width: 400px){
+    .download{
+        top: 45px;
+        right: 25%;
+        border-radius: 0px;
+        display: inline-block;
+    }
+
+    
+    .download img{
+        border-radius: 0px;
+        display: inline-block;
+    }
 }

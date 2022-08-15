@@ -45,7 +45,7 @@ const About = ( props ) => {
 
   return(
     <div name = "Stuart">
-      <Typography variant = "h2" className={classes.h2} onClick = {() => setAboutStatus(!aboutStatus)}> About </Typography>
+      <Typography variant = "h2" className={classes.h2} onClick = {() => setAboutStatus(!aboutStatus)} component={'span'}> About </Typography>
       
       <CssBaseline />
    {   aboutStatus ? <Container maxWidth = "md" style = {{backgroundColor : "#BC6C25", padding : "1vh",

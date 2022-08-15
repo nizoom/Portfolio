@@ -3,16 +3,11 @@ import './globalnews.css';
 import "fontsource-roboto"
 import Typography from "@material-ui/core/Typography"
 import { makeStyles } from "@material-ui/core/styles"
-// import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 
 import Grid from '@material-ui/core/Grid';
 
-
-// import Instructions from "./Components/Instructions/instructions"
-// import SearchBar from "./Components/SearchBar/searchbar"
 import Map from "./Components/Map/map"
-// import LocalityCheckBox from "./Components/LocalityCheckBox/checkbox"
 import NewsDisplay from "./Components/NewsDisplay/newsdisplay"
 import About from "./Components/About/aboutglobalnews"
 import Dropdown from "./Components/dropdown/dropdown";
@@ -112,10 +107,10 @@ const handleBackClick = () => {
         
         <Grid item xs = {12}>
      
-          <Typography variant = "h2" className = {`${classes.typographyStyle} ${classes.h2MediaQueries}` }>
+          <Typography variant = "h2" className = {`${classes.typographyStyle} ${classes.h2MediaQueries}` } component={'div'}>
             The Global News Source
           </Typography>
-          <Typography variant = "h4" className = {`${classes.typographyStyle} ${classes.h4MediaQueries}`}> A new way to keep up </Typography>
+          <Typography variant = "h4" className = {`${classes.typographyStyle} ${classes.h4MediaQueries}`} component={'div'}> A new way to keep up </Typography>
     
         </Grid>
 

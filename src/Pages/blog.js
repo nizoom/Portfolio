@@ -14,20 +14,20 @@ import BackToTopBtn from "../Components/backToTop/backToTop"
 
 const Blog = (props) => {
 
-  const [navStatus, setNavStatus] = useState(false);
+  // const [navStatus, setNavStatus] = useState(false);
 
-  const getSidebarStatus = (sidebarStatus) => {
+  // const getSidebarStatus = (sidebarStatus) => {
   
-    return (sidebarStatus ? setNavStatus(true) : setNavStatus(false))
-  }
+  //   return (sidebarStatus ? setNavStatus(true) : setNavStatus(false))
+  // }
 
 
   return (
-    <div className={navStatus ? "wallpaper-extended blog-wrapper": "wallpaper blog-wrapper" }>
+    <div  className="blog-page-wrapper">
       <Logo />
       <Sidebar clickHandler={null} />
-      <div className={navStatus ? "navOpen" : null}>
-        <BackToTopBtn navStatus = {navStatus}/>
+      <div>
+        <BackToTopBtn navStatus = {false}/>
         <div className="blog_div">
           <div className="post">
 

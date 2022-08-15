@@ -43,9 +43,6 @@ const About = (props) => {
 
                   I also love to continue learning new technologies and strive to keep up with the rapidly changing world of front-end development. 
 
-
-
-
                   </p>
             </section>
           </div>

@@ -121,13 +121,14 @@
     height: 100%;
     background-color:black;
     width: 50%;
-    position: absolute;
+    position: fixed;
     right: 0;
     top: 0;
-    box-shadow: -9px 0px 100px 400px #31302e;
+    box-shadow: -9px 0px 100px 400px #151311;
     border-radius: 18px;
     transform: translateX(100%);
     -webkit-transform: translateX(100%);
+  
     
   }
   .open{

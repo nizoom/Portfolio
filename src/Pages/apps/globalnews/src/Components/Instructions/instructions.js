@@ -19,21 +19,21 @@ const Instructions = ( ) => {
   return (
     <div>
 
-      <Typography variant = "h3" className = {classes.typographyStyle}>
+      <Typography variant = "h3" className = {classes.typographyStyle} component={'div'}>
         Here's how it works </Typography>
 
-        <Typography variant = "h5" className = {classes.typographyStyle}>
+        <Typography variant = "h5" className = {classes.typographyStyle} component={'div'}>
            Click on 👆 a location to see what is being reported in
            that part of the world.
         </Typography>
 
-      <Typography variant = "h5" className = {classes.typographyStyle}>
+      <Typography variant = "h5" className = {classes.typographyStyle} component={'div'}>
         Use the Topic Filter field  🔎 below before clicking the map
         to include a filter on the geographically
         generated news. This is an optional feature.
       </Typography>
 
-      <Typography variant = "h6" className = {classes.typographyStyle}>
+      <Typography variant = "h6" className = {classes.typographyStyle} component={'div'}>
         Given our web search capabilities at this time it is possible that a geographically localized search
         won't yield any articles. If this occurs please feel free to toggle off ✅ the local feature in order
         to broaden the search results to a country-wide level. You may still pair this with the Topic Filter.

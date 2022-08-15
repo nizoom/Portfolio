@@ -170,7 +170,7 @@ const NewsDisplay = (props) => {
         >
         <Typography component="div" className={classes.typographyStyle}
           style={{ backgroundColor: '#283618', overflowY: 'hidden'}}
-          ref={newsDisplayRef}>
+          ref={newsDisplayRef} > 
 
           {WhatToDisplay()}
 

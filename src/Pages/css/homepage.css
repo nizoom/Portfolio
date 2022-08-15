@@ -371,7 +371,7 @@ footer{
 
 @media(max-width: 850px){
   .socials-wrapper{
-    margin-top: 6px;
+    margin-top: 10px;
   }
 }
 
@@ -384,7 +384,7 @@ footer{
     width: 400px;
   }
   .socials-wrapper{
-    top: 23px;
+    top: 38px;
     right: 100px;
   }
   .socials-wrapper img{
