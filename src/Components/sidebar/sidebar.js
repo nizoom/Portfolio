@@ -29,11 +29,31 @@ const Sidebar = (props) => {
     }
   }
 
-  const renderSidebar = () => {
+    
+
   
-    if(sidebarStatus) {
-      return (
-        <nav className="nav">
+
+
+
+  return (
+    <div className="">
+      <div className="">
+        <div className={`classes ${sidebarStatus ? "change" : null}`}>
+          <button className="square-btn"
+            onClick={() => { sideBarBtnHandler() }}>
+            <div className="bars-wrapper"> 
+              <div className="bar1"></div>
+              <div className="bar2"></div>
+              <div className="bar3"></div>
+
+            </div>
+           
+          </button>
+        </div>
+
+      </div>
+
+      <nav className= {sidebarStatus ? "nav slide-in" : "slide-out"}>
         <ul className= {sidebarStatus ? "open slide-in" : "slide-out"}>
   
           <li onClick={sideBarBtnHandler}>
@@ -65,34 +85,6 @@ const Sidebar = (props) => {
   
         </ul>
       </nav>
-      )
-    } else {
-      return null;
-    }
-
-  } 
-
-
-
-  return (
-    <div className="">
-      <div className="">
-        <div className={`classes ${sidebarStatus ? "change" : null}`}>
-          <button className="square-btn"
-            onClick={() => { sideBarBtnHandler() }}>
-            <div className="bars-wrapper"> 
-              <div className="bar1"></div>
-              <div className="bar2"></div>
-              <div className="bar3"></div>
-
-            </div>
-           
-          </button>
-        </div>
-
-      </div>
-
-      {renderSidebar()}
 
         
 
