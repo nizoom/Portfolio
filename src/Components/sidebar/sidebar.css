@@ -1,16 +1,114 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
-.container{
- 
+
+.open{
+  display: flex;
+  position: absolute;
+  top: 20px;
+  right: 9%;
+  background-color: black;
+  z-index: 1000;
+  font-family: 'Montserrat', sans-serif;
+
+  transform: translateX(100%);
+  -webkit-transform: translateX(100%);
+} 
+
+
+
+.slide-in {
+  animation: slide-in 0.5s forwards;
+  -webkit-animation: slide-in 0.5s forwards;
 }
 
-.off{
-  float: right;
-  width: 0;
-  overflow-x: hidden;
-  transition: .5s;
-  height: 100vh;
+.slide-out {
+  position: absolute;
+  display: none;
+  animation: slide-out 0.5s forwards;
+  -webkit-animation: slide-out 0.5s forwards;
 }
+  
+@keyframes slide-in {
+  100% { transform: translateX(0%); }
+}
+
+@-webkit-keyframes slide-in {
+  100% { -webkit-transform: translateX(0%); }
+}
+  
+@keyframes slide-out {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-100%); }
+}
+
+@-webkit-keyframes slide-out {
+  0% { -webkit-transform: translateX(0%); }
+  100% { -webkit-transform: translateX(-100%); }
+}
+
+
+
+
+
+
+
+
+
+
+
+.item {
+  -webkit-animation: fadein .3s linear forwards;
+  animation: fadein .3s linear forwards;
+  /* padding: 10px; */
+}
+.item-fadeout{
+
+  /* padding: 10px; */
+  -webkit-animation: fadeout .3s linear forwards;
+  animation: fadeout .3s linear forwards;
+}
+  
+@-webkit-keyframes fadein {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+  
+@keyframes fadein {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+  
+@-webkit-keyframes fadeout {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+  
+@keyframes fadeout {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .bar1, .bar2, .bar3 {
   width: 35px;
   height: 5px;
@@ -40,44 +138,40 @@
   position: fixed;
   right : 30px;
   top : 40px;
-  /* background: #003566; */
   border: none;
- 
   padding-top: 1px;
   box-shadow: 2px 2px 40px #976508;
   background: radial-gradient(#976508, black);
-  /* background: linear-gradient(to left, #01060F, #D5B060); */
 
 }
 
 
-nav {
+/* .nav {
   font-family: 'Montserrat', sans-serif;
 }
 
+
 .sidebar {
-  color: #D5B060;
-  float: right;
-  width: 25%;
-  height: 100vh;
-  /* background: #312450; */
+
+  
+}
+.sidebarz {
+  /* color: #D5B060;
+
+  width: 15%;
   background:black;
   font-size: auto;
-  box-shadow: 1px 1px, -.3em 0 .002em #eccd88;
+  box-shadow: -.3em 0 .002em #eccd88;
   transition: 0.5s;
   overflow-x: hidden;
   margin-left: 2%;
+  z-index: 1000;
+  position: absolute;
+  right: 10px; 
+  
 }
+*/
 
-.nav {
-  color: #D5B060;
-  position: relative;
-  margin:  15 0%;
-  text-align: right;
-  top: 50%;
-  transform: translateY(-50%);
-  font-weight: bold;
-}
 
 ul{
   list-style: none;
@@ -118,10 +212,10 @@ li{
     right: 32px;
   }
   .sidebar{
-    margin-top: 5%;
+    /* margin-top: 5%;
     padding-top: 10%;
     height: 95vh;
-    width:80%;
+    width:80%; */
   }
 
   .bar1, .bar2, .bar3 {

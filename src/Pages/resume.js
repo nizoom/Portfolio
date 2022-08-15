@@ -19,7 +19,7 @@ const Resume = () => {
         <div className="resume-page-wrapper">
             <Logo/>
             <div className="top-right-div">
-                <Sidebar functionCallFromParent={getSidebarStatus} />
+                <Sidebar clickHandler={null}/>
                 <a  href={ResumePDF} target="_blank" download>
                     <button className="download"> <img  src = {DownloadIcon}/> 
     

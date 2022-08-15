@@ -162,11 +162,20 @@
 }
 
 .text-wrapper button{
-  /* margin: 10px; */
   color: #B7861B;
   
 }
 
 .tech{
   margin-bottom: 20px;
+}
+
+@media(max-width: 450px){
+  .text-wrapper{
+    font-size: small;
+  }
+
+  .text-wrapper button{
+    font-size: small;
+  }
 }

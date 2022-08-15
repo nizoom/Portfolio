@@ -25,7 +25,7 @@ const Blog = (props) => {
   return (
     <div className={navStatus ? "wallpaper-extended blog-wrapper": "wallpaper blog-wrapper" }>
       <Logo />
-      <Sidebar functionCallFromParent={getSidebarStatus} />
+      <Sidebar clickHandler={null} />
       <div className={navStatus ? "navOpen" : null}>
         <BackToTopBtn navStatus = {navStatus}/>
         <div className="blog_div">

@@ -20,7 +20,7 @@ const About = (props) => {
     <div className="page-wrapper">
 
       <Logo />
-      <Sidebar functionCallFromParent={getSidebarStatus} />
+      <Sidebar clickHandler={null} />
     
       <div>
 

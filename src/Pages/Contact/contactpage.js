@@ -43,7 +43,7 @@ const ContactPage = () => {
   return (
     <div className="contact-page-wrapper">
       <Logo />
-      <Sidebar functionCallFromParent={getSidebarStatus} />
+      <Sidebar clickHandler={null} />
 
 
 

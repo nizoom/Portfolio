@@ -25,37 +25,39 @@ class HomePage extends Component {
   
     this.state = {
 
-      sidebarVisible: false,
+     
 
       visitationStatus : false,
     
+      sidbarStatus: false,
+
       clickHandler: () => {
         this.setState(prevstate => ({
-          sidebarVisible: !prevstate.sidebarVisible
-        }))
+          sidbarStatus: !prevstate.sidbarStatus
+        }))}
        
-      },
-      determineClass: (x) => {
-        if (x && window.innerWidth < 850) {
-          this.setState({ navStatusClass: "navOpen" })
-        } else {
-          this.setState({ navStatusClass: "standard" })
-        }
+      // },
+      // determineClass: (x) => {
+      //   if (x && window.innerWidth < 850) {
+      //     this.setState({ navStatusClass: "navOpen" })
+      //   } else {
+      //     this.setState({ navStatusClass: "standard" })
+      //   }
 
-      },
+      // },
 
 
-      popupStatus: false,
-      projectInFocus : '',
+      // popupStatus: false,
+      // projectInFocus : '',
 
-      toggleOpacityForPopup: (projectInFocus) => {
-        this.setState(prevstate => ({
-          popupStatus: !prevstate.popupStatus,
-          projectInFocus : projectInFocus
-        }))
-      },
+      // toggleOpacityForPopup: (projectInFocus) => {
+      //   this.setState(prevstate => ({
+      //     popupStatus: !prevstate.popupStatus,
+      //     projectInFocus : projectInFocus
+      //   }))
+      // },
 
-      navStatusClass: "standard", 
+      // navStatusClass: "standard", 
 
       }
   }
@@ -67,13 +69,9 @@ class HomePage extends Component {
     const userVisitationStatus = getLocalVisitStatus();
 
     if(userVisitationStatus === null || userVisitationStatus === undefined){
-
            firstVisit()
-
            this.props.history.push('/Intro')
-
     } 
-
   }
 
     
@@ -85,26 +83,24 @@ class HomePage extends Component {
       
 
       <div className= "homepage_wrapper background-covering"> 
-        <div className= {this.state.popupStatus ? "gray-out" : null }> </div>
+        <div className= ''> </div>
         <div className="fade-in"> 
           <Logo />
-          <Sidebar
-            functionCallFromParent={this.state.determineClass} />
+          <Sidebar clickHandler = {this.state.clickHandler}/>
 
-          <div className={this.state.navStatusClass === "navOpen" ? "navOpen" : "projects"}>
+          <div className="projects">
 
             
             <header>
-                <Socials/>
+                <Socials sidebarStatus = {this.state.sidbarStatus}/>
                 <div className="welcome-border">
                   <div className="welcome-statement">
-                    {/* <hr className="bar-short"/> */}
-                    <h2 className={this.state.navStatusClass}> Welcome to my portfolio </h2>
+                    <h2 className='standard'> Welcome to my portfolio </h2>
                   </div>
                   <hr className="bar-long"/>
                     <div className="subheader-div">
-                      <h2 className={this.state.navStatusClass}> Check out my projects below </h2>
-                      {/* <hr className="bar-short"/> */}
+                      <h2 className='standard'> Check out my projects below </h2>
+                 
                     </div>
               
                   

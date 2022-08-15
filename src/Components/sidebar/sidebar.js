@@ -11,7 +11,14 @@ const Sidebar = (props) => {
 
   const sideBarBtnHandler = () => {
     setSidebarStatus(!sidebarStatus)
-    childFunction(!sidebarStatus)
+    if(props.clickHandler != null) {
+      props.clickHandler()
+    } 
+    // if sidebarStatus then render sidebar with sidebar class 
+      // have media query determine which way it will be rendered
+
+
+    // rerender nav 
     if(!sidebarStatus){
      
         window.scrollTo({
@@ -20,25 +27,59 @@ const Sidebar = (props) => {
         })
       
     }
-    //if sidebar closed so should tooltip
   }
 
-
+  const renderSidebar = () => {
   
+    if(sidebarStatus) {
+      return (
+        <nav className="nav">
+        <ul className= {sidebarStatus ? "open slide-in" : "slide-out"}>
+  
+          <li onClick={sideBarBtnHandler}>
+            <Link to="/" className="link" > Portfolio </Link>
+          </li>
+  
+          <li onClick={sideBarBtnHandler}> 
+            <Link to="/About" className="link"> About </Link>
+          </li>
+  
+          <li onClick={sideBarBtnHandler}>
+            <Link to="/Blog" className="link"> Blog. </Link>
+          </li>
+  
+          <li onClick={sideBarBtnHandler}>
+            <a target="blank" href="https://github.com/nizoom"
+              className="link">
+              GitHub </a>
+          </li>
+  
+          <li onClick={sideBarBtnHandler}>
+            <Link to="/Contact" className="link"> Contact </Link>
+          </li>
+  
+          <li onClick={sideBarBtnHandler}>
+            <Link to="/resume" className="link"> Resume </Link>
+          </li>
+  
+  
+        </ul>
+      </nav>
+      )
+    } else {
+      return null;
+    }
 
-  const childFunction = (e) => {
-    props.functionCallFromParent(e)
-  }
-
+  } 
 
 
 
   return (
-    <div className="container">
-      <div className="sidebar_btn">
+    <div className="">
+      <div className="">
         <div className={`classes ${sidebarStatus ? "change" : null}`}>
           <button className="square-btn"
-            onClick={() => { sideBarBtnHandler(); childFunction(!sidebarStatus) }}>
+            onClick={() => { sideBarBtnHandler() }}>
             <div className="bars-wrapper"> 
               <div className="bar1"></div>
               <div className="bar2"></div>
@@ -50,39 +91,11 @@ const Sidebar = (props) => {
         </div>
 
       </div>
-      <div className={`classes ${sidebarStatus ? "sidebar" : "off"}`}>
-        <nav>
-          <ul>
-            <li onClick={sideBarBtnHandler}>
-              <Link to="/" className="link" > Portfolio </Link>
-            </li>
 
-            <li onClick={sideBarBtnHandler}> 
-              <Link to="/About" className="link"> About </Link>
-            </li>
+      {renderSidebar()}
 
-            <li onClick={sideBarBtnHandler}>
-              <Link to="/Blog" className="link"> Blog. </Link>
-            </li>
+        
 
-            <li onClick={sideBarBtnHandler}>
-              <a target="blank" href="https://github.com/nizoom"
-                className="link">
-                GitHub </a>
-            </li>
-
-            <li onClick={sideBarBtnHandler}>
-              <Link to="/Contact" className="link"> Contact </Link>
-            </li>
-
-            <li onClick={sideBarBtnHandler}>
-              <Link to="/resume" className="link"> Resume </Link>
-            </li>
-
-
-          </ul>
-        </nav>
-      </div>
     </div>
   )
 }

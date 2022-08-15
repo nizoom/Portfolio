@@ -9,7 +9,7 @@ import { BrowserRouter as Router, Link } from "react-router-dom";
 const Socials = (props) => {
     return (
         <div>
-            <nav className="socials-wrapper">
+            <nav className={props.sidebarStatus ? "slide-out" : "socials-wrapper slide-in"}>
                 <ul>
                     <li> <a href = "https://www.linkedin.com/in/nissimram/"   target="_blank" rel="noopener noreferrer"> 
                             <img src = {LinkedInIcon} alt = "Nissim Ram's LinkedIn"/> 
