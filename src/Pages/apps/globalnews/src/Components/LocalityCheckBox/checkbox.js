@@ -16,14 +16,11 @@ const LocalityCheckBox = ( props ) => {
     fontWeight: "1000",
     marginRight: "0px",
 
-    
-
     '&$checked': {
       color: '#283618',
     },
   },
 
-  
   checked: {},
 })((props) => <Checkbox color="default" {...props} />);
 
@@ -32,11 +29,18 @@ const LocalityCheckBox = ( props ) => {
 
     {/* below props pass the current checked status of the box and an onChange function
       for when it is clicked.*/}
-      <p className="filter-label"> {props.status ? "2. Checking for local news" : "2. Checking for national news"}</p> 
+      <p className="filter-label"> {props.checkboxState.Localize ? "2. Check for local news" : "2. Check for national news"}</p> 
     <FormControlLabel
-         control={<CustomBox checked={props.status} onChange={props.handleBoxClick}
+         control={<CustomBox checked={props.checkboxState.Localize} onChange={props.handleBoxClick}
          name="Localize"/>}
          label="Localized" 
+       
+       />
+     
+    <FormControlLabel
+         control={<CustomBox checked={props.checkboxState.National } onChange={props.handleBoxClick}
+         name="National"/>}
+         label="National" 
        
        />
 

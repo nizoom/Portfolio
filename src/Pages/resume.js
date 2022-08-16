@@ -6,36 +6,33 @@ import Logo from "../Components/logo/logo"
 import Sidebar from "../Components/sidebar/sidebar";
 import DownloadIcon from "../project_layout/download.jpg"
 import ResumePDF from "../project_layout/RamNissimResume.pdf"
+
 const Resume = () => {
 
-    const [navStatus, setNavStatus] = useState(false);
+    // hide resume download btn when sidebar is active
+    const [dlBtn, setDlBtn] = useState(true)
 
-    const getSidebarStatus = (sidebarStatus) => {
-  
-    return (sidebarStatus ? setNavStatus(true) : setNavStatus(false))
-  }
+    const sidebarHandler = () => {
+        setDlBtn(!dlBtn)
+    } 
 
     return (
         <div className="resume-page-wrapper">
             <Logo/>
             <div className="top-right-div">
-                <Sidebar clickHandler={null}/>
+                <Sidebar clickHandler={sidebarHandler}/>
                 <a  href={ResumePDF} target="_blank" download>
-                    <button className="download"> <img  src = {DownloadIcon}/> 
-    
-                    </button>
+                   { dlBtn ? <button className="download"> <img  src = {DownloadIcon}/> </button> : null }
                 </a>
 
             </div>
            
            
-           { !navStatus ? <section className="resume-wrapper">
+           <section className="resume-wrapper">
             <h3 className="section-header"> Skills </h3>
             <p className="body-paragraph">
             JavaScript, React, Node, Next, Express, HTML5, CSS3, Material UI, Figma, Google Cloud, Azure, PostGreSQL, Java, Spring, SpringBoot, Maven, Eclipse, Git, GitHub      </p>
-            {/* <h3 className="section-header"> Technical Skills</h3> */}
 
-           {/* <span> <p className="tech-header">Programming </p> Java, JavaScript, HTML5, CSS3, SQL, Spring, Spring Boot, JDBC, Jackson, NodeJS, Webpack, ReactJS, NextJS, Redux, Babel, Maven, NPM, Material UI  </span> */}
         
 
            <h3 className="section-header"> Professional Experience</h3>
@@ -100,7 +97,7 @@ const Resume = () => {
                 <h3 className="section-header"> Education</h3>
             
                 <div className="title-dates-split">
-                    <h3 className="experience-name"> Cook Systems FastTrack Java Program – Memphis, TN </h3> 
+                    <h3 className="experience-name"> Cook Systems FastTrack Java Program </h3> 
                     <h3 className="date">  06/22 – 08/22  </h3>
                 
                 </div>
@@ -111,12 +108,12 @@ const Resume = () => {
                     <h3 className="date">   09/14 – 05/18 </h3>
                 
                 </div>
-                <p className="education-paragraph">B.S. in History and Anthropology 	          		</p>
+                <p className="education-paragraph">B.S. in History and Anthropology </p>
 
 
            </div>
 
-            </section> : null}
+            </section>
         </div>
     )
 }

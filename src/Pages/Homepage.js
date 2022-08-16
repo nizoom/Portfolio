@@ -35,29 +35,6 @@ class HomePage extends Component {
         this.setState(prevstate => ({
           sidbarStatus: !prevstate.sidbarStatus
         }))}
-       
-      // },
-      // determineClass: (x) => {
-      //   if (x && window.innerWidth < 850) {
-      //     this.setState({ navStatusClass: "navOpen" })
-      //   } else {
-      //     this.setState({ navStatusClass: "standard" })
-      //   }
-
-      // },
-
-
-      // popupStatus: false,
-      // projectInFocus : '',
-
-      // toggleOpacityForPopup: (projectInFocus) => {
-      //   this.setState(prevstate => ({
-      //     popupStatus: !prevstate.popupStatus,
-      //     projectInFocus : projectInFocus
-      //   }))
-      // },
-
-      // navStatusClass: "standard", 
 
       }
   }
@@ -132,7 +109,7 @@ class HomePage extends Component {
 
           
              <Cards alt = 'Thank You Email Generator'  appTitle = 'Thank You Email Generator' stackList = ' ReactJS, ExpressJS, NodeJS, NodeMailer, and Handlebars.'
-                githubUrl = 'https://github.com/nizoom/TYTemplateBuilder'
+                githubUrl = 'https://github.com/nizoom/TYTemplateBuilder#readme'
                 Description = {<p className='app-description'> Form web app that builds and sends templated thank you emails.</p>}
                 toggleOpacityForPopup ={this.state.toggleOpacityForPopup} position = 'one' projectInFocus = {this.state.projectInFocus} status = {this.state.popupStatus}
                 logo={emailBuilderIcon} btnOneTxt='View ReadMe'
@@ -189,9 +166,3 @@ class HomePage extends Component {
 
 export default HomePage;
 
-
-
-// import Card1 from "../project_layout/Card1.png"
-// import Card2 from "../project_layout/Card2.png"
-// import Card3 from "../project_layout/Card3.png"
-// import Card4 from "../project_layout/Card4.png"

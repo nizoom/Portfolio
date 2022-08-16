@@ -183,6 +183,10 @@
 }
 
 @media (max-width: 500px){
+
+  .open{
+    margin-top: 45%;
+  }
   .square-btn{
     margin-top: 5px;
   }
@@ -190,7 +194,7 @@
     margin-top: 0px;
     margin-right: 0;
   
-  }x
+  }
   .link{
     font-size: 14px;
   }

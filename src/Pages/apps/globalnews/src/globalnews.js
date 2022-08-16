@@ -71,7 +71,10 @@ const handleBackClick = () => {
   const [input, setInput] = useState("")
 
 //Tracks whether the LocalityCheckBox has been checked
-  const [checked, setChecked] = useState(true)
+  const [checkboxState, setCheckboxState] = useState({
+    Localize : true,
+    National : false
+  })
 
 //sets news info when either articles or null is found
   const [newsData, setNewsData] = useState("")
@@ -95,7 +98,11 @@ const handleBackClick = () => {
 
 //handles locality checkbox being clicked/unclicked
   const handleBoxClick = (e) => {
-    setChecked(e.target.checked)
+    const updatedState = {... checkboxState}
+    for (const property in updatedState){
+      updatedState[property] = !checkboxState[property]
+    }
+    setCheckboxState(updatedState)
   }
 
   const classes = useStyles()
@@ -120,7 +127,7 @@ const handleBackClick = () => {
    
            <Dropdown typed = {handleChange}
 
-             handleBoxClick = {handleBoxClick} status = {checked}
+             handleBoxClick = {handleBoxClick} checkboxState = {checkboxState}
              
             />
 
@@ -136,7 +143,7 @@ const handleBackClick = () => {
 
               
             </div>
-            <Map topicFilter = {input} localityStatus = {checked}
+            <Map topicFilter = {input} localityStatus = {checkboxState.Localize}
               dataBackToTop = {dataBackToTop} 
             />
 
@@ -145,7 +152,7 @@ const handleBackClick = () => {
         
           {newsData !=="" && page === 2 ? 
             <Grid item xs = {12} className = {classes.allItems}>
-              <NewsDisplay dataForDisplay = {newsData} localityStatus = {checked}/>
+              <NewsDisplay dataForDisplay = {newsData} localityStatus = {checkboxState.Localize}/>
             </Grid> : null
           } 
       
@@ -163,19 +170,3 @@ const handleBackClick = () => {
 export default Globalnews;
 
 
- {/* <Grid item xs = {12} className = {classes.allItems} >
-          <Instructions />
-        </Grid> */}
-          {/* <Grid item md = {6}  xs = {12}>     break points for mobile and desktop formats
-
-              <SearchBar typed = {handleChange} className = {classes.allItems}
-
-              />
-
-          </Grid>
-
-          <Grid item md = {6} xs = {12}>  Searchbar and locality checkbox should be side-to-side
-            in desktop and then stacked in mobile 
-            <LocalityCheckBox className = {classes.allItems}
-            boxClicked = {handleBoxClick} status = {checked}/>
-          </Grid> */}

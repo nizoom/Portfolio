@@ -14,9 +14,6 @@ const Sidebar = (props) => {
     if(props.clickHandler != null) {
       props.clickHandler()
     } 
-    // if sidebarStatus then render sidebar with sidebar class 
-      // have media query determine which way it will be rendered
-
 
     // rerender nav 
     if(!sidebarStatus){
@@ -30,10 +27,6 @@ const Sidebar = (props) => {
   }
 
     
-
-  
-
-
 
   return (
     <div className="">

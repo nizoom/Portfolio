@@ -31,7 +31,7 @@ const SearchBar = ( props ) => {
 
   return(
     <form className="filter-form">
-      <p className="filter-label"> 1. Topic Filter (optional) </p> 
+      <p className="filter-label"> 1. Enter a topic (optional) </p> 
       <MuiThemeProvider theme = {theme}>
       {/* passes in function that tracks user input
        to textField*/}
