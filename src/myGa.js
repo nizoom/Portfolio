@@ -1,10 +1,10 @@
 import ReactGA from 'react-ga';
-import React from 'react';
+
 
 const myGa = () => {
-    const GA_ID = 'G-LNEK6TGS7T'; // your google analytics id
+    const GA_ID = process.env.REACT_APP_GOOGLE_ID; 
     ReactGA.initialize(GA_ID);
-    ReactGA.pageview(window.location.pathname + window.location.search);
+    ReactGA.pageview('/#'); //+ window.location.search)
 };
 
 export default myGa;

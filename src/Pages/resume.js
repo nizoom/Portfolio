@@ -21,8 +21,8 @@ const Resume = () => {
             <Logo/>
             <div className="top-right-div">
                 <Sidebar clickHandler={sidebarHandler}/>
-                <a  href={ResumePDF} target="_blank" download>
-                   { dlBtn ? <button className="download"> <img  src = {DownloadIcon}/> </button> : null }
+                <a  href={ResumePDF}rel="noreferrer"  target="_blank" download>
+                   { dlBtn ? <button className="download"> <img  src = {DownloadIcon} alt='download-resume'/> </button> : null }
                 </a>
 
             </div>

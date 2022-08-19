@@ -1,20 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import Logo from "../Components/logo/logo"
 import Sidebar from "../Components/sidebar/sidebar"
 import Headshot from "../project_layout/headshot.png"
 import "./css/about.css"
 
 const About = (props) => {
-
-
-  const [navStatus, setNavStatus] = useState(false)
-
-
-  const getSidebarStatus = (sidebarStatus) => {
- 
-    return (sidebarStatus ? setNavStatus(true) : setNavStatus(false))
-  }
-
 
   return (
     <div className="page-wrapper">
@@ -24,7 +14,7 @@ const About = (props) => {
     
       <div>
 
-        <section className={navStatus ? "nav-open-about" : "about-wrapper"}> 
+        <section className="about-wrapper"> 
 
 
               <h2 className="header"> Hey there, I'm a web developer based in New York City.</h2>

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
+import myGa from "../myGa";
 
 import Logo from "../Components/logo/logo"
 import Sidebar from "../Components/sidebar/sidebar"
@@ -34,17 +35,19 @@ const HomePage =  () =>  {
    
  const history = useHistory();
  useEffect(() => {
-      // Runs after the first render() lifecycle
- 
-      const userVisitationStatus = getLocalVisitStatus();
+        // Runs after the first render() lifecycle
+  
+        const userVisitationStatus = getLocalVisitStatus();
 
-      if(userVisitationStatus === null || userVisitationStatus === undefined){
-             firstVisit()
-            
+        if(userVisitationStatus === null || userVisitationStatus === undefined){
+              firstVisit()
+              
 
-             history.push('/Intro')
-      } 
-  })
+              history.push('/Intro')
+        } 
+
+        myGa();
+    },[])
 
  
     

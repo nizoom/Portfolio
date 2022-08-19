@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import "./dropdown.css"
 import SearchBar from '../SearchBar/searchbar';
 import LocalityCheckBox from '../LocalityCheckBox/checkbox';
@@ -8,7 +8,7 @@ import { Grid } from '@material-ui/core';
 
 const Dropdown = (props) => {
 
-    const [dropdownStatus, setDropdownStatus] = useState(true)
+  
 
  
     return (
@@ -17,13 +17,13 @@ const Dropdown = (props) => {
             <Grid item xs = {12} md = {12} style = {{width : '85%', margin: 'auto'}} >
                
                     <div className='toggle-filters-div'>
-                        <h3 className='dropdown-label'> <img src = {CircledOne} className='numbers'/>Try Filters </h3> 
+                        <h3 className='dropdown-label'> <img src = {CircledOne} className='numbers' alt ='step-1'/>Try Filters </h3> 
             
-                        <img src = {Settings} alt ='activate filters dropdown menu' className= {dropdownStatus ? 'toggle-dropdwn-btn-on' : 'toggle-dropdwn-btn' }
+                        <img src = {Settings} alt ='activate filters dropdown menu' className= 'toggle-dropdwn-btn-on'
                     />
                     </div>
                     
-                        <section className={dropdownStatus ? 'dropdown-bubble' : 'hide'}>
+                        <section className= 'dropdown-bubble'>
 
                                 <SearchBar typed = {props.typed}/> 
 

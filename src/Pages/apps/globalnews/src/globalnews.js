@@ -30,7 +30,7 @@ function Globalnews() {
       textAlign: "center",
       padding : theme.spacing(2),
       justifyContent : "center",
-      padding: '0',
+  
 
     }, //padding: theme.spacing(2),
 
@@ -98,7 +98,7 @@ const handleBackClick = () => {
 
 //handles locality checkbox being clicked/unclicked
   const handleBoxClick = (e) => {
-    const updatedState = {... checkboxState}
+    const updatedState = {...checkboxState}
     for (const property in updatedState){
       updatedState[property] = !checkboxState[property]
     }
@@ -139,7 +139,7 @@ const handleBackClick = () => {
         {page === 2 ? 
           <Grid item xs = {12} className = {classes.allItems} >
                 <div className="map-instruction-wrapper">
-                <p className="dropdown-label map-instruction"> <img src= {CircledTwo} className='numbers'/> and 👇 a point on the map </p>
+                <p className="dropdown-label map-instruction"> <img src= {CircledTwo} className='numbers' alt='step-2'/> and 👇 a point on the map </p>
 
               
             </div>

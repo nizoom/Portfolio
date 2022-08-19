@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Logo from "../Components/logo/logo";
 import Sidebar from "../Components/sidebar/sidebar"
 import "./css/blog.css"
@@ -12,15 +12,7 @@ import BackToTopBtn from "../Components/backToTop/backToTop"
 
 
 
-const Blog = (props) => {
-
-  // const [navStatus, setNavStatus] = useState(false);
-
-  // const getSidebarStatus = (sidebarStatus) => {
-  
-  //   return (sidebarStatus ? setNavStatus(true) : setNavStatus(false))
-  // }
-
+const Blog = () => {
 
   return (
     <div  className="blog-page-wrapper">

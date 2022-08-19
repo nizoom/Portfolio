@@ -14,7 +14,7 @@ const Cards = (props) => {
             <img src = {Card} alt ='app' className='card-img'/>
             <div className='text-wrapper'>
                 <h3 className='app-title'> {props.appTitle} </h3>
-                <img src = {props.logo} className='logo'/>
+                <img src = {props.logo} className='logo' alt='app-logo'/>
                 <p className='description-txt'> {props.Description}</p>
                 <p className='description-txt tech'> Technologies: {props.stackList}</p>
 
