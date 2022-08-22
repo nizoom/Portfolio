@@ -23,15 +23,15 @@ const HomePage =  () =>  {
 
   const [state,setState] = useState({
     visitationStatus : false,
-    
     sidbarStatus: false,
 
-    clickHandler: () => {
-      setState(prevstate => ({
-        sidbarStatus: !prevstate.sidbarStatus
-      }))}
-
   })
+
+  const clickHandler = () => {
+    console.log('clicked')
+    setState(prevstate => ({
+      sidbarStatus: !prevstate.sidbarStatus
+    }))}
    
  const history = useHistory();
  useEffect(() => {
@@ -41,11 +41,8 @@ const HomePage =  () =>  {
 
         if(userVisitationStatus === null || userVisitationStatus === undefined){
               firstVisit()
-              
-
               history.push('/Intro')
         } 
-
         myGa();
     },[])
 
@@ -60,7 +57,7 @@ const HomePage =  () =>  {
         <div className= ''> </div>
         <div className="fade-in"> 
           <Logo />
-          <Sidebar clickHandler = {state.clickHandler}/>
+          <Sidebar clickHandler = {clickHandler}/>
 
           <div className="projects">
 

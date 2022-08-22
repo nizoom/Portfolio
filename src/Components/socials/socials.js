@@ -8,8 +8,6 @@ import { BrowserRouter as Router, Link } from "react-router-dom";
 
 const Socials = (props) => {
 
-
-
     return (
         <div>
             <nav className={props.sidebarStatus && window.innerWidth > 701 ? "slide-out" : "socials-wrapper slide-in"}>

@@ -11,18 +11,17 @@ const Sidebar = (props) => {
 
   const sideBarBtnHandler = () => {
     setSidebarStatus(!sidebarStatus)
+    console.log(props)
     if(props.clickHandler != null) {
       props.clickHandler()
     } 
 
     // rerender nav 
     if(!sidebarStatus){
-     
         window.scrollTo({
           top: 0,
           behavior: "smooth"
-        })
-      
+        }) 
     }
   }
 
