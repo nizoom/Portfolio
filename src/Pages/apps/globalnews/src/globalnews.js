@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import './globalnews.css';
+import './styles/globalnews.css';
 import "fontsource-roboto"
 import Typography from "@material-ui/core/Typography"
 import { makeStyles } from "@material-ui/core/styles"

@@ -1,0 +1,16 @@
+@use "globalstyles";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+
+//  font-size: map-get(landingpage.$font-sizes, small );
+.gn-landingpage-wrapper{
+    background-color: map-get(globalstyles.$palette, light-gray);
+    height: 100vh;
+    width: 100%;
+}
+
+.global-news-title{
+    margin: 0;
+    font-weight: map-get(globalstyles.$font-weights, regular);
+    font-size: map-get(globalstyles.$font-sizes, large);
+}

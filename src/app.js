@@ -2,8 +2,9 @@ import React, { Component } from "react";
 import './app.css';
 import { BrowserRouter as Router, Route, Switch, Redirect, HashRouter } from "react-router-dom"
 
-//Apps 
+//GlobalNews 
 import Globalnews from "./Pages/apps/globalnews/src/globalnews"
+import LandingPage from "./Pages/apps/globalnews/src/landingpage";
 
 //Pages
 
@@ -25,10 +26,10 @@ class App extends Component {
           <Route exact path="/About" component={About} />
           <Route exact path="/Blog" component={Blog} />
           <Route exact path="/Contact" component={ContactPage} />
-          <Route exact path="/globalnews" component={Globalnews} />
           <Route exact path="/resume" component={Resume} />
 
-
+          <Route exact path="/globalnews" component={Globalnews} />
+          <Route exact path="/globalnews/landingpage" component={LandingPage} />
 
           <Route path="/404" component={NotFound} />
           <Redirect to="/404" />

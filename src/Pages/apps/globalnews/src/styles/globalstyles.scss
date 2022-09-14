@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+$font-weights: (
+    "light" : 100,
+    "regular": 400,
+    "semi-bold": 500,
+    "bold" : 700,
+    "heavy" : 900,
+);
+
+$font-sizes: (
+    "largest": 39.06px,
+    "large": 31.25px,
+    "medium": 25px,
+    "small" : 20.00px,
+    "x-small" : 16px
+);
+
+$palette: (
+    "darkest": #22223B,
+    "light-gray": #4A4E69,
+    "light-prpl": #9A8C98,
+    "light-pink": #C9ADA7,
+    "lightest": #F2E9E4
+)
