@@ -4,7 +4,8 @@
 
 //  font-size: map-get(landingpage.$font-sizes, small );
 .gn-landingpage-wrapper{
-    background-color: map-get(globalstyles.$palette, light-gray);
+    background-image: linear-gradient(to bottom, map-get(globalstyles.$palette, light-gray), map-get(globalstyles.$palette, light-pink));
+    // background-color: map-get(globalstyles.$palette, light-gray);
     height: 100vh;
     width: 100%;
 }
@@ -13,4 +14,62 @@
     margin: 0;
     font-weight: map-get(globalstyles.$font-weights, regular);
     font-size: map-get(globalstyles.$font-sizes, large);
+    color: map-get(globalstyles.$palette, lightest);
+    padding: 50px 0 0 60px;
+}
+.gn-copy-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    flex-direction: column;
+}
+.gl-main-copy{
+    font-weight: map-get(globalstyles.$font-weights, regular);
+    font-size: map-get(globalstyles.$font-sizes, largest);
+    color: map-get(globalstyles.$palette, lightest);
+}
+
+.gl-sub-copy{
+    font-weight: map-get(globalstyles.$font-weights, regular);
+    font-size: map-get(globalstyles.$font-sizes, medium);
+    color: map-get(globalstyles.$palette, lightest);
+}
+
+.gl-login-wrapper{
+    background-color: map-get(globalstyles.$palette, darkest);
+    height: 450px;
+    width: 450px;
+    border-radius: 32px;
+    margin: auto;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    .gl-traditional-logins-wrapper{
+        display: flex;
+        gap: 20px;
+
+        button{
+            background-color: map-get(globalstyles.$palette, lightest);
+            color: map-get(globalstyles.$palette, darkest);
+            font-weight: map-get(globalstyles.$font-weights, bold);
+            border: none;
+            width: 150px;
+            height: 50px;
+            border-radius: 16px;
+            cursor: pointer;
+        }
+    }
+    p {
+        color: map-get(globalstyles.$palette, lightest);
+        font-size: map-get(globalstyles.$font-sizes, small);
+    }
+}
+
+.gn-graphic{
+    position: absolute;
+    right: 10px;
+    bottom: 20px;
 }

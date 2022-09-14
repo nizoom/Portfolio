@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
 .gn-landingpage-wrapper {
-  background-color: #4A4E69;
+  background-image: linear-gradient(to bottom, #4A4E69, #C9ADA7);
   height: 100vh;
   width: 100%;
 }
@@ -10,6 +10,65 @@
   margin: 0;
   font-weight: 400;
   font-size: 31.25px;
+  color: #F2E9E4;
+  padding: 50px 0 0 60px;
+}
+
+.gn-copy-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  flex-direction: column;
+}
+
+.gl-main-copy {
+  font-weight: 400;
+  font-size: 39.06px;
+  color: #F2E9E4;
+}
+
+.gl-sub-copy {
+  font-weight: 400;
+  font-size: 25px;
+  color: #F2E9E4;
+}
+
+.gl-login-wrapper {
+  background-color: #22223B;
+  height: 450px;
+  width: 450px;
+  border-radius: 32px;
+  margin: auto;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.gl-login-wrapper .gl-traditional-logins-wrapper {
+  display: flex;
+  gap: 20px;
+}
+.gl-login-wrapper .gl-traditional-logins-wrapper button {
+  background-color: #F2E9E4;
+  color: #22223B;
+  font-weight: 700;
+  border: none;
+  width: 150px;
+  height: 50px;
+  border-radius: 16px;
+  cursor: pointer;
+}
+.gl-login-wrapper p {
+  color: #F2E9E4;
+  font-size: 20px;
+}
+
+.gn-graphic {
+  position: absolute;
+  right: 10px;
+  bottom: 20px;
 }
 
 /*# sourceMappingURL=landingpage.css.map */
