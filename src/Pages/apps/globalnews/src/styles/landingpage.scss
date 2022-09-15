@@ -77,6 +77,17 @@ $intro-page-color:linear-gradient(to bottom, map-get(globalstyles.$palette, ligh
     }
 }
 
+.gn-google-link{
+    background-color:map-get(globalstyles.$palette, light-gray);
+    padding: 8px;
+    border-radius: 32px;
+    border: 2px solid map-get(globalstyles.$palette, lightest);
+    font-weight: map-get(globalstyles.$font-weights, semi-bold);
+    letter-spacing: -1px;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
 .gn-graphic{
     position: absolute;
     right: 10px;

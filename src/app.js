@@ -13,6 +13,7 @@ import Globalnews from "./Pages/apps/globalnews/src/globalnews";
 import LandingPage from "./Pages/apps/globalnews/src/landingpage";
 import GNLogin from "./Pages/apps/globalnews/src/GNlogin";
 import GNSignup from "./Pages/apps/globalnews/src/GNSignup";
+import GNHomePage from "./Pages/apps/globalnews/src/GNhome";
 
 //Pages
 
@@ -40,6 +41,7 @@ class App extends Component {
           <Route exact path="/globalnews/landingpage" component={LandingPage} />
           <Route exact path="/globalnews/login" component={GNLogin} />
           <Route exact path="/globalnews/signup" component={GNSignup} />
+          <Route exact path="/globalnews/home" component={GNHomePage} />
 
           <Route path="/404" component={NotFound} />
           <Redirect to="/404" />
