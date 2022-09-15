@@ -1,6 +1,7 @@
 import React from "react";
 import "./styles/compiledCss/landingpage.css";
 import MonitorPNG from "./Images/graphic.png";
+import { Link } from "react-router-dom";
 const LandingPage = () => {
   return (
     <div className="gn-landingpage-wrapper">
@@ -19,8 +20,12 @@ const LandingPage = () => {
         {/* <img src={MonitorPNG} className="gn-graphic" /> */}
         <div className="gn-login-wrapper">
           <div className="gn-traditional-logins-wrapper">
-            <button className="gn-login-btns"> Login </button>
-            <button className="gn-login-btns">Sign up </button>
+            <Link to="/globalnews/login">
+              <button className="gn-login-btns"> Login </button>
+            </Link>
+            <Link to="/globalnews/signup">
+              <button className="gn-login-btns">Sign up </button>
+            </Link>
           </div>
           <p> Or sign in with: </p>
         </div>

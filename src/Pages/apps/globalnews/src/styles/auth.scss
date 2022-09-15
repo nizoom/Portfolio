@@ -1,0 +1,62 @@
+@use "globalstyles";
+@use "landingpage";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+
+.gn-authpage-wrapper{
+    background-image: landingpage.$intro-page-color;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gn-auth-form-wrapper{
+    @include landingpage.intro-page-box;
+    margin-top: 0;
+}
+
+.gn-auth-title{
+    font-weight: map-get(globalstyles.$font-weights, regular);
+    font-size: map-get(globalstyles.$font-sizes, medium);
+    color: map-get(globalstyles.$palette, lightest);
+    margin: 0;
+}
+
+.gn-auth-form{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+
+    button{
+        @include landingpage.gn-login-btns
+    }
+}
+
+.gn-form-section{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    label{
+        font-weight: map-get(globalstyles.$font-weights, regular);
+        font-size: map-get(globalstyles.$font-sizes, x-small);
+        color: map-get(globalstyles.$palette, lightest);
+    }
+
+    input{
+        background-color: map-get(globalstyles.$palette, light-pink);
+        border: none;
+        border-radius: 6px;
+        height: 25px;
+        width: 200px;
+    }
+
+}
+
+@media(max-width:576px){
+    .gn-auth-form-wrapper{
+        width: 300px;
+    }
+}

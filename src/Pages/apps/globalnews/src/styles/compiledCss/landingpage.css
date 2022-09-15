@@ -50,9 +50,9 @@
   display: flex;
   gap: 20px;
 }
-.gn-login-wrapper .gn-traditional-logins-wrapper .gn-login-btns {
-  background-color: #F2E9E4;
-  color: #22223B;
+.gn-login-wrapper .gn-traditional-logins-wrapper button {
+  background-color: #4A4E69;
+  color: #F2E9E4;
   font-weight: 700;
   border: none;
   width: 150px;

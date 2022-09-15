@@ -11,6 +11,8 @@ import {
 //GlobalNews
 import Globalnews from "./Pages/apps/globalnews/src/globalnews";
 import LandingPage from "./Pages/apps/globalnews/src/landingpage";
+import GNLogin from "./Pages/apps/globalnews/src/GNlogin";
+import GNSignup from "./Pages/apps/globalnews/src/GNSignup";
 
 //Pages
 
@@ -21,7 +23,6 @@ import Blog from "./Pages/blog";
 import ContactPage from "./Pages/Contact/contactpage";
 import IntroScreen from "./Pages/intro";
 import Resume from "./Pages/resume";
-import GNLogin from "./Pages/apps/globalnews/src/GNlogin";
 
 class App extends Component {
   render() {
@@ -38,6 +39,7 @@ class App extends Component {
           <Route exact path="/globalnews" component={Globalnews} />
           <Route exact path="/globalnews/landingpage" component={LandingPage} />
           <Route exact path="/globalnews/login" component={GNLogin} />
+          <Route exact path="/globalnews/signup" component={GNSignup} />
 
           <Route path="/404" component={NotFound} />
           <Redirect to="/404" />

@@ -4,6 +4,30 @@
 
 $intro-page-color:linear-gradient(to bottom, map-get(globalstyles.$palette, light-gray), map-get(globalstyles.$palette, light-pink));
 
+@mixin intro-page-box{
+    background-color: map-get(globalstyles.$palette, darkest);
+    height: 450px;
+    width: 450px;
+    border-radius: 32px;
+    margin: auto;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+@mixin gn-login-btns{
+    background-color: map-get(globalstyles.$palette, light-gray);
+    color: map-get(globalstyles.$palette, lightest);
+    font-weight: map-get(globalstyles.$font-weights, bold);
+    border: none;
+    width: 150px;
+    height: 50px;
+    border-radius: 16px;
+    cursor: pointer;
+}
+
 .gn-landingpage-wrapper{
     background-image: $intro-page-color;
     height: 100vh;
@@ -37,30 +61,15 @@ $intro-page-color:linear-gradient(to bottom, map-get(globalstyles.$palette, ligh
 }
 
 .gn-login-wrapper{
-    background-color: map-get(globalstyles.$palette, darkest);
-    height: 450px;
-    width: 450px;
-    border-radius: 32px;
-    margin: auto;
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
+    @include intro-page-box();
     .gn-traditional-logins-wrapper{
         display: flex;
         gap: 20px;
 
-        .gn-login-btns{
-            background-color: map-get(globalstyles.$palette, lightest);
-            color: map-get(globalstyles.$palette, darkest);
-            font-weight: map-get(globalstyles.$font-weights, bold);
-            border: none;
-            width: 150px;
-            height: 50px;
-            border-radius: 16px;
-            cursor: pointer;
+        button{
+            @include gn-login-btns()
         }
+    
     }
     p {
         color: map-get(globalstyles.$palette, lightest);

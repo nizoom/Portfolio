@@ -1,18 +1,22 @@
 import React from "react";
 import "./styles/compiledCss/auth.css";
-const GNLogin = () => {
+const GNSignup = () => {
   return (
     <div className="gn-authpage-wrapper">
       <section>
         <div className="gn-auth-form-wrapper">
           <form className="gn-auth-form">
-            <h3 className="gn-auth-title">Login</h3>
+            <h3 className="gn-auth-title">Sign up</h3>
             <div className="gn-form-section">
               <label htmlFor="email"> Email</label>
               <input id="email" type="email" name="email" />
             </div>
             <div className="gn-form-section">
               <label htmlFor="Password"> Password</label>
+              <input id="password" type="password" name="password" />
+            </div>
+            <div className="gn-form-section">
+              <label htmlFor="Password"> Confirm password </label>
               <input id="password" type="password" name="password" />
             </div>
             <button type="submit" className="gn-login-btns">
@@ -25,4 +29,4 @@ const GNLogin = () => {
   );
 };
 
-export default GNLogin;
+export default GNSignup;
