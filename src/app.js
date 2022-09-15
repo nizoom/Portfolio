@@ -1,27 +1,34 @@
 import React, { Component } from "react";
-import './app.css';
-import { BrowserRouter as Router, Route, Switch, Redirect, HashRouter } from "react-router-dom"
+import "./app.css";
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  Redirect,
+  HashRouter,
+} from "react-router-dom";
 
-//GlobalNews 
-import Globalnews from "./Pages/apps/globalnews/src/globalnews"
+//GlobalNews
+import Globalnews from "./Pages/apps/globalnews/src/globalnews";
 import LandingPage from "./Pages/apps/globalnews/src/landingpage";
 
 //Pages
 
-import HomePage from "./Pages/Homepage"
-import NotFound from "./Pages/NotFound"
-import About from "./Pages/About"
-import Blog from "./Pages/blog"
-import ContactPage from "./Pages/Contact/contactpage"
+import HomePage from "./Pages/Homepage";
+import NotFound from "./Pages/NotFound";
+import About from "./Pages/About";
+import Blog from "./Pages/blog";
+import ContactPage from "./Pages/Contact/contactpage";
 import IntroScreen from "./Pages/intro";
-import Resume from "./Pages/resume"
+import Resume from "./Pages/resume";
+import GNLogin from "./Pages/apps/globalnews/src/GNlogin";
 
 class App extends Component {
   render() {
     return (
       <HashRouter>
         <Switch>
-          <Route exact path = "/Intro" component = {IntroScreen}/>
+          <Route exact path="/Intro" component={IntroScreen} />
           <Route exact path="/" component={HomePage} />
           <Route exact path="/About" component={About} />
           <Route exact path="/Blog" component={Blog} />
@@ -30,12 +37,13 @@ class App extends Component {
 
           <Route exact path="/globalnews" component={Globalnews} />
           <Route exact path="/globalnews/landingpage" component={LandingPage} />
+          <Route exact path="/globalnews/login" component={GNLogin} />
 
           <Route path="/404" component={NotFound} />
           <Redirect to="/404" />
         </Switch>
       </HashRouter>
-    )
+    );
   }
 }
 
