@@ -1,0 +1,95 @@
+@use "globalstyles";
+
+@mixin dropdown {
+    list-style-type: none;
+    background-color:map-get(globalstyles.$palette, darkest);
+    width: 350px;
+    text-align: center;
+    padding: 0;
+    margin-top: 0;
+    border-radius: 6px 6px 12px 12px;
+    height: 100%;
+    transition: height 1s;
+}
+.homepage-wrapper{
+    height: 100vh;
+    background-color: map-get(globalstyles.$palette, light-prpl);
+    display: grid;
+    grid-template-columns: 50% 50%;
+
+}
+
+.GN-title{
+    color: map-get(globalstyles.$palette, lightest);
+    font-weight: map-get(globalstyles.$font-weights, regular);
+    font-size: map-get(globalstyles.$font-sizes, large);
+    margin: auto;
+    padding: 40px;
+}
+
+.savedplaces-component-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.locations-dropdwn-label{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: map-get(globalstyles.$palette, darkest);
+    color: map-get(globalstyles.$palette, lightest);
+    font-weight: map-get(globalstyles.$font-weights, regular);
+    font-size: map-get(globalstyles.$font-sizes, medium);
+    width: 400px;
+    height: 70px;
+    border-radius: 32px;
+    cursor: pointer;
+}
+
+.savedplaces-list-closed{
+    @include dropdown();
+    animation: liftUp 200ms ease-in-out forwards;
+    transform-origin: top center;
+}
+
+.savedplaces-list{
+    @include dropdown();
+    animation: growDown 200ms ease-in-out forwards;
+    transform-origin: top center;
+}
+
+.place-item{
+    font-size: map-get(globalstyles.$font-sizes, small);
+    margin: 10px;
+    padding: 5px;
+    border: 2px solid map-get(globalstyles.$palette, light-gray);
+    background-color: map-get(globalstyles.$palette, light-pink);
+    cursor: pointer;
+}
+
+
+
+@keyframes growDown {
+    0% {
+        transform: scaleY(0)
+    }
+    80% {
+        transform: scaleY(1.1)
+    }
+    100% {
+        transform: scaleY(1)
+    }
+}
+@keyframes liftUp {
+    0% {
+        transform: scaleY(1)
+    }
+    80% {
+        transform: scaleY(.2)
+    }
+    100% {
+        transform: scaleY(0)
+    }
+}

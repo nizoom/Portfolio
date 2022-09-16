@@ -1,3 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+.homepage-wrapper {
+  height: 100vh;
+  background-color: #9A8C98;
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
 
+.GN-title {
+  color: #F2E9E4;
+  font-weight: 400;
+  font-size: 31.25px;
+  margin: auto;
+  padding: 40px;
+}
+
+.savedplaces-component-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.locations-dropdwn-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #22223B;
+  color: #F2E9E4;
+  font-weight: 400;
+  font-size: 25px;
+  width: 400px;
+  height: 70px;
+  border-radius: 32px;
+  cursor: pointer;
+}
+
+.savedplaces-list-closed {
+  list-style-type: none;
+  background-color: #22223B;
+  width: 350px;
+  text-align: center;
+  padding: 0;
+  margin-top: 0;
+  border-radius: 6px 6px 12px 12px;
+  height: 100%;
+  transition: height 1s;
+  animation: liftUp 200ms ease-in-out forwards;
+  transform-origin: top center;
+}
+
+.savedplaces-list {
+  list-style-type: none;
+  background-color: #22223B;
+  width: 350px;
+  text-align: center;
+  padding: 0;
+  margin-top: 0;
+  border-radius: 6px 6px 12px 12px;
+  height: 100%;
+  transition: height 1s;
+  animation: growDown 200ms ease-in-out forwards;
+  transform-origin: top center;
+}
+
+.place-item {
+  font-size: 20px;
+  margin: 10px;
+  padding: 5px;
+  border: 2px solid #4A4E69;
+  background-color: #C9ADA7;
+  cursor: pointer;
+}
+
+@keyframes growDown {
+  0% {
+    transform: scaleY(0);
+  }
+  80% {
+    transform: scaleY(1.1);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+@keyframes liftUp {
+  0% {
+    transform: scaleY(1);
+  }
+  80% {
+    transform: scaleY(0.2);
+  }
+  100% {
+    transform: scaleY(0);
+  }
+}
 
 /*# sourceMappingURL=home.css.map */
