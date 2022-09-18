@@ -11,21 +11,48 @@
     height: 100%;
     transition: height 1s;
 }
+
+@mixin btn-shape{
+    font-weight: map-get(globalstyles.$font-weights, bold);
+    font-size: map-get(globalstyles.$font-sizes, medium);
+    border-radius: 50%;
+    border: none;
+    height: 25px;
+    width: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    span{
+        margin-bottom: 4px;
+    }
+}
 .homepage-wrapper{
     height: 100vh;
     background-color: map-get(globalstyles.$palette, light-prpl);
     display: grid;
     grid-template-columns: 50% 50%;
+}
 
+.left-column{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: map-get(globalstyles.$palette, light-prpl);
+   
 }
 
 .GN-title{
     color: map-get(globalstyles.$palette, lightest);
     font-weight: map-get(globalstyles.$font-weights, regular);
     font-size: map-get(globalstyles.$font-sizes, large);
-    margin: auto;
+    margin: 0;
     padding: 40px;
+    position: absolute;
+    left: 20px;
+
 }
+
+// SAVED LOCATIONS
 
 .savedplaces-component-wrapper{
     display: flex;
@@ -60,16 +87,32 @@
     transform-origin: top center;
 }
 
+.preload{
+    display: none;
+}
+
 .place-item{
+    display: flex;
+    gap: 20px;
+    text-align: center;
     font-size: map-get(globalstyles.$font-sizes, small);
     margin: 10px;
     padding: 5px;
-    border: 2px solid map-get(globalstyles.$palette, light-gray);
     background-color: map-get(globalstyles.$palette, light-pink);
     cursor: pointer;
+    border-radius: 3px;
+    p{
+        
+        margin: 2px;
+    }
+
+    .remove-place-btn{
+        @include btn-shape;
+        background-color: map-get(globalstyles.$palette, darkest);
+        color: map-get(globalstyles.$palette, light-pink);
+
+    }
 }
-
-
 
 @keyframes growDown {
     0% {
@@ -92,4 +135,48 @@
     100% {
         transform: scaleY(0)
     }
+}
+
+
+//CURRENT LOCATION
+
+.currentlocation-component-wrapper{
+    background-color: map-get(globalstyles.$palette, darkest);
+    width: 70%;
+    margin: 20px;
+    margin-top: 200px;
+    border-radius: 32px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    gap: 20px;
+    
+
+}
+.current-location{
+    color: map-get(globalstyles.$palette, lightest);
+    font-size: map-get(globalstyles.$font-sizes, x-small);
+}
+
+.add-location-btn{
+    @include btn-shape;
+    background-color: map-get(globalstyles.$palette, light-pink);
+    cursor: pointer;
+    span{
+        margin-top: 5px;
+        margin-left: 1px;
+    }
+}
+
+.map-container{
+    width: 500px;
+    height: 400px;
+    border: 10px solid map-get(globalstyles.$palette, darkest);
+    border-radius: 32px;
+    margin-bottom: 20px;  
+}
+
+
+.right-column{
+    background-color: map-get(globalstyles.$palette, light-prpl);
 }
