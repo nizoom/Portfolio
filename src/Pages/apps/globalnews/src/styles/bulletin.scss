@@ -1,0 +1,41 @@
+@use "globalstyles";
+:root {
+    --card-width: 250px;
+    --card-border-radius: 16px;
+    --row-increment: 10px;
+    --card-small: 26;
+    --card-medium: 33;
+    --card-large: 45; 
+ }
+
+ .bulletin-component-wrapper{ 
+    height: 570px;
+    width: 500px; 
+    background-color: map-get(globalstyles.$palette, darkest);
+    margin-top: 100px;
+    border-radius: 12px;
+
+
+    padding: 3px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, var(--card-width)); //handles cards wrapping to next row 
+    grid-template-rows: var(--row-increment);//grid auto rows handles height of card
+    justify-content: flex-start;
+ }
+
+ .card{
+    padding: 0px;
+    margin: 10px;
+    border-radius: 12px;
+    background-color: map-get(globalstyles.$palette, light-prpl);
+ }
+
+ .card-small{
+    grid-row-end: span var(--card-small );
+ }
+ .card-medium{
+    grid-row-end: span var(--card-medium );
+ }
+ .card-large{
+    grid-row-end: span var(--card-large );
+ }

@@ -1,0 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+:root {
+  --card-width: 250px;
+  --card-border-radius: 16px;
+  --row-increment: 10px;
+  --card-small: 26;
+  --card-medium: 33;
+  --card-large: 45;
+}
+
+.bulletin-component-wrapper {
+  height: 570px;
+  width: 500px;
+  background-color: #22223B;
+  margin-top: 100px;
+  border-radius: 12px;
+  padding: 3px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, var(--card-width));
+  grid-template-rows: var(--row-increment);
+  justify-content: flex-start;
+}
+
+.card {
+  padding: 0px;
+  margin: 10px;
+  border-radius: 12px;
+  background-color: #9A8C98;
+}
+
+.card-small {
+  grid-row-end: span var(--card-small);
+}
+
+.card-medium {
+  grid-row-end: span var(--card-medium);
+}
+
+.card-large {
+  grid-row-end: span var(--card-large);
+}
+
+/*# sourceMappingURL=bulletin.css.map */

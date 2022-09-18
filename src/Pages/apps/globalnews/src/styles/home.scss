@@ -1,5 +1,5 @@
 @use "globalstyles";
-
+@use "landingpage";
 @mixin dropdown {
     list-style-type: none;
     background-color:map-get(globalstyles.$palette, darkest);
@@ -48,7 +48,7 @@
     margin: 0;
     padding: 40px;
     position: absolute;
-    left: 20px;
+    left: -5px;
 
 }
 
@@ -179,4 +179,24 @@
 
 .right-column{
     background-color: map-get(globalstyles.$palette, light-prpl);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.logout-btn{
+    @include landingpage.gn-login-btns;
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 40px 30px;
+}
+
+.bulletin-component-wrapper{
+    // height: 570px;
+    // width: 400px;
+    // background-color: map-get(globalstyles.$palette, darkest);
+    // margin-top: -75px;
+    // border-radius: 12px;
 }

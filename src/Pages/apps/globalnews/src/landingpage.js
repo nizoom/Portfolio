@@ -1,15 +1,19 @@
 import React from "react";
 import "./styles/compiledCss/landingpage.css";
 // import MonitorPNG from "./Images/graphic.png";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
 import { auth, provider } from "./config/firebase";
 import { signInWithPopup } from "firebase/auth";
 const LandingPage = () => {
+  const history = useHistory();
+
   const signInWithGoogle = async () => {
-    const result = signInWithPopup(auth, provider);
+    const result = await signInWithPopup(auth, provider);
     console.log(result);
+    history.push("/globalnews/home");
   };
+
   return (
     <div className="gn-landingpage-wrapper">
       <h1 className="global-news-title"> Global News </h1>
