@@ -28,14 +28,15 @@ const NewsBulletin = (props) => {
     const html = newsArr.map((article) => {
       const title = article.name;
       const className = determineBoxSize(title);
-      console.log(className);
       // console.log("fired");
       return (
         <li className={`${className} gn-box-content`} key={uuidv4()}>
           <a href={article.url} rel="noopener noreferrer" target="_blank">
             <p className="gn-article-title"> {title}</p>
           </a>
-          <p className="gn-publisher"> {article.provider[0].name}</p>
+          <div className="gn-publisher-div">
+            <p className="gn-publisher"> {article.provider[0].name}</p>
+          </div>
         </li>
       );
     });

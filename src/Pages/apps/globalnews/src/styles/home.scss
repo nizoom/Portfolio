@@ -193,5 +193,30 @@
     margin: 40px 30px;
 }
 
-.bulletin-component-wrapper{
+@media(max-width: 1050px){
+    .homepage-wrapper{
+        display: flex;
+        flex-direction: column;
+    }
+}
+@media(max-width: 576px){
+   .map-container{
+    width: 90%;
+    margin: auto;
+   }
+
+   .locations-dropdwn-label{
+        margin-top: 20px;
+        font-size: map-get(globalstyles.$font-sizes, small);
+        width: 250px;
+   }
+
+   .GN-title{
+    font-size: map-get(globalstyles.$font-sizes, medium);
+   }
+   .logout-btn{
+    width: 100px;
+    margin-right: 20px;
+    margin-top: 30px;
+   }
 }

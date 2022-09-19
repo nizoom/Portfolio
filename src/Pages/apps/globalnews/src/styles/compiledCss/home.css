@@ -342,4 +342,30 @@
   margin: 40px 30px;
 }
 
+@media (max-width: 1050px) {
+  .homepage-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media (max-width: 576px) {
+  .map-container {
+    width: 90%;
+    margin: auto;
+  }
+  .locations-dropdwn-label {
+    margin-top: 20px;
+    font-size: 20px;
+    width: 250px;
+  }
+  .GN-title {
+    font-size: 25px;
+  }
+  .logout-btn {
+    width: 100px;
+    margin-right: 20px;
+    margin-top: 30px;
+  }
+}
+
 /*# sourceMappingURL=home.css.map */

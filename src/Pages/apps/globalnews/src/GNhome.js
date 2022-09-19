@@ -5,7 +5,6 @@ import CurrentLocation from "./Components/current";
 import Map from "./Components/Map/map";
 import NewsBulletin from "./Components/Bulletin/bulletin";
 import { auth } from "./config/firebase";
-import { useAuthState } from "react-firebase-hooks/auth";
 import { signOut } from "firebase/auth";
 import { useHistory } from "react-router-dom";
 
