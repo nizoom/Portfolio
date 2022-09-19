@@ -2,10 +2,10 @@
 :root {
   --card-width: 250px;
   --card-border-radius: 16px;
-  --row-increment: 10px;
-  --card-small: 26;
-  --card-medium: 33;
-  --card-large: 45;
+  --row-increment: 5px;
+  --card-small: 15;
+  --card-medium: 22;
+  --card-large: 25;
 }
 
 .bulletin-component-wrapper {
@@ -15,6 +15,7 @@
   margin-top: 100px;
   border-radius: 12px;
   padding: 3px;
+  overflow: scroll;
   display: grid;
   grid-template-columns: repeat(auto-fill, var(--card-width));
   grid-template-rows: var(--row-increment);
@@ -22,10 +23,11 @@
 }
 
 .card {
+  height: auto;
   padding: 0px;
-  margin: 10px;
+  margin: 5px;
   border-radius: 12px;
-  background-color: #9A8C98;
+  background-color: #C9ADA7;
 }
 
 .card-small {
@@ -38,6 +40,38 @@
 
 .card-large {
   grid-row-end: span var(--card-large);
+}
+
+.bulletin-component-wrapper-no-data {
+  height: 570px;
+  width: 500px;
+  background-color: #22223B;
+  margin-top: 100px;
+  border-radius: 12px;
+  padding: 3px;
+  overflow: scroll;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.default-bulletin {
+  color: #C9ADA7;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.gn-box-content {
+  list-style-type: none;
+}
+.gn-box-content p {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.gn-article-title {
+  color: #22223B;
+  font-weight: 500;
 }
 
 /*# sourceMappingURL=bulletin.css.map */

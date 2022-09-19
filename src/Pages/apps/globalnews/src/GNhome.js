@@ -38,7 +38,7 @@ const GNHomePage = () => {
       const locationStr = `${localLocation}, ${countryLocation}`;
       localLocation.replaceAll(undefined, "");
       setHomeState({
-        articles: articles,
+        articles: articles == undefined ? [] : articles,
         currentLocation: locationStr,
       });
       // console.log("fired");
@@ -60,7 +60,7 @@ const GNHomePage = () => {
           {" "}
           Logout{" "}
         </button>
-        <NewsBulletin newArray={homeState.articles} />
+        <NewsBulletin newsArray={homeState.articles} />
       </div>
     </div>
   );

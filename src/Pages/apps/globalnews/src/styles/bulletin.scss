@@ -2,32 +2,37 @@
 :root {
     --card-width: 250px;
     --card-border-radius: 16px;
-    --row-increment: 10px;
-    --card-small: 26;
-    --card-medium: 33;
-    --card-large: 45; 
+    --row-increment: 5px;
+    --card-small: 15;
+    --card-medium: 22;
+    --card-large: 25; 
+ }
+
+ @mixin bulletin-component-wrapper-style{
+   height: 570px;
+   width: 500px; 
+   background-color: map-get(globalstyles.$palette, darkest);
+   margin-top: 100px;
+   border-radius: 12px;
+   padding: 3px;
+   overflow: scroll;
  }
 
  .bulletin-component-wrapper{ 
-    height: 570px;
-    width: 500px; 
-    background-color: map-get(globalstyles.$palette, darkest);
-    margin-top: 100px;
-    border-radius: 12px;
-
-
-    padding: 3px;
+   @include bulletin-component-wrapper-style;
     display: grid;
     grid-template-columns: repeat(auto-fill, var(--card-width)); //handles cards wrapping to next row 
     grid-template-rows: var(--row-increment);//grid auto rows handles height of card
+   //  grid-auto-rows: minmax(min-content, max-content);
     justify-content: flex-start;
  }
 
  .card{
+   height: auto;
     padding: 0px;
-    margin: 10px;
+    margin: 5px;
     border-radius: 12px;
-    background-color: map-get(globalstyles.$palette, light-prpl);
+    background-color: map-get(globalstyles.$palette, light-pink);
  }
 
  .card-small{
@@ -38,4 +43,33 @@
  }
  .card-large{
     grid-row-end: span var(--card-large );
+ }
+
+ .bulletin-component-wrapper-no-data{
+   @include bulletin-component-wrapper-style();
+   display: flex;
+   justify-content: center;
+   align-items: center;
+ }
+ .default-bulletin{
+   color: map-get(globalstyles.$palette, light-pink);
+   text-align: center;
+   vertical-align: middle;
+ }
+
+ .gn-box-content{
+   list-style-type: none;
+   p{
+      padding-left: 10px;
+      padding-right: 10px;
+   }
+ }
+
+ .gn-article-title{
+   color: map-get(globalstyles.$palette, darkest);
+   font-weight: map-get(globalstyles.$font-weights, semi-bold);
+ }
+
+ .gn-publisher{
+   font-size: map-get(globalstyles.$font-sizes, xx-small);
  }
