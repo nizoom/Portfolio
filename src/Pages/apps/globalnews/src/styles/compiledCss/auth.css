@@ -209,6 +209,15 @@
   width: 200px;
 }
 
+.gn-success-msg {
+  background-color: #C9ADA7;
+  font-weight: 500;
+  padding: 5px;
+  border-radius: 12px;
+  width: 90%;
+  margin: auto;
+}
+
 @media (max-width: 576px) {
   .gn-auth-form-wrapper {
     width: 300px;
