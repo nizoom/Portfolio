@@ -12,3 +12,11 @@ export const validateSignup = (email, pw, cfmPw) => {
     return false;
   }
 };
+
+export const validateLogin = (email, pw) => {
+  if (email && pw) {
+    return true;
+  } else {
+    return false;
+  }
+};
