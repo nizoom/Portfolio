@@ -2,7 +2,6 @@ import { uuidv4 } from "@firebase/util";
 import React from "react";
 import "../../styles/compiledCss/bulletin.css";
 const NewsBulletin = (props) => {
-  console.log(props.newsArray);
   const newsArr = props.newsArray[0];
   // newsArr.forEach((article) => {
   //   console.log(article.provider[0].name);

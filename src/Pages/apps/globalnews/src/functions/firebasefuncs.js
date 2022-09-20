@@ -6,7 +6,9 @@ import {
   onValue,
   child,
   push,
+  remove,
 } from "firebase/database";
+import { findAllInRenderedTree } from "react-dom/test-utils";
 export const validateSignup = (email, pw, cfmPw) => {
   // console.log(email);
   // console.log(pw);
@@ -49,8 +51,6 @@ function initUser(userId) {
   // );
 }
 
-// REMOVE LOCATION FROM SAVED
-
 export const saveLocation = (uid, locationData) => {
   const db = getDatabase();
   // const [locationName, latlng] = locationData;
@@ -66,4 +66,60 @@ export const saveLocation = (uid, locationData) => {
     .catch((error) => {
       console(error);
     });
+};
+
+// GET SAVED LOCATIONS
+
+export const getSavedLocations = async (uid) => {
+  const db = getDatabase();
+  const locationsRef = ref(db, "users/" + uid + "/savedLocations");
+  let savedLocations;
+  await onValue(locationsRef, (snapshot) => {
+    savedLocations = snapshot.val();
+    // if (!snapshot.exists() || savedLocations === null) {
+    //   return false;
+    // }
+  });
+  const sortedLocations = sortLocationObject(savedLocations);
+  return sortedLocations;
+};
+
+// SORT LOCATIONS OBJECT
+
+function sortLocationObject(locations) {
+  if (locations === undefined || locations === null) {
+    // no locations saved yet
+    return false;
+  }
+  const arrOfObjects = Object.entries(locations);
+  const organizedObjects = arrOfObjects.map((el) => {
+    const locationId = el["0"];
+    const { latlng, locationName } = el["1"];
+    return {
+      locationId: locationId,
+      locationName: locationName,
+      latlng: latlng,
+    };
+  });
+  return organizedObjects;
+}
+
+// REMOVE LOCATION FROM SAVED
+
+export const removeLocationFromSaved = (uid, locationId) => {
+  const db = getDatabase();
+  const locationsRef = ref(
+    db,
+    "users/" + uid + "/savedLocations/" + locationId
+  );
+  return remove(locationsRef)
+    .then(function () {
+      console.log("Remove succeeded.");
+      return { status: true };
+    })
+    .catch(function (error) {
+      console.log("Remove failed: " + error.message);
+      return { status: false, msg: error.message };
+    });
+  // console.log(locationsRef);
 };

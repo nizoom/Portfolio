@@ -216,7 +216,7 @@
   transform-origin: top center;
 }
 
-.preload {
+.firstLoad {
   display: none;
 }
 
@@ -232,6 +232,7 @@
   border-radius: 3px;
 }
 .place-item p {
+  text-align: left;
   margin: 2px;
 }
 .place-item .remove-place-btn {
@@ -246,6 +247,7 @@
   align-items: center;
   background-color: #22223B;
   color: #C9ADA7;
+  cursor: pointer;
 }
 .place-item .remove-place-btn span {
   margin-bottom: 4px;
@@ -271,6 +273,25 @@
   }
   100% {
     transform: scaleY(0);
+  }
+}
+.fall {
+  animation: fallAway forwards 1s ease-out 1;
+}
+
+@keyframes fallAway {
+  0% {
+    transform: rotateZ(0deg);
+    top: 0;
+    opacity: 1;
+  }
+  25% {
+    transform: rotateZ(-15deg);
+  }
+  100% {
+    top: 300px;
+    transform: rotateZ(-5deg);
+    opacity: 0;
   }
 }
 .currentlocation-component-wrapper {

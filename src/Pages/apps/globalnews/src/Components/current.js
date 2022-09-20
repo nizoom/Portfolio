@@ -11,11 +11,11 @@ const CurrentLocation = (props) => {
     };
     const result = await saveLocation(uid, locationData);
     setTimeout(() => {
+      props.triggerSaveRerender();
       setPulse(false);
     }, 2000);
   };
   const [pulse, setPulse] = useState(false);
-
   return (
     <div
       className={

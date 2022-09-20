@@ -30,9 +30,18 @@ const GNHomePage = () => {
   const [homeState, setHomeState] = useState({
     currentLocation: "Click a location",
     articles: [],
-    latlng: [],
+    latlng: false,
   });
 
+  const [triggerStaus, setTriggerStatus] = useState(false);
+  const saveTrigger = () => {
+    // triggers rerender of saved locations list
+    console.log("fired");
+    setTriggerStatus(true);
+    setTimeout(() => {
+      setTriggerStatus(false);
+    }, 1000);
+  };
   const updateState = (data) => {
     if (data == null) {
       // sometimes data is not iterable - no news or place
@@ -62,9 +71,10 @@ const GNHomePage = () => {
         <CurrentLocation
           locationStr={homeState.currentLocation}
           latlng={homeState.latlng}
+          triggerSaveRerender={saveTrigger}
         />
         <Map updateState={updateState} />
-        <SavedPlacesDropdown />
+        <SavedPlacesDropdown triggerListener={triggerStaus} />
       </div>
       <div className="right-column">
         <button className="logout-btn" onClick={logout}>
