@@ -30,6 +30,7 @@ const GNHomePage = () => {
   const [homeState, setHomeState] = useState({
     currentLocation: "Click a location",
     articles: [],
+    latlng: [],
   });
 
   const updateState = (data) => {
@@ -41,25 +42,27 @@ const GNHomePage = () => {
         currentLocation: "No news available here. Please try somewhere else.",
       });
     } else {
-      const [articles, localLocation, countryLocation] = data;
+      const [articles, localLocation, countryLocation, latlng] = data;
 
-      const locationStr = `${localLocation}, ${countryLocation}`;
+      const locationStr = !localLocation
+        ? `${countryLocation}`
+        : `${localLocation}, ${countryLocation}`;
       localLocation.replaceAll(undefined, "");
       setHomeState({
         articles: articles == undefined ? [] : articles,
         currentLocation: locationStr,
+        latlng: latlng,
       });
-      // console.log("fired");
-      // console.log(news);
-      // console.log(localLocation);
-      // console.log(countryLocation);
     }
   };
   return (
     <div className="homepage-wrapper">
       <div className="left-column">
         <h1 className="GN-title"> Global News </h1>
-        <CurrentLocation locationStr={homeState.currentLocation} />
+        <CurrentLocation
+          locationStr={homeState.currentLocation}
+          latlng={homeState.latlng}
+        />
         <Map updateState={updateState} />
         <SavedPlacesDropdown />
       </div>

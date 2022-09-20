@@ -17,9 +17,10 @@ const AddMarker = (props) => {
   useMapEvents({
     // a hook from leaflet library
     click: (e) => {
-      setPosition(e.latlng);
+      const latlng = e.latlng;
+      setPosition(latlng);
 
-      getPlaceName(e.latlng).then((response) => {
+      getPlaceName(latlng).then((response) => {
         // Get address components from google maps API results
         // gather placenames from google maps nested address categories/objects in the response^
         let articles = [];
@@ -77,7 +78,7 @@ const AddMarker = (props) => {
 
           //further isolates the country information or makes it an obsolete factor if
           //the user clicked a body of water for example
-          let country = countryObj.length > 0 ? countryObj[0].long_name : null;
+          let country = countryObj.length > 0 ? countryObj[0].long_name : ""; //was once null?
 
           // Filter google maps results based on entries containing locality
 
@@ -88,7 +89,7 @@ const AddMarker = (props) => {
 
           //further isolate those names
           let localArea =
-            localAreaResults.length > 0 ? localAreaResults[0].long_name : null;
+            localAreaResults.length > 0 ? localAreaResults[0].long_name : "";
 
           // gets aministrative area names which are formatted differently from localitise
           // in googles response obj
@@ -150,6 +151,7 @@ const AddMarker = (props) => {
                     props.dataToMap([
                       articles,
                       countryOrNonNationalName,
+                      latlng,
                       // props.userFilter,
                     ]);
                   } else {
@@ -161,6 +163,7 @@ const AddMarker = (props) => {
                         articles,
                         successfulPlaceName,
                         countryOrNonNationalName,
+                        latlng,
                         // props.userFilter,
                       ]);
                     } else {
@@ -170,6 +173,7 @@ const AddMarker = (props) => {
                       props.dataToMap([
                         articles,
                         countryOrNonNationalName,
+                        latlng,
                         // props.userFilter,
                       ]);
                     }
@@ -178,7 +182,7 @@ const AddMarker = (props) => {
               });
             } //if no news is found
             if (articles.length === 0) {
-              props.dataToMap(null);
+              props.dataToMap(undefined);
             }
           })();
         }

@@ -1,4 +1,12 @@
-import { getDatabase, ref, set, update, onValue } from "firebase/database";
+import {
+  getDatabase,
+  ref,
+  set,
+  update,
+  onValue,
+  child,
+  push,
+} from "firebase/database";
 export const validateSignup = (email, pw, cfmPw) => {
   // console.log(email);
   // console.log(pw);
@@ -46,9 +54,9 @@ function initUser(userId) {
 export const saveLocation = (uid, locationData) => {
   const db = getDatabase();
   // const [locationName, latlng] = locationData;
-  //  skip key ?
+  const newLocationKey = push(child(ref(db), "savedLocations")).key;
   const updates = {};
-  updates[`users/${uid}/savedLocations`] = locationData;
+  updates[`users/${uid}/savedLocations/${newLocationKey}`] = locationData;
 
   return update(ref(db), updates)
     .then(() => {
