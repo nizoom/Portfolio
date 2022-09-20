@@ -37,7 +37,7 @@ class App extends Component {
           <Route exact path="/Contact" component={ContactPage} />
           <Route exact path="/resume" component={Resume} />
 
-          <Route exact path="/globalnews" component={Globalnews} />
+          {/* <Route exact path="/globalnews" component={Globalnews} /> */}
           <Route exact path="/globalnews/landingpage" component={LandingPage} />
           <Route exact path="/globalnews/login" component={GNLogin} />
           <Route exact path="/globalnews/signup" component={GNSignup} />

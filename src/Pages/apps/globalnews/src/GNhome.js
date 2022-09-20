@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./styles/compiledCss/home.css";
 import SavedPlacesDropdown from "./Components/savedplaces";
 import CurrentLocation from "./Components/current";
@@ -7,11 +7,20 @@ import NewsBulletin from "./Components/Bulletin/bulletin";
 import { auth } from "./config/firebase";
 import { signOut } from "firebase/auth";
 import { useHistory } from "react-router-dom";
+import { checkUserInDB } from "./functions/firebasefuncs";
 
 const GNHomePage = () => {
   // const user = useAuthState(auth);
-  console.log(auth.currentUser?.displayName);
-  console.log(auth.currentUser);
+  // console.log(auth.currentUser?.displayName);
+  // console.log(auth.currentUser);
+
+  useEffect(() => {
+    if (!auth.currentUser) {
+      history.push("/globalnews/landingpage");
+      return;
+    }
+    checkUserInDB(auth.currentUser?.uid);
+  }, []);
   const history = useHistory();
   const logout = async () => {
     await signOut(auth);

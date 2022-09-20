@@ -4,8 +4,6 @@ import "../../styles/compiledCss/bulletin.css";
 const NewsBulletin = (props) => {
   console.log(props.newsArray);
   const newsArr = props.newsArray[0];
-  // const sizeArr = ["small", "medium", "large"];
-
   // newsArr.forEach((article) => {
   //   console.log(article.provider[0].name);
   // });
@@ -58,12 +56,3 @@ const NewsBulletin = (props) => {
   );
 };
 export default NewsBulletin;
-
-{
-  /* <div className="card card-small"></div>
-          <div className="card card-small"></div>
-          <div className="card card-medium"></div>
-          <div className="card card-small"></div>
-          <div className="card card-small"></div>
-          <div className="card card-large"></div> */
-}
