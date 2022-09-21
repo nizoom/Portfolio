@@ -41,7 +41,8 @@ const SavedPlacesDropdown = (props) => {
     }
   };
 
-  const handleRemoveLocation = async (locationId, btnId) => {
+  const handleRemoveLocation = async (e, locationId, btnId) => {
+    e.stopPropagation();
     const uid = auth.currentUser?.uid;
     setActivLocationId(666);
     const result = await removeLocationFromSaved(uid, locationId);
@@ -60,7 +61,6 @@ const SavedPlacesDropdown = (props) => {
     const uid = auth.currentUser?.uid;
     const savedLocations = await getSavedLocations(uid);
     if (savedLocations) {
-      console.log(savedLocations);
       setLocationsList(savedLocations);
     } else {
       setLocationsList([{ locationName: "Try saving a location first" }]);
@@ -115,7 +115,7 @@ const SavedPlacesDropdown = (props) => {
         >
           <button
             className={determineLineItemClass(index, "delete-btn")}
-            onClick={() => handleRemoveLocation(locationId, index)}
+            onClick={(e) => handleRemoveLocation(e, locationId, index)}
           >
             <span> - </span>
           </button>

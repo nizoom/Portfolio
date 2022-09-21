@@ -51,9 +51,9 @@ function initUser(userId) {
   // );
 }
 
+// SAVE LOCATION
 export const saveLocation = (uid, locationData) => {
   const db = getDatabase();
-  // const [locationName, latlng] = locationData;
   const newLocationKey = push(child(ref(db), "savedLocations")).key;
   const updates = {};
   updates[`users/${uid}/savedLocations/${newLocationKey}`] = locationData;
@@ -91,14 +91,16 @@ function sortLocationObject(locations) {
     // no locations saved yet
     return false;
   }
+  // console.log(locations);
   const arrOfObjects = Object.entries(locations);
   const organizedObjects = arrOfObjects.map((el) => {
     const locationId = el["0"];
     const { latlng, locationName } = el["1"];
+    const formattedLatLng = JSON.parse(latlng.replace(/\\"/g, '"'));
     return {
       locationId: locationId,
       locationName: locationName,
-      latlng: latlng,
+      latlng: formattedLatLng,
     };
   });
   return organizedObjects;

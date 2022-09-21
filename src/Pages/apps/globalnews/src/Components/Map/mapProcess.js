@@ -1,6 +1,6 @@
 import getPlaceName from "./getplacename";
 import getNews from "./getNews";
-export const getAndprocessPlaceName = (latlng, callback) => {
+export const getNewsResultsFromPosition = (latlng, callback) => {
   getPlaceName(latlng).then((response) => {
     let articles = [];
 
@@ -121,52 +121,20 @@ export const getAndprocessPlaceName = (latlng, callback) => {
               x += 500; // stops loop at next iteration
 
               if (country === null) {
-                // passing data for body of water
-                // or nonnational click.
-                // console.log(' passing data for body of water or nonnational click. Here country represents')
-                //   props.dataToMap([
-                //     articles,
-                //     countryOrNonNationalName,
-                //     latlng,
-
-                //   ]);
                 callback([articles, countryOrNonNationalName, latlng]);
               } else {
-                //typical conutry click
-                // if (props.localityStatus) {
-                //checking if locality box is checked off
-                // console.log('typical local conutry click')
-                //   props.dataToMap([
-                //     articles,
-                //     successfulPlaceName,
-                //     countryOrNonNationalName,
-                //     latlng,
-                // props.userFilter,
-                //   ]);
                 callback([
                   articles,
                   successfulPlaceName,
                   countryOrNonNationalName,
                   latlng,
                 ]);
-                // }
-                // else {
-                //   // not checked exclude locality
-
-                //   // console.log('not checked - national level click ')
-                //   props.dataToMap([
-                //     articles,
-                //     countryOrNonNationalName,
-                //     latlng,
-                //     // props.userFilter,
-                //   ]);
-                // }
               }
             }
           });
         } //if no news is found
         if (articles.length === 0) {
-          props.dataToMap(undefined);
+          callback(undefined);
         }
       })();
     }

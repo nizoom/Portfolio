@@ -31,7 +31,6 @@ const GNHomePage = () => {
     currentLocation: "Click a location",
     articles: [],
     latlng: false,
-    // fromSavedLocation: false,
   });
 
   const [triggerStaus, setTriggerStatus] = useState(false);
@@ -49,10 +48,10 @@ const GNHomePage = () => {
       setHomeState({
         articles: [],
         currentLocation: "No news available here. Please try somewhere else.",
+        fromSaved: false,
       });
     } else {
       const [articles, localLocation, countryLocation, latlng] = data;
-
       const locationStr = !localLocation
         ? `${countryLocation}`
         : `${localLocation}, ${countryLocation}`;
@@ -61,19 +60,18 @@ const GNHomePage = () => {
         articles: articles == undefined ? [] : articles,
         currentLocation: locationStr,
         latlng: latlng,
-        // from saved
+        fromSaved: false,
       });
     }
   };
 
   const passSavedSelection = (place) => {
-    console.log(place);
-    // setHomeState({
-    //   currentLocation: place.locationName,
-    //   articles: [],
-    //   latlng: place.latlng,
-    //   // fromSavedLocation: false
-    // });
+    setHomeState({
+      currentLocation: place.locationName,
+      articles: [],
+      latlng: place.latlng,
+      fromSaved: true,
+    });
   };
   return (
     <div className="homepage-wrapper">

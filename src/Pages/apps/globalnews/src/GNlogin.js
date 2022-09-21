@@ -20,7 +20,6 @@ const GNLogin = () => {
         .then((userCredential) => {
           // Signed in
           const user = userCredential.user;
-          console.log(user);
           history.push("/globalnews/home");
 
           // ...
