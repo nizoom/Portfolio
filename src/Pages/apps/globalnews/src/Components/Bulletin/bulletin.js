@@ -47,7 +47,7 @@ const NewsBulletin = (props) => {
       ) : (
         <div className="bulletin-component-wrapper-no-data">
           <p className="default-bulletin">
-            Click and a location to get your local paper
+            Click a location to get your local paper
           </p>
         </div>
       )}
