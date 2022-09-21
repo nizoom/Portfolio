@@ -1,5 +1,5 @@
 import getPlaceName from "./getplacename";
-
+import getNews from "./getNews";
 export const getAndprocessPlaceName = (latlng, callback) => {
   getPlaceName(latlng).then((response) => {
     let articles = [];
