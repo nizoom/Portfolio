@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { MapContainer, TileLayer, Marker, useMapEvents } from "react-leaflet";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
@@ -12,13 +12,6 @@ const AddMarker = (props) => {
   //getPlaceName that will reverse geolocate that data and return a human readable address
 
   const [position, setPosition] = useState(null); // hook assists with setting marker position on map
-
-  // useEffect(() => {
-  //   const savedLocationData = props.selectedFromSavedLocation;
-  //   if (savedLocationData.latlng !== undefined) {
-  //     mapAndNewsProcess(savedLocationData.latlng);
-  //   }
-  // }, [props.selectedFromSavedLocation]);
 
   const mapAndNewsProcess = (latlng) => {
     setPosition(latlng);
@@ -41,7 +34,7 @@ const AddMarker = (props) => {
           (placeObj) => placeObj.address_components
         );
 
-        //this section until line 62 filters out the irrelevant data from the address objects
+        //this section filters out the irrelevant data from the address objects
         const filterAddresses = addressComponentsArray.map((component) => {
           let addressObjects = component.filter(function (item) {
             return determineRelevance(item.types);
@@ -235,3 +228,10 @@ const Map = (props) => {
 };
 
 export default Map;
+
+// useEffect(() => {
+//   const savedLocationData = props.selectedFromSavedLocation;
+//   if (savedLocationData.latlng !== undefined) {
+//     mapAndNewsProcess(savedLocationData.latlng);
+//   }
+// }, [props.selectedFromSavedLocation]);
