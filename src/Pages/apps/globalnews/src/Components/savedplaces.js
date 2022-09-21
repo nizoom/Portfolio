@@ -17,7 +17,6 @@ const SavedPlacesDropdown = (props) => {
 
   const toggleDropdownClass = () => {
     if (dropdwnStatus.firstLoad) {
-      console.log("here0");
       fetchLocationsFromFB();
       setDropdwnStatus({
         firstLoad: false,
@@ -26,7 +25,6 @@ const SavedPlacesDropdown = (props) => {
       });
     } else {
       if (!dropdwnStatus.status) {
-        console.log("here1");
         fetchLocationsFromFB();
         setDropdwnStatus({
           firstLoad: false,
@@ -34,7 +32,6 @@ const SavedPlacesDropdown = (props) => {
           className: "savedplaces-list-closed",
         });
       } else {
-        console.log("here2");
         setDropdwnStatus({
           firstLoad: false,
           status: false,
@@ -43,23 +40,10 @@ const SavedPlacesDropdown = (props) => {
       }
     }
   };
-  const [removalAnimation, setRemovalAnimation] = useState({
-    active: false,
-    locationId: "",
-  });
 
-  const determineLocationClass = (locationId) => {
-    // return removalAnimation.active && removalAnimation.locationId === locationId
-    //   ? "fall"
-    //   : "place-item";
-
-    if (removalAnimation.active && removalAnimation.locationId === locationId) {
-      return "fall";
-    }
-    return "place-item";
-  };
   const handleRemoveLocation = async (locationId, btnId) => {
     const uid = auth.currentUser?.uid;
+    setActivLocationId(666);
     const result = await removeLocationFromSaved(uid, locationId);
     if (result.status) {
       // rerender without that item
@@ -88,20 +72,34 @@ const SavedPlacesDropdown = (props) => {
     if (props.triggerListener) {
       console.log("new saved");
       setActiveBtnRemovalId(666);
+      setActivLocationId(666);
       fetchLocationsFromFB();
       renderLocations();
     }
   }, [props.triggerListener]);
 
-  const handleSelectedFromSaved = (place) => {
+  const handleSelectedFromSaved = (place, index) => {
+    setActivLocationId(index);
     props.passSavedSelection(place);
+    const timer = setTimeout(() => {
+      //wait for animation to happen then fetch
+      setActivLocationId(666);
+    }, 1000);
+    clearTimeout(timer);
   };
 
   const [activeBtnRemovalId, setActiveBtnRemovalId] = useState(666);
-  const determineRemovalBtnClass = (btnId) => {
-    return activeBtnRemovalId === btnId
-      ? "remove-place-btn removal-pulse"
-      : "remove-place-btn";
+  const [activeLocationId, setActivLocationId] = useState(666);
+  const determineLineItemClass = (btnId, btnType) => {
+    if (btnType === "delete-btn") {
+      return activeBtnRemovalId === btnId
+        ? "remove-place-btn removal-pulse"
+        : "remove-place-btn";
+    } else {
+      return activeLocationId === btnId
+        ? "place-item pulse-animation"
+        : "place-item";
+    }
   };
   const renderLocations = () => {
     return locationsList.map((place, index) => {
@@ -112,11 +110,11 @@ const SavedPlacesDropdown = (props) => {
           value={place}
           key={key}
           // className={() => determineLocationClass(locationId)}
-          className="place-item"
-          onClick={() => handleSelectedFromSaved(place)}
+          className={determineLineItemClass(index, "location-btn")}
+          onClick={() => handleSelectedFromSaved(place, index)}
         >
           <button
-            className={determineRemovalBtnClass(index)}
+            className={determineLineItemClass(index, "delete-btn")}
             onClick={() => handleRemoveLocation(locationId, index)}
           >
             <span> - </span>

@@ -200,8 +200,7 @@
   transition: height 1s;
   max-height: 0;
   margin: 0;
-  transition: max-height 0.15s ease-out;
-  transform-origin: top center;
+  transition: max-height 0.1s ease-out;
 }
 
 .savedplaces-list {
@@ -214,7 +213,6 @@
   border-radius: 6px 6px 12px 12px;
   height: 100%;
   transition: height 1s;
-  transform-origin: top center;
   max-height: 1000px;
   transition: max-height 0.25s ease-in;
 }

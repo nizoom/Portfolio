@@ -67,6 +67,7 @@ const GNHomePage = () => {
   };
 
   const passSavedSelection = (place) => {
+    console.log(place);
     // setHomeState({
     //   currentLocation: place.locationName,
     //   articles: [],
