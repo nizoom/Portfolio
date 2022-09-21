@@ -31,12 +31,12 @@ const GNHomePage = () => {
     currentLocation: "Click a location",
     articles: [],
     latlng: false,
+    // fromSavedLocation: false,
   });
 
   const [triggerStaus, setTriggerStatus] = useState(false);
   const saveTrigger = () => {
     // triggers rerender of saved locations list
-    console.log("fired");
     setTriggerStatus(true);
     setTimeout(() => {
       setTriggerStatus(false);
@@ -61,8 +61,18 @@ const GNHomePage = () => {
         articles: articles == undefined ? [] : articles,
         currentLocation: locationStr,
         latlng: latlng,
+        // from saved
       });
     }
+  };
+
+  const passSavedSelection = (place) => {
+    // setHomeState({
+    //   currentLocation: place.locationName,
+    //   articles: [],
+    //   latlng: place.latlng,
+    //   // fromSavedLocation: false
+    // });
   };
   return (
     <div className="homepage-wrapper">
@@ -73,8 +83,11 @@ const GNHomePage = () => {
           latlng={homeState.latlng}
           triggerSaveRerender={saveTrigger}
         />
-        <Map updateState={updateState} />
-        <SavedPlacesDropdown triggerListener={triggerStaus} />
+        <Map updateState={updateState} selectedFromSavedLocation={homeState} />
+        <SavedPlacesDropdown
+          triggerListener={triggerStaus}
+          passSavedSelection={passSavedSelection}
+        />
       </div>
       <div className="right-column">
         <button className="logout-btn" onClick={logout}>

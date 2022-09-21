@@ -17,25 +17,28 @@ const SavedPlacesDropdown = (props) => {
 
   const toggleDropdownClass = () => {
     if (dropdwnStatus.firstLoad) {
+      console.log("here0");
       fetchLocationsFromFB();
       setDropdwnStatus({
         firstLoad: false,
         status: false,
-        className: "firstLoad",
+        className: "savedplaces-list",
       });
     } else {
       if (!dropdwnStatus.status) {
+        console.log("here1");
         fetchLocationsFromFB();
         setDropdwnStatus({
           firstLoad: false,
           status: true,
-          className: "savedplaces-list",
+          className: "savedplaces-list-closed",
         });
       } else {
+        console.log("here2");
         setDropdwnStatus({
           firstLoad: false,
           status: false,
-          className: "savedplaces-list-closed",
+          className: "savedplaces-list",
         });
       }
     }
@@ -55,13 +58,17 @@ const SavedPlacesDropdown = (props) => {
     }
     return "place-item";
   };
-  const handleRemoveLocation = async (locationId) => {
+  const handleRemoveLocation = async (locationId, btnId) => {
     const uid = auth.currentUser?.uid;
     const result = await removeLocationFromSaved(uid, locationId);
     if (result.status) {
       // rerender without that item
-      setRemovalAnimation({ active: true, locationId: locationId });
-      fetchLocationsFromFB();
+      // setRemovalAnimation({ active: true, locationId: locationId });
+      setActiveBtnRemovalId(btnId);
+      setTimeout(() => {
+        //wait for animation to happen then fetch
+        fetchLocationsFromFB();
+      }, 1000);
     }
   };
   const [locationsList, setLocationsList] = useState([]);
@@ -77,31 +84,42 @@ const SavedPlacesDropdown = (props) => {
   };
 
   useEffect(() => {
+    // if a new save has occured stay open
     if (props.triggerListener) {
+      console.log("new saved");
+      setActiveBtnRemovalId(666);
+      fetchLocationsFromFB();
       renderLocations();
-      // if drop down is already open then leave open
-      if (!dropdwnStatus.status) {
-        toggleDropdownClass();
-      }
     }
   }, [props.triggerListener]);
 
+  const handleSelectedFromSaved = (place) => {
+    props.passSavedSelection(place);
+  };
+
+  const [activeBtnRemovalId, setActiveBtnRemovalId] = useState(666);
+  const determineRemovalBtnClass = (btnId) => {
+    return activeBtnRemovalId === btnId
+      ? "remove-place-btn removal-pulse"
+      : "remove-place-btn";
+  };
   const renderLocations = () => {
-    return locationsList.map((place) => {
+    return locationsList.map((place, index) => {
       const locationId = place.locationId;
+      const key = uuidv4();
       return (
         <li
           value={place}
-          key={uuidv4()}
+          key={key}
           // className={() => determineLocationClass(locationId)}
           className="place-item"
+          onClick={() => handleSelectedFromSaved(place)}
         >
           <button
-            className="remove-place-btn"
-            onClick={() => handleRemoveLocation(locationId)}
+            className={determineRemovalBtnClass(index)}
+            onClick={() => handleRemoveLocation(locationId, index)}
           >
-            {" "}
-            <span> - </span>{" "}
+            <span> - </span>
           </button>
           <p>{place.locationName}</p>
         </li>
