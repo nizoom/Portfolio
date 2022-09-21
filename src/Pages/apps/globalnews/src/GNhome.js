@@ -10,15 +10,13 @@ import { useHistory } from "react-router-dom";
 import { checkUserInDB } from "./functions/firebasefuncs";
 
 const GNHomePage = () => {
-  // const user = useAuthState(auth);
-  // console.log(auth.currentUser?.displayName);
-  // console.log(auth.currentUser);
-
   useEffect(() => {
-    if (!auth.currentUser) {
-      history.push("/globalnews/landingpage");
-      return;
-    }
+    auth.onAuthStateChanged(function (user) {
+      if (!user) {
+        history.push("/globalnews/landingpage");
+      }
+    });
+
     checkUserInDB(auth.currentUser?.uid);
   }, []);
   const history = useHistory();
@@ -90,8 +88,7 @@ const GNHomePage = () => {
       </div>
       <div className="right-column">
         <button className="logout-btn" onClick={logout}>
-          {" "}
-          Logout{" "}
+          Logout
         </button>
         <NewsBulletin newsArray={homeState.articles} />
       </div>

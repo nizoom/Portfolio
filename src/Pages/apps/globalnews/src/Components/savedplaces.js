@@ -15,7 +15,9 @@ const SavedPlacesDropdown = (props) => {
     className: "firstLoad",
   });
 
-  const toggleDropdownClass = () => {
+  const toggleDropdownClass = (e) => {
+    e.stopPropagation();
+    setActiveBtnRemovalId(666);
     if (dropdwnStatus.firstLoad) {
       fetchLocationsFromFB();
       setDropdwnStatus({
@@ -75,6 +77,15 @@ const SavedPlacesDropdown = (props) => {
       setActivLocationId(666);
       fetchLocationsFromFB();
       renderLocations();
+
+      // on refresh
+      window.onbeforeunload = function () {
+        fetchLocationsFromFB();
+        renderLocations();
+      };
+      return () => {
+        window.onbeforeunload = null;
+      };
     }
   }, [props.triggerListener]);
 
@@ -130,7 +141,7 @@ const SavedPlacesDropdown = (props) => {
       <label
         htmlFor="locations"
         className="locations-dropdwn-label"
-        onClick={toggleDropdownClass}
+        onClick={(e) => toggleDropdownClass(e)}
       >
         Saved locations
       </label>

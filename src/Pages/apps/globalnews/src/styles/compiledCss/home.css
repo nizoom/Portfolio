@@ -201,6 +201,7 @@
   max-height: 0;
   margin: 0;
   transition: max-height 0.1s ease-out;
+  overflow: hidden;
 }
 
 .savedplaces-list {
@@ -350,11 +351,13 @@
 }
 
 .right-column {
+  max-height: fit-content;
   background-color: #9A8C98;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+  margin-top: 100px;
 }
 
 .logout-btn {
@@ -377,6 +380,9 @@
     display: flex;
     flex-direction: column;
   }
+  .right-column {
+    margin-top: 0;
+  }
 }
 @media (max-width: 576px) {
   .map-container {
@@ -396,6 +402,25 @@
     width: 100px;
     margin-right: 20px;
     margin-top: 30px;
+  }
+  .add-location-btn {
+    height: 40px;
+    width: 40px;
+  }
+  .add-location-btn span {
+    color: #22223B;
+  }
+  .currentlocation-component-wrapper {
+    width: 95%;
+    height: 60px;
+  }
+  .current-location {
+    letter-spacing: 0.01px;
+    text-align: center;
+  }
+  .place-item .remove-place-btn {
+    padding: 4%;
+    align-self: center;
   }
 }
 
