@@ -134,25 +134,6 @@ const HomePage = () => {
             />
 
             <Cards
-              alt="Build NYC"
-              appTitle="Build NYC"
-              stackList="React JS, LeafletJS, ChartJS, SoQueryLanguage, NodeJS, ExpressJS."
-              url="https://build-nyc.herokuapp.com/"
-              githubUrl="https://github.com/nizoom/BuildNYC"
-              Description={
-                <p className="app-description">
-                  {" "}
-                  Data visualization interface that illustrates building
-                  development in NYC.{" "}
-                </p>
-              }
-              position="three"
-              status={state.popupStatus}
-              logo={NYCIcon}
-              btnOneTxt="Try now"
-            />
-
-            <Cards
               alt="Echo Chamber"
               appTitle="Echochamber"
               stackList="ReactJS, Material UI, NodeJS, ExpressJS."
@@ -187,6 +168,24 @@ const HomePage = () => {
               status={state.popupStatus}
               logo={tyIcon}
               btnOneTxt="View ReadMe"
+            />
+            <Cards
+              alt="Build NYC"
+              appTitle="Build NYC"
+              stackList="React JS, LeafletJS, ChartJS, SoQueryLanguage, NodeJS, ExpressJS."
+              url="https://build-nyc.herokuapp.com/"
+              githubUrl="https://github.com/nizoom/BuildNYC"
+              Description={
+                <p className="app-description">
+                  {" "}
+                  Data visualization interface that illustrates building
+                  development in NYC.{" "}
+                </p>
+              }
+              position="three"
+              status={state.popupStatus}
+              logo={NYCIcon}
+              btnOneTxt="Try now"
             />
             <Cards
               alt="Twitter API Clone"

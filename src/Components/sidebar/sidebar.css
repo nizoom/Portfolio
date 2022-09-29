@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
+.bars-wrapper{
+  cursor: pointer;
+}
+
 .nav{
   position: absolute;
   top: 0;
@@ -49,20 +53,6 @@
   0% { -webkit-transform: translateX(0%); }
   100% { -webkit-transform: translateX(100%); }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
