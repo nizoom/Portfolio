@@ -96,6 +96,25 @@ const HomePage = () => {
 
           <section className="apps-section">
             <Cards
+              alt="FeedSee"
+              appTitle="FeedSee"
+              stackList="ReactJS, TypeScript, Chakra UI, NodeJS, ExpressJS."
+              url="https://github.com/nizoom/FeedSee"
+              githubUrl="https://github.com/nizoom/FeedSee"
+              Description={
+                <p className="app-description">
+                  {" "}
+                  Web scraping app that uses Twitter's API to recreate a
+                  personal feed.
+                </p>
+              }
+              position="six"
+              status={state.popupStatus}
+              logo={EchoIcon}
+              btnOneTxt="View ReadMe"
+            />
+
+            <Cards
               alt="Global News"
               appTitle="Global News"
               url="http://nissimram.com/#/globalnews/landingpage"
@@ -134,25 +153,6 @@ const HomePage = () => {
             />
 
             <Cards
-              alt="Echo Chamber"
-              appTitle="Echochamber"
-              stackList="ReactJS, Material UI, NodeJS, ExpressJS."
-              url="https://entertheechochamber.herokuapp.com/"
-              githubUrl="https://github.com/nizoom/Echochamber"
-              Description={
-                <p className="app-description">
-                  {" "}
-                  Web scraping app that uses Twitter's API to recreate a
-                  personal feed.
-                </p>
-              }
-              position="six"
-              status={state.popupStatus}
-              logo={EchoIcon}
-              btnOneTxt="Try now"
-            />
-
-            <Cards
               alt="Thank you Email Automation"
               appTitle="Thank You Email Automation"
               stackList=" ExpressJS, NodeJS, NodeMailer, and Handlebars."
@@ -169,7 +169,7 @@ const HomePage = () => {
               logo={tyIcon}
               btnOneTxt="View ReadMe"
             />
-            <Cards
+            {/* <Cards
               alt="Build NYC"
               appTitle="Build NYC"
               stackList="React JS, LeafletJS, ChartJS, SoQueryLanguage, NodeJS, ExpressJS."
@@ -186,7 +186,7 @@ const HomePage = () => {
               status={state.popupStatus}
               logo={NYCIcon}
               btnOneTxt="Try now"
-            />
+            /> */}
             <Cards
               alt="Twitter API Clone"
               appTitle="Twitter API Clone"
