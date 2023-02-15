@@ -2,8 +2,7 @@ import React from "react";
 import "./styles/compiledCss/landingpage.css";
 // import MonitorPNG from "./Images/graphic.png";
 import { Link, useHistory } from "react-router-dom";
-
-import { auth, provider } from "./config/firebase";
+import { auth, provider } from "./config/firebase.js";
 import { signInWithPopup } from "firebase/auth";
 const LandingPage = () => {
   const history = useHistory();
