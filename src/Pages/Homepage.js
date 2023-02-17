@@ -117,7 +117,7 @@ const HomePage = () => {
             <Cards
               alt="Global News"
               appTitle="Global News"
-              url="http://nissimram.com/#/globalnews/landingpage"
+              url="http://localhost:3000/#/globalnews/"
               // "http://nissimram.com/#/globalnews/landingpage"
               githubUrl="https://github.com/nizoom/Portfolio/tree/main/src/Pages/apps/globalnews/src"
               stackList="ReactJS, React Router, Azure, Google Cloud, Firebase."

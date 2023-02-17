@@ -6,12 +6,27 @@
   width: 100%;
 }
 
-.global-news-title {
+.gn-landingpage-wrapper h1,
+h2 {
   margin: 0;
+}
+
+.gn-landingpage-wrapper section {
+  width: 70%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.global-news-title {
+  margin-top: 90px;
   font-weight: 400;
   font-size: 31.25px;
   color: #F2E9E4;
-  padding: 50px 0 0 60px;
 }
 
 .gn-copy-wrapper {
@@ -34,35 +49,8 @@
   color: #F2E9E4;
 }
 
-.gn-login-wrapper {
-  background-color: #22223B;
-  height: 450px;
-  width: 450px;
-  border-radius: 32px;
-  margin: auto;
-  margin-top: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-}
-.gn-login-wrapper .gn-traditional-logins-wrapper {
-  display: flex;
-  gap: 20px;
-}
-.gn-login-wrapper .gn-traditional-logins-wrapper button {
-  background-color: #4A4E69;
-  color: #F2E9E4;
-  font-weight: 700;
-  border: none;
-  width: 150px;
-  height: 50px;
-  border-radius: 16px;
-  cursor: pointer;
-}
-.gn-login-wrapper p {
-  color: #F2E9E4;
-  font-size: 20px;
+.gn-main-copy {
+  padding-top: 30px;
 }
 
 .gn-google-link {
@@ -74,12 +62,31 @@
   letter-spacing: -1px;
   cursor: pointer;
   margin-left: 5px;
+  color: white;
 }
 
 .gn-graphic {
   position: absolute;
   right: 10px;
   bottom: 20px;
+}
+
+.lndpg-btns-wrapper {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.lndpg-btns-wrapper button {
+  background-color: rgb(74, 78, 105);
+  border: 2px solid white;
+  color: white;
+  border-radius: 20px;
+  padding: 10px 20px;
+  width: 100px;
+  font-size: 16px;
+  cursor: pointer;
 }
 
 @media (max-width: 992px) {
@@ -94,9 +101,6 @@
   .gn-sub-copy {
     width: 80%;
     text-align: center;
-  }
-  .gn-login-wrapper {
-    height: 400px;
   }
 }
 @media (max-width: 768px) {
@@ -117,6 +121,9 @@
     flex-direction: column;
     justify-content: space-evenly;
   }
+  .gn-landingpage-wrapper section {
+    margin-top: 0;
+  }
   .global-news-title {
     text-align: center;
     padding-left: 0;
@@ -127,17 +134,6 @@
   .gn-sub-copy {
     font-size: 16px;
     color: #fbfbfb;
-  }
-  .gn-login-wrapper {
-    width: 300px;
-    height: 300px;
-    font-size: 16px;
-  }
-  .gn-login-wrapper p {
-    font-size: 16px;
-  }
-  .gn-login-btns {
-    width: 100px !important;
   }
   .gn-copy-wrapper {
     width: 100%;
@@ -313,7 +309,7 @@
   }
   70% {
     transform: scale(1);
-    box-shadow: 0 0 0 10px #E94057;
+    box-shadow: 0 0 0 10px #e94057;
   }
 }
 .current-location {

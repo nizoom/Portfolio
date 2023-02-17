@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
 .gn-landingpage-wrapper {
-  background-image: linear-gradient(to bottom, #4A4E69, #C9ADA7);
+  background-image: linear-gradient(to bottom, #4a4e69, #c9ada7);
   height: 100vh;
   width: 100%;
 }
@@ -11,7 +11,7 @@
   margin: 0;
   font-weight: 400;
   font-size: 31.25px;
-  color: #F2E9E4;
+  color: #f2e9e4;
   padding: 50px 0 0 60px;
 }
 
@@ -26,17 +26,16 @@
 .gn-main-copy {
   font-weight: 400;
   font-size: 39.06px;
-  color: #F2E9E4;
+  color: #f2e9e4;
 }
 
 .gn-sub-copy {
   font-weight: 400;
   font-size: 25px;
-  color: #F2E9E4;
+  color: #f2e9e4;
 }
 
 .gn-login-wrapper {
-  background-color: #22223B;
   height: 450px;
   width: 450px;
   border-radius: 32px;
@@ -52,8 +51,8 @@
   gap: 20px;
 }
 .gn-login-wrapper .gn-traditional-logins-wrapper button {
-  background-color: #4A4E69;
-  color: #F2E9E4;
+  background-color: #4a4e69;
+  color: #f2e9e4;
   font-weight: 700;
   border: none;
   width: 150px;
@@ -62,15 +61,15 @@
   cursor: pointer;
 }
 .gn-login-wrapper p {
-  color: #F2E9E4;
+  color: #f2e9e4;
   font-size: 20px;
 }
 
 .gn-google-link {
-  background-color: #4A4E69;
+  background-color: #4a4e69;
   padding: 8px;
   border-radius: 32px;
-  border: 2px solid #F2E9E4;
+  border: 2px solid #f2e9e4;
   font-weight: 500;
   letter-spacing: -1px;
   cursor: pointer;
@@ -145,7 +144,7 @@
   }
 }
 .gn-authpage-wrapper {
-  background-image: linear-gradient(to bottom, #4A4E69, #C9ADA7);
+  background-image: linear-gradient(to bottom, #4a4e69, #c9ada7);
   height: 100vh;
   width: 100%;
   display: flex;
@@ -154,7 +153,7 @@
 }
 
 .gn-auth-form-wrapper {
-  background-color: #22223B;
+  background-color: #22223b;
   height: 450px;
   width: 450px;
   border-radius: 32px;
@@ -170,7 +169,7 @@
 .gn-auth-title {
   font-weight: 400;
   font-size: 25px;
-  color: #F2E9E4;
+  color: #f2e9e4;
   margin: 0;
 }
 
@@ -181,8 +180,8 @@
   align-items: center;
 }
 .gn-auth-form button {
-  background-color: #4A4E69;
-  color: #F2E9E4;
+  background-color: #4a4e69;
+  color: #f2e9e4;
   font-weight: 700;
   border: none;
   width: 150px;
@@ -199,10 +198,10 @@
 .gn-form-section label {
   font-weight: 400;
   font-size: 16px;
-  color: #F2E9E4;
+  color: #f2e9e4;
 }
 .gn-form-section input {
-  background-color: #C9ADA7;
+  background-color: #c9ada7;
   border: none;
   border-radius: 6px;
   height: 25px;
@@ -210,7 +209,7 @@
 }
 
 .gn-success-msg {
-  background-color: #C9ADA7;
+  background-color: #c9ada7;
   font-weight: 500;
   padding: 5px;
   border-radius: 12px;
