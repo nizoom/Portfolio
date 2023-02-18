@@ -4,6 +4,8 @@ import "./styles/compiledCss/landingpage.css";
 import { Link, useHistory } from "react-router-dom";
 import { auth, provider } from "./config/firebase.js";
 import { signInWithPopup } from "firebase/auth";
+import point from "./media/point.png";
+
 const LandingPage = () => {
   const history = useHistory();
 
@@ -22,14 +24,29 @@ const LandingPage = () => {
         <h2 className="gn-sub-copy">
           Stay in touch with the places important to you. Down to the town.
         </h2>
+        <div
+          style={{
+            position: "absolute",
+            bottom: "0px",
+            overflow: "hidden",
+            borderRadius: "100%",
+            maxHeight: "400px",
+          }}
+        >
+          <div className="ellipse">
+            {" "}
+            <img src={point} className="point" />
+            <img src={point} className="point" />
+            <img src={point} className="point" />
+            <img src={point} className="point" />
+          </div>
+        </div>
 
-        {/* <img src={MonitorPNG} className="gn-graphic" /> */}
         <div className="">
           <div className="lndpg-btns-wrapper">
             <Link to="/globalnews/login">
               <button className="">
-                {" "}
-                <p>Login </p>{" "}
+                <p>Login </p>
               </button>
             </Link>
             <Link to="/globalnews/signup">

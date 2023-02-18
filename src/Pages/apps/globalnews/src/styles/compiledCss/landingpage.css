@@ -89,6 +89,73 @@ h2 {
   cursor: pointer;
 }
 
+.ellipse {
+  margin-bottom: -50px;
+  height: 400px;
+  width: 400px;
+  border-radius: 100%;
+  border: 1px solid white;
+  animation-duration: 10s;
+  animation-name: rotation;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  overflow: hidden;
+  background: radial-gradient(circle at 100%, #53556e, #827884 50%, #ad989a 75%, #70163c 75%);
+}
+
+.point {
+  height: 50px;
+  margin: 20px;
+}
+
+.ellipse img {
+  transform: rotate(5deg);
+}
+
+img:nth-child(2n) {
+  transform: rotate(120deg);
+  position: absolute;
+  bottom: 10%;
+}
+
+img:nth-child(3n) {
+  position: absolute;
+  top: 10%;
+  right: 10%;
+}
+
+img:nth-child(4n) {
+  transform: rotate(-90deg);
+  position: absolute;
+  top: 30%;
+  left: 0%;
+}
+
+img:nth-child(3n) {
+  position: absolute;
+  top: 10%;
+  right: 10%;
+}
+
+img:nth-child(8n) {
+  transform: rotate(180deg);
+  position: absolute;
+  bottom: 3%;
+  right: 10%;
+}
+
+.boxes {
+  width: 70%;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
 @media (max-width: 992px) {
   .gn-copy-wrapper {
     width: 600px;
