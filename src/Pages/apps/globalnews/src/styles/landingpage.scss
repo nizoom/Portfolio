@@ -136,41 +136,27 @@ h2 {
 
 .point {
   height: 50px;
-  margin: 20px;
-}
+  width: 50px;
 
-.ellipse img {
-  transform: rotate(5deg);
-}
-img:nth-child(2n) {
-  transform: rotate(120deg);
-  position: absolute;
-  bottom: 10%;
-}
-img:nth-child(3n) {
-  //   transform: rotate(90deg);
-  position: absolute;
-  top: 10%;
-  right: 10%;
-}
-img:nth-child(4n) {
-  transform: rotate(-90deg);
-  position: absolute;
-  top: 30%;
-  left: 0%;
-}
+  background: radial-gradient(
+    circle at 100%,
 
-img:nth-child(3n) {
-  //   transform: rotate(90deg);
-  position: absolute;
-  top: 10%;
-  right: 10%;
-}
-img:nth-child(8n) {
+    #827884 50%,
+    #827884 45%,
+    #22223b
+  );
+  border-radius: 100%;
+  overflow: hidden;
   transform: rotate(180deg);
-  position: absolute;
-  bottom: 3%;
-  right: 10%;
+}
+
+.stem {
+  height: 60px;
+  width: 5px;
+  background-color: #22223b;
+  margin-top: -20px;
+  margin-left: 20px;
+  box-shadow: 20px 10px 20px #22223b;
 }
 
 .boxes {
@@ -203,7 +189,7 @@ img:nth-child(8n) {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 820px) {
   .gn-copy-wrapper {
     width: 500px;
     margin: auto;
@@ -219,6 +205,21 @@ img:nth-child(8n) {
 }
 
 @media (max-width: 576px) {
+  .ellipse {
+    height: 200px;
+    width: 200px;
+  }
+
+  .point {
+    height: 25px;
+    width: 25px;
+  }
+
+  .stem {
+    height: 32px;
+    width: 2.5px;
+    margin-left: 11px;
+  }
   .gn-landingpage-wrapper {
     display: flex;
     flex-direction: column;
@@ -243,5 +244,46 @@ img:nth-child(8n) {
 
   .gn-copy-wrapper {
     width: 100%;
+  }
+}
+@media (max-height: 800px) {
+  .ellipse {
+    height: 300px;
+    width: 300px;
+  }
+}
+
+@media (max-height: 800px) and (max-width: 576px) {
+  .ellipse {
+    height: 200px;
+    width: 200px;
+  }
+
+  .point {
+    height: 25px;
+    width: 25px;
+  }
+
+  .stem {
+    height: 32px;
+    width: 2.5px;
+    margin-left: 11px;
+  }
+}
+@media screen and (max-width: 1024px) and (max-height: 768px) {
+  .ellipse {
+    height: 170px;
+    width: 170px;
+  }
+
+  .point {
+    height: 25px;
+    width: 25px;
+  }
+
+  .stem {
+    height: 32px;
+    width: 2.5px;
+    margin-left: 11px;
   }
 }

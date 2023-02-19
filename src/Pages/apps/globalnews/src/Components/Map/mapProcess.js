@@ -9,7 +9,6 @@ export const getNewsResultsFromPosition = (latlng, callback) => {
       callback(null);
     } else {
       //normal process flow
-
       //sometimes an address component may not have any useful information
       //this is because the types of that address component is called a plus code
 

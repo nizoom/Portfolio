@@ -8,7 +8,6 @@ import { getNewsResultsFromPosition } from "./mapProcess";
 const AddMarker = (props) => {
   // A component that creates a marker on leaflet map and conveys coordinates to
   //getPlaceName that will reverse geolocate that data and return a human readable address
-
   const [position, setPosition] = useState(null); // hook assists with setting marker position on map
 
   useEffect(() => {
@@ -30,7 +29,6 @@ const AddMarker = (props) => {
       mapAndNewsProcess(e.latlng);
     },
   });
-
   return position === null ? null : (
     <Marker position={position} icon={props.symbol}></Marker>
   );

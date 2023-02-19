@@ -31,6 +31,7 @@ const HomePage = () => {
       sidbarStatus: !prevstate.sidbarStatus,
     }));
   };
+  console.log(process.env.REACT_APP_TILELAYER_KEY);
 
   const history = useHistory();
   useEffect(() => {

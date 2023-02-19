@@ -35,10 +35,22 @@ const LandingPage = () => {
         >
           <div className="ellipse">
             {" "}
+            {/* <img src={point} className="point" />
             <img src={point} className="point" />
             <img src={point} className="point" />
-            <img src={point} className="point" />
-            <img src={point} className="point" />
+            <img src={point} className="point" /> */}
+            <div style={{ position: "absolute", left: "50%" }}>
+              <div className="point"> </div>
+              <div className="stem"> </div>
+            </div>
+            <div style={{ position: "absolute", left: "30%", top: "20%" }}>
+              <div className="point"> </div>
+              <div className="stem"> </div>
+            </div>
+            <div style={{ position: "absolute", left: "62%", top: "41%" }}>
+              <div className="point"> </div>
+              <div className="stem"> </div>
+            </div>
           </div>
         </div>
 
