@@ -139,6 +139,12 @@
     margin-top: 25%;
   }
 }
+
+@media (max-width: 1100px) {
+  .square-btn {
+    margin-top: 26px;
+  }
+}
 @media (max-width: 850px) {
   .link {
     font-size: 16px;
@@ -160,7 +166,7 @@
     height: 3px;
   }
   .square-btn {
-    margin-top: 25px;
+    margin-top: 42px;
   }
 
   .change .bar1 {
@@ -175,6 +181,12 @@
   .change .bar3 {
     -webkit-transform: rotate(45deg) translate(-8px, -8px);
     transform: rotate(45deg) translate(-4px, -6.5px);
+  }
+}
+
+@media (max-width: 700px) {
+  .square-btn {
+    margin-top: 25px;
   }
 }
 

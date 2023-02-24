@@ -106,7 +106,6 @@ const HomePage = () => {
               githubUrl="https://github.com/nizoom/FeedSee"
               Description={
                 <p className="app-description">
-                  {" "}
                   Web scraping app that uses Twitter's API to recreate a
                   personal feed.
                 </p>

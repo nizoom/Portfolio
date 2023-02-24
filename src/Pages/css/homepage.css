@@ -27,10 +27,14 @@
 }
 
 .apps-section {
-  background-image: url("");
+  background-image: url("../../project_layout/Rectangle-left.png"),
+    url("../../project_layout/Rectangle-purp-right.png");
+  background-position: top left, right top;
+
   background-repeat: repeat-y;
-  padding-bottom: 200px;
-  background-size: contain;
+  background-blend-mode: darken;
+
+  background-size: auto;
   display: grid;
   grid-template-columns: 50% 50%;
 }
