@@ -24,35 +24,6 @@ const LandingPage = () => {
         <h2 className="gn-sub-copy">
           Stay in touch with the places important to you. Down to the town.
         </h2>
-        <div
-          style={{
-            position: "absolute",
-            bottom: "0px",
-            overflow: "hidden",
-            borderRadius: "100%",
-            maxHeight: "400px",
-          }}
-        >
-          <div className="ellipse">
-            {" "}
-            {/* <img src={point} className="point" />
-            <img src={point} className="point" />
-            <img src={point} className="point" />
-            <img src={point} className="point" /> */}
-            <div style={{ position: "absolute", left: "50%" }}>
-              <div className="point"> </div>
-              <div className="stem"> </div>
-            </div>
-            <div style={{ position: "absolute", left: "30%", top: "20%" }}>
-              <div className="point"> </div>
-              <div className="stem"> </div>
-            </div>
-            <div style={{ position: "absolute", left: "62%", top: "41%" }}>
-              <div className="point"> </div>
-              <div className="stem"> </div>
-            </div>
-          </div>
-        </div>
 
         <div className="">
           <div className="lndpg-btns-wrapper">
@@ -78,6 +49,32 @@ const LandingPage = () => {
           >
             Or sign in with <strong>Google </strong>
           </p>
+        </div>
+        <div
+          style={{
+            borderRadius: "100%",
+            height: "100%",
+          }}
+        >
+          <div className="ellipse">
+            {" "}
+            {/* <img src={point} className="point" />
+            <img src={point} className="point" />
+            <img src={point} className="point" />
+            <img src={point} className="point" /> */}
+            <div style={{ position: "absolute", left: "50%" }}>
+              <div className="point"> </div>
+              <div className="stem"> </div>
+            </div>
+            <div style={{ position: "absolute", left: "30%", top: "20%" }}>
+              <div className="point"> </div>
+              <div className="stem"> </div>
+            </div>
+            <div style={{ position: "absolute", left: "62%", top: "41%" }}>
+              <div className="point"> </div>
+              <div className="stem"> </div>
+            </div>
+          </div>
         </div>
       </section>
     </div>

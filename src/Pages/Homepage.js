@@ -14,7 +14,7 @@ import {
   getLocalVisitStatus,
 } from "../Components/localstorage/localstorage";
 import EchoIcon from "../project_layout/echochambericon.png";
-import NYCIcon from "../project_layout/builtnyclogo.png";
+// import NYCIcon from "../project_layout/builtnyclogo.png";
 import globalnewsIcon from "../project_layout/worldnews.png";
 import tyIcon from "../project_layout/tyicon.png";
 import emailBuilderIcon from "../project_layout/form.png";
@@ -62,7 +62,7 @@ const HomePage = () => {
               <h3>
                 welcome to my page. Check out my latest projects below or learn
                 more about{" "}
-                <Link to="/About" className="">
+                <Link to="/About" style={{ textDecoration: "none" }}>
                   <span>what I do.</span>
                 </Link>
               </h3>

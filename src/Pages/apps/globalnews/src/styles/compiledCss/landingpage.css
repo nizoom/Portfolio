@@ -2,8 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
 .gn-landingpage-wrapper {
   background-image: linear-gradient(to bottom, #4A4E69, #C9ADA7);
-  height: 100vh;
-  width: 100%;
+  padding-bottom: 100px;
 }
 
 .gn-landingpage-wrapper h1,
@@ -90,7 +89,6 @@ h2 {
 }
 
 .ellipse {
-  margin-bottom: -50px;
   height: 400px;
   width: 400px;
   border-radius: 100%;
@@ -99,7 +97,6 @@ h2 {
   animation-name: rotation;
   animation-iteration-count: infinite;
   animation-direction: normal;
-  overflow: hidden;
   background: radial-gradient(circle at 100%, #53556e, #827884 50%, #ad989a 75%, #70163c 75%);
 }
 
@@ -174,6 +171,7 @@ h2 {
     margin-left: 11px;
   }
   .gn-landingpage-wrapper {
+    padding-top: 15px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
