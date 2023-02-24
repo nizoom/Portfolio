@@ -71,27 +71,27 @@ const HomePage = () => {
             <img
               src={gradientBubble}
               alt="graphic of bubbles falling down"
-              className="left large"
+              className="left large move"
             />
             <img
               src={gradientBubble}
               alt="graphic of bubbles falling down"
-              className="small-bbl middle-left"
+              className="small-bbl middle-left move-2"
             />
             <img
               src={gradientBubble}
               alt="graphic of bubbles falling down"
-              className="small-bbl middle-right"
+              className="small-bbl middle-right move"
             />
             <img
               src={gradientBubble}
               alt="graphic of bubbles falling down"
-              className="right large"
+              className="right large move-2"
             />
             <img
               src={gradientBubble}
               alt="graphic of bubbles falling down"
-              className="small-bbl right-most"
+              className="small-bbl right-most move"
             />
           </div>
 
@@ -119,7 +119,7 @@ const HomePage = () => {
               alt="Global News"
               appTitle="Global News"
               url="http://localhost:3000/#/globalnews/"
-              // "http://nissimram.com/#/globalnews/landingpage"
+              // http://localhost:3000/#/globalnews/landingpage
               githubUrl="https://github.com/nizoom/Portfolio/tree/main/src/Pages/apps/globalnews/src"
               stackList="ReactJS, React Router, Azure, Google Cloud, Firebase."
               linkType="Link"
@@ -188,6 +188,7 @@ const HomePage = () => {
               logo={NYCIcon}
               btnOneTxt="Try now"
             /> */}
+
             <Cards
               alt="Twitter API Clone"
               appTitle="Twitter API Clone"
