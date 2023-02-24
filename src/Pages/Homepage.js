@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { useHistory } from "react-router-dom";
+import { useHistory, Link } from "react-router-dom";
+// import { BrowserRouter as Router, Link } from "react-router-dom";
 import myGa from "../myGa";
 
 import Logo from "../Components/logo/logo";
@@ -56,14 +57,15 @@ const HomePage = () => {
         <div className="projects">
           <header>
             <Socials sidebarStatus={state.sidbarStatus} />
-            <div className="welcome-border">
-              <div className="welcome-statement">
-                <h2 className="standard"> Welcome to my portfolio </h2>
-              </div>
-              <hr className="bar-long" />
-              <div className="subheader-div">
-                <h2 className="standard"> Check out my projects below </h2>
-              </div>
+            <div className="intro-copy-wrapper">
+              <h1 className=""> Hey there, </h1>
+              <h3>
+                welcome to my page. Check out my latest projects below or learn
+                more about{" "}
+                <Link to="/About" className="">
+                  <span>what I do.</span>
+                </Link>
+              </h3>
             </div>
           </header>
 
@@ -170,24 +172,6 @@ const HomePage = () => {
               logo={tyIcon}
               btnOneTxt="View ReadMe"
             />
-            {/* <Cards
-              alt="Build NYC"
-              appTitle="Build NYC"
-              stackList="React JS, LeafletJS, ChartJS, SoQueryLanguage, NodeJS, ExpressJS."
-              url="https://build-nyc.herokuapp.com/"
-              githubUrl="https://github.com/nizoom/BuildNYC"
-              Description={
-                <p className="app-description">
-                  {" "}
-                  Data visualization interface that illustrates building
-                  development in NYC.{" "}
-                </p>
-              }
-              position="three"
-              status={state.popupStatus}
-              logo={NYCIcon}
-              btnOneTxt="Try now"
-            /> */}
 
             <Cards
               alt="Twitter API Clone"
@@ -214,3 +198,24 @@ const HomePage = () => {
 };
 
 export default HomePage;
+
+{
+  /* <Cards
+              alt="Build NYC"
+              appTitle="Build NYC"
+              stackList="React JS, LeafletJS, ChartJS, SoQueryLanguage, NodeJS, ExpressJS."
+              url="https://build-nyc.herokuapp.com/"
+              githubUrl="https://github.com/nizoom/BuildNYC"
+              Description={
+                <p className="app-description">
+                  {" "}
+                  Data visualization interface that illustrates building
+                  development in NYC.{" "}
+                </p>
+              }
+              position="three"
+              status={state.popupStatus}
+              logo={NYCIcon}
+              btnOneTxt="Try now"
+            /> */
+}

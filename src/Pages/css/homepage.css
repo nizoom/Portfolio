@@ -27,7 +27,7 @@
 }
 
 .apps-section {
-  background-image: url("../../project_layout/background.png");
+  background-image: url("");
   background-repeat: repeat-y;
   padding-bottom: 200px;
   background-size: contain;
@@ -35,6 +35,29 @@
   grid-template-columns: 50% 50%;
 }
 
+.intro-copy-wrapper {
+  width: 80%;
+  margin: auto;
+  color: #d5b060;
+  font-family: "Montserrat", sans-serif;
+}
+
+.intro-copy-wrapper h1 {
+  font-weight: 400;
+}
+
+.intro-copy-wrapper h3 {
+  font-weight: 500;
+}
+
+.intro-copy-wrapper span {
+  color: #b18d8d;
+}
+.intro-copy-wrapper span:hover {
+  color: white;
+  cursor: pointer;
+  text-decoration: underline;
+}
 @media (max-width: 1050px) {
   .apps-section {
     grid-template-columns: 100%;
@@ -145,8 +168,7 @@ header {
   width: 100%;
 }
 
-.welcome-border {
-  /* background: ellipse at top(#000814, #D5B060); */
+/* .welcome-border {
   display: inline-block;
   display: flex;
   flex-direction: column;
@@ -156,9 +178,9 @@ header {
   font-family: "Montserrat", sans-serif;
   margin-top: 50px;
   margin-bottom: 150px;
-}
+} */
 
-.bar-short {
+/* .bar-short {
   color: #d5b060;
   background-color: #d5b060;
   height: 4px;
@@ -173,7 +195,7 @@ header {
   border: none;
   margin: 0;
   width: 100%;
-}
+} */
 
 .welcome-border {
 }
@@ -191,7 +213,7 @@ header {
   border-top: none;
 }
 
-.welcome-statement {
+/* .welcome-statement {
   background: #01060f;
   padding: 10px;
   font-family: "Montserrat", sans-serif;
@@ -207,7 +229,7 @@ header {
   border-left: none;
   border-bottom: none;
   font-size: 20px;
-}
+} */
 
 .standard {
   font-size: 20px;
@@ -238,12 +260,13 @@ header {
 .bubbles-wrapper {
   /* margin-bottom: 500px;
   margin-left: 70px; */
+  margin-top: 15%;
   position: relative;
   display: flex;
   justify-content: space-around;
   height: 200px;
   align-items: flex-start;
-  padding-bottom: 110px;
+  /* padding-bottom: 110px; */
 }
 
 .left {
@@ -299,7 +322,7 @@ footer {
   }
 
   .bubbles-wrapper {
-    margin-top: 300px;
+    /* margin-top: 200px; */
   }
   .welcome-border {
     height: 150px;
@@ -313,7 +336,7 @@ footer {
 
   .socials-wrapper img {
     width: 25px;
-    margin-top: 5px;
+    margin-top: 20px;
   }
   .socials-wrapper {
     right: 125px;
@@ -335,6 +358,9 @@ footer {
 }
 
 @media (max-width: 900px) {
+  .bubbles-wrapper {
+    margin-top: 20%;
+  }
   .subheader-div h2 {
     margin-left: 30px;
     padding-bottom: 18px;
@@ -364,6 +390,9 @@ footer {
 }
 
 @media (max-width: 800px) {
+  .bubbles-wrapper {
+    margin-top: 30%;
+  }
   .welcome-border {
     height: 400px;
     width: 400px;
@@ -378,22 +407,32 @@ footer {
   }
 }
 @media (max-width: 700px) {
-  .welcome-border h2 {
+  .intro-copy-wrapper {
+    width: 60%;
+    margin-top: 90px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .bubbles-wrapper {
+    margin-top: 40%;
+  }
+  /* .welcome-border h2 {
     font-size: 18px;
   }
   .welcome-border {
     margin-top: 155px;
     height: 200px;
-  }
+  } */
 
   .socials-wrapper {
-    top: 87.4px;
+    top: 88.4px;
     left: 21px;
     border-left: 3px solid #d5b060;
     border-top: 3px solid #d5b060;
     width: 20px;
     border-top-left-radius: 16px;
-
     margin-top: 0;
   }
 
@@ -442,6 +481,20 @@ footer {
   }
 }
 @media (max-width: 500px) {
+  .intro-copy-wrapper {
+    margin-top: 75px;
+    width: 70%;
+  }
+  .intro-copy-wrapper h1 {
+    font-size: x-large;
+  }
+  .intro-copy-wrapper h3 {
+    font-size: large;
+    line-height: 22.5px;
+  }
+  .bubbles-wrapper {
+    margin-top: 50%;
+  }
   .welcome-border {
     width: 250px;
   }
@@ -473,6 +526,9 @@ footer {
   }
 }
 @media (max-width: 450px) {
+  .intro-copy-wrapper {
+    margin-top: 80px;
+  }
   .small-bbl {
     width: 25px;
   }
@@ -486,12 +542,20 @@ footer {
   }
 }
 @media (max-width: 400px) {
+  .intro-copy-wrapper {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 73px;
+  }
+  .bubbles-wrapper {
+    margin-top: 60%;
+  }
   .socials-wrapper {
     top: 64.5px;
-    height: 400px;
   }
   .socials-wrapper ul {
-    margin-top: 200px;
+    margin-top: 40px;
   }
   /* .welcome-border{
     width: 250px;
