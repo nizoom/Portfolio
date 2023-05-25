@@ -119,14 +119,14 @@
 }
 
 .move {
-  animation: my0rbit 20s linear infinite;
-  -webkit-animation: myOrbit 15s linear infinite; /* Chrome, Safari 5 */
+  animation: my0rbit 7s linear infinite;
+  -webkit-animation: myOrbit 7s linear infinite; /* Chrome, Safari 5 */
 }
 
 .move-2 {
   animation-delay: 2s;
-  animation: myOorbit 20s linear infinite;
-  -webkit-animation: myOrbit 15s reverse infinite; /* Chrome, Safari 5 */
+  animation: myOorbit 7s linear infinite;
+  -webkit-animation: myOrbit 7s reverse infinite; /* Chrome, Safari 5 */
 }
 
 @keyframes myOrbit {

@@ -19,6 +19,7 @@ import globalnewsIcon from "../project_layout/worldnews.png";
 import tyIcon from "../project_layout/tyicon.png";
 import emailBuilderIcon from "../project_layout/form.png";
 import TwitterIcon from "../project_layout/twitter.png";
+import internIcon from "../project_layout/intern.png";
 
 const HomePage = () => {
   const [state, setState] = useState({
@@ -99,6 +100,21 @@ const HomePage = () => {
 
           <section className="apps-section">
             <Cards
+              alt="Web Developer Intern"
+              appTitle="Web Dev Intern with 3:5Creative[s]"
+              stackList="WordPress, HTML, Bootstrap, JS, Elementor"
+              url=""
+              githubUrl=""
+              Description={
+                <p className="app-description">
+                  Built out full WordPress websites for multiple company clients
+                  based on wireframes from design team.
+                </p>
+              }
+              logo={internIcon}
+              btnOneTxt="View pages"
+            />
+            <Cards
               alt="FeedSee"
               appTitle="FeedSee"
               stackList="ReactJS, TypeScript, Chakra UI, NodeJS, ExpressJS."
@@ -110,8 +126,6 @@ const HomePage = () => {
                   personal feed.
                 </p>
               }
-              position="six"
-              status={state.popupStatus}
               logo={EchoIcon}
               btnOneTxt="View ReadMe"
             />
@@ -131,8 +145,6 @@ const HomePage = () => {
                   map click.
                 </p>
               }
-              position="five"
-              status={state.popupStatus}
               logo={globalnewsIcon}
               btnOneTxt="Try now"
             />
@@ -148,8 +160,6 @@ const HomePage = () => {
                   Form web app that builds and sends templated thank you emails.
                 </p>
               }
-              position="one"
-              status={state.popupStatus}
               logo={emailBuilderIcon}
               btnOneTxt="View ReadMe"
             />
@@ -166,13 +176,11 @@ const HomePage = () => {
                   emails based on donations from an API.
                 </p>
               }
-              position="four"
-              status={state.popupStatus}
               logo={tyIcon}
               btnOneTxt="View ReadMe"
             />
 
-            <Cards
+            {/* <Cards
               alt="Twitter API Clone"
               appTitle="Twitter API Clone"
               stackList="Java, SpringBoot, JPA, PostgresQL, PGAdmin, Postman, Eclipse, Maven"
@@ -184,11 +192,11 @@ const HomePage = () => {
                 </p>
               }
               position="two"
-              status={state.popupStatus}
+            
               githubUrl="https://github.com/nizoom/Twitter-API-Clone"
               logo={TwitterIcon}
               btnOneTxt="View ReadMe"
-            />
+            /> */}
           </section>
         </div>
       </div>
@@ -213,7 +221,7 @@ export default HomePage;
                 </p>
               }
               position="three"
-              status={state.popupStatus}
+   
               logo={NYCIcon}
               btnOneTxt="Try now"
             /> */

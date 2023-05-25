@@ -4,7 +4,6 @@ import "./styles/compiledCss/landingpage.css";
 import { Link, useHistory } from "react-router-dom";
 import { auth, provider } from "./config/firebase.js";
 import { signInWithPopup } from "firebase/auth";
-import point from "./media/point.png";
 
 const LandingPage = () => {
   const history = useHistory();
@@ -57,11 +56,6 @@ const LandingPage = () => {
           }}
         >
           <div className="ellipse">
-            {" "}
-            {/* <img src={point} className="point" />
-            <img src={point} className="point" />
-            <img src={point} className="point" />
-            <img src={point} className="point" /> */}
             <div style={{ position: "absolute", left: "50%" }}>
               <div className="point"> </div>
               <div className="stem"> </div>
