@@ -223,6 +223,7 @@
   max-width: 800px;
   margin: auto;
 }
+
 #root
   > div
   > div.fade-in
@@ -230,9 +231,9 @@
   > div:nth-child(3)
   > div
   > div
-  > button.slick-arrow.slick-prev:before {
+  > button.slick-arrow.slick-next::before {
   color: #bb914e;
-  margin-right: -500%;
+  margin-left: -500%;
   font-size: 24px;
 }
 #root
@@ -242,10 +243,22 @@
   > div:nth-child(3)
   > div
   > div
-  > button.slick-arrow.slick-next:before {
+  > button.slick-arrow.slick-prev::before {
   color: #bb914e;
-  margin-left: -500%;
+  margin-right: -500%;
   font-size: 24px;
+  z-index: 0;
+}
+#root
+  > div
+  > div.fade-in
+  > div.projects
+  > div:nth-child(3)
+  > div
+  > div
+  > button.slick-arrow.slick-prev {
+  margin-right: -500%;
+  z-index: 200;
 }
 
 .slick-dots li.slick-active button:before {
@@ -352,6 +365,10 @@
     bottom: -950%;
     position: absolute;
   }
+  .x-char {
+    height: 10px;
+    width: 10px;
+  }
 }
 
 @media (max-width: 580px) {
@@ -406,6 +423,8 @@
   }
   .close-slider-btn {
     margin-left: 5px;
+    margin-bottom: 20px;
+    margin-top: 0;
   }
   .x-char {
     height: 10px;
