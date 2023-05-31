@@ -18,9 +18,9 @@ import EchoIcon from "../project_layout/echochambericon.png";
 import globalnewsIcon from "../project_layout/worldnews.png";
 import tyIcon from "../project_layout/tyicon.png";
 import emailBuilderIcon from "../project_layout/form.png";
-import TwitterIcon from "../project_layout/twitter.png";
+// import TwitterIcon from "../project_layout/twitter.png";
 import internIcon from "../project_layout/intern.png";
-
+import Fade from "../Components/applinks/cardscomponent/slider";
 const HomePage = () => {
   const [state, setState] = useState({
     visitationStatus: false,
@@ -28,12 +28,10 @@ const HomePage = () => {
   });
 
   const clickHandler = () => {
-    console.log("clicked");
     setState((prevstate) => ({
       sidbarStatus: !prevstate.sidbarStatus,
     }));
   };
-  console.log(process.env.REACT_APP_TILELAYER_KEY);
 
   const history = useHistory();
   useEffect(() => {
@@ -47,6 +45,17 @@ const HomePage = () => {
     }
     myGa();
   }, []);
+  const [showSlider, setShowSlider] = useState(false);
+
+  const sliderControls = {
+    triggerSlider: () => {
+      setShowSlider(true);
+      // handleScrollToSlider();
+    },
+    closeSlider: () => {
+      setShowSlider(false);
+    },
+  };
 
   return (
     <div className="homepage_wrapper background-covering">
@@ -62,9 +71,9 @@ const HomePage = () => {
               <h1 className=""> Hey there, </h1>
               <h3>
                 welcome to my page. Check out my latest projects below or learn
-                more about{" "}
+                more about
                 <Link to="/About" style={{ textDecoration: "none" }}>
-                  <span>what I do.</span>
+                  <span> what I do.</span>
                 </Link>
               </h3>
             </div>
@@ -98,6 +107,11 @@ const HomePage = () => {
             />
           </div>
 
+          <div>
+            {showSlider ? (
+              <Fade sliderControls={sliderControls} sliderStatus={showSlider} />
+            ) : null}
+          </div>
           <section className="apps-section">
             <Cards
               alt="Web Developer Intern"
@@ -112,7 +126,8 @@ const HomePage = () => {
                 </p>
               }
               logo={internIcon}
-              btnOneTxt="View pages"
+              mainBtnTxt="View pages"
+              sliderControls={sliderControls}
             />
             <Cards
               alt="FeedSee"
@@ -127,7 +142,8 @@ const HomePage = () => {
                 </p>
               }
               logo={EchoIcon}
-              btnOneTxt="View ReadMe"
+              mainBtnTxt="View ReadMe"
+              sliderControls={sliderControls}
             />
 
             <Cards
@@ -140,13 +156,13 @@ const HomePage = () => {
               linkType="Link"
               Description={
                 <p className="app-description">
-                  {" "}
                   Web app that finds localized news based on geolocation from
                   map click.
                 </p>
               }
               logo={globalnewsIcon}
-              btnOneTxt="Try now"
+              mainBtnTxt="Try now"
+              sliderControls={sliderControls}
             />
 
             <Cards
@@ -161,7 +177,8 @@ const HomePage = () => {
                 </p>
               }
               logo={emailBuilderIcon}
-              btnOneTxt="View ReadMe"
+              mainBtnTxt="View ReadMe"
+              sliderControls={sliderControls}
             />
 
             <Cards
@@ -177,7 +194,8 @@ const HomePage = () => {
                 </p>
               }
               logo={tyIcon}
-              btnOneTxt="View ReadMe"
+              mainBtnTxt="View ReadMe"
+              sliderControls={sliderControls}
             />
 
             {/* <Cards
@@ -205,24 +223,3 @@ const HomePage = () => {
 };
 
 export default HomePage;
-
-{
-  /* <Cards
-              alt="Build NYC"
-              appTitle="Build NYC"
-              stackList="React JS, LeafletJS, ChartJS, SoQueryLanguage, NodeJS, ExpressJS."
-              url="https://build-nyc.herokuapp.com/"
-              githubUrl="https://github.com/nizoom/BuildNYC"
-              Description={
-                <p className="app-description">
-                  {" "}
-                  Data visualization interface that illustrates building
-                  development in NYC.{" "}
-                </p>
-              }
-              position="three"
-   
-              logo={NYCIcon}
-              btnOneTxt="Try now"
-            /> */
-}

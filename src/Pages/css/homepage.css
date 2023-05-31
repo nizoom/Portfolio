@@ -56,9 +56,11 @@
   color: #b18d8d;
 }
 .intro-copy-wrapper span:hover {
-  color: white;
+  color: #a880b9;
   cursor: pointer;
   text-decoration: underline;
+  font-weight: bolder;
+  box-shadow: 0 0 10px rgba(168, 128, 185, 0.5);
 }
 @media (max-width: 1050px) {
   .apps-section {

@@ -8,6 +8,7 @@ const Cards = (props) => {
     btnNumberOne: false,
     btnNumberTwo: false,
   });
+
   const btnOneStyle = {
     background: isHover.btnNumberOne ? "black" : "#C7A25D",
     color: isHover.btnNumberOne ? "white" : "black",
@@ -17,7 +18,7 @@ const Cards = (props) => {
       : "",
     marginTop: "5px",
   };
-  const btnTwpStyle = {
+  const btnTwoStyle = {
     background: isHover.btnNumberTwo ? "black" : "#C7A25D",
     color: isHover.btnNumberTwo ? "white" : "black",
     textDecoration: "none",
@@ -37,6 +38,26 @@ const Cards = (props) => {
       [btnNumber]: true,
     }));
   };
+
+  const handleConditionalBtnClick = () => {
+    console.log("btn clicked");
+    if (props.mainBtnTxt === "View pages") {
+      props.sliderControls.triggerSlider();
+    } else {
+      window.open(props.githubUrl, "_blank", "noopener,noreferrer");
+      return;
+    }
+  };
+
+  // const sliderControls = {
+  //   triggerSlider: () => {
+  //     setShowSlider(true);
+  //   },
+  //   closeSlider: () => {
+  //     setShowSlider(false);
+  //   },
+  // };
+
   return (
     // ICON CARD
     <div className="card-component-wrapper bob-on-hover">
@@ -47,18 +68,19 @@ const Cards = (props) => {
         <p className="description-txt"> {props.Description}</p>
         <p className="description-txt tech"> Technologies: {props.stackList}</p>
 
-        {props.btnOneTxt === "View ReadMe" ||
-        props.btnOneTxt === "View pages" ? (
-          <button className="more-info-btn" style={btnOneStyle}>
+        {props.mainBtnTxt === "View ReadMe" ||
+        props.mainBtnTxt === "View pages" ? (
+          <button
+            className="more-info-btn"
+            style={btnOneStyle}
+            onClick={handleConditionalBtnClick}
+          >
             <a
               onMouseEnter={() => handleMouseEnter("btnNumberOne")}
               onMouseLeave={handleMouseLeave}
-              href={props.githubUrl}
               style={btnOneStyle}
-              target="_blank"
-              rel="noopener noreferrer"
             >
-              {props.btnOneTxt}
+              {props.mainBtnTxt}
             </a>
           </button>
         ) : (
@@ -72,16 +94,16 @@ const Cards = (props) => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                {props.btnOneTxt}
+                {props.mainBtnTxt}
               </a>
             </button>
 
-            <button className="more-info-btn view-code" style={btnTwpStyle}>
+            <button className="more-info-btn view-code" style={btnTwoStyle}>
               <a
                 onMouseEnter={() => handleMouseEnter("btnNumberTwo")}
                 onMouseLeave={handleMouseLeave}
                 href={props.githubUrl}
-                style={btnTwpStyle}
+                style={btnTwoStyle}
                 target="_blank"
                 rel="noopener noreferrer"
               >
