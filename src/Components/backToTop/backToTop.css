@@ -1,4 +1,4 @@
-.top{
+.top {
   -webkit-appearance: none;
   scroll-behavior: smooth;
   font-size: 240%;
@@ -8,18 +8,22 @@
   margin-right: 2%; */
   border-radius: 50%;
   left: 94%;
-  height: 60px;
-  width: 60px;
+  height: 50px;
+  width: 50px;
   background: black;
   padding: 0;
-  border: 3px solid #D5AF60;
+  border: 3px solid #a0844a;
   box-shadow: 2px 2px 40px #8f702e;
+  cursor: pointer;
   /* background-color: #E94057; */
-
 }
 
-
-.btn_div{
+.up-arrow-img {
+  height: 30px;
+  margin-left: 1px;
+  margin-top: 5px;
+}
+.btn_div {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -30,89 +34,74 @@
   appearance: none;
   position: fixed;
   right: 35px;
-  
+  bottom: 10px;
 }
 
-.up-arrow-img{
-  margin-top: 8px;
-
-}
-
-.hide-backtotop-btn{
+.hide-backtotop-btn {
   display: none;
 }
 
-@media(max-width: 1350px) {
-  .btn_div{
-
+@media (max-width: 1350px) {
+  .btn_div {
   }
 }
-@media (max-width:1200px) {
-  .top{
+@media (max-width: 1200px) {
+  .top {
     text-align: center;
     top: 15%;
     font-size: 150%;
     border-radius: 9999px;
     -webkit-appearance: none;
     -moz-appearance: none;
-
-
   }
-
- 
-
 }
 
-@media(max-width:840px){
-  .top{
+@media (max-width: 840px) {
+  .top {
     height: 40px;
     width: 40px;
-
-
-   
   }
 
-  .up-arrow-img{
+  .up-arrow-img {
     height: 20px;
   }
-  .btn_div{
+  .btn_div {
     right: 30px;
     margin-right: 8px;
-
   }
 }
 
-@media(max-width:740px){
-  .btn_div{
+@media (max-width: 740px) {
+  .btn_div {
     width: 30px;
     right: 35px;
   }
 
-  .top{
+  .top {
     height: 40px;
     width: 40px;
   }
 
-  .up-arrow-img{
-    height: 20px;  
+  .up-arrow-img {
+    height: 20px;
   }
 }
 
-@media(max-width: 500px){
-  .top{
+@media (max-width: 500px) {
+  .top {
     height: 35px;
     width: 30px;
   }
-  .btn_div{
+  .btn_div {
     right: 10px;
   }
-  .up-arrow-img{
-    height: 20px;  
+  .up-arrow-img {
+    height: 20px;
     margin-top: 5px;
   }
 }
-@media(max-width: 400px){
-  .btn_div{
+@media (max-width: 400px) {
+  .btn_div {
     right: 5px;
   }
 }
