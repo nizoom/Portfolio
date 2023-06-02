@@ -27,7 +27,7 @@ const HomePage = () => {
     sidbarStatus: false,
   });
 
-  const clickHandler = () => {
+  const sidebarHandler = () => {
     setState((prevstate) => ({
       sidbarStatus: !prevstate.sidbarStatus,
     }));
@@ -38,7 +38,6 @@ const HomePage = () => {
     // Runs after the first render() lifecycle
 
     const userVisitationStatus = getLocalVisitStatus();
-
     if (userVisitationStatus === null || userVisitationStatus === undefined) {
       firstVisit();
       history.push("/Intro");
@@ -50,7 +49,6 @@ const HomePage = () => {
   const sliderControls = {
     triggerSlider: () => {
       setShowSlider(true);
-      // handleScrollToSlider();
     },
     closeSlider: () => {
       setShowSlider(false);
@@ -62,7 +60,7 @@ const HomePage = () => {
       <div className=""> </div>
       <div className="fade-in">
         <Logo />
-        <Sidebar clickHandler={clickHandler} />
+        <Sidebar clickHandler={sidebarHandler} />
 
         <div className="projects">
           <header>

@@ -86,8 +86,8 @@
 }
 
 .slide-out {
-  animation: slide-out 0.5s forwards;
-  -webkit-animation: slide-out 0.5s forwards;
+  animation: slide-out 2.5s forwards;
+  -webkit-animation: slide-out 2.5s forwards;
 }
 
 @keyframes slide-in {
@@ -155,7 +155,7 @@
   padding: 2px 20px 0;
 }
 
-.socials-wrapper li:hover {
+.socials-li:hover {
   transform: scale(1.15);
   transition: 0.2s ease-in;
 }
@@ -451,7 +451,7 @@ footer {
     width: 20px;
   }
 
-  .socials-wrapper li {
+  .socials-li {
     width: 10px;
     padding-bottom: 0;
   }
@@ -561,24 +561,4 @@ footer {
   .socials-wrapper ul {
     margin-top: 40px;
   }
-  /* .welcome-border{
-    width: 250px;
-  }
-  .subheader-div h2{
-    margin-left: 0;
-    width: 210px;
-  }
-  .subheader-div {
-    margin-left: 0;
-    padding-left: 0;
-    justify-content: space-between;
-  }
-
-  .welcome-statement h2{
-    width: 210px; 
-  }
-
-  .welcome-border{
-    margin-left: 120px;
-  } */
 }

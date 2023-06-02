@@ -30,7 +30,7 @@
 .slide-out {
   animation: slide-out 0.5s forwards;
   -webkit-animation: slide-out 0.5s forwards;
-  display: none;
+  /* display: none; */
 }
 
 @keyframes slide-in {

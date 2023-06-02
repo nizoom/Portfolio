@@ -1,9 +1,20 @@
-import React from "react";
-
+import React, { useMemo } from "react";
+import "../../Pages/css/homepage.css";
+import { useMediaQuery } from "react-responsive";
 const BlogMenu = (props) => {
+  // const isDesktop = useMediaQuery({ minWidth: 1024 });
+  // const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 1023 });
+  const isMobile = useMediaQuery({ maxWidth: 700 });
+
+  const screenType = useMemo(() => {
+    if (isMobile) {
+      return "socials-wrapper mobile-blog-nav";
+    }
+    return "blog-nav";
+  }, [isMobile]);
   return (
     <div>
-      <nav className="blog-nav">
+      <nav className={screenType}>
         <ul>
           <li className="blog-tab">
             <h3>Tech</h3>

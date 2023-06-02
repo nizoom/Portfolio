@@ -27,6 +27,7 @@
 
 .blog-nav {
   margin-bottom: 100px;
+  border-left: 3px solid #d5b060;
 }
 
 .blog-nav ul {
@@ -76,7 +77,7 @@
 
 @media (max-width: 900px) {
   .blog_div {
-    margin-top: 15%;
+    margin-top: 12%;
   }
 
   .blog_div button {
@@ -90,24 +91,50 @@
     font-size: 24px;
   }
 }
+@media (max-width: 700px) {
+  .post {
+    margin-top: 400px;
+  }
+  .mobile-blog-nav {
+    left: 0px;
+    top: 88px;
+  }
+  .blog-tab h3:hover {
+    transition: none;
+    transform: none;
+  }
+}
+
 @media (max-width: 600px) {
   .blog-tab h3 {
     font-size: 22px;
   }
   .blog-nav {
-    width: 55%;
+    width: auto;
+  }
+}
+@media (max-width: 500px) {
+  .post {
+    margin-top: 400px;
+  }
+  .mobile-blog-nav {
+    left: -9px;
+    top: 74.9px;
   }
 }
 @media (max-width: 450px) {
   .blog-nav {
-    width: auto;
-    margin-left: 10%;
-    margin-right: 10%;
+    min-width: 200px;
+    margin-top: -135px;
+    border-top: 0.5px solid #d5b060;
   }
   .blog-nav ul {
+    padding-top: 50px;
+    padding-left: 10px;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
-    gap: 15px;
+    align-items: left;
+    gap: 5px;
   }
 }
 
@@ -116,11 +143,18 @@
     font-size: 20px;
   }
   .post {
-    margin-top: 50px;
+    margin-top: 400px;
     font-size: 80%;
   }
 
   .blog_div {
-    margin-top: 60px;
+  }
+  .blog-nav {
+    margin-top: -135.5px;
+    margin-left: -10px;
+    border-top-left-radius: 6px;
+  }
+  .mobile-blog-nav {
+    top: 64.9px;
   }
 }
