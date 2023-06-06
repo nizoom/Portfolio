@@ -38,46 +38,48 @@ const Sidebar = (props) => {
         </div>
       </div>
 
-      <nav className={sidebarStatus ? "nav slide-in" : "slide-out"}>
-        <ul className={sidebarStatus ? "open slide-in" : "slide-out"}>
+      <nav className="nav">
+        {/* <nav className={sidebarStatus ? "" : ""}> */}
+        <ul
+          // the open class means the menu has the styling of when it
+          //is open in terms of look but slide changes the orientation
+          className={
+            sidebarStatus ? "open slide-in" : "open lrg-window-slideout"
+          }
+        >
           <li onClick={sideBarBtnHandler}>
             <Link to="/" className="link">
-              {" "}
-              Portfolio{" "}
+              Portfolio
             </Link>
           </li>
 
           <li onClick={sideBarBtnHandler}>
             <Link to="/About" className="link">
-              {" "}
-              About{" "}
+              About
             </Link>
           </li>
 
           <li onClick={sideBarBtnHandler}>
             <Link to="/Blog" className="link">
-              {" "}
-              Blog.{" "}
+              Blog.
             </Link>
           </li>
 
           <li onClick={sideBarBtnHandler}>
             <a target="blank" href="https://github.com/nizoom" className="link">
-              GitHub{" "}
+              GitHub
             </a>
           </li>
 
           <li onClick={sideBarBtnHandler}>
             <Link to="/Contact" className="link">
-              {" "}
-              Contact{" "}
+              Contact
             </Link>
           </li>
 
           <li onClick={sideBarBtnHandler}>
             <Link to="/resume" className="link">
-              {" "}
-              Resume{" "}
+              Resume
             </Link>
           </li>
         </ul>

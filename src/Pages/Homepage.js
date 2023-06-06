@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import { useHistory, Link } from "react-router-dom";
 // import { BrowserRouter as Router, Link } from "react-router-dom";
 import myGa from "../myGa";
@@ -21,6 +21,8 @@ import emailBuilderIcon from "../project_layout/form.png";
 // import TwitterIcon from "../project_layout/twitter.png";
 import internIcon from "../project_layout/intern.png";
 import Fade from "../Components/applinks/cardscomponent/slider";
+import { useMediaQuery } from "react-responsive";
+
 const HomePage = () => {
   const [state, setState] = useState({
     visitationStatus: false,
@@ -55,16 +57,27 @@ const HomePage = () => {
     },
   };
 
+  const isMobile = useMediaQuery({ maxWidth: 700 });
+  const screenType = useMemo(() => {
+    if (isMobile) {
+      return "socials-mobile-view";
+    }
+    return "sidebar-and-socials-wrapper";
+  }, [isMobile]);
+
   return (
     <div className="homepage_wrapper background-covering">
       <div className=""> </div>
       <div className="fade-in">
         <Logo />
-        <Sidebar clickHandler={sidebarHandler} />
-
+        {/* ADD A MEDIA QUERY THAT REMOVES THE BELOW CLASS AT SMALLER SCREEN SIZE
+        WHERE SOCIALS BECOME VERTICLE */}
+        <div className={screenType}>
+          <Sidebar clickHandler={sidebarHandler} />
+          <Socials sidebarStatus={state.sidbarStatus} />
+        </div>
         <div className="projects">
           <header>
-            <Socials sidebarStatus={state.sidbarStatus} />
             <div className="intro-copy-wrapper">
               <h1 className=""> Hey there, </h1>
               <h3>

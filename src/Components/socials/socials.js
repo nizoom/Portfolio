@@ -13,11 +13,11 @@ const Socials = (props) => {
       <nav
         className={
           props.sidebarStatus && window.innerWidth > 701
-            ? "slide-out"
+            ? "socials-wrapper slide-out"
             : "socials-wrapper slide-in"
         }
       >
-        <ul>
+        <ul className="socials-wrapper-ul">
           <li className="socials-li">
             {" "}
             <a
