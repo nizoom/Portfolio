@@ -1,9 +1,25 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./sidebar.css";
 import { BrowserRouter as Router, Link } from "react-router-dom";
 
 const Sidebar = (props) => {
   const [sidebarStatus, setSidebarStatus] = useState(false);
+  const [sidebarClass, setSidebarClass] = useState("closed-sidebar");
+
+  useEffect(() => {
+    if (sidebarStatus) {
+      setSidebarClass("open slide-in");
+      return;
+    }
+    setSidebarClass("open lrg-window-slideout");
+    // Remove the class after 1 second
+    const timer = setTimeout(() => {
+      setSidebarClass("closed-sidebar");
+    }, 500);
+
+    // Clean up the timer on component unmount
+    return () => clearTimeout(timer);
+  }, [sidebarStatus]);
 
   const sideBarBtnHandler = () => {
     setSidebarStatus(!sidebarStatus);
@@ -20,32 +36,27 @@ const Sidebar = (props) => {
   };
 
   return (
-    <div className="">
-      <div className="">
-        <div className={`classes ${sidebarStatus ? "change" : null}`}>
-          <button
-            className="square-btn"
-            onClick={() => {
-              sideBarBtnHandler();
-            }}
-          >
-            <div className="bars-wrapper">
-              <div className="bar1"></div>
-              <div className="bar2"></div>
-              <div className="bar3"></div>
-            </div>
-          </button>
-        </div>
+    <div>
+      <div className={`classes ${sidebarStatus ? "change" : null}`}>
+        <button
+          className="square-btn"
+          onClick={() => {
+            sideBarBtnHandler();
+          }}
+        >
+          <div className="bars-wrapper">
+            <div className="bar1"></div>
+            <div className="bar2"></div>
+            <div className="bar3"></div>
+          </div>
+        </button>
       </div>
 
       <nav className="nav">
-        {/* <nav className={sidebarStatus ? "" : ""}> */}
         <ul
           // the open class means the menu has the styling of when it
           //is open in terms of look but slide changes the orientation
-          className={
-            sidebarStatus ? "open slide-in" : "open lrg-window-slideout"
-          }
+          className={sidebarClass}
         >
           <li onClick={sideBarBtnHandler}>
             <Link to="/" className="link">

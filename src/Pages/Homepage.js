@@ -73,8 +73,8 @@ const HomePage = () => {
         {/* ADD A MEDIA QUERY THAT REMOVES THE BELOW CLASS AT SMALLER SCREEN SIZE
         WHERE SOCIALS BECOME VERTICLE */}
         <div className={screenType}>
-          <Sidebar clickHandler={sidebarHandler} />
           <Socials sidebarStatus={state.sidbarStatus} />
+          <Sidebar clickHandler={sidebarHandler} />
         </div>
         <div className="projects">
           <header>

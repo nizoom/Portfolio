@@ -328,6 +328,7 @@ footer {
     border-top-left-radius: 16px;
     margin-top: 0;
     animation: none;
+    transform: none;
   }
 
   .socials-wrapper ul {
