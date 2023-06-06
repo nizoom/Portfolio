@@ -15,7 +15,10 @@ const Blog = () => {
   return (
     <div className="blog-page-wrapper">
       <Logo />
-      <Sidebar clickHandler={null} />
+      <div className="sidebar-and-socials-wrapper">
+        <Sidebar clickHandler={null} />
+      </div>
+
       <div>
         <BackToTopBtn navStatus={false} />
         <div className="blog_div">

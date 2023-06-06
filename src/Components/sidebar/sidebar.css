@@ -5,19 +5,6 @@
   cursor: pointer;
 }
 
-.nav {
-}
-.open {
-  display: flex;
-  /* position: absolute; */
-  /* right: 100px; */
-  background-color: black;
-
-  font-family: "Montserrat", sans-serif;
-  transform: translateX(100%);
-  -webkit-transform: translateX(100%);
-}
-
 .bar1,
 .bar2,
 .bar3 {
@@ -90,17 +77,24 @@
   margin-top: -35px;
 }
 
+.open {
+  display: flex;
+  background-color: black;
+  font-family: "Montserrat", sans-serif;
+  transform: translateX(100%);
+  -webkit-transform: translateX(100%);
+}
 .lrg-window-slideout {
+  animation: slide-out 0.5s forwards;
+  -webkit-animation: slide-out 0.5s forwards;
+}
+
+.regular-window-slideout {
   display: flex;
   flex-direction: row;
   animation: nav-slide-out 0.5s forwards;
   -webkit-animation: nav-slide-out 0.5s forwards;
   width: 0px;
-}
-
-.slide-out {
-  animation: slide-out 0.5s forwards;
-  -webkit-animation: slide-out 0.5s forwards;
 }
 
 @keyframes nav-slide-out {
@@ -152,7 +146,7 @@
 }
 
 .nav,
-.lrg-window-slideout,
+.regular-window-slideout,
 .open {
   overflow: hidden;
 }

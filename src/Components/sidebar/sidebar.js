@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
 import "./sidebar.css";
 import { BrowserRouter as Router, Link } from "react-router-dom";
+import { useMediaQuery } from "react-responsive";
 
 const Sidebar = (props) => {
+  const isDesktop = useMediaQuery({ minWidth: 1300 });
   const [sidebarStatus, setSidebarStatus] = useState(false);
   const [sidebarClass, setSidebarClass] = useState("closed-sidebar");
 
@@ -11,11 +13,15 @@ const Sidebar = (props) => {
       setSidebarClass("open slide-in");
       return;
     }
-    setSidebarClass("open lrg-window-slideout");
+    if (isDesktop) {
+      setSidebarClass("open lrg-window-slideout");
+    } else {
+      setSidebarClass("open regular-window-slideout");
+    }
     // Remove the class after 1 second
     const timer = setTimeout(() => {
       setSidebarClass("closed-sidebar");
-    }, 500);
+    }, 1000);
 
     // Clean up the timer on component unmount
     return () => clearTimeout(timer);
