@@ -24,7 +24,10 @@ const ContactPage = () => {
   return (
     <div className="contact-page-wrapper">
       <Logo />
-      <Sidebar clickHandler={null} />
+      <div className="sidebar-and-socials-wrapper">
+        {" "}
+        <Sidebar clickHandler={null} />
+      </div>
 
       <div className="contact-border">
         <div className="contact-form-wrapper">

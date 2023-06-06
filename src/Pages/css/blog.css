@@ -98,6 +98,7 @@
   .mobile-blog-nav {
     left: 0px;
     top: 88px;
+    transform: none;
   }
   .blog-tab h3:hover {
     transition: none;

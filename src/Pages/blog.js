@@ -9,6 +9,7 @@ import PostFour from "../Components/blog_posts/post_four";
 import PostFive from "../Components/blog_posts/post_five";
 import BackToTopBtn from "../Components/backToTop/backToTop";
 import BlogMenu from "../Components/BlogMenu/blogmenu";
+import "./css/homepage.css";
 
 const Blog = () => {
   return (
@@ -18,7 +19,10 @@ const Blog = () => {
       <div>
         <BackToTopBtn navStatus={false} />
         <div className="blog_div">
-          <BlogMenu />
+          <div className="socials-mobile-view">
+            <BlogMenu />
+          </div>
+
           <div className="post">
             <PostFive />
 

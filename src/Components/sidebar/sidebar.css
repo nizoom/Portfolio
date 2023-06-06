@@ -223,9 +223,6 @@
 }
 
 @media (max-width: 500px) {
-  .open {
-    margin-top: 45%;
-  }
   .square-btn {
     margin-top: 5px;
   }

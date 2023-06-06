@@ -19,7 +19,10 @@ const Resume = () => {
     <div className="resume-page-wrapper">
       <Logo />
       <div className="top-right-div">
-        <Sidebar clickHandler={sidebarHandler} />
+        <div className="sidebar-and-socials-wrapper">
+          <Sidebar clickHandler={sidebarHandler} />
+        </div>
+
         <a href={ResumePDF} rel="noreferrer" target="_blank" download>
           {dlBtn ? (
             <button className="download">

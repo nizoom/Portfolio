@@ -121,9 +121,6 @@
   z-index: 3000;
 }
 
-.welcome-border h2 {
-  font-weight: 300;
-}
 header {
   display: flex;
   width: 100%;
@@ -236,16 +233,9 @@ footer {
   .bubbles-wrapper {
     /* margin-top: 200px; */
   }
-  .welcome-border {
-    height: 150px;
-  }
 }
 
 @media (max-width: 1100px) {
-  .welcome-border {
-    font-size: 14px;
-  }
-
   .socials-wrapper img {
     width: 25px;
     margin-top: 20px;
@@ -258,14 +248,6 @@ footer {
 @media (max-width: 1050px) {
   .apps-section {
     padding-bottom: 100px;
-  }
-
-  .welcome-border {
-    height: 400px;
-    width: 450px;
-  }
-  .welcome-border h2 {
-    font-size: 20px;
   }
 }
 
@@ -309,10 +291,7 @@ footer {
   .bubbles-wrapper {
     margin-top: 30%;
   }
-  .welcome-border {
-    height: 400px;
-    width: 400px;
-  }
+
   .socials-wrapper {
     top: 38px;
     right: 100px;
@@ -334,13 +313,11 @@ footer {
   .bubbles-wrapper {
     margin-top: 40%;
   }
-  /* .welcome-border h2 {
-    font-size: 18px;
+  .socials-mobile-view {
+    top: 88px;
+    position: absolute;
+    left: 18px;
   }
-  .welcome-border {
-    margin-top: 155px;
-    height: 200px;
-  } */
 
   .socials-wrapper {
     top: 88.4px;
@@ -350,6 +327,7 @@ footer {
     width: 20px;
     border-top-left-radius: 16px;
     margin-top: 0;
+    animation: none;
   }
 
   .socials-wrapper ul {
@@ -370,9 +348,6 @@ footer {
 }
 
 @media (max-width: 600px) {
-  .welcome-border {
-    width: 350px;
-  }
   .subheader-div h2 {
     margin-left: 50px;
   }
@@ -388,14 +363,7 @@ footer {
     margin-top: 60px;
   }
 }
-@media (max-width: 550px) {
-  .welcome-border {
-    width: 320px;
-  }
-  .welcome-border h2 {
-    font-size: 16px;
-  }
-}
+
 @media (max-width: 500px) {
   .intro-copy-wrapper {
     margin-top: 75px;
@@ -411,15 +379,9 @@ footer {
   .bubbles-wrapper {
     margin-top: 50%;
   }
-  .welcome-border {
-    width: 250px;
-  }
+
   /* GIVE MORE WIDTH TO BOTH */
-  .welcome-border h2 {
-    letter-spacing: -1px;
-    width: 90%;
-    white-space: nowrap;
-  }
+
   .subheader-div {
     flex-direction: row;
   }
@@ -432,13 +394,14 @@ footer {
     left: 15px;
   }
 
-  .welcome-border {
-    margin-top: 0;
-  }
-
   .socials-wrapper img {
     height: 15px;
     width: 15px;
+  }
+  .socials-mobile-view {
+    top: 75px;
+    position: absolute;
+    left: 8px;
   }
 }
 @media (max-width: 450px) {
@@ -472,5 +435,10 @@ footer {
   }
   .socials-wrapper ul {
     margin-top: 40px;
+  }
+  .socials-mobile-view {
+    top: 65px;
+    position: absolute;
+    left: 8px;
   }
 }
