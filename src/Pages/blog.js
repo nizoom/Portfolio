@@ -14,10 +14,12 @@ import "./css/homepage.css";
 const Blog = () => {
   return (
     <div className="blog-page-wrapper">
-      <Logo />
-      <div className="sidebar-and-socials-wrapper">
-        <Sidebar clickHandler={null} />
-      </div>
+      <header>
+        <Logo />
+        <div className="sidebar-and-socials-wrapper">
+          <Sidebar clickHandler={null} />
+        </div>
+      </header>
 
       <div>
         <BackToTopBtn navStatus={false} />

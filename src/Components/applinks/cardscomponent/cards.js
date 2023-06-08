@@ -49,15 +49,6 @@ const Cards = (props) => {
     }
   };
 
-  // const sliderControls = {
-  //   triggerSlider: () => {
-  //     setShowSlider(true);
-  //   },
-  //   closeSlider: () => {
-  //     setShowSlider(false);
-  //   },
-  // };
-
   return (
     // ICON CARD
     <div className="card-component-wrapper bob-on-hover">

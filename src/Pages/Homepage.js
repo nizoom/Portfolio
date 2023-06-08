@@ -38,7 +38,6 @@ const HomePage = () => {
   const history = useHistory();
   useEffect(() => {
     // Runs after the first render() lifecycle
-
     const userVisitationStatus = getLocalVisitStatus();
     if (userVisitationStatus === null || userVisitationStatus === undefined) {
       firstVisit();
@@ -46,23 +45,23 @@ const HomePage = () => {
     }
     myGa();
   }, []);
-  const [showSlider, setShowSlider] = useState(false);
+  const [showCarousel, setShowCarousel] = useState(false);
 
   const sliderControls = {
     triggerSlider: () => {
-      setShowSlider(true);
+      setShowCarousel(true);
     },
     closeSlider: () => {
-      setShowSlider(false);
+      setShowCarousel(false);
     },
   };
 
   const isMobile = useMediaQuery({ maxWidth: 700 });
   const screenType = useMemo(() => {
-    if (isMobile) {
-      return "socials-mobile-view";
-    }
-    return "sidebar-and-socials-wrapper";
+    const layoutClass = isMobile
+      ? "socials-mobile-view"
+      : "sidebar-and-socials-wrapper";
+    return layoutClass;
   }, [isMobile]);
 
   return (
@@ -70,8 +69,7 @@ const HomePage = () => {
       <div className=""> </div>
       <div className="fade-in">
         <Logo />
-        {/* ADD A MEDIA QUERY THAT REMOVES THE BELOW CLASS AT SMALLER SCREEN SIZE
-        WHERE SOCIALS BECOME VERTICLE */}
+
         <div className={screenType}>
           <Socials sidebarStatus={state.sidbarStatus} />
           <Sidebar clickHandler={sidebarHandler} />
@@ -119,8 +117,11 @@ const HomePage = () => {
           </div>
 
           <div>
-            {showSlider ? (
-              <Fade sliderControls={sliderControls} sliderStatus={showSlider} />
+            {showCarousel ? (
+              <Fade
+                sliderControls={sliderControls}
+                sliderStatus={showCarousel}
+              />
             ) : null}
           </div>
           <section className="apps-section">

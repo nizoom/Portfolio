@@ -67,8 +67,9 @@
   float: right;
   overflow: hidden;
   position: absolute;
-  right: 150px;
+  right: 100px;
   top: 38px;
+  width: 610px;
 }
 
 @media (max-width: 1050px) {

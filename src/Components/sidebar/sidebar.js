@@ -1,22 +1,27 @@
 import React, { useState, useEffect } from "react";
 import "./sidebar.css";
-import { BrowserRouter as Router, Link } from "react-router-dom";
+import { BrowserRouter as Router, Link, useLocation } from "react-router-dom";
 import { useMediaQuery } from "react-responsive";
 
 const Sidebar = (props) => {
   const isDesktop = useMediaQuery({ minWidth: 1300 });
   const [sidebarStatus, setSidebarStatus] = useState(false);
   const [sidebarClass, setSidebarClass] = useState("closed-sidebar");
+  const currentPage = useLocation();
 
   useEffect(() => {
+    const openClass =
+      currentPage.pathname === "/"
+        ? "open-homepage-version"
+        : "open-regular-version";
     if (sidebarStatus) {
-      setSidebarClass("open slide-in");
+      setSidebarClass(`${openClass} slide-in`);
       return;
     }
     if (isDesktop) {
-      setSidebarClass("open lrg-window-slideout");
+      setSidebarClass(`${openClass} lrg-window-slideout`);
     } else {
-      setSidebarClass("open regular-window-slideout");
+      setSidebarClass(`${openClass} regular-window-slideout`);
     }
     // Remove the class after 1 second
     const timer = setTimeout(() => {

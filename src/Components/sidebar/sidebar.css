@@ -74,10 +74,20 @@
 .socials-wrapper-ul {
   display: flex;
   justify-content: end;
-  margin-top: -35px;
+  /* margin-top: -35px; */
 }
 
-.open {
+.open-homepage-version {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  background-color: black;
+  font-family: "Montserrat", sans-serif;
+  transform: translateX(100%);
+  -webkit-transform: translateX(100%);
+}
+.open-regular-version {
   display: flex;
   background-color: black;
   font-family: "Montserrat", sans-serif;
@@ -85,6 +95,10 @@
   -webkit-transform: translateX(100%);
 }
 .lrg-window-slideout {
+  animation: slide-out 0.5s forwards;
+  -webkit-animation: slide-out 0.5s forwards;
+}
+.slide-out {
   animation: slide-out 0.5s forwards;
   -webkit-animation: slide-out 0.5s forwards;
 }
@@ -157,7 +171,8 @@
   }
   .nav {
   }
-  .open {
+  .open-regular-version,
+  .open-homepage-version {
     min-width: 50vw;
     padding: 50px;
     gap: 40px;
