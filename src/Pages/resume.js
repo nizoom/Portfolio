@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import "./css/resume.css";
 
 import Logo from "../Components/logo/logo";
@@ -53,11 +52,15 @@ const Resume = () => {
           <ul className="list">
             <li>
               Built out full websites for company clients based on wireframes
-              from design team
+              from design team.
             </li>
             <li>
               Responded to client and designer feedback to iterate and improve
-              wireframe implementation
+              wireframe implementation.
+            </li>
+            <li>
+              Multitasked between multiple ongoing client sites to ensure quick
+              turnaround.
             </li>
           </ul>
 
