@@ -17,7 +17,7 @@ const Resume = () => {
   return (
     <div className="resume-page-wrapper">
       <Logo />
-      <div className="top-right-div">
+      <div>
         <div className="sidebar-and-socials-wrapper">
           <Sidebar clickHandler={sidebarHandler} />
         </div>
@@ -26,7 +26,7 @@ const Resume = () => {
           {dlBtn ? (
             <button className="download">
               {" "}
-              <img src={DownloadIcon} alt="download-resume" />{" "}
+              <img src={DownloadIcon} alt="download-resume" />
             </button>
           ) : null}
         </a>

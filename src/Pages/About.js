@@ -20,7 +20,13 @@ const About = (props) => {
             Hey there, I'm a web developer based in New York City.
           </h2>
 
-          <img src={Headshot} alt="Nissim Ram" className="headshot" />
+          <img
+            src={Headshot}
+            alt="Nissim Ram"
+            className="headshot"
+            rel="preload"
+            as="image"
+          />
 
           <p className="about-content">
             The UIs I create begin in Figma and end in saving users a lot of
