@@ -53,10 +53,10 @@
 }
 
 .intro-copy-wrapper span {
-  color: #b18d8d;
+  color: #a880b9;
 }
 .intro-copy-wrapper span:hover {
-  color: #a880b9;
+  color: #f38e89;
   cursor: pointer;
   text-decoration: underline;
   font-weight: bolder;

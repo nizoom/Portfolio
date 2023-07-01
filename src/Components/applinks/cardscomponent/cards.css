@@ -150,7 +150,7 @@
 .more-info-btn {
   padding: 10px;
   /* border: 2px solid black; */
-  border: none;
+  border: 1.8px solid black;
   border-radius: 3px;
   font-family: "Montserrat", sans-serif;
 

@@ -5,7 +5,7 @@ const PostOne = () => {
     <article>
       <h2 className="blog-date"> Post One, January 2021 </h2>
 
-      <h3 className="blog-title title-1"> Hello world. </h3>
+      <h3 className="post-title title-1"> Hello world. </h3>
 
       <p className="blog-body">
         {" "}

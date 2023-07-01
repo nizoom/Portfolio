@@ -24,17 +24,19 @@ import Blog from "./Pages/blog";
 import ContactPage from "./Pages/Contact/contactpage";
 import IntroScreen from "./Pages/intro";
 import Resume from "./Pages/resume";
+import ArsenalPage from "./Pages/blogpages/arsenal";
 
 class App extends Component {
   render() {
     return (
       <HashRouter>
         <Switch>
-          <Route exact path="/Intro" component={IntroScreen} />
+          <Route exact path="/intro" component={IntroScreen} />
           <Route exact path="/" component={HomePage} />
           <Route exact path="/About" component={About} />
-          <Route exact path="/Blog" component={Blog} />
-          <Route exact path="/Contact" component={ContactPage} />
+          <Route exact path="/blog" component={Blog} />
+          <Route exact path="/arsenal" component={ArsenalPage} />
+          <Route exact path="/contact" component={ContactPage} />
           <Route exact path="/resume" component={Resume} />
           <Route exact path="/resume" component={Resume} />
 

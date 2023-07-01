@@ -6,7 +6,7 @@ const PostFour = () => {
     <article>
       <h1 className="blog-date"> Post Four, August 2021 </h1>
 
-      <h2 className="blog-title title-4">
+      <h2 className="post-title title-4">
         {" "}
         City Building, Certifications, and CRUDs{" "}
       </h2>

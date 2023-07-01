@@ -10,8 +10,9 @@ const Cards = (props) => {
   });
 
   const btnOneStyle = {
-    background: isHover.btnNumberOne ? "black" : "#C7A25D",
+    background: isHover.btnNumberOne ? "black" : "#EF8F85",
     color: isHover.btnNumberOne ? "white" : "black",
+
     textDecoration: "none",
     boxShadow: isHover.btnNumberOne
       ? "0px 0px 10px rgba(0.467, 0.341, 0.506, 1)"
@@ -19,8 +20,9 @@ const Cards = (props) => {
     marginTop: "5px",
   };
   const btnTwoStyle = {
-    background: isHover.btnNumberTwo ? "black" : "#C7A25D",
+    background: isHover.btnNumberTwo ? "black" : "#EF8F85",
     color: isHover.btnNumberTwo ? "white" : "black",
+    border: "",
     textDecoration: "none",
     boxShadow: isHover.btnNumberTwo
       ? "0px 0px 10px rgba(0.467, 0.341, 0.506, 1)"

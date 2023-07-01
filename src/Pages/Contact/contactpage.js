@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import useForm from "./useForm";
 import validate from "./validateinfo";
-import "./contact.css";
+import "../css/contact.css";
 import Sidebar from "../../Components/sidebar/sidebar";
 import Logo from "../../Components/logo/logo";
 import submitValidatedData from "./submit";
@@ -9,7 +9,7 @@ import cluster from "../../project_layout/contactpagecluster.png";
 
 const ContactPage = () => {
   // FORM CODE
-  const { handleChange, values, handleSubmit, errors, isSubmitting } = useForm(
+  const { handleChange, values, handleSubmit, errors } = useForm(
     validate,
     submitForm
   );

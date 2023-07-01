@@ -5,7 +5,7 @@ const PostTwo = (props) => {
   return (
     <article>
       <h1 className="blog-date"> Post Two, March 2021 </h1>
-      <h2 className="blog-title"> Global News Project </h2>
+      <h2 className="post-title"> Global News Project </h2>
 
       <p className="blog-body">
         This post is about building my first web application, Global News. I

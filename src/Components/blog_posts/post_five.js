@@ -5,7 +5,7 @@ const PostFive = () => {
   return (
     <article>
       <h1 className="blog-date"> Post 5, February 2022 </h1>
-      <h2 className="blog-title"> UIs, backend apps, and client work </h2>
+      <h2 className="post-title"> UIs, backend apps, and client work </h2>
       <p className="blog-body">
         The last six months have been an eventful period in my coding journey.
         During this period I primarily engaged in client work where I deployed

@@ -1,44 +1,56 @@
-import globalnewsIcon from "../../../project_layout/worldnews.png"
+import globalnewsIcon from "../../../project_layout/worldnews.png";
 import { BrowserRouter as Router, Link } from "react-router-dom";
 import React from "react";
-import "./presentgn.css"
-import "../presentappstyles.css"
-import appIconCard from "../../../project_layout/appiconcard.png"
-import appDescriptionCard from "../../../project_layout/appdescriptioncard.png"
+import "./presentgn.css";
+import "../presentappstyles.css";
+import appIconCard from "../../../project_layout/appiconcard.png";
+import appDescriptionCard from "../../../project_layout/appdescriptioncard.png";
 
-const PresentGlobalNews = (props) => {
-
-
+const PresentGlobalNews = () => {
   return (
     <section className="whole-project-box">
-
-
-    <div>
-     <h3 className="global-news-title"> Try Global News</h3>
-     <Link to="/globalnews" target="_blank" rel="noopener noreferrer">
-              {/* <h3 className="app_title"> Try it out! </h3> */}
-              <img src={globalnewsIcon} alt="world news icon" className="newsIcon" />
-      <img src = {appIconCard} alt = 'icon card'className="global-new-icon-card"/>
-
-            </Link>
-
-      
-    </div>
-
-    <div>
-      <div className="description-text-div">
-          <p className="tech-used">  <span className="stack"> Tech stack: </span> <span className="tech-list">ReactJS, React Router, Material UI, Azure, Google Cloud, LeafletJS.  </span> </p>
-          <button className="more-info-btn"> Click here for more info</button>
+      <div>
+        <h3 className="global-news-title"> Try Global News</h3>
+        <Link to="/globalnews" target="_blank" rel="noopener noreferrer">
+          <img
+            src={globalnewsIcon}
+            alt="world news icon"
+            className="newsIcon"
+          />
+          <img
+            src={appIconCard}
+            alt="icon card"
+            className="global-new-icon-card"
+          />
+        </Link>
       </div>
-      <img src = {appDescriptionCard} alt = 'app description card' className="app-description-card news-desc-card-location"/>
-      
-    
 
-    </div>
-    
+      <div>
+        <div className="description-text-div">
+          <p className="tech-used">
+            {" "}
+            <span className="stack"> Tech stack: </span>{" "}
+            <span className="tech-list">
+              ReactJS, React Router, Material UI, Azure, Google Cloud,
+              LeafletJS.{" "}
+            </span>{" "}
+          </p>
+          <button className="more-info-btn"> Click here for more info</button>
+        </div>
+        <img
+          src={appDescriptionCard}
+          alt="app description card"
+          className="app-description-card news-desc-card-location"
+        />
+      </div>
+    </section>
+  );
+};
 
+export default PresentGlobalNews;
 
-      {/* <div className="title-wrapper">
+{
+  /* <div className="title-wrapper">
         <h3 className="project-title"> Global News </h3>
       </div>
       <section className="project-wrapper">
@@ -73,10 +85,5 @@ const PresentGlobalNews = (props) => {
 
 
         </div>
-      </section> */}
-    </section>
-  )
+      </section> */
 }
-
-export default PresentGlobalNews
-// <span className="try"> 

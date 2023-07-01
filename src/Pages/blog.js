@@ -12,6 +12,14 @@ import BlogMenu from "../Components/BlogMenu/blogmenu";
 import "./css/homepage.css";
 
 const Blog = () => {
+  const returnSelectedPgComponent = (clickedPage) => {
+    console.log(clickedPage);
+    // selection logic
+
+    // transition css
+
+    // show content
+  };
   return (
     <div className="blog-page-wrapper">
       <header>
@@ -25,7 +33,7 @@ const Blog = () => {
         <BackToTopBtn navStatus={false} />
         <div className="blog_div">
           <div className="socials-mobile-view">
-            <BlogMenu />
+            <BlogMenu returnSelectedPgComponent={returnSelectedPgComponent} />
           </div>
 
           <div className="post">

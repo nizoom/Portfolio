@@ -5,7 +5,7 @@ const PostThree = () => {
   return (
     <article>
       <h1 className="blog-date"> Post Three, June 2021 </h1>
-      <h2 className="blog-title"> Enter the Echo Chamber </h2>
+      <h2 className="post-title"> Enter the Echo Chamber </h2>
       <p className="blog-body">
         This post is about building my second web app,{" "}
         <em> Enter the Echo Chamber </em>. Compared to Global News, my first

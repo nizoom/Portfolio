@@ -1,98 +1,96 @@
-/* .loading-page-wrapper{
-    background-color: #000000;
-    position: absolute;
-    top: 
-} */
- 
-svg{
+svg {
   margin: 0;
-  padding:0;
-  width:345px;
-  height:469px;
-  
+  padding: 0;
+  width: 345px;
+  height: 469px;
 }
-.intro-screen-parent{
-    text-align: center;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-
-.draw-bold-straight{
-    stroke: #D5B060;
-    stroke-width:  10px;
-    stroke-dasharray: 500;
-    stroke-dashoffset: 500;
-    animation: animate 3s ease-out infinite;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards
-
+.intro-screen-parent {
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.diagonal-line{
-    stroke: #D5B060;
-    stroke-width:  10px;
-    stroke-dasharray: 500;
-    stroke-dashoffset: 500;
-    animation: animate 2s ease-out infinite;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-    animation-delay: 1s;
-}
-.draw-curve-lrg{
-    stroke: #D5B060;
-    stroke-width:  10px;
-    stroke-dasharray: 500;
-    stroke-dashoffset: 500;
-    animation: animate 2s ease-out infinite;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-    animation-delay: 2100ms;
+.draw-bold-straight {
+  stroke: #d5b060;
+  stroke-width: 10px;
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  animation: animate 3s ease-out infinite;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }
 
-.draw-curve-small{
-    stroke: #D5B060;
-    stroke-width:  10px;
-    stroke-dasharray: 500;
-    stroke-dashoffset: 500;
-    animation: animate 3.5s ease-out infinite;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-    animation-delay: 2100ms;
+.diagonal-line {
+  stroke: #d5b060;
+  stroke-width: 10px;
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  animation: animate 2s ease-out infinite;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-delay: 1s;
+}
+.draw-curve-lrg {
+  stroke: #d5b060;
+  stroke-width: 10px;
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  animation: animate 2s ease-out infinite;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-delay: 2100ms;
+}
 
+.draw-curve-small {
+  stroke: #d5b060;
+  stroke-width: 10px;
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  animation: animate 3.5s ease-out infinite;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-delay: 2100ms;
 }
 
 .fade-out {
-    animation:fade-out 3s 1;
-    -webkit-animation:fade-out 3s 1;
-    animation-fill-mode: forwards;
+  animation: fade-out 3s 1;
+  -webkit-animation: fade-out 3s 1;
+  animation-fill-mode: forwards;
 
-    animation-delay:.95s;
-    -webkit-animation-delay:.95s; /* Safari and Chrome */
-    -webkit-animation-fill-mode: forwards;
- }
+  animation-delay: 0.95s;
+  -webkit-animation-delay: 0.95s; /* Safari and Chrome */
+  -webkit-animation-fill-mode: forwards;
+}
 
-@keyframes animate{
-    to {
-        stroke-dashoffset: 0;
-  
-    }
- 
+@keyframes animate {
+  to {
+    stroke-dashoffset: 0;
+  }
 }
 
 @keyframes fade-out {
-    0%   {opacity: 1;}
-    70%  {opacity: 1;}
-    90% {opacity: 1;-webkit-transform: translateY(0px);}
-    100% {opacity: 0;-webkit-transform: translateY(-30px);}
- }
+  0% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(-30px);
+  }
+}
 
- @media (max-width: 600px){
-    .intro-screen-parent{
-        zoom: 60%;
-    }
- }
+@media (max-width: 600px) {
+  .intro-screen-parent {
+    zoom: 60%;
+  }
+}
