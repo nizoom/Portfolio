@@ -2,11 +2,11 @@ import React from "react";
 import Logo from "../Components/logo/logo";
 import Sidebar from "../Components/sidebar/sidebar";
 import "./css/blog.css";
-import PostOne from "../Components/blog_posts/post_one";
-import PostTwo from "../Components/blog_posts/post_two";
-import PostThree from "../Components/blog_posts/post_three";
-import PostFour from "../Components/blog_posts/post_four";
-import PostFive from "../Components/blog_posts/post_five";
+// import PostOne from "../Components/blog_posts/post_one";
+// import PostTwo from "../Components/blog_posts/post_two";
+// import PostThree from "../Components/blog_posts/post_three";
+// import PostFour from "../Components/blog_posts/post_four";
+// import PostFive from "../Components/blog_posts/post_five";
 import BackToTopBtn from "../Components/backToTop/backToTop";
 import BlogMenu from "../Components/BlogMenu/blogmenu";
 import "./css/homepage.css";
@@ -22,21 +22,19 @@ const Blog = () => {
   };
   return (
     <div className="blog-page-wrapper">
+      <Logo />
       <header>
-        <Logo />
         <div className="sidebar-and-socials-wrapper">
           <Sidebar clickHandler={null} />
         </div>
       </header>
 
       <div>
-        <BackToTopBtn navStatus={false} />
-        <div className="blog_div">
-          <div className="socials-mobile-view">
-            <BlogMenu returnSelectedPgComponent={returnSelectedPgComponent} />
-          </div>
+        {/* <BackToTopBtn navStatus={false} /> */}
 
-          <div className="post">
+        <BlogMenu returnSelectedPgComponent={returnSelectedPgComponent} />
+
+        {/* <div className="post">
             <PostFive />
 
             <PostFour />
@@ -46,8 +44,7 @@ const Blog = () => {
             <PostTwo />
 
             <PostOne />
-          </div>
-        </div>
+          </div> */}
       </div>
     </div>
   );

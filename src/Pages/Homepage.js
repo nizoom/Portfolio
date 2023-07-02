@@ -75,7 +75,7 @@ const HomePage = () => {
           <Sidebar clickHandler={sidebarHandler} />
         </div>
         <div className="projects">
-          <header>
+          <header className="homepage-header">
             <div className="intro-copy-wrapper">
               <h1 className=""> Hey there, </h1>
               <h3>

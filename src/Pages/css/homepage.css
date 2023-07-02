@@ -227,7 +227,7 @@ footer {
 /* MEDIA QUERIUES */
 
 @media (max-width: 1600px) {
-  header {
+  hompage-header {
     height: 100px;
   }
 
@@ -315,19 +315,19 @@ footer {
     margin-top: 40%;
   }
   .socials-mobile-view {
-    top: 88px;
+    top: 64px;
     position: absolute;
-    left: 18px;
+    left: 20.5px;
   }
 
   .socials-wrapper {
     top: 88.4px;
-    left: 21px;
-    border-left: 3px solid #d5b060;
-    border-top: 3px solid #d5b060;
+    left: 22px;
+    border-left: 3.5px solid #d5b060;
+    height: 220px;
     width: 20px;
-    border-top-left-radius: 16px;
-    margin-top: 0;
+
+    margin-top: -40px;
     animation: none;
     transform: none;
   }
@@ -337,6 +337,9 @@ footer {
     flex-direction: column;
     gap: 0;
     margin-top: 50px;
+  }
+  .socials-wrapper ul li {
+    margin-top: 5px;
   }
   .socials-wrapper img {
     height: 20px;
@@ -401,9 +404,6 @@ footer {
     width: 15px;
   }
   .socials-mobile-view {
-    top: 75px;
-    position: absolute;
-    left: 8px;
   }
 }
 @media (max-width: 450px) {
@@ -439,8 +439,5 @@ footer {
     margin-top: 40px;
   }
   .socials-mobile-view {
-    top: 65px;
-    position: absolute;
-    left: 8px;
   }
 }

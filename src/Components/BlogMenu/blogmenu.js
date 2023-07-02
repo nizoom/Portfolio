@@ -31,31 +31,50 @@ const BlogMenu = (props) => {
     props.returnSelectedPgComponent(page);
   };
 
-  const screenType = useMemo(() => {
-    if (isMobile) {
-      if (comingSoonMsgClass !== "hide-coming-soon-msg") {
-        setComingSoonMsgClass("mobile-coming-soon-msg");
-      }
-      return "socials-wrapper mobile-blog-nav";
-    }
-    return "blog-nav";
-  }, [isMobile, comingSoonMsgClass]);
+  // const screenType = useMemo(() => {
+  //   if (isMobile) {
+  //     if (comingSoonMsgClass !== "hide-coming-soon-msg") {
+  //       setComingSoonMsgClass("mobile-coming-soon-msg");
+  //     }
+  //     return "socials-wrapper mobile-blog-nav";
+  //   }
+  //   return "blog-nav";
+  // }, [isMobile, comingSoonMsgClass]);
   return (
-    <div>
-      <h4 className={comingSoonMsgClass}>These sections are coming soon!</h4>
-      <nav className={screenType}>
+    <div className="blog-menu-flexbox">
+      <div className="blog-page-description-wrapper">
+        <h1 className="blog-menu-header">
+          {" "}
+          Blogs <span>and </span> writeups
+        </h1>
+      </div>
+      <nav className="blog-nav">
+        <h4 className={comingSoonMsgClass}>These sections are coming soon!</h4>
+
         <ul>
-          <li className="blog-tab" onClick={() => toggleBlogPage("Tech")}>
+          <li
+            className="blog-tab tech-tab"
+            onClick={() => toggleBlogPage("Tech")}
+          >
             <h3>Tech</h3>
           </li>
-          <li className="blog-tab" onClick={() => toggleBlogPage("Writing")}>
-            <h3>Writing</h3>
-          </li>
-          <li className="blog-tab" onClick={() => toggleBlogPage("Arsenal")}>
+          <li
+            className="blog-tab arsenal-tab"
+            onClick={() => toggleBlogPage("Arsenal")}
+          >
             <h3>Arsenal</h3>
           </li>
-          <li className="blog-tab" onClick={() => toggleBlogPage("Music")}>
+          <li
+            className="blog-tab music-tab"
+            onClick={() => toggleBlogPage("Music")}
+          >
             <h3>Music</h3>
+          </li>
+          <li
+            className="blog-tab writing-tab"
+            onClick={() => toggleBlogPage("Writing")}
+          >
+            <h3>Writing</h3>
           </li>
         </ul>
       </nav>
