@@ -4,7 +4,7 @@ import Sidebar from "../Components/sidebar/sidebar";
 import Headshot from "../project_layout/headshot.png";
 import "./css/about.css";
 
-const About = (props) => {
+const About = () => {
   return (
     <div className="page-wrapper">
       <Logo />
@@ -13,21 +13,13 @@ const About = (props) => {
         <Sidebar clickHandler={null} />
       </div>
 
-      <div>
-        <section className="about-wrapper">
+      <div className="about-flexbox">
+        <section className="about-section">
           <h2 className="header">
             {" "}
-            Hey there, I'm a web developer based in New York City.
+            <span>Hey there,</span> I'm a web developer based in{" "}
+            <span>New York City</span>.
           </h2>
-
-          <img
-            src={Headshot}
-            alt="Nissim Ram"
-            className="headshot"
-            rel="preload"
-            as="image"
-          />
-
           <p className="about-content">
             The UIs I create begin in Figma and end in saving users a lot of
             time in reaching their goals. My work in the nonprofit space have
@@ -45,6 +37,15 @@ const About = (props) => {
             rapidly changing world of front-end development.
           </p>
         </section>
+        <div className="headshot-wrapper">
+          <img
+            src={Headshot}
+            alt="Nissim Ram"
+            className="headshot"
+            rel="preload"
+            as="image"
+          />
+        </div>
       </div>
     </div>
   );
