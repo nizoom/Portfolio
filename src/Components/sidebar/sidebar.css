@@ -167,7 +167,6 @@
 
 @media (max-width: 1300px) {
   .socials-wrapper-ul {
-    margin-top: 15px;
   }
   .nav {
   }
@@ -227,7 +226,7 @@
     transform: rotate(45deg) translate(-4px, -6.5px);
   }
   .socials-wrapper-ul {
-    margin-top: 28px;
+    /* margin-top: 28px; */
     right: 0;
   }
 }

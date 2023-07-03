@@ -17,8 +17,8 @@ const About = () => {
         <section className="about-section">
           <h2 className="header">
             {" "}
-            <span>Hey there,</span> I'm a web developer based in{" "}
-            <span>New York City</span>.
+            <span>Hey there,</span> I'm a <span> web developer </span>based in{" "}
+            New York City.
           </h2>
           <p className="about-content">
             The UIs I create begin in Figma and end in saving users a lot of

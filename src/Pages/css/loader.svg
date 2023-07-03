@@ -1,5 +1,5 @@
 
-    <svg  viewBox="-4 0 348 459" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg  viewBox="-4 0 348 459" fill="#edc671" xmlns="http://www.w3.org/2000/svg">
                 <path className = 'draw' d="M6 133.145L332 454.495" />
                 <path className='draw-bold-straight' d="M334 459L334 133.145"/>
                 <path className='draw-bold-straight' d="M5.51308 459.001L5.49078 128.641" />

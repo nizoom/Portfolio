@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useMemo } from "react";
 import { useHistory, Link } from "react-router-dom";
-// import { BrowserRouter as Router, Link } from "react-router-dom";
 import myGa from "../myGa";
 
 import Logo from "../Components/logo/logo";
@@ -14,7 +13,6 @@ import {
   getLocalVisitStatus,
 } from "../Components/localstorage/localstorage";
 import EchoIcon from "../project_layout/echochambericon.png";
-// import NYCIcon from "../project_layout/builtnyclogo.png";
 import globalnewsIcon from "../project_layout/worldnews.png";
 import tyIcon from "../project_layout/tyicon.png";
 import emailBuilderIcon from "../project_layout/form.png";
@@ -65,30 +63,44 @@ const HomePage = () => {
   }, [isMobile]);
 
   return (
-    <div className="homepage_wrapper background-covering">
-      <div className=""> </div>
+    <div className="landingpage-wrapper">
       <div className="fade-in">
         <Logo />
 
         <div className={screenType}>
           <Socials sidebarStatus={state.sidbarStatus} />
-          <Sidebar clickHandler={sidebarHandler} />
+          {/* <Sidebar clickHandler={sidebarHandler} /> */}
         </div>
-        <div className="projects">
+        <div className="landing-section">
           <header className="homepage-header">
-            <div className="intro-copy-wrapper">
-              <h1 className=""> Hey there, </h1>
-              <h3>
-                welcome to my page. Check out my latest projects below or learn
-                more about
-                <Link to="/About" style={{ textDecoration: "none" }}>
-                  <span> what I do.</span>
-                </Link>
-              </h3>
-            </div>
+            <h1> Nissim Ram</h1>
+            <h2> Freelance web developer and writer</h2>
           </header>
+          <nav className="landing-page-menu">
+            <ul className="landingpage-ul">
+              <li className="main-lp-li">
+                <button className="main-lp-li-btn">Blog</button>
+              </li>
 
-          <div className="bubbles-wrapper">
+              <li className="main-lp-li">
+                <button className="main-lp-li-btn">Projects</button>
+              </li>
+
+              <li className="main-lp-li">
+                <button className="main-lp-li-btn">About</button>
+              </li>
+
+              <li className="main-lp-li">
+                <button className="main-lp-li-btn">Contact</button>
+              </li>
+
+              <li className="main-lp-li">
+                <button className="main-lp-li-btn">CV</button>
+              </li>
+            </ul>
+          </nav>
+
+          {/* <div className="bubbles-wrapper">
             <img
               src={gradientBubble}
               alt="graphic of bubbles falling down"
@@ -114,7 +126,7 @@ const HomePage = () => {
               alt="graphic of bubbles falling down"
               className="small-bbl right-most move"
             />
-          </div>
+          </div> */}
 
           <div>
             {showCarousel ? (
@@ -124,6 +136,7 @@ const HomePage = () => {
               />
             ) : null}
           </div>
+          {/*  
           <section className="apps-section">
             <Cards
               alt="Web Developer Intern"
@@ -209,25 +222,7 @@ const HomePage = () => {
               mainBtnTxt="View ReadMe"
               sliderControls={sliderControls}
             />
-
-            {/* <Cards
-              alt="Twitter API Clone"
-              appTitle="Twitter API Clone"
-              stackList="Java, SpringBoot, JPA, PostgresQL, PGAdmin, Postman, Eclipse, Maven"
-              Description={
-                <p className="app-description">
-                  {" "}
-                  Java backend including endpoints to create users, like tweets,
-                  and follow accounts
-                </p>
-              }
-              position="two"
-            
-              githubUrl="https://github.com/nizoom/Twitter-API-Clone"
-              logo={TwitterIcon}
-              btnOneTxt="View ReadMe"
-            /> */}
-          </section>
+          </section> */}
         </div>
       </div>
     </div>
