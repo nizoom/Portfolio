@@ -8,11 +8,6 @@ import {
   firstVisit,
   getLocalVisitStatus,
 } from "../Components/localstorage/localstorage";
-import EchoIcon from "../project_layout/echochambericon.png";
-import globalnewsIcon from "../project_layout/worldnews.png";
-import tyIcon from "../project_layout/tyicon.png";
-import emailBuilderIcon from "../project_layout/form.png";
-import internIcon from "../project_layout/intern.png";
 import rectangleGradient from "../project_layout/Rectangle.png";
 import Fade from "../Components/applinks/cardscomponent/slider";
 import { useMediaQuery } from "react-responsive";
@@ -76,23 +71,33 @@ const HomePage = () => {
           <nav className="landing-page-menu">
             <ul className="landingpage-ul">
               <li className="main-lp-li">
-                <button className="main-lp-li-btn">Blog</button>
+                <Link to="/Blog">
+                  <button className="main-lp-li-btn">Blog</button>
+                </Link>
               </li>
 
               <li className="main-lp-li">
-                <button className="main-lp-li-btn">Projects</button>
+                <Link to="/">
+                  <button className="main-lp-li-btn">Projects</button>
+                </Link>
               </li>
 
               <li className="main-lp-li">
-                <button className="main-lp-li-btn">About</button>
+                <Link to="/About">
+                  <button className="main-lp-li-btn">About</button>
+                </Link>
               </li>
 
               <li className="main-lp-li">
-                <button className="main-lp-li-btn">Contact</button>
+                <Link to="/Contact">
+                  <button className="main-lp-li-btn">Contact</button>
+                </Link>
               </li>
 
               <li className="main-lp-li">
-                <button className="main-lp-li-btn">CV</button>
+                <Link to="/Resume">
+                  <button className="main-lp-li-btn">CV</button>
+                </Link>
               </li>
             </ul>
           </nav>

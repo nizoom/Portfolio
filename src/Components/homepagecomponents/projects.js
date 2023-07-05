@@ -5,15 +5,20 @@ const ProjectsGridComponent = () => {
   const standardCardBtn = (props) => {
     return (
       <button className="project-card-btn">
-        <a href={props.url} rel="noreferrer" target="_blank">
-          {props.action}
+        <a href={props.link} rel="noreferrer" target="_blank">
+          <p>{props.action}</p>
         </a>
       </button>
     );
   };
 
   const initSlidesBtn = () => {
-    return <button className="project-card-btn"> View Pages</button>;
+    return (
+      <button className="project-card-btn">
+        {" "}
+        <p>View Pages</p>
+      </button>
+    );
   };
   return (
     <div className="project-grid">
@@ -32,7 +37,10 @@ const ProjectsGridComponent = () => {
         cardBtnsArray={[
           {
             component: standardCardBtn,
-            props: { link: "", action: "View ReadMe" },
+            props: {
+              link: "https://github.com/nizoom/FeedSee",
+              action: "View ReadMe",
+            },
           },
         ]}
       />
@@ -43,7 +51,10 @@ const ProjectsGridComponent = () => {
         cardBtnsArray={[
           {
             component: standardCardBtn,
-            props: { link: "", action: "Try Now" },
+            props: {
+              link: "https://github.com/nizoom/Portfolio/tree/main/src/Pages/apps/globalnews/src",
+              action: "Try Now",
+            },
           },
           {
             component: standardCardBtn,
