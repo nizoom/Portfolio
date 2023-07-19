@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import React, { forwardRef, useEffect } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -6,14 +6,14 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faX } from "@fortawesome/free-solid-svg-icons";
 import ESContactPage from "../../../project_layout/elitesuites-contact.png";
 import ESEntrePage from "../../../project_layout/elitesuites-entre.png";
-import "./cards.css";
+import certOfCompletion from "../../../project_layout/Nissim-Certificate-Of-Completion.pdf";
+import "./carousel.css";
 
-const Fader = (props) => {
+const Carousel = forwardRef((props, ref) => {
   useEffect(() => {
     function handleKeyPress(event) {
       if (event.key === "Escape") {
-        // Do something when the Escape key is pressed
-        props.sliderControls.closeSlider();
+        props.closeSlider();
       }
     }
     document.addEventListener("keydown", handleKeyPress);
@@ -21,30 +21,6 @@ const Fader = (props) => {
       document.removeEventListener("keydown", handleKeyPress);
     };
   });
-
-  const faderRef = useRef();
-  useEffect(() => {
-    if (props.sliderStatus) {
-      console.log(faderRef.current);
-      if (faderRef.current) {
-        handleScrollToSlider();
-      }
-    }
-  }, [props.sliderStatus]);
-
-  const handleScrollToSlider = () => [
-    setTimeout(() => {
-      if (props.sliderStatus) {
-        console.log("check test");
-        requestAnimationFrame(() => {
-          faderRef.current.scrollIntoView({
-            behavior: "smooth",
-            block: "start",
-          });
-        });
-      }
-    }, 500),
-  ];
 
   const settings = {
     dots: true,
@@ -55,10 +31,10 @@ const Fader = (props) => {
     slidesToScroll: 1,
   };
   const closeSlider = () => {
-    props.sliderControls.closeSlider();
+    props.closeSlider();
   };
   return (
-    <div className="slider-wrapper" ref={faderRef}>
+    <div className={props.className} ref={ref}>
       <button className="close-slider-btn" onClick={closeSlider}>
         <FontAwesomeIcon icon={faX} />
       </button>
@@ -81,9 +57,18 @@ const Fader = (props) => {
             style={{ maxHeight: "500px", maxWidth: "800px" }}
           />
         </div>
+        <div>
+          <img
+            rel="preload"
+            as="image"
+            src={certOfCompletion}
+            alt="certificate for completion of internship"
+            style={{ maxHeight: "500px", maxWidth: "800px" }}
+          />
+        </div>
       </Slider>
     </div>
   );
-};
+});
 
-export default Fader;
+export default Carousel;

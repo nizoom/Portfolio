@@ -9,7 +9,6 @@ import {
   getLocalVisitStatus,
 } from "../Components/localstorage/localstorage";
 import rectangleGradient from "../project_layout/Rectangle.png";
-import Fade from "../Components/applinks/cardscomponent/slider";
 import { useMediaQuery } from "react-responsive";
 import ProjectsGridComponent from "../Components/homepagecomponents/projects";
 
@@ -35,16 +34,6 @@ const HomePage = () => {
     }
     myGa();
   }, []);
-  const [showCarousel, setShowCarousel] = useState(false);
-
-  const sliderControls = {
-    triggerSlider: () => {
-      setShowCarousel(true);
-    },
-    closeSlider: () => {
-      setShowCarousel(false);
-    },
-  };
 
   const isMobile = useMediaQuery({ maxWidth: 700 });
   const screenType = useMemo(() => {
@@ -102,14 +91,7 @@ const HomePage = () => {
             </ul>
           </nav>
 
-          <div>
-            {showCarousel ? (
-              <Fade
-                sliderControls={sliderControls}
-                sliderStatus={showCarousel}
-              />
-            ) : null}
-          </div>
+          <div></div>
         </div>
       </div>
       <div className="transition-gradient">

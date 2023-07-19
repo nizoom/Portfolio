@@ -14,10 +14,16 @@ const Sidebar = (props) => {
       currentPage.pathname === "/"
         ? "open-homepage-version"
         : "open-regular-version";
+    // if first time page load
+    // keep menu closed and return
+    if (!sidebarStatus && sidebarClass === "closed-sidebar") {
+      return;
+    }
     if (sidebarStatus) {
       setSidebarClass(`${openClass} slide-in`);
       return;
     }
+
     if (isDesktop) {
       setSidebarClass(`${openClass} lrg-window-slideout`);
     } else {
