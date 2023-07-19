@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo } from "react";
+import React, { useState, useEffect, useMemo, useRef } from "react";
 import { useHistory, Link } from "react-router-dom";
 import myGa from "../myGa";
 import Logo from "../Components/logo/logo";
@@ -10,7 +10,10 @@ import {
 } from "../Components/localstorage/localstorage";
 import rectangleGradient from "../project_layout/Rectangle.png";
 import { useMediaQuery } from "react-responsive";
-import ProjectsGridComponent from "../Components/homepagecomponents/projects";
+import {
+  ProjectsGridComponent,
+  smoothScroll,
+} from "../Components/homepagecomponents/projects";
 
 const HomePage = () => {
   const [state, setState] = useState({
@@ -43,6 +46,10 @@ const HomePage = () => {
     return layoutClass;
   }, [isMobile]);
 
+  const projectSectionRef = useRef();
+  const handleProjectBtnClick = () => {
+    smoothScroll(projectSectionRef);
+  };
   return (
     <div className="landingpage-wrapper">
       <div className="fade-in">
@@ -66,9 +73,12 @@ const HomePage = () => {
               </li>
 
               <li className="main-lp-li">
-                <Link to="/">
-                  <button className="main-lp-li-btn">Projects</button>
-                </Link>
+                <button
+                  className="main-lp-li-btn"
+                  onClick={handleProjectBtnClick}
+                >
+                  Projects
+                </button>
               </li>
 
               <li className="main-lp-li">
@@ -97,7 +107,7 @@ const HomePage = () => {
       <div className="transition-gradient">
         <img src={rectangleGradient} />
       </div>
-      <div className="projects-section-header">
+      <div className="projects-section-header" ref={projectSectionRef}>
         <h1>&lt;Web Projects/&gt;</h1>
       </div>
       <section>

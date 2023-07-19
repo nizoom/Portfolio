@@ -2,6 +2,16 @@ import React, { useState, useRef } from "react";
 import ProjectCard from "./projectcard";
 import Carousel from "../applinks/cardscomponent/carousel";
 
+const smoothScroll = (locationRef) => {
+  requestAnimationFrame(() => {
+    console.log("scrolling");
+    locationRef.current.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  });
+};
+
 const ProjectsGridComponent = () => {
   const [sliderClassName, setSliderClassName] = useState("slider-wrapper");
   const standardCardBtn = (props) => {
@@ -14,15 +24,6 @@ const ProjectsGridComponent = () => {
     );
   };
 
-  const smoothScroll = (locationRef) => {
-    requestAnimationFrame(() => {
-      console.log("scrolling");
-      locationRef.current.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
-    });
-  };
   const triggerSlider = () => {
     setSliderClassName("slider-wrapper");
     smoothScroll(carouselRef);
@@ -127,4 +128,4 @@ const ProjectsGridComponent = () => {
   );
 };
 
-export default ProjectsGridComponent;
+export { ProjectsGridComponent, smoothScroll };
