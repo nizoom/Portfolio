@@ -49,11 +49,6 @@
 .close-slider-btn:hover {
   background-color: rgba(187, 145, 78);
 }
-.slider-wrapper img {
-  max-height: 500px;
-  max-width: 800px;
-  margin: auto;
-}
 
 #root
   > div
@@ -103,16 +98,26 @@
   width: 80%;
   margin: auto;
 }
+
+.carousel-img {
+  height: 500px;
+  margin: auto;
+}
+
 @media (max-width: 1000px) {
-  .slider-wrapper img {
-    /* height: 440px;
-      width: 650px; */
-    height: 70%;
-    width: 85%;
-    margin: auto;
+  .carousel-img {
+    height: 400px;
+  }
+}
+@media (max-width: 900px) {
+  .carousel-img {
+    height: 350px;
   }
 }
 @media (max-width: 750px) {
+  .carousel-img {
+    height: 300px;
+  }
   .close-slider-btn {
     font-size: 12px;
   }
@@ -143,13 +148,9 @@
 }
 
 @media (max-width: 675px) {
-  .slider-wrapper img {
-    /* height: 440px;
-      width: 650px; */
-
-    height: 100%;
-    width: 100%;
-    margin: auto;
+  .carousel-img {
+    height: 300px;
+    max-width: 400px;
   }
   .slider-wrapper {
     margin: auto;
@@ -228,8 +229,16 @@
     > button.slick-arrow.slick-prev:before {
     bottom: -800%;
   }
+  .carousel-img {
+    height: 200px;
+    max-width: 400px;
+  }
 }
 @media (max-width: 450px) {
+  .slider-wrapper {
+    width: 95%;
+    left: 0%;
+  }
   .text-wrapper {
     font-size: small;
   }
@@ -245,7 +254,7 @@
     > div
     > div
     > button.slick-arrow.slick-next:before {
-    bottom: -650%;
+    bottom: -250%;
   }
   #root
     > div
@@ -256,6 +265,10 @@
     > div
     > button.slick-arrow.slick-prev:before {
     bottom: -650%;
+  }
+  .slick-prev,
+  .slick-next {
+    top: 110%;
   }
   .close-slider-btn {
     margin-left: 5px;

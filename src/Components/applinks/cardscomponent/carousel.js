@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faX } from "@fortawesome/free-solid-svg-icons";
 import ESContactPage from "../../../project_layout/elitesuites-contact.png";
 import ESEntrePage from "../../../project_layout/elitesuites-entre.png";
-import certOfCompletion from "../../../project_layout/Nissim-Certificate-Of-Completion.pdf";
+import certOfCompletion from "../../../project_layout/Nissim-Certificate-Of-Completion.png";
 import "./carousel.css";
 
 const Carousel = forwardRef((props, ref) => {
@@ -38,13 +38,13 @@ const Carousel = forwardRef((props, ref) => {
       <button className="close-slider-btn" onClick={closeSlider}>
         <FontAwesomeIcon icon={faX} />
       </button>
-      <Slider {...settings}>
+      <Slider {...settings} className="slider-parent-element">
         <div>
           <img
             rel="preload"
             as="image"
             src={ESContactPage}
-            style={{ maxHeight: "500px", maxWidth: "800px" }}
+            className="carousel-img"
             alt="contact-page-build-during-internship"
           />
         </div>
@@ -54,7 +54,7 @@ const Carousel = forwardRef((props, ref) => {
             as="image"
             src={ESEntrePage}
             alt="entrepreneurs-page-build-during-internship"
-            style={{ maxHeight: "500px", maxWidth: "800px" }}
+            className="carousel-img"
           />
         </div>
         <div>
@@ -63,7 +63,7 @@ const Carousel = forwardRef((props, ref) => {
             as="image"
             src={certOfCompletion}
             alt="certificate for completion of internship"
-            style={{ maxHeight: "500px", maxWidth: "800px" }}
+            className="carousel-img"
           />
         </div>
       </Slider>
