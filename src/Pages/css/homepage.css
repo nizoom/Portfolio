@@ -92,7 +92,7 @@
   text-align: center;
   flex-direction: column;
   position: absolute;
-  left: 50%;
+  left: 49%;
   transform: translateX(-50%);
   top: 17%;
 }
@@ -152,7 +152,7 @@ h2 {
 .transition-gradient {
   position: absolute;
   top: 0;
-  z-index: -1;
+  z-index: 0;
 }
 .transition-gradient img {
   height: 10%;
@@ -184,13 +184,15 @@ h2 {
   gap: 30px;
   flex-wrap: wrap;
   justify-content: center;
+  z-index: 2;
 }
 .projectcard-box {
   flex-basis: calc(50% - 45px);
-  background-color: rgba(44, 148, 136, 0.5);
+  background-color: rgba(34, 110, 101, 0.7);
   box-sizing: border-box;
   color: #d0b16a;
   font-family: "Montserrat", sans-serif;
+  z-index: 2;
 }
 .projectcard-content {
   margin: 10px;
@@ -329,6 +331,9 @@ h2 {
   }
 }
 @media (max-width: 700px) {
+  .homepage-header {
+    left: 50%;
+  }
   .homepage-header h1 {
     font-size: 1.7rem;
   }

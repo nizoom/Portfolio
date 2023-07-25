@@ -13,7 +13,9 @@ const smoothScroll = (locationRef) => {
 };
 
 const ProjectsGridComponent = () => {
-  const [sliderClassName, setSliderClassName] = useState("slider-wrapper");
+  const [sliderClassName, setSliderClassName] = useState(
+    "closed-slider-wrapper"
+  );
   const standardCardBtn = (props) => {
     return (
       <button className="project-card-btn">
