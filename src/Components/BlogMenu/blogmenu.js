@@ -1,6 +1,7 @@
 import React, { useMemo, useState } from "react";
 import "../../Pages/css/homepage.css";
 import { useMediaQuery } from "react-responsive";
+import { Link } from "react-router-dom";
 const BlogMenu = (props) => {
   // const isDesktop = useMediaQuery({ minWidth: 1024 });
   // const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 1023 });
@@ -31,15 +32,6 @@ const BlogMenu = (props) => {
     props.returnSelectedPgComponent(page);
   };
 
-  // const screenType = useMemo(() => {
-  //   if (isMobile) {
-  //     if (comingSoonMsgClass !== "hide-coming-soon-msg") {
-  //       setComingSoonMsgClass("mobile-coming-soon-msg");
-  //     }
-  //     return "socials-wrapper mobile-blog-nav";
-  //   }
-  //   return "blog-nav";
-  // }, [isMobile, comingSoonMsgClass]);
   return (
     <div className="blog-menu-flexbox">
       <div className="blog-page-description-wrapper">
@@ -58,12 +50,19 @@ const BlogMenu = (props) => {
           >
             <h3>Tech</h3>
           </li>
+
           <li
             className="blog-tab arsenal-tab"
             onClick={() => toggleBlogPage("Arsenal")}
           >
-            <h3>Arsenal</h3>
+            <Link
+              to="/Arsenal"
+              style={{ color: "#edc671", textDecoration: "none" }}
+            >
+              <h3>Arsenal</h3>
+            </Link>
           </li>
+
           <li
             className="blog-tab music-tab"
             onClick={() => toggleBlogPage("Music")}

@@ -1,33 +1,65 @@
 .arsenal-page {
-  background-image: url("../../../project_layout/arsenalbg.png");
-  background-size: cover;
-  background-position: top center;
-  background-repeat: no-repeat;
+}
+.arsenal-pg-solid-bg {
   background-color: #2e4757;
-
-  animation-duration: 1s;
-  animation-timing-function: ease-in-out;
-  animation-delay: 0s;
-  animation-iteration-count: 1;
-  animation-name: slideInLeft;
 }
 
 /* have the content slide in a .5 seconds after or something like that */
 
-.blog_div {
-  animation-delay: 0.5s;
+.arsenal-background {
+  background-image: url("../../../project_layout/arsenalbg.png");
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+  width: 100vw; /* Set the width to 100% of the viewport width */
+  min-height: 200vh;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-name: slideInBackgroundFromLeft;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+}
+.blog-div {
 }
 
+.blog-title {
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-name: slideInContentFromLeft;
+}
 .arsenal-content {
   max-width: 53%;
+  margin-top: 0%;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-name: slideInContentFromLeft;
+  z-index: 1;
+  color: #d5af60;
+  margin-left: 50px;
 }
 
-@keyframes slideInLeft {
+@keyframes slideInBackgroundFromLeft {
   0% {
     transform: translateX(-100%);
   }
   100% {
     transform: translateX(0);
+  }
+}
+@keyframes slideInContentFromLeft {
+  0% {
+    margin-left: 100px; /* Start with the initial left margin */
+    color: black;
+  }
+
+  100% {
+    margin-left: 50px; /* Reduce the left margin to 0 at the end of the animation */
   }
 }
 
@@ -40,7 +72,7 @@
   .arsenal-content {
     max-width: 65%;
   }
-  .blog_div {
+  .blog-div {
     margin-left: 30px;
     margin-top: 100px;
   }
