@@ -95,19 +95,19 @@
   left: 49%;
   transform: translateX(-50%);
   top: 17%;
+  mix-blend-mode: plus-lighter; /* Choose an appropriate blend mode  */
 }
 
 .homepage-header h1,
 h2 {
   font-weight: 400;
 }
-
 .landing-section {
   background-image: url("../../project_layout/nrhero.png");
-
   background-position: bottom center, bottom left;
   height: 100vh;
   background-repeat: no-repeat;
+  background-size: cover;
   margin-top: 100px;
 }
 
@@ -116,7 +116,7 @@ h2 {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  top: 53%;
+  top: 50%;
   width: auto;
 }
 
@@ -442,7 +442,7 @@ h2 {
   .landing-page-menu {
     /* top: 55%; */
     /* top: 63vh; */
-    top: 50%;
+    top: 45%;
     width: 100%;
   }
 }
@@ -460,7 +460,7 @@ h2 {
   }
   .landing-page-menu {
     /* top: 55%; */
-    top: 69vh;
+
     width: 100%;
   }
 }
@@ -475,7 +475,7 @@ h2 {
     margin-top: 40px;
   }
   .landing-page-menu {
-    top: 53.5%;
+    /* top: 53.5%; */
   }
 }
 
@@ -489,7 +489,7 @@ h2 {
 }
 @media (max-width: 360px) {
   .landing-page-menu {
-    top: 62vh;
+    /* top: 62vh; */
   }
 }
 
@@ -498,7 +498,7 @@ h2 {
     top: 8%;
   }
   .landing-page-menu {
-    top: 60vh;
+    top: 50vh;
   }
 }
 @media (min-width: 1280px) and (min-height: 800px) {
@@ -506,7 +506,7 @@ h2 {
     top: 8%;
   }
   .landing-page-menu {
-    top: 70vh;
+    /* top: 70vh; */
   }
 }
 /* IPAD MINI */
@@ -516,7 +516,7 @@ h2 {
     top: 25%;
   }
   .landing-page-menu {
-    top: 76vh;
+    /* top: 76vh; */
   }
 }
 
@@ -526,7 +526,7 @@ h2 {
     top: 25%;
   }
   .landing-page-menu {
-    top: 80vh;
+    /* top: 80vh; */
   }
 }
 @media (min-width: 1180px) and (max-width: 1181px) and (min-height: 820px) {
@@ -534,7 +534,7 @@ h2 {
     top: 17.5%;
   }
   .landing-page-menu {
-    top: 71vh;
+    /* top: 71vh; */
   }
 }
 

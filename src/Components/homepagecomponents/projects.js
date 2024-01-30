@@ -51,9 +51,9 @@ const ProjectsGridComponent = () => {
     <div>
       <div className="project-grid" ref={topOfSectionRef}>
         <ProjectCard
-          projectTitle="Web Dev Intern with 3:5Creative[s]"
-          projectDescription="Built out full WordPress websites for multiple company clients based on wireframes from design team."
-          technologies="WordPress, HTML, Bootstrap, JS, Elementor"
+          projectTitle="Wordpress Developer with 3:5Creative[s]"
+          projectDescription="Built out WordPress websites and themes for company clients based on wireframes from design team. Led team of interns to assist in development."
+          technologies="WordPress, PHP, Elementor, Bootstrap, JS, Elementor"
           cardBtnsArray={[
             {
               component: initSlidesBtn,
