@@ -94,7 +94,7 @@
   position: absolute;
   left: 49%;
   transform: translateX(-50%);
-  top: 17%;
+  top: 10%;
   mix-blend-mode: plus-lighter; /* Choose an appropriate blend mode  */
 }
 
@@ -152,7 +152,7 @@ h2 {
 .transition-gradient {
   position: absolute;
   top: 0;
-  z-index: 0;
+  z-index: -1;
 }
 .transition-gradient img {
   height: 10%;
@@ -162,9 +162,9 @@ h2 {
   font-family: "Montserrat", sans-serif;
   margin-top: 100px;
   color: #9f8d65;
+  padding: 5%;
 }
 .projects-section-header h1 {
-  border-radius: 6px;
   margin: auto;
   padding: 1.5%;
   font-weight: 500;
@@ -173,8 +173,23 @@ h2 {
   display: inline-block;
   /* background-image: url("../../project_layout/stacked-waves-haikei.svg");
   background-size: cover; */
-  padding: 5%;
+
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 2.5s steps(17);
+  border-right: 20px solid #b4a27c;
+  border-radius: 0px; /* Add a blinking cursor effect */
 }
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 31%;
+  }
+}
+/* Apply the typing animation to the text */
 
 /* PROJECT SECTION */
 .project-grid {
@@ -328,6 +343,10 @@ h2 {
   }
   .project-grid {
     width: 95%;
+  }
+
+  .homepage-header {
+    top: 20%;
   }
 }
 @media (max-width: 700px) {
