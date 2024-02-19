@@ -7,7 +7,6 @@ const Logo = () => {
   const [isHovered, setIsHovered] = useState(false);
   const handleMouseEnter = () => {
     if (!isHovered) {
-      console.log("mouse enter");
       setIsHovered(true);
       setTimeout(() => {
         setIsHovered(false);

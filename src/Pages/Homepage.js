@@ -14,6 +14,7 @@ import {
   ProjectsGridComponent,
   smoothScroll,
 } from "../Components/homepagecomponents/projects";
+import { setupIntersectionObserver } from "./utils/visibilityoberver";
 
 const HomePage = () => {
   const [state, setState] = useState({
@@ -21,13 +22,11 @@ const HomePage = () => {
     sidbarStatus: false,
   });
 
-  const sidebarHandler = () => {
-    setState((prevstate) => ({
-      sidbarStatus: !prevstate.sidbarStatus,
-    }));
-  };
-
   const history = useHistory();
+
+  const projectSectionRef = useRef();
+  const [webProjectsVisible, setWebProjectsVisible] = useState(false);
+
   useEffect(() => {
     // Runs after the first render() lifecycle
     const userVisitationStatus = getLocalVisitStatus();
@@ -36,6 +35,10 @@ const HomePage = () => {
       history.push("/Intro");
     }
     myGa();
+
+    if (!webProjectsVisible) {
+      setupIntersectionObserver(projectSectionRef, setWebProjectsVisible);
+    }
   }, []);
 
   const isMobile = useMediaQuery({ maxWidth: 700 });
@@ -46,7 +49,6 @@ const HomePage = () => {
     return layoutClass;
   }, [isMobile]);
 
-  const projectSectionRef = useRef();
   const handleProjectBtnClick = () => {
     smoothScroll(projectSectionRef);
   };
@@ -107,8 +109,14 @@ const HomePage = () => {
       <div className="transition-gradient">
         <img src={rectangleGradient} />
       </div>
-      <div className="projects-section-header" ref={projectSectionRef}>
-        <h1>&lt;Web Projects/&gt;</h1>
+      <div className="typing-wrapper" ref={projectSectionRef}>
+        <div
+          className={
+            webProjectsVisible ? "projects-section-header" : "blacked-out"
+          }
+        >
+          <h1>&lt;Web Projects/&gt;</h1>
+        </div>
       </div>
       <section>
         <ProjectsGridComponent />
