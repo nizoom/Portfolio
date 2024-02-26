@@ -1,7 +1,7 @@
 import React from "react";
 import Logo from "../Components/logo/logo";
 import Sidebar from "../Components/sidebar/sidebar";
-import Headshot from "../project_layout/headshot.png";
+import Headshot from "../assets/headshot.png";
 import "./css/about.css";
 
 const About = () => {

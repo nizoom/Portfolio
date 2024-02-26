@@ -7,7 +7,7 @@
 /* have the content slide in a .5 seconds after or something like that */
 
 .arsenal-background {
-  background-image: url("../../../project_layout/arsenalbg.png");
+  background-image: url("../../../assets/arsenalbg.png");
   background-size: cover;
   background-position: top center;
   background-repeat: no-repeat;

@@ -5,7 +5,7 @@ import "../css/contact.css";
 import Sidebar from "../../Components/sidebar/sidebar";
 import Logo from "../../Components/logo/logo";
 import submitValidatedData from "./submit";
-import cluster from "../../project_layout/contactpagecluster.png";
+import cluster from "../../assets/contactpagecluster.png";
 
 const ContactPage = () => {
   // FORM CODE

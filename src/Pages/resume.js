@@ -3,8 +3,8 @@ import "./css/resume.css";
 
 import Logo from "../Components/logo/logo";
 import Sidebar from "../Components/sidebar/sidebar";
-import DownloadIcon from "../project_layout/download.jpg";
-import ResumePDF from "../project_layout/RamNissimResume.pdf";
+import DownloadIcon from "../assets/download.jpg";
+import ResumePDF from "../assets/RamNissimResume.pdf";
 
 const Resume = () => {
   // hide resume download btn when sidebar is active

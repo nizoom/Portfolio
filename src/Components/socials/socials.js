@@ -1,8 +1,8 @@
 import React from "react";
-import LinkedInIcon from "../../project_layout/socialicons/linkedin.png";
-import GithubIcon from "../../project_layout/socialicons/github.png";
-import TwitterIcon from "../../project_layout/socialicons/twitter.png";
-import EmailIcon from "../../project_layout/socialicons/email.png";
+import LinkedInIcon from "../../assets/socialicons/linkedin.png";
+import GithubIcon from "../../assets/socialicons/github.png";
+import TwitterIcon from "../../assets/socialicons/twitter.png";
+import EmailIcon from "../../assets/socialicons/email.png";
 import { useMediaQuery } from "react-responsive";
 
 import { BrowserRouter as Router, Link } from "react-router-dom";

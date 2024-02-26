@@ -103,7 +103,7 @@ h2 {
   font-weight: 400;
 }
 .landing-section {
-  background-image: url("../../project_layout/nrhero.png");
+  background-image: url("../../assets/nrhero.png");
   background-position: bottom center, bottom left;
   height: 100vh;
   background-repeat: no-repeat;

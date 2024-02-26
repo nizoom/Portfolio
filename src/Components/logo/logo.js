@@ -1,7 +1,7 @@
 import "./logo.css";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import NRLogo from "../../project_layout/nrlogo.svg";
+import NRLogo from "../../assets/nrlogo.svg";
 
 const Logo = () => {
   const [isHovered, setIsHovered] = useState(false);

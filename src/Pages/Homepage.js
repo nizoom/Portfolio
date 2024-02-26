@@ -8,7 +8,7 @@ import {
   firstVisit,
   getLocalVisitStatus,
 } from "../Components/localstorage/localstorage";
-import rectangleGradient from "../project_layout/Rectangle.png";
+import rectangleGradient from "../assets/Rectangle.png";
 import { useMediaQuery } from "react-responsive";
 import {
   ProjectsGridComponent,

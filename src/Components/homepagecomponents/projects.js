@@ -1,11 +1,10 @@
-import React, { useState, useRef } from "react";
+import React from "react";
 import ProjectCard from "./projectcard";
-import Carousel from "../applinks/cardscomponent/carousel";
-import FeedSeeThumbnail from "../../project_layout/feedseethumbnail.gif";
-import GlobalNewsThumbnail from "../../project_layout/globalnews_thumbnail.png";
-import ThreeFiveThumbnail from "../../project_layout/35-img.webp";
-import ThankYouEmailBuilderThumbnail from "../../project_layout/Template_Builder_Thumbnail.png";
-import EmailAutomaitonThumbnail from "../../project_layout/automation_thumbnail.jpg";
+import FeedSeeThumbnail from "../../assets/feedseethumbnail.gif";
+import GlobalNewsThumbnail from "../../assets/globalnews_thumbnail.png";
+import ThreeFiveThumbnail from "../../assets/35-img.webp";
+import ThankYouEmailBuilderThumbnail from "../../assets/Template_Builder_Thumbnail.png";
+import EmailAutomaitonThumbnail from "../../assets/automation_thumbnail.jpg";
 
 const smoothScroll = (locationRef) => {
   requestAnimationFrame(() => {
@@ -18,9 +17,6 @@ const smoothScroll = (locationRef) => {
 };
 
 const ProjectsGridComponent = () => {
-  const [sliderClassName, setSliderClassName] = useState(
-    "closed-slider-wrapper"
-  );
   const standardCardBtn = (props) => {
     return (
       <button className="project-card-btn">
@@ -31,30 +27,9 @@ const ProjectsGridComponent = () => {
     );
   };
 
-  const triggerSlider = () => {
-    setSliderClassName("slider-wrapper");
-    smoothScroll(carouselRef);
-  };
-  const closeSlider = () => {
-    smoothScroll(topOfSectionRef);
-    setTimeout(() => {
-      setSliderClassName("closed-slider-wrapper ");
-    }, 500);
-  };
-
-  const carouselRef = useRef();
-  const topOfSectionRef = useRef();
-  const initSlidesBtn = () => {
-    return (
-      <button className="project-card-btn" onClick={triggerSlider}>
-        {" "}
-        <p>View Pages</p>
-      </button>
-    );
-  };
   return (
     <div>
-      <div className="project-grid" ref={topOfSectionRef}>
+      <div className="project-grid">
         <ProjectCard
           projectTitle="Wordpress Developer with 3:5Creative[s]"
           thumbnail={ThreeFiveThumbnail}
@@ -62,7 +37,7 @@ const ProjectsGridComponent = () => {
           technologies="WordPress, PHP, Elementor, Bootstrap, JS"
           cardBtnsArray={[
             {
-              component: initSlidesBtn,
+              component: standardCardBtn,
               props: {
                 link: "https://35creatives.com/",
                 action: "View Pages",
@@ -139,11 +114,6 @@ const ProjectsGridComponent = () => {
         />
       </div>
       <div></div>
-      <Carousel
-        className={sliderClassName}
-        closeSlider={closeSlider}
-        ref={carouselRef}
-      />
     </div>
   );
 };
