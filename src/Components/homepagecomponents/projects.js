@@ -1,6 +1,11 @@
 import React, { useState, useRef } from "react";
 import ProjectCard from "./projectcard";
 import Carousel from "../applinks/cardscomponent/carousel";
+import FeedSeeThumbnail from "../../project_layout/feedseethumbnail.gif";
+import GlobalNewsThumbnail from "../../project_layout/globalnews_thumbnail.png";
+import ThreeFiveThumbnail from "../../project_layout/35-img.webp";
+import ThankYouEmailBuilderThumbnail from "../../project_layout/Template_Builder_Thumbnail.png";
+import EmailAutomaitonThumbnail from "../../project_layout/automation_thumbnail.jpg";
 
 const smoothScroll = (locationRef) => {
   requestAnimationFrame(() => {
@@ -52,8 +57,9 @@ const ProjectsGridComponent = () => {
       <div className="project-grid" ref={topOfSectionRef}>
         <ProjectCard
           projectTitle="Wordpress Developer with 3:5Creative[s]"
+          thumbnail={ThreeFiveThumbnail}
           projectDescription="Built out WordPress websites and themes for company clients based on wireframes from design team. Led team of interns to assist in development."
-          technologies="WordPress, PHP, Elementor, Bootstrap, JS, Elementor"
+          technologies="WordPress, PHP, Elementor, Bootstrap, JS"
           cardBtnsArray={[
             {
               component: initSlidesBtn,
@@ -66,8 +72,9 @@ const ProjectsGridComponent = () => {
         />
         <ProjectCard
           projectTitle="FeedSee"
+          thumbnail={FeedSeeThumbnail}
           projectDescription="Web scraping app that uses Twitter's API to recreate a personal feed."
-          technologies="ReactJS, TypeScript, Chakra UI, NodeJS, ExpressJS."
+          technologies="ReactJS, TypeScript, Chakra UI, NodeJS."
           cardBtnsArray={[
             {
               component: standardCardBtn,
@@ -80,8 +87,9 @@ const ProjectsGridComponent = () => {
         />
         <ProjectCard
           projectTitle="Global News"
+          thumbnail={GlobalNewsThumbnail}
           projectDescription="Web app that finds localized news based on geolocation from map click."
-          technologies="ReactJS, React Router, Azure, Google Cloud, Firebase."
+          technologies="ReactJS, Azure, Google Cloud, Firebase."
           cardBtnsArray={[
             {
               component: standardCardBtn,
@@ -97,10 +105,10 @@ const ProjectsGridComponent = () => {
           ]}
         />
         <ProjectCard
-          projectTitle="Thank You Email Generator
-        "
+          projectTitle="Thank You Email Generator"
+          thumbnail={ThankYouEmailBuilderThumbnail}
           projectDescription="Form web app that builds and sends templated thank you emails for nonprofit donations."
-          technologies="ReactJS, ExpressJS, NodeJS, NodeMailer, and Handlebars."
+          technologies="ReactJS, NodeJS, and Handlebars."
           cardBtnsArray={[
             {
               component: standardCardBtn,
@@ -110,8 +118,9 @@ const ProjectsGridComponent = () => {
         />
         <ProjectCard
           projectTitle="Automation Donation Handler"
-          projectDescription="Backend app that uses that generates custom daily thank you emails based on donations from an API and stores them in the organization's database."
-          technologies="ExpressJS, NodeJS, NodeMailer, and Handlebars."
+          thumbnail={EmailAutomaitonThumbnail}
+          projectDescription="Backend app that generates custom daily thank you emails based on donations from an API and stores them in the organization's database."
+          technologies="NodeJS, NodeMailer, and Handlebars."
           cardBtnsArray={[
             {
               component: standardCardBtn,
