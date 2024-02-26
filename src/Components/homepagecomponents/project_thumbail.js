@@ -11,7 +11,7 @@ const ProjectThumbnail = (props) => {
         }
       >
         <img
-          src={ThreeFiveImg}
+          src={props.thumbnailImg}
           className="thumbnail-img"
           onMouseEnter={toggleHoverState}
           onMouseLeave={toggleHoverState}
