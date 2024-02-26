@@ -269,6 +269,41 @@ h2 {
   transform: scale(1.1);
 }
 
+.thumbnail-img {
+  max-width: 100%;
+  cursor: pointer;
+  transition: transform 0.5s ease;
+  transform: scale(1.01);
+}
+
+.thumbnail-wrapper {
+  /* Add transition for smooth animation */
+  overflow: hidden;
+  max-height: 200px; /* Set the initial max-height */
+  transition: max-height 0.5s ease; /* Add transition for smooth reveal */
+}
+
+.thumbnail-wrapper-hovered {
+  overflow: hidden;
+  transition: max-height 1s ease;
+  max-height: 1000px;
+}
+
+@keyframes revealBounce {
+  0% {
+    max-height: 50%;
+  }
+
+  80% {
+    max-height: 110%;
+  }
+
+  100% {
+    max-height: auto;
+    transition: max-height 1s ease;
+  }
+}
+
 /* BUBBLES */
 .bubbles-wrapper {
   margin-top: 15%;

@@ -1,9 +1,11 @@
 import React from "react";
+import ProjectThumbnail from "./project_thumbail";
 
 const ProjectCard = (props) => {
   return (
     <div className="projectcard-box">
       <div className="projectcard-content">
+        <ProjectThumbnail thumbnailImg={""} />
         <h3 className="project-title">{props.projectTitle}</h3>
         <p className="proj-description"> {props.projectDescription}</p>
         <p className="proj-description"> Technologies: {props.technologies}</p>
