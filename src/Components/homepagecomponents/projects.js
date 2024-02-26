@@ -64,7 +64,7 @@ const ProjectsGridComponent = () => {
             {
               component: initSlidesBtn,
               props: {
-                link: triggerSlider,
+                link: "https://35creatives.com/",
                 action: "View Pages",
               },
             },
@@ -79,7 +79,7 @@ const ProjectsGridComponent = () => {
             {
               component: standardCardBtn,
               props: {
-                link: "https://github.com/nizoom/FeedSee",
+                link: "https://github.com/nizoom/FeedSee/blob/main/README.md",
                 action: "View ReadMe",
               },
             },
@@ -94,13 +94,16 @@ const ProjectsGridComponent = () => {
             {
               component: standardCardBtn,
               props: {
-                link: "https://github.com/nizoom/Portfolio/tree/main/src/Pages/apps/globalnews/src",
+                link: "https://nissimram.com/#/globalnews/landingpage",
                 action: "Try Now",
               },
             },
             {
               component: standardCardBtn,
-              props: { link: "", action: "View Code" },
+              props: {
+                link: "https://github.com/nizoom/Portfolio/tree/main/src/Pages/apps/globalnews/src",
+                action: "View Code",
+              },
             },
           ]}
         />
@@ -112,7 +115,10 @@ const ProjectsGridComponent = () => {
           cardBtnsArray={[
             {
               component: standardCardBtn,
-              props: { link: "", action: "View ReadMe" },
+              props: {
+                link: "https://github.com/nizoom/TYTemplateBuilder#readme",
+                action: "View ReadMe",
+              },
             },
           ]}
         />
@@ -124,7 +130,10 @@ const ProjectsGridComponent = () => {
           cardBtnsArray={[
             {
               component: standardCardBtn,
-              props: { link: "", action: "View ReadMe" },
+              props: {
+                link: "https://github.com/nizoom/TYAutomation/blob/main/README.md",
+                action: "View ReadMe",
+              },
             },
           ]}
         />

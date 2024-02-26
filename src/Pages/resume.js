@@ -35,9 +35,9 @@ const Resume = () => {
       <section className="resume-wrapper">
         <h3 className="section-header"> Skills </h3>
         <p className="body-paragraph">
-          React, Node, Next, Express, TypeScript, HTML5, CSS3, Material UI,
-          Bootstrap, Chakra UI, Figma, Google Cloud, Azure, PostGreSQL, Git,
-          GitHub
+          JavaScript, React, Node, WordPress, Elementor, TypeScript, Next,
+          Express, HTML5, CSS3, SASS, Bootstrap, Figma, Google Cloud, Sanity
+          CMS, Firebase, Git, GitHub
         </p>
 
         <h3 className="section-header"> Professional Experience</h3>
@@ -45,9 +45,9 @@ const Resume = () => {
           <div className="title-dates-split">
             <h3 className="experience-name">
               3:5Creative[s],
-              <span className="position"> Web Developer Intern</span>
+              <span className="position"> Lead WordPress Developer</span>
             </h3>
-            <h3 className="date"> 01/23 – present </h3>
+            <h3 className="date"> 07/23 – present </h3>
           </div>
           <ul className="list">
             <li>
@@ -64,6 +64,24 @@ const Resume = () => {
             </li>
           </ul>
 
+          <div className="title-dates-split">
+            <h3 className="experience-name">
+              UC San Diego Design Department
+              <span className="position">Web Developer</span>
+            </h3>
+            <h3 className="date"> 09/22 – as needed </h3>
+          </div>
+
+          <ul className="list">
+            <li>
+              Prototyped and implemented an interactive lesson React application
+              for an online design textbook using React and Sanity CMS
+            </li>
+            <li>
+              Implemented accessibility best practices according to W3C
+              guidelines
+            </li>
+          </ul>
           <div className="title-dates-split">
             <h3 className="experience-name">
               Common Threads Project,
@@ -97,18 +115,14 @@ const Resume = () => {
               Nissimram.com,{" "}
               <span className="position"> Freelance Developer </span>{" "}
             </h3>
-            <h3 className="date"> 08/21 – 11/21</h3>
+            <h3 className="date"> 08/21 – present</h3>
           </div>
 
           <ul className="list">
             <li>
-              Designed, built, and deployed multiple full-stack React apps using
-              responsive CSS. Projects showcase data visualization, API
-              integration, and web scraping.{" "}
-            </li>
-            <li>
-              Documented production process through blog posts I wrote to log my
-              coding journey.{" "}
+              Designed, built, and deployed multiple full-stack responsive React
+              apps. Projects showcase API integration, web scraping, data base
+              implementation.
             </li>
           </ul>
 
@@ -124,20 +138,10 @@ const Resume = () => {
 
           <ul className="list">
             <li>
-              Maintained flow of business by processing large volume of active
-              immigration matters under strict deadlines for corporate /
-              individual clients related to nonimmigrant visas, permanent
-              residence and citizenship.{" "}
-            </li>
-            <li>
-              Ensured positive client relations by promptly communicating with
-              and provide support for client HR representatives and foreign
-              national employees.
-            </li>
-            <li>
-              Thoroughly summarized job duties and responsibilities for
-              specialized visa applications for those seeking H1-B, L-1, and TN
-              status.{" "}
+              Liaised with foreign nationals and processed high volume of
+              immigrant visa applications. Ensured positive client relations by
+              promptly communicating with and providing support for client HR
+              representatives and foreign national employees.
             </li>
           </ul>
 

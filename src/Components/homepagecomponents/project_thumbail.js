@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import ThreeFiveImg from "../../project_layout/35-img.webp";
+
 const ProjectThumbnail = (props) => {
   const toggleHoverState = () => setHoverState(!hoverState);
   const [hoverState, setHoverState] = useState(false);
+  console.log(props.link);
   return (
     <div className="project-thumbnail-wrapper">
       <div
@@ -10,12 +11,14 @@ const ProjectThumbnail = (props) => {
           !hoverState ? "thumbnail-wrapper" : "thumbnail-wrapper-hovered"
         }
       >
-        <img
-          src={props.thumbnailImg}
-          className="thumbnail-img"
-          onMouseEnter={toggleHoverState}
-          onMouseLeave={toggleHoverState}
-        />
+        <a href={props.link} target="_blank">
+          <img
+            src={props.thumbnailImg}
+            className="thumbnail-img"
+            onMouseEnter={toggleHoverState}
+            onMouseLeave={toggleHoverState}
+          />
+        </a>
       </div>
     </div>
   );
