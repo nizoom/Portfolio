@@ -55,7 +55,7 @@ const BlogMenu = (props) => {
 
           <li
             className="blog-tab arsenal-tab"
-            onClick={() => toggleBlogPage("Arsenal")}
+            // onClick={() => toggleBlogPage("Arsenal")}
           >
             <Link
               to="/Arsenal"
