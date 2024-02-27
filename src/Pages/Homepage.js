@@ -120,6 +120,7 @@ const HomePage = () => {
       </div>
       <section>
         <ProjectsGridComponent />
+        <button> Contact</button>
       </section>
     </div>
   );
