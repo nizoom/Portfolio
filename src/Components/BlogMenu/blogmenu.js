@@ -1,11 +1,11 @@
-import React, { useMemo, useState } from "react";
-import "../../Pages/css/homepage.css";
+import React, { useState } from "react";
+import "../../Pages/css/blog.css";
 import { useMediaQuery } from "react-responsive";
 import { Link } from "react-router-dom";
 const BlogMenu = (props) => {
   // const isDesktop = useMediaQuery({ minWidth: 1024 });
   // const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 1023 });
-  const isMobile = useMediaQuery({ maxWidth: 700 });
+  const isMobile = useMediaQuery({ maxWidth: 768 });
 
   const [comingSoonMsgClass, setComingSoonMsgClass] = useState(
     "hide-coming-soon-msg"
@@ -39,10 +39,12 @@ const BlogMenu = (props) => {
           {" "}
           Blogs <span>and </span> writeups
         </h1>
+        <h3 className={comingSoonMsgClass}>
+          This section is coming <span> soon!</span>
+        </h3>
       </div>
-      <nav className="blog-nav">
-        <h4 className={comingSoonMsgClass}>These sections are coming soon!</h4>
 
+      <nav className="blog-nav">
         <ul>
           <li
             className="blog-tab tech-tab"

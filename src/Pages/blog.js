@@ -8,11 +8,9 @@ import "./css/homepage.css";
 
 const Blog = () => {
   const returnSelectedPgComponent = (clickedPage) => {
-    console.log(clickedPage);
+    // console.log(clickedPage);
     // selection logic
-
     // transition css
-
     // show content
   };
   return (

@@ -3,7 +3,6 @@ import React, { useState } from "react";
 const ProjectThumbnail = (props) => {
   const toggleHoverState = () => setHoverState(!hoverState);
   const [hoverState, setHoverState] = useState(false);
-  console.log(props.link);
   return (
     <div className="project-thumbnail-wrapper">
       <div
