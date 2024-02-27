@@ -120,7 +120,15 @@ const HomePage = () => {
       </div>
       <section>
         <ProjectsGridComponent />
-        <button> Contact</button>
+        <div className="bottom-cta-wrapper">
+          <Link to="/Contact">
+            <button className="bottom-cta"> Contact</button>
+          </Link>
+          <Link to="/Resume">
+            {" "}
+            <button className="bottom-cta"> Resume</button>{" "}
+          </Link>
+        </div>
       </section>
     </div>
   );
