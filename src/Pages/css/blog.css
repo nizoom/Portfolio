@@ -117,6 +117,25 @@
   top: 15%;
   right: 100px;
 }
+
+.default-label-class {
+  transition: all 0.5s ease;
+  text-transform: capitalize;
+  transform: translateX(0%);
+}
+.slide-out,
+.slide-in {
+  transition: transform 0.5s ease-in-out; /* Apply transition to transform property */
+}
+
+.slide-out {
+  transform: translateX(-100%);
+}
+
+.slide-in {
+  transform: translateX(100%);
+}
+
 @media (max-width: 1000px) {
   .wallpaper-extended {
     background-color: black;
@@ -140,22 +159,6 @@
   }
 }
 @media (max-width: 768px) {
-  .hide-coming-soon-msg {
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-    position: fixed;
-    /* top: 25%; */
-    left: 60%;
-    transform: translate(-50%, -50%);
-    width: 200px;
-  }
-  .mobile-coming-soon-msg {
-    transition: opacity 0.3s ease-in-out;
-    color: #edc671;
-    position: absolute;
-    bottom: 0%;
-    left: 10%;
-  }
   .post {
     margin-top: 400px;
   }
@@ -218,9 +221,6 @@
     width: 90%;
     margin: auto;
   }
-  .mobile-coming-soon-msg {
-    top: 31%;
-  }
 }
 
 @media (max-width: 400px) {
@@ -230,30 +230,5 @@
   .post {
     margin-top: 300px;
     font-size: 80%;
-  }
-
-  .blog-nav {
-  }
-}
-@media (max-width: 375px) {
-  .mobile-coming-soon-msg {
-    top: 42%;
-  }
-}
-@media (max-width: 360px) {
-  .mobile-coming-soon-msg {
-    top: 39%;
-  }
-}
-
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
-  /* CSS rules specific to tablets */
-  .mobile-coming-soon-msg {
-    bottom: 25% important;
-  }
-  .show-coming-soon-msg {
-    bottom: 50% important;
-    top: auto;
-    left: 5%;
   }
 }
