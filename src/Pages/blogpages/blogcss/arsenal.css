@@ -67,6 +67,12 @@
   .arsenal-content {
     max-width: 59%;
   }
+
+  .arsenal-background {
+    background-size: cover;
+    background-repeat: repeat;
+    min-height: 280vh;
+  }
 }
 @media (max-width: 450px) {
   .arsenal-content {

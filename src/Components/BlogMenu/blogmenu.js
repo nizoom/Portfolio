@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import "../../Pages/css/blog.css";
 import { Link } from "react-router-dom";
 const BlogMenu = (props) => {
-  // const isDesktop = useMediaQuery({ minWidth: 1024 });
-
   const [comingSoonMsgClass, setComingSoonMsgClass] = useState(
     "hide-coming-soon-msg"
   );

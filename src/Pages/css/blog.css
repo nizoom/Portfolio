@@ -162,15 +162,7 @@
   .post {
     margin-top: 400px;
   }
-  .mobile-blog-nav {
-    left: 0px;
-    top: 88px;
-    transform: none;
-  }
-  .blog-tab h3:hover {
-    transition: none;
-    transform: none;
-  }
+
   .blog-nav ul {
     margin-top: 0px;
   }
@@ -199,16 +191,8 @@
   .post {
     margin-top: 300px;
   }
-  .mobile-blog-nav {
-    left: -9px;
-    top: 74.9px;
-  }
 }
 @media (max-width: 450px) {
-  .blog-nav {
-    /* min-width: 200px;
-    margin-top: -135px; */
-  }
   .blog-nav ul {
     padding-left: 10px;
     flex-direction: column;
