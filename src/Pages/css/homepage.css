@@ -30,8 +30,8 @@
   float: right;
   overflow: hidden;
   position: absolute;
-  right: 78px;
-  top: 41px;
+  right: 10px;
+  top: 5px;
   width: 610px;
 }
 
@@ -101,6 +101,10 @@
 .homepage-header h1,
 h2 {
   font-weight: 400;
+}
+
+.homepage-header h1 {
+  margin: 7px;
 }
 .landing-section {
   background-image: url("../../assets/nrhero.png");
@@ -473,10 +477,6 @@ h2 {
   }
 }
 @media (max-width: 450px) {
-  .homepage-header {
-    top: 8%;
-  }
-
   .landing-page-menu {
     /* top: 55%; */
 
@@ -490,14 +490,6 @@ h2 {
   .socials-wrapper ul {
     margin-top: 40px;
   }
-}
-
-@media (max-width: 390px) {
-  .homepage-header {
-    top: 7%;
-  }
-}
-@media (max-width: 360px) {
 }
 
 @media (min-width: 1024px) and (min-height: 600px) and (max-height: 700px) {

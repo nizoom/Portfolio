@@ -64,7 +64,7 @@ const HomePage = () => {
         <div className="landing-section">
           <header className="homepage-header">
             <h1> Nissim Ram</h1>
-            <h2> Freelance web developer and writer</h2>
+            <h2> Web development / writing </h2>
           </header>
           <nav className="landing-page-menu">
             <ul className="landingpage-ul">
